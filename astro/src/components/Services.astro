@@ -1,0 +1,128 @@
+---
+// Services component
+const services = [
+  {
+    title: "Back Pain Treatment",
+    description: "Effective treatment for acute and chronic back pain using Advanced Biostructural Correction.",
+    icon: "fa-solid fa-spine",
+    link: "/back-pain-treatment-sydney-cbd/"
+  },
+  {
+    title: "Neck Pain Treatment",
+    description: "Relief from neck pain, stiffness, and related headaches with our specialized approach.",
+    icon: "fa-solid fa-head-side",
+    link: "/neck-pain-treatment-sydney-cbd/"
+  },
+  {
+    title: "Headache & Migraine Treatment",
+    description: "Addressing the root causes of headaches and migraines for lasting relief.",
+    icon: "fa-solid fa-head-side-brain",
+    link: "/headaches-migraines-treatment-sydney-cbd/"
+  },
+  {
+    title: "Posture Treatment",
+    description: "Correcting forward head posture and improving overall body alignment.",
+    icon: "fa-solid fa-user",
+    link: "/posture-treatment-sydney-cbd/"
+  }
+];
+---
+
+<div class="services">
+  <div class="services-grid">
+    {services.map(service => (
+      <div class="service-card">
+        <div class="service-icon">
+          <i class={service.icon}></i>
+        </div>
+        <h3>{service.title}</h3>
+        <p>{service.description}</p>
+        <a href={service.link} class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+      </div>
+    ))}
+  </div>
+  
+  <div class="services-cta">
+    <a href="/back-pain-treatment-sydney-cbd/" class="btn btn-secondary">
+      View All Treatments <i class="fas fa-arrow-right"></i>
+    </a>
+  </div>
+</div>
+
+<style>
+  .services {
+    margin-top: 40px;
+  }
+  
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-bottom: 40px;
+  }
+  
+  .service-card {
+    background-color: white;
+    border-radius: 8px;
+    padding: 30px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+  }
+  
+  .service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  }
+  
+  .service-icon {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+  }
+  
+  .service-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: var(--primary-color);
+  }
+  
+  .service-card p {
+    margin-bottom: 20px;
+    color: #666;
+  }
+  
+  .service-link {
+    display: inline-flex;
+    align-items: center;
+    color: var(--secondary-color);
+    font-weight: 500;
+  }
+  
+  .service-link i {
+    margin-left: 8px;
+    transition: transform 0.3s ease;
+  }
+  
+  .service-link:hover i {
+    transform: translateX(5px);
+  }
+  
+  .services-cta {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .btn-secondary {
+    background-color: var(--primary-color);
+  }
+  
+  .btn-secondary:hover {
+    background-color: var(--secondary-color);
+  }
+  
+  @media (max-width: 768px) {
+    .services-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style> 

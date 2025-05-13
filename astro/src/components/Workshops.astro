@@ -1,0 +1,154 @@
+---
+// Workshops component
+const workshops = [
+  {
+    title: "Posture Workshop",
+    description: "Learn how to maintain proper posture throughout your day and prevent pain.",
+    date: "June 15, 2023",
+    image: "/images/workshop-posture.jpg"
+  },
+  {
+    title: "Ergonomics at Work",
+    description: "Set up your workspace to prevent injuries and improve productivity.",
+    date: "July 10, 2023",
+    image: "/images/workshop-ergonomics.jpg"
+  },
+  {
+    title: "Stress Management",
+    description: "Techniques to reduce stress and its physical impact on your body.",
+    date: "August 5, 2023",
+    image: "/images/workshop-stress.jpg"
+  }
+];
+---
+
+<section class="workshops-section">
+  <div class="container">
+    <div class="section-header">
+      <h2>Upcoming Workshops</h2>
+      <div class="divider"></div>
+      <p>Join our educational workshops to learn more about maintaining your health and preventing pain.</p>
+    </div>
+    
+    <div class="workshops-grid">
+      {workshops.map(workshop => (
+        <div class="workshop-card">
+          <div class="workshop-image">
+            <img src={workshop.image} alt={workshop.title} />
+          </div>
+          <div class="workshop-content">
+            <h3>{workshop.title}</h3>
+            <p class="workshop-date">{workshop.date}</p>
+            <p class="workshop-description">{workshop.description}</p>
+            <a href="/workshops/" class="workshop-link">Learn More <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+      ))}
+    </div>
+    
+    <div class="workshops-cta">
+      <a href="/workshops/" class="btn">
+        View All Workshops <i class="fas fa-arrow-right"></i>
+      </a>
+    </div>
+  </div>
+</section>
+
+<style>
+  .workshops-section {
+    padding: 80px 0;
+    background-color: var(--light-bg);
+  }
+  
+  .section-header {
+    text-align: center;
+    margin-bottom: 50px;
+  }
+  
+  .section-header h2 {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+  }
+  
+  .divider {
+    width: 80px;
+    height: 4px;
+    background-color: var(--secondary-color);
+    margin: 0 auto 20px;
+  }
+  
+  .workshops-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-bottom: 40px;
+  }
+  
+  .workshop-card {
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+  }
+  
+  .workshop-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  }
+  
+  .workshop-image img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+  
+  .workshop-content {
+    padding: 20px;
+  }
+  
+  .workshop-content h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: var(--primary-color);
+  }
+  
+  .workshop-date {
+    color: var(--secondary-color);
+    font-weight: 500;
+    margin-bottom: 15px;
+  }
+  
+  .workshop-description {
+    margin-bottom: 20px;
+    color: #666;
+  }
+  
+  .workshop-link {
+    display: inline-flex;
+    align-items: center;
+    color: var(--secondary-color);
+    font-weight: 500;
+  }
+  
+  .workshop-link i {
+    margin-left: 8px;
+    transition: transform 0.3s ease;
+  }
+  
+  .workshop-link:hover i {
+    transform: translateX(5px);
+  }
+  
+  .workshops-cta {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  @media (max-width: 768px) {
+    .workshops-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style> 

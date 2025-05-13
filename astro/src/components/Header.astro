@@ -1,0 +1,327 @@
+---
+// Header component with navigation
+---
+
+<header id="site-header" class="site-header">
+  <div class="top-bar">
+    <div class="container">
+      <div class="top-bar-inner">
+        <div class="location-info">
+          <div class="location">
+            <h3>Clinic 27 (CBD)</h3>
+            <p>Ph: <a href="tel:0280597743">02 8059 7743</a></p>
+          </div>
+          <div class="logo">
+            <a href="/">
+              <img src="/images/Blue-Logo-Clinic-27-min.png" alt="Clinic 27 Logo" width="238" height="238" />
+            </a>
+          </div>
+          <div class="location">
+            <h3>Complete Chiropractic (Dee Why)</h3>
+            <p>Ph: <a href="tel:0299720040">02 9972 0040</a></p>
+          </div>
+        </div>
+        <div class="social-icons">
+          <a href="https://www.facebook.com/clinictwentyseven/" target="_blank" aria-label="Facebook">
+            <i class="fab fa-facebook"></i>
+          </a>
+          <a href="https://www.youtube.com/channel/UC9hBMtr0amB5mrKbEskzTNw" target="_blank" aria-label="YouTube">
+            <i class="fab fa-youtube"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="main-header">
+    <div class="container">
+      <div class="main-header-inner">
+        <div class="logo">
+          <a href="/">
+            <img src="/images/Blue-Logo-Clinic-27-min.png" alt="Clinic 27 Logo" width="120" height="120" />
+          </a>
+        </div>
+        
+        <nav class="main-navigation">
+          <ul class="menu">
+            <li><a href="/" class="active">HOME</a></li>
+            <li class="has-dropdown">
+              <a href="#">TREATMENTS</a>
+              <ul class="dropdown">
+                <li><a href="/back-pain-treatment-sydney-cbd/">Back Pain Treatment</a></li>
+                <li><a href="/carpal-tunnel-syndrome-treatment-sydney-cbd/">Carpal Tunnel Syndrome Treatment & Diagnosis</a></li>
+                <li><a href="/headaches-migraines-treatment-sydney-cbd/">Headache & Migraine Treatment</a></li>
+                <li><a href="/neck-pain-treatment-sydney-cbd/">Neck Pain Treatment</a></li>
+                <li><a href="/vertigo-treatment-sydney-cbd/">Vertigo Treatment</a></li>
+                <li><a href="/endonasal-cranial-correction-treatment-sydney-cbd/">EndoNasal Cranial Correction</a></li>
+                <li><a href="/posture-treatment-sydney-cbd/">Posture Treatment</a></li>
+                <li><a href="/sciatica-treatment-sydney-cbd/">Sciatica Treatment</a></li>
+                <li><a href="/cranial-chiropractic/">Cranial Chiropractic</a></li>
+                <li><a href="/scoliosis-treatment-sydney-cbd/">Scoliosis Treatment</a></li>
+              </ul>
+            </li>
+            <li><a href="/massage-sydney-cbd-best-massage-sydney/">MASSAGE</a></li>
+            <li><a href="/workshops/">WORKSHOPS</a></li>
+            <li><a href="/videos/">VIDEOS</a></li>
+            <li><a href="/about-clinic27/">ABOUT</a></li>
+            <li><a href="/blog-overview/">BLOG</a></li>
+            <li><a href="/contact-us/">CONTACT</a></li>
+          </ul>
+        </nav>
+        
+        <div class="mobile-menu-toggle">
+          <i class="fa fa-bars"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="mobile-menu">
+    <ul class="menu">
+      <li><a href="/">HOME</a></li>
+      <li class="has-dropdown">
+        <a href="#">TREATMENTS</a>
+        <ul class="dropdown">
+          <li><a href="/back-pain-treatment-sydney-cbd/">Back Pain Treatment</a></li>
+          <li><a href="/carpal-tunnel-syndrome-treatment-sydney-cbd/">Carpal Tunnel Syndrome Treatment & Diagnosis</a></li>
+          <li><a href="/headaches-migraines-treatment-sydney-cbd/">Headache & Migraine Treatment</a></li>
+          <li><a href="/neck-pain-treatment-sydney-cbd/">Neck Pain Treatment</a></li>
+          <li><a href="/vertigo-treatment-sydney-cbd/">Vertigo Treatment</a></li>
+          <li><a href="/endonasal-cranial-correction-treatment-sydney-cbd/">EndoNasal Cranial Correction</a></li>
+          <li><a href="/posture-treatment-sydney-cbd/">Posture Treatment</a></li>
+          <li><a href="/sciatica-treatment-sydney-cbd/">Sciatica Treatment</a></li>
+          <li><a href="/cranial-chiropractic/">Cranial Chiropractic</a></li>
+          <li><a href="/scoliosis-treatment-sydney-cbd/">Scoliosis Treatment</a></li>
+        </ul>
+      </li>
+      <li><a href="/massage-sydney-cbd-best-massage-sydney/">MASSAGE</a></li>
+      <li><a href="/workshops/">WORKSHOPS</a></li>
+      <li><a href="/videos/">VIDEOS</a></li>
+      <li><a href="/about-clinic27/">ABOUT</a></li>
+      <li><a href="/blog-overview/">BLOG</a></li>
+      <li><a href="/contact-us/">CONTACT</a></li>
+    </ul>
+  </div>
+</header>
+
+<style>
+  .site-header {
+    width: 100%;
+  }
+  
+  .top-bar {
+    background-color: #f5f5f5;
+    padding: 10px 0;
+  }
+  
+  .container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+  }
+  
+  .top-bar-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .location-info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+  }
+  
+  .location {
+    text-align: center;
+  }
+  
+  .location h3 {
+    font-size: 16px;
+    margin-bottom: 5px;
+  }
+  
+  .location p {
+    font-size: 14px;
+    margin: 0;
+  }
+  
+  .logo img {
+    max-width: 120px;
+  }
+  
+  .social-icons {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .social-icons a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    background-color: var(--primary-color);
+    color: white;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+  }
+  
+  .social-icons a:hover {
+    background-color: var(--secondary-color);
+    transform: translateY(-2px);
+  }
+  
+  .main-header {
+    background-color: white;
+    padding: 15px 0;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .main-header-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .main-navigation .menu {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+  }
+  
+  .main-navigation .menu li {
+    position: relative;
+  }
+  
+  .main-navigation .menu a {
+    color: var(--primary-color);
+    font-weight: 500;
+    font-size: 16px;
+    padding: 5px 0;
+  }
+  
+  .main-navigation .menu a:hover,
+  .main-navigation .menu a.active {
+    color: var(--secondary-color);
+  }
+  
+  .has-dropdown {
+    position: relative;
+  }
+  
+  .dropdown {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: white;
+    min-width: 200px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: all 0.3s ease;
+    z-index: 100;
+    list-style: none;
+    padding: 10px 0;
+  }
+  
+  .has-dropdown:hover .dropdown {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+  
+  .dropdown li {
+    padding: 0;
+  }
+  
+  .dropdown a {
+    display: block;
+    padding: 8px 15px;
+    font-size: 14px;
+  }
+  
+  .mobile-menu-toggle {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: var(--primary-color);
+  }
+  
+  .mobile-menu {
+    display: none;
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .mobile-menu .menu {
+    list-style: none;
+  }
+  
+  .mobile-menu .menu li {
+    margin-bottom: 10px;
+  }
+  
+  .mobile-menu .menu a {
+    display: block;
+    padding: 8px 0;
+    font-weight: 500;
+  }
+  
+  .mobile-menu .dropdown {
+    position: static;
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+    box-shadow: none;
+    padding-left: 20px;
+  }
+  
+  @media (max-width: 1024px) {
+    .location-info {
+      flex-direction: column;
+    }
+    
+    .main-navigation {
+      display: none;
+    }
+    
+    .mobile-menu-toggle {
+      display: block;
+    }
+    
+    .mobile-menu.active {
+      display: block;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .top-bar {
+      display: none;
+    }
+    
+    .logo img {
+      max-width: 100px;
+    }
+  }
+</style>
+
+<script>
+  // Toggle dropdown on mobile
+  document.addEventListener('DOMContentLoaded', function() {
+    const hasDropdown = document.querySelectorAll('.mobile-menu .has-dropdown');
+    
+    hasDropdown.forEach(item => {
+      item.addEventListener('click', function(e) {
+        if (e.target.tagName === 'A' && e.target.parentElement.classList.contains('has-dropdown')) {
+          e.preventDefault();
+          this.querySelector('.dropdown').classList.toggle('active');
+        }
+      });
+    });
+  });
+</script> 
