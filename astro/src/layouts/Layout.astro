@@ -1,5 +1,6 @@
 ---
 // Layout component that wraps all pages
+import '../styles/global.css';
 export interface Props {
   title: string;
   description?: string;
@@ -60,59 +61,4 @@ const { title, description = "Sydney Chiropractor CBD - Clinic 27" } = Astro.pro
       });
     </script>
   </body>
-</html>
-
-<style is:global>
-  :root {
-    --primary-color: #202CA2;
-    --secondary-color: #E62E78;
-    --text-color: #333;
-    --light-bg: #f5f5f5;
-    --dark-bg: #1a1a1a;
-  }
-  
-  * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-  }
-  
-  body {
-    font-family: 'Poppins', sans-serif;
-    color: var(--text-color);
-    line-height: 1.6;
-  }
-  
-  img {
-    max-width: 100%;
-    height: auto;
-  }
-  
-  a {
-    color: var(--primary-color);
-    text-decoration: none;
-    transition: all 0.3s ease;
-  }
-  
-  a:hover {
-    color: var(--secondary-color);
-  }
-  
-  .sticky-menu {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 1000;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    animation: slideDown 0.3s ease-in-out;
-  }
-  
-  @keyframes slideDown {
-    from {
-      transform: translateY(-100%);
-    }
-    to {
-      transform: translateY(0);
-    }
-  }
-</style> 
+</html> 
