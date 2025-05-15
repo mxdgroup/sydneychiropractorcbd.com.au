@@ -646,7 +646,7 @@ body{
 
 
 .buttonimg {
-  background-image: url("/wp-content/uploads/2021/03/place-your-image@3x-min.png");
+  background-image: url("../2021/03/place-your-image@3x-min.png");
    background-size:cover;
   background-repeat: no-repeat
     background-position:center center;
@@ -661,7 +661,7 @@ body{
 .bimg{padding: 50% 50%;}
 
 .buttonimg2 {
-  background-image: url("/wp-content/uploads/2021/03/place-your-image@3x-min.png");
+  background-image: url("../2021/03/place-your-image@3x-min.png");
    background-size:cover;
   background-repeat: no-repeat
     background-position:center;
