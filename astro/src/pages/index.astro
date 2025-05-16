@@ -1,107 +1,18 @@
 ---
-// Import components
-import Layout from '../layouts/Layout.astro';
-import Header from '../components/Header.astro';
-import Hero from '../components/Hero.astro';
-import Services from '../components/Services.astro';
-import PostureSection from '../components/PostureSection.astro';
-import Workshops from '../components/Workshops.astro';
-import Team from '../components/Team.astro';
-import Testimonials from '../components/Testimonials.astro';
-import Blog from '../components/Blog.astro';
-import Footer from '../components/Footer.astro';
-
-// Page metadata
-const pageTitle = "Chiropractor Sydney CBD | Chiropractic Clinic Sydney";
-const pageDescription = "Clinic 27 is a chiropractic clinic with experienced chiropractors in Sydney CBD dedicated to the provision of chiropractic care.";
+import "../global.css";
+import Header from "../components/Header.astro";
 ---
 
-<Layout title={pageTitle} description={pageDescription}>
-  <Header />
-  
-  <main>
-    <Hero />
-    
-    <section class="services-section">
-      <div class="container">
-        <h2>Sydney Chiropractic Treatments</h2>
-        <p>
-          The team of Sydney CBD Chiropractors at Clinic 27 is dedicated to the provision of chiropractic care with a difference, 
-          helping business professionals achieve their health care goals and maintain a high level of performance.
-        </p>
-        <p>
-          Clinic 27 is one of only a handful of Australian clinics to promote Advanced Biostructural Correction (ABC™). 
-          This technique reverses the effects of the body's natural compensation for old injuries and physical trauma 
-          and provides a long-term solution to pain and discomfort. We treat all kinds of pain, from bruxism headaches, 
-          to ear pain, back pain, jaw discomfort, etc.
-        </p>
-        
-        <Services />
-      </div>
-    </section>
-    
-    <PostureSection />
-    
-    <Workshops />
-    
-    <section class="insurance-section">
-      <div class="container">
-        <h2>Health insurance accepted</h2>
-        <div class="insurance-logos">
-          <!-- Insurance logos carousel here -->
-        </div>
-      </div>
-    </section>
-    
-    <section class="treatments-section">
-      <div class="container">
-        <h2>Chiropractor Sydney CBD - Clinic 27</h2>
-        <p>
-          Our team of qualified and highly experienced chiropractors at Clinic 27 provide professional individualised care 
-          to clients who want to improve their health and experience total wellbeing.
-        </p>
-        <!-- Treatment details here -->
-      </div>
-    </section>
-    
-    <section class="core-score-section">
-      <div class="container">
-        <h2>Why forward posture affects your health & how to fix it</h2>
-        <p>
-          We are excited to announce that we now have access to some of the latest technology designed to objectively track 
-          your progress when it comes to overall nervous system function.
-        </p>
-        <!-- Core Score details here -->
-      </div>
-    </section>
-    
-    <section class="book-section">
-      <div class="container">
-        <h2>Straight Forward Book</h2>
-        <h3>Why forward posture affects your health & how to fix it</h3>
-        <a href="https://www.amazon.com/kindle/dp/B01LYSGA5Q/ref=rdr_kindle_ext_eos_detail#reader_B01LYSGA5Qebook1" class="btn">Buy It Now</a>
-      </div>
-    </section>
-    
-    <Team />
-    
-    <Testimonials />
-    
-    <Blog />
-    
-    <section class="chiropractor-near-me">
-      <div class="container">
-        <h2>Chiropractor Near Me in the Sydney CBD</h2>
-        <p>
-          Not every chiropractor can offer effective treatments that suit an individual patient's requirements. 
-          And not every chiropractor is situated near where you live or work (especially when you need a chiropractor in the Sydney CBD!). 
-          Fortunately, Clinic 27, with 30+ years' chiropractic experience behind them, are situated smack-bang in the middle of the Sydney CBD, 
-          just minutes from where you live or work!
-        </p>
-        <!-- More content here -->
-      </div>
-    </section>
-  </main>
-  
-  <Footer />
-</Layout>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<title>Astro</title>
+	</head>
+	<body>
+		<Header />
+		<h1 class="text-3xl font-bold underline">Astro</h1>
+	</body>
+</html>
