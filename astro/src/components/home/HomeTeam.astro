@@ -1,0 +1,155 @@
+---
+import UnderlinedHeader from "../UnderlinedHeader.astro";
+import PrimaryButton from "../PrimaryButton.astro";
+const doctors = [
+    {
+        name: "Dr. Hooman Zahedi",
+        image: "https://sydneychiropractorcbd.com.au/wp-content/uploads/2021/06/1-tm.png",
+        description: "Chiropractor"
+    },
+    {
+        name: "Dr. Angus Phelps",
+        image: "https://sydneychiropractorcbd.com.au/wp-content/uploads/2021/06/1-tm.png",
+        description: "Chiropractor"
+    },
+    {
+        name: "Dr. Rebecca Squire",
+        image: "https://sydneychiropractorcbd.com.au/wp-content/uploads/2021/06/1-tm.png",
+        description: "Chiropractor"
+    },
+    {
+        name: "Dr Rin Choi",
+        image: "https://sydneychiropractorcbd.com.au/wp-content/uploads/2021/06/1-tm.png",
+        description: "Chiropractor"
+    },
+]
+
+const assistant = [
+    {
+        name: "Roberto Vita",
+        image: "https://sydneychiropractorcbd.com.au/wp-content/uploads/2021/06/1-tm.png",
+        description: "Massage Therapist"
+    },
+    {
+        name: "Christine Clark",
+        image: "https://sydneychiropractorcbd.com.au/wp-content/uploads/2021/06/1-tm.png",
+        description: "Chiropractic Assistant"
+    },
+    {
+        name: "Emma Muir",
+        image: "https://sydneychiropractorcbd.com.au/wp-content/uploads/2021/06/1-tm.png",
+        description: "Chiropractic Assistant"
+    },
+]
+---
+<div class="w-full py-20">
+    <div class="w-1/2 mx-auto">
+        <div class="text-center mb-16">
+            <UnderlinedHeader>
+                Meet Your Sydney CBD Chiropractors
+            </UnderlinedHeader>
+        </div>
+
+        <!-- Doctors Grid - 4 columns -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+            {doctors.map((doctor) => (
+                <div class="flex flex-col items-center">
+                    <div class="w-52 h-52 mb-4 overflow-hidden rounded-full">
+                        <img src={doctor.image} alt={doctor.name} class="w-full h-full object-cover" />
+                    </div>
+                    <h3 class="text-xl font-semibold mb-1">{doctor.name}</h3>
+                    <p class="text-gray-600">{doctor.description}</p>
+                </div>
+            ))}
+        </div>
+
+        <!-- Assistants Grid - 3 columns -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {assistant.map((person) => (
+                <div class="flex flex-col items-center">
+                    <div class="w-72 h-72 mb-4 overflow-hidden rounded-full">
+                        <img src={person.image} alt={person.name} class="w-full h-full object-cover" />
+                    </div>
+                    <h3 class="text-xl font-semibold mb-1">{person.name}</h3>
+                    <p class="text-gray-600">{person.description}</p>
+                </div>
+            ))}
+        </div>
+        <div class="flex justify-center mt-10">
+            <PrimaryButton>Book Now</PrimaryButton>
+        </div>
+    </div>
+    
+    <!-- Doctor Carousel Section -->
+    <div class="mt-20 py-16" style="background-image: linear-gradient(rgba(0,0,0, 0.4), rgba(0,0,0, 0.4)), url('https://sydneychiropractorcbd.com.au/wp-content/uploads/2021/06/Personal-Plan-img.jpg'); background-size: cover; background-position: center;">
+        <div class="carousel relative">
+            <!-- Carousel slides -->
+            <div class="carousel-content">
+                {doctors.map((doctor, index) => (
+                    <div class="carousel-slide" id={`slide-${index}`} style={index === 0 ? "display: block;" : "display: none;"}>
+                        <div class="flex flex-col items-center px-8">
+                            <div class="w-52 h-52 mb-4 overflow-hidden rounded-full">
+                                <img src={doctor.image} alt={doctor.name} class="w-full h-full object-cover" />
+                            </div>
+                            <h3 class="text-xl font-semibold mb-1">{doctor.name}</h3>
+                            <p class="text-gray-600 mb-6">{doctor.description}</p>
+                            <PrimaryButton>Learn More</PrimaryButton>
+                        </div>
+                    </div>
+                ))}
+            </div>
+            
+            <!-- Carousel navigation dots -->
+            <div class="carousel-dots flex justify-center mt-8">
+                {doctors.map((_, index) => (
+                    <button 
+                        class="carousel-dot mx-2 w-3 h-3 rounded-full bg-gray-300 focus:outline-none" 
+                        data-slide={index}
+                        aria-label={`Go to slide ${index + 1}`}
+                        data-index={index}
+                        id={`dot-${index}`}
+                    ></button>
+                ))}
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    // Carousel functionality
+    document.addEventListener('DOMContentLoaded', () => {
+        const slides = document.querySelectorAll('.carousel-slide');
+        const dots = document.querySelectorAll('.carousel-dot');
+        
+        // Set first slide and dot as active
+        if (slides.length > 0) {
+            (slides[0] as HTMLElement).style.display = 'block';
+            dots[0].classList.add('bg-black');
+        }
+        
+        // Add click event to dots
+        dots.forEach((dot) => {
+            dot.addEventListener('click', (e) => {
+                const target = e.currentTarget as HTMLElement;
+                const index = parseInt(target.getAttribute('data-index') || '0', 10);
+                showSlide(index);
+            });
+        });
+        
+        // Function to show a specific slide
+        function showSlide(index: number) {
+            slides.forEach((slide) => {
+                (slide as HTMLElement).style.display = 'none';
+            });
+            
+            dots.forEach(dot => {
+                dot.classList.remove('bg-black');
+                dot.classList.add('bg-gray-300');
+            });
+            
+            (slides[index] as HTMLElement).style.display = 'block';
+            dots[index].classList.remove('bg-gray-300');
+            dots[index].classList.add('bg-black');
+        }
+    });
+</script>
