@@ -1,0 +1,73 @@
+---
+import HomeTreatmentCard from "./HomeTreatmentCard.astro";
+
+const treatments = [
+  {
+    title: "Back and Neck Pain",
+    description: [
+      "Back and neck pain is a common condition that can be caused by a variety of factors, including poor posture, injury, and age-related changes.",
+      "Our chiropractors can help you manage your back and neck pain through a range of treatments, including manual therapy, massage, and exercise."
+    ],
+    image: "https://sydneychiropractorcbd.com.au/wp-content/uploads/2021/12/backpain.png"
+  },
+  {
+    title: "Headaches and Migraines",
+    description: [
+      "Headaches and migraines can be debilitating and affect your quality of life. They can be caused by tension, stress, or underlying health conditions.",
+      "Our team specializes in identifying the root cause of your headaches and providing effective treatment to reduce their frequency and intensity."
+    ],
+    image: "https://sydneychiropractorcbd.com.au/wp-content/uploads/2021/12/backpain.png"
+  },
+  {
+    title: "Posture Correction",
+    description: [
+      "Poor posture can lead to a range of health issues, including back pain, neck pain, and headaches.",
+      "Our chiropractors can help you improve your posture through targeted exercises and adjustments, helping you stand taller and feel better."
+    ],
+    image: "https://sydneychiropractorcbd.com.au/wp-content/uploads/2021/12/backpain.png"
+  },
+  {
+    title: "Sciatica Treatment",
+    description: [
+      "Sciatica is characterized by pain that radiates along the path of the sciatic nerve, which branches from your lower back through your hips and down each leg.",
+      "Our treatments focus on relieving pressure on the sciatic nerve and reducing inflammation to alleviate your pain and discomfort."
+    ],
+    image: "https://sydneychiropractorcbd.com.au/wp-content/uploads/2021/12/backpain.png"
+  }
+];
+---
+<div class="w-full py-10" style="background-color: #e4e6f2;">
+    <div class="w-1/2 mx-auto">
+        <h1 class="text-4xl font-bold text-white text-center mb-4" style="color:#333b55">Chiropractor Sydney CBD - Clinic 27</h1>
+        <p class="text-md text-center">
+            Our team of qualified and highly experienced chiropractors at Clinic 27 provide professional individualised care to clients who want to improve their health and experience total wellbeing.
+        </p>
+        <br/>
+        <p class="text-md text-center">
+            Clinic 27 is only one of the few Australian chiropractic clinics that use the Advanced Biostructural Correction™ (ABC™) technique designed to reverse the ill effects of how the body naturally compensates for physical trauma and old injuries, resolving pain and discomfort efficiently.
+        </p>
+        <br/>
+        <p class="text-md text-center mb-20">
+            So if you are afflicted with problems involving back and neck pain, carpal tunnel syndrome, poor posture, tightness in jaw, vertigo, sciatica, pain in jaw and temples, scoliosis, ear pain, pregnancy pain or pain in the endocranial area, we can assess your condition. We will then recommend and implement the appropriate mode of treatment so you can go back to living a pain-free, healthy life.
+        </p>
+        
+        {treatments.map((treatment, index) => (
+            <HomeTreatmentCard 
+                title={treatment.title} 
+                description={treatment.description} 
+                image={treatment.image} 
+                index={index}
+            />
+        ))}
+        <h1 class="text-4xl font-bold text-white text-center mt-4" style="color:#333b55">Book Your Treatment At Clinic 27 In Sydney’s CBD Today!</h1>
+        <p class="text-md text-center">
+            Whatever type of pain you may be experiencing right now, know that it’s not something
+you need to live with every day.
+        </p>
+        <p class="text-md text-center">
+            You may schedule an appointment with Clinic 27 by using our online booking form.
+            Alternatively, you can call us on 02 9972 0040 or 02 8059 7743.
+        </p>
+
+    </div>
+</div>
