@@ -1,18 +1,10 @@
 ---
-import "../global.css";
-import Header from "../components/Header.astro";
+import Layout from "../layouts/Layout.astro";
+import HomeWorkshop from "../components/home/HomeWorkshop.astro";
+import HomeTreatments from "../components/home/HomeTreatments.astro";
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<Header />
-		<h1 class="text-3xl font-bold underline">Astro</h1>
-	</body>
-</html>
+<Layout title="Sydney Chiropractor CBD">
+  <HomeWorkshop />
+  <HomeTreatments />
+</Layout>
