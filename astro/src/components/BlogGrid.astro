@@ -1,9 +1,19 @@
 ---
-import UnderlinedHeader from "../UnderlinedHeader.astro";
-import BlogGrid from "../BlogGrid.astro";
+import BlogCard from "./home/BlogCard.astro";
 
-// Sample blog data
-const blogs = [
+type Blog = {
+  imageUrl: string;
+  date: string;
+  title: string;
+  excerpt: string;
+};
+
+type Props = {
+  blogs?: Blog[];
+};
+
+// Default blog data if none provided
+const defaultBlogs: Blog[] = [
   {
     imageUrl: "https://sydneychiropractorcbd.com.au/wp-content/uploads/2024/12/The-Main-Reasons-for-Lower-Back-Pain-1024x1024.jpg",
     date: "December 30, 2024",
@@ -53,27 +63,17 @@ const blogs = [
     excerpt: "What you eat plays a crucial role in maintaining healthy joints and reducing inflammation. Discover the best foods for joint health..."
   }
 ];
+
+const { blogs = defaultBlogs } = Astro.props;
 ---
-<div class="w-full py-20 bg-gray-50">
-    <div class="container mx-auto px-4">
-        <UnderlinedHeader>Chiropractic Credentials And Accreditations</UnderlinedHeader>
-        <div class="mx-auto flex flex-row justify-center items-center w-full md:w-3/4 gap-10 mb-16">
-            <h1 class="w-1/4">
-              Test
-            </h1>
-            <h1 class="w-1/4">
-              Test
-            </h1>
-            <h1 class="w-1/4">
-              Test
-            </h1>
-            <h1 class="w-1/4">
-              Test
-            </h1>
-        </div>
-        
-        <UnderlinedHeader>Latest Blogs</UnderlinedHeader>
-        
-        <BlogGrid blogs={blogs} />
-    </div>
-</div>
+
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-10">
+    {blogs.map(blog => (
+        <BlogCard 
+            imageUrl={blog.imageUrl}
+            date={blog.date}
+            title={blog.title}
+            excerpt={blog.excerpt}
+        />
+    ))}
+</div> 
