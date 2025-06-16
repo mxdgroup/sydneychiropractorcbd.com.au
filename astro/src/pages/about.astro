@@ -1,145 +1,21 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import HeaderImage from "../components/HeaderImage.astro";
+import UnderlinedHeader from "../components/UnderlinedHeader.astro";
+import Paragraphs from "../components/Paragraphs.astro";
+import AboutTeamSection from "../components/AboutTeamSection.astro";
+import contactBg from "../../public/Contact-us.webp";
 ---
-
 <Layout title="About Us | Sydney Chiropractor CBD">
-  <div class="container about-page">
-    <h1>About Sydney Chiropractor CBD</h1>
-    
-    <section class="about-intro">
-      <div class="about-content">
-        <h2>Our Practice</h2>
-        <p>
-          Founded in 2010, Sydney Chiropractor CBD has been providing exceptional chiropractic care to the Sydney community for over a decade. Our clinic combines traditional chiropractic techniques with modern approaches to deliver personalized treatment plans for each patient.
-        </p>
-        <p>
-          We believe in a holistic approach to health, addressing not just the symptoms but the root causes of pain and discomfort. Our mission is to help our patients achieve optimal health and wellness through natural, non-invasive treatments.
-        </p>
-      </div>
-      <div class="about-image">
-        <img src="/images/clinic.jpg" alt="Sydney Chiropractor CBD Clinic" />
-      </div>
-    </section>
-    
-    <section class="our-team">
-      <h2>Meet Our Team</h2>
-      <div class="team-grid">
-        <div class="team-member">
-          <img src="/images/dr-smith.jpg" alt="Dr. John Smith" />
-          <h3>Dr. John Smith</h3>
-          <p class="title">Lead Chiropractor</p>
-          <p>With over 15 years of experience, Dr. Smith specializes in sports injuries and spinal rehabilitation.</p>
-        </div>
-        <div class="team-member">
-          <img src="/images/dr-johnson.jpg" alt="Dr. Emily Johnson" />
-          <h3>Dr. Emily Johnson</h3>
-          <p class="title">Chiropractor</p>
-          <p>Dr. Johnson focuses on posture correction and preventative care for office workers.</p>
-        </div>
-        <div class="team-member">
-          <img src="/images/sarah.jpg" alt="Sarah Williams" />
-          <h3>Sarah Williams</h3>
-          <p class="title">Practice Manager</p>
-          <p>Sarah ensures our clinic runs smoothly and all patients receive the best possible care.</p>
-        </div>
-      </div>
-    </section>
-    
-    <section class="our-approach">
-      <h2>Our Approach to Chiropractic Care</h2>
-      <div class="approach-content">
-        <p>
-          At Sydney Chiropractor CBD, we follow a patient-centered approach that focuses on your unique needs. Our process includes:
-        </p>
-        <ol>
-          <li><strong>Comprehensive Assessment:</strong> We begin with a thorough examination to understand your condition.</li>
-          <li><strong>Personalized Treatment Plan:</strong> Based on your assessment, we develop a customized treatment strategy.</li>
-          <li><strong>Hands-on Care:</strong> Our skilled chiropractors use precise adjustments to address your specific issues.</li>
-          <li><strong>Education and Prevention:</strong> We provide guidance on exercises and lifestyle changes to prevent future problems.</li>
-        </ol>
-      </div>
-    </section>
-  </div>
+    <HeaderImage backgroundImage={contactBg.src} headerText="About Us" buttonText="Book an Appointment" />
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <UnderlinedHeader>ABOUT CLINIC 27 CHIROPRACTORS SYDNEY CBD</UnderlinedHeader>
+        <div class="mt-10"></div>
+        <Paragraphs paragraphs={
+        ["Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+        ]} />
+    </div>
+    <AboutTeamSection />
 </Layout>
-
-<style>
-  .about-page {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 2rem;
-  }
-  
-  h1 {
-    text-align: center;
-    margin-bottom: 2rem;
-  }
-  
-  .about-intro {
-    display: grid;
-    grid-template-columns: 3fr 2fr;
-    gap: 2rem;
-    margin: 3rem 0;
-  }
-  
-  .about-image img {
-    width: 100%;
-    border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  }
-  
-  .team-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 2rem;
-    margin-top: 2rem;
-  }
-  
-  .team-member {
-    text-align: center;
-    padding: 1.5rem;
-    border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  }
-  
-  .team-member img {
-    width: 180px;
-    height: 180px;
-    border-radius: 50%;
-    object-fit: cover;
-    margin-bottom: 1rem;
-  }
-  
-  .team-member .title {
-    color: #666;
-    font-style: italic;
-    margin-bottom: 1rem;
-  }
-  
-  .our-approach {
-    margin: 4rem 0;
-  }
-  
-  .approach-content ol {
-    margin-left: 1.5rem;
-    margin-top: 1.5rem;
-  }
-  
-  .approach-content li {
-    margin-bottom: 1rem;
-  }
-  
-  section h2 {
-    margin-bottom: 1.5rem;
-    color: #333;
-  }
-  
-  @media (max-width: 768px) {
-    .about-intro {
-      grid-template-columns: 1fr;
-    }
-    
-    .about-image {
-      order: -1;
-    }
-  }
-</style> 

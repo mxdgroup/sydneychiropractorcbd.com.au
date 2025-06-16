@@ -1,0 +1,24 @@
+---
+export interface Props {
+  paragraphs: string[];
+}
+
+const { paragraphs } = Astro.props;
+---
+
+<div class="paragraphs-container">
+  {paragraphs.map((paragraph) => (
+    <p class="paragraph">{paragraph}</p>
+  ))}
+</div>
+
+<style>
+  .paragraph {
+    margin-bottom: 1rem;
+    text-align: left;
+  }
+  
+  .paragraph:last-child {
+    margin-bottom: 0;
+  }
+</style>
