@@ -1,0 +1,47 @@
+---
+import overlay from "../../public/bg-overlay.webp";
+import PrimaryButton from "./PrimaryButton.astro";
+export interface Props {
+  backgroundImage: string;
+  headerText: string;
+  buttonText: string;
+}
+
+const { backgroundImage, headerText, buttonText } = Astro.props;
+---
+
+<section class="relative w-full h-screen max-h-[800px] flex items-center justify-center overflow-hidden">
+  <!-- Background Image -->
+  <div 
+    class="absolute inset-0 bg-cover bg-center bg-no-repeat z-0"
+    style={`background-image: url('${backgroundImage}')`}
+  >
+  </div>
+  
+  <!-- Dark overlay for background image only -->
+  <div class="absolute inset-0 bg-black/50 z-10"></div>
+  
+  <!-- Background Overlay Image (positioned at bottom) -->
+  <div class="absolute inset-0 z-20">
+    <img 
+      src={overlay.src} 
+      alt="" 
+      class="absolute bottom-0 left-0 w-full h-auto object-cover"
+      loading="lazy"
+    />
+  </div>
+  
+  
+  <!-- Content Container -->
+  <div class="relative z-30 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+    <!-- Header Text -->
+    <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-8 leading-tight">
+      {headerText}
+    </h1>
+    
+    <!-- Call-to-Action Button -->
+    <PrimaryButton text={buttonText} />
+
+
+  </div>
+</section>

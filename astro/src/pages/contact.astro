@@ -1,82 +1,88 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import contactBg from "../../public/Contact-us.webp";
+import HeaderImage from "../components/HeaderImage.astro";
+import UnderlinedHeader from "../components/UnderlinedHeader.astro";
+import TextInput from "../components/TextInput.astro";
+import TextArea from "../components/TextArea.astro";
+import overlay from "../../public/bg-overlay.webp";
+import PrimaryButton from "../components/PrimaryButton.astro";
 ---
 
 <Layout title="Contact Us | Sydney Chiropractor CBD">
-  <div class="container contact-page">
-    <h1>Contact Us</h1>
-    
-    <div class="contact-wrapper">
-      <div class="contact-info">
-        <h2>Visit Our Clinic</h2>
-        <address>
-          <p><strong>Address:</strong><br>
-          123 George Street<br>
-          Sydney CBD, NSW 2000<br>
-          Australia</p>
+  <HeaderImage backgroundImage={contactBg.src} headerText="Contact Us" buttonText="Book an Appointment" />
+  <!-- Two Column Grid Layout -->
+  <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-16">
+    <UnderlinedHeader>Contact Us</UnderlinedHeader>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-20">
+      
+      <!-- Left Column - Form (60% width) -->
+      <div class="md:w-full md:col-span-1 md:pr-4">
+        <form id="contactForm" class="space-y-6">
+          <!-- First Name and Email Row -->
+          <div class="flex flex-col md:flex-row md:space-x-4 space-y-6 md:space-y-0">
+            <div class="flex-1">
+              <TextInput 
+                label="First Name*" 
+                placeholder="First Name" 
+                id="firstName" 
+                name="firstName" 
+                required={true}
+              />
+            </div>
+            <div class="flex-1">
+              <TextInput 
+                label="Email*" 
+                placeholder="Email" 
+                id="email" 
+                name="email" 
+                type="email"
+                required={true}
+              />
+            </div>
+          </div>
           
-          <p><strong>Phone:</strong><br>
-          (02) 9123 4567</p>
+          <!-- Message TextArea -->
+          <TextArea 
+            label="Message" 
+            placeholder="Your Message" 
+            id="message" 
+            name="message" 
+            rows={6}
+          />
           
-          <p><strong>Email:</strong><br>
-          info@sydneychiropractorcbd.com.au</p>
-        </address>
-        
-        <div class="hours">
-          <h3>Opening Hours</h3>
-          <ul>
-            <li><span>Monday - Friday:</span> 8:00 AM - 6:00 PM</li>
-            <li><span>Saturday:</span> 9:00 AM - 2:00 PM</li>
-            <li><span>Sunday:</span> Closed</li>
-          </ul>
+          <!-- Submit Button -->
+           <PrimaryButton text="Send Message" />
+        </form>
+      </div>
+      
+      <!-- Right Column - Background Image with Overlay -->
+      <div class="relative h-96 md:h-full min-h-[400px]">
+        <div 
+          class="bg-cover bg-center h-full rounded-lg overflow-hidden relative"
+          style={`background-image: url(${contactBg.src})`}
+        >
+          <!-- Dark overlay for background -->
+          <div class="absolute inset-0 bg-black/40"></div>
+          
+          <!-- Overlay image at bottom -->
+          <img 
+            src={overlay.src} 
+            alt="" 
+            class="absolute inset-x-0 bottom-0 w-full h-auto object-cover"
+          />
+          
+          <!-- Centered button -->
+          <div class="absolute inset-0 flex items-center justify-center z-10">
+            <button class="bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-md px-6 py-3 shadow-lg transition-colors duration-200 transform hover:scale-105">
+              Book an Appointment
+            </button>
+          </div>
         </div>
       </div>
       
-      <div class="contact-form-container">
-        <h2>Send Us a Message</h2>
-        <form class="contact-form" id="contactForm">
-          <div class="form-group">
-            <label for="name">Full Name</label>
-            <input type="text" id="name" name="name" required>
-          </div>
-          
-          <div class="form-group">
-            <label for="email">Email</label>
-            <input type="email" id="email" name="email" required>
-          </div>
-          
-          <div class="form-group">
-            <label for="phone">Phone</label>
-            <input type="tel" id="phone" name="phone">
-          </div>
-          
-          <div class="form-group">
-            <label for="subject">Subject</label>
-            <select id="subject" name="subject">
-              <option value="appointment">Book an Appointment</option>
-              <option value="question">General Question</option>
-              <option value="feedback">Feedback</option>
-            </select>
-          </div>
-          
-          <div class="form-group">
-            <label for="message">Message</label>
-            <textarea id="message" name="message" rows="5" required></textarea>
-          </div>
-          
-          <button type="submit" class="btn btn-primary">Send Message</button>
-        </form>
-      </div>
     </div>
-    
-    <div class="map-container">
-      <h2>Find Us</h2>
-      <div class="map">
-        <!-- Replace with an actual map embed code -->
-        <img src="/images/map-placeholder.jpg" alt="Map location of Sydney Chiropractor CBD" />
-      </div>
-    </div>
-  </div>
+  </div>  
 </Layout>
 
 <style>
