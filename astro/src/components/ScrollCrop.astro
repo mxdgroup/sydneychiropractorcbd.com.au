@@ -1,0 +1,206 @@
+---
+export interface Props {
+  src: string;
+  height?: string | number;
+  alt?: string;
+  class?: string;
+}
+
+const { src, height = "600px", alt = "", class: className = "" } = Astro.props;
+
+// Normalize height to include units if it's a number
+const normalizedHeight = typeof height === 'number' ? `${height}px` : height;
+
+// Generate unique ID for this instance
+const componentId = `scrollcrop-${Math.random().toString(36).substr(2, 9)}`;
+---
+
+<div 
+  class={`scrollcrop ${className}`}
+  id={componentId}
+  data-src={src}
+  style={`height: ${normalizedHeight}`}
+>
+  <!-- Hidden image for accessibility and SEO -->
+  <img src={src} alt={alt} style="position: absolute; left: -9999px; width: 1px; height: 1px;" />
+</div>
+
+<style>
+  .scrollcrop {
+    position: relative;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-attachment: local;
+    will-change: background-position;
+  }
+
+  /* CSS Scroll-driven animations (modern browsers) */
+  @supports (animation-timeline: view()) {
+    .scrollcrop {
+      view-timeline-name: --pan;
+      animation: scroll-crop linear;
+      animation-timeline: --pan;
+      animation-range: entry 0% exit 100%;
+      animation-fill-mode: both;
+    }
+  }
+
+  /* Alternative syntax for broader support */
+  @supports (view-timeline-name: --test) {
+    .scrollcrop {
+      view-timeline-name: --pan;
+      animation: scroll-crop linear;
+      animation-timeline: --pan;
+      animation-range: entry 0% exit 100%;
+    }
+  }
+
+  @keyframes scroll-crop {
+    0% {
+      background-position-y: 0%;
+    }
+    100% {
+      background-position-y: 100%;
+    }
+  }
+
+  /* Reduced motion support */
+  @media (prefers-reduced-motion: reduce) {
+    .scrollcrop {
+      animation: none !important;
+      background-position: center center !important;
+    }
+  }
+</style>
+
+<script>
+  // Enhanced scroll crop implementation
+  (function() {
+    // Feature detection for view-timeline
+    const supportsViewTimeline = CSS.supports('animation-timeline', 'view()');
+    
+    let ticking = false;
+    const scrollCropElements = new Map();
+    let lastScrollY = window.scrollY;
+
+    function initializeLazyLoading() {
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          const element = entry.target as HTMLElement;
+          const src = element.dataset.src;
+          
+          if (entry.isIntersecting && src && !element.style.backgroundImage) {
+            element.style.backgroundImage = `url("${src}")`;
+            
+            if (!supportsViewTimeline) {
+              // Add to tracking for JavaScript fallback
+              scrollCropElements.set(element, {
+                element,
+                lastProgress: -1 // Track last progress to avoid unnecessary updates
+              });
+            }
+          } else if (!entry.isIntersecting && scrollCropElements.has(element)) {
+            // Remove from tracking when out of view
+            scrollCropElements.delete(element);
+          }
+        });
+      }, {
+        rootMargin: '50px 0px' // Start loading slightly before visible
+      });
+
+      document.querySelectorAll('.scrollcrop').forEach(el => {
+        observer.observe(el);
+      });
+    }
+
+    function calculateScrollProgress(element: HTMLElement) {
+      const rect = element.getBoundingClientRect();
+      const viewportHeight = window.innerHeight;
+      const elementHeight = rect.height;
+      
+      // More precise calculation for smooth scrolling
+      const elementTop = rect.top;
+      const elementBottom = rect.bottom;
+      
+      // When element top enters viewport from bottom: start at 0%
+      // When element bottom exits viewport from top: end at 100%
+      const entryPoint = viewportHeight; // Element starts affecting when bottom enters
+      const exitPoint = -elementHeight; // Element stops affecting when top exits
+      
+      const totalScrollDistance = entryPoint - exitPoint; // Total distance for full transition
+      const currentPosition = elementTop - exitPoint; // Current position in transition
+      
+      let progress = 1 - (currentPosition / totalScrollDistance);
+      
+      // Smooth easing and clamping
+      progress = Math.max(0, Math.min(1, progress));
+      
+      return progress;
+    }
+
+    function updateScrollCrop() {
+      const currentScrollY = window.scrollY;
+      const scrollDelta = Math.abs(currentScrollY - lastScrollY);
+      
+      // Only update if there's meaningful scroll movement
+      if (scrollDelta < 0.5 && scrollCropElements.size > 0) {
+        ticking = false;
+        return;
+      }
+      
+      lastScrollY = currentScrollY;
+      
+      scrollCropElements.forEach((data, element: HTMLElement) => {
+        const progress = calculateScrollProgress(element);
+        
+        // Only update if progress changed significantly (reduce repaints)
+        if (Math.abs(progress - data.lastProgress) > 0.001) {
+          const smoothProgress = progress;
+          element.style.backgroundPositionY = `${smoothProgress * 100}%`;
+          data.lastProgress = progress;
+        }
+      });
+      
+      ticking = false;
+    }
+
+    function onScroll() {
+      if (!ticking) {
+        requestAnimationFrame(updateScrollCrop);
+        ticking = true;
+      }
+    }
+
+    function onResize() {
+      // Recalculate on window resize
+      if (!ticking) {
+        requestAnimationFrame(updateScrollCrop);
+        ticking = true;
+      }
+    }
+
+    // Initialize lazy loading for all browsers
+    initializeLazyLoading();
+    
+    // Only add JavaScript fallback listeners if view-timeline is not supported
+    if (!supportsViewTimeline) {
+      window.addEventListener('scroll', onScroll, { passive: true });
+      window.addEventListener('resize', onResize, { passive: true });
+      
+      // Initial update
+      setTimeout(updateScrollCrop, 100);
+    }
+
+    // Handle dynamic content
+    const mutationObserver = new MutationObserver(() => {
+      initializeLazyLoading();
+    });
+    
+    mutationObserver.observe(document.body, {
+      childList: true,
+      subtree: true
+    });
+  })();
+</script> 
