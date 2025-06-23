@@ -1,6 +1,7 @@
 ---
 import UnderlinedHeader from "../UnderlinedHeader.astro";
 import PrimaryButton from "../PrimaryButton.astro";
+import ScrollCrop from "../ScrollCrop.astro";
 const doctors = [
     {
         name: "Dr. Hooman Zahedi",
@@ -57,7 +58,7 @@ const assistant = [
                     <div class="w-52 h-52 mb-4 overflow-hidden rounded-full">
                         <img src={doctor.image} alt={doctor.name} class="w-full h-full object-cover" />
                     </div>
-                    <h3 class="text-xl font-semibold mb-1">{doctor.name}</h3>
+                    <h3 class="text-xl font-semibold mb-1 text-custom-purple">{doctor.name}</h3>
                     <p class="text-gray-600">{doctor.description}</p>
                 </div>
             ))}
@@ -70,7 +71,7 @@ const assistant = [
                     <div class="w-72 h-72 mb-4 overflow-hidden rounded-full">
                         <img src={person.image} alt={person.name} class="w-full h-full object-cover" />
                     </div>
-                    <h3 class="text-xl font-semibold mb-1">{person.name}</h3>
+                    <h3 class="text-xl font-semibold mb-1 text-custom-purple">{person.name}</h3>
                     <p class="text-gray-600">{person.description}</p>
                 </div>
             ))}
@@ -81,8 +82,20 @@ const assistant = [
     </div>
     
     <!-- Doctor Carousel Section -->
-    <div class="mt-20 py-16" style="background-image: linear-gradient(rgba(0,0,0, 0.4), rgba(0,0,0, 0.4)), url('https://sydneychiropractorcbd.com.au/wp-content/uploads/2021/06/Personal-Plan-img.jpg'); background-size: cover; background-position: center;">
-        <div class="carousel relative">
+    <div class="mt-20 relative overflow-hidden">
+        <!-- Background layer: ScrollCrop -->
+        <ScrollCrop 
+            src="https://sydneychiropractorcbd.com.au/wp-content/uploads/2021/06/Personal-Plan-img.jpg"
+            height="auto"
+            class="absolute top-0 left-0 w-full h-full"
+        />
+        
+        <!-- Overlay layer: Dark semi-transparent overlay -->
+        <div class="absolute top-0 left-0 w-full h-full bg-black/40"></div>
+        
+        <!-- Content layer: Carousel -->
+        <div class="relative z-10 py-16">
+            <div class="carousel relative">
             <!-- Carousel slides -->
             <div class="carousel-content">
                 {doctors.map((doctor, index) => (
@@ -91,9 +104,9 @@ const assistant = [
                             <div class="w-52 h-52 mb-4 overflow-hidden rounded-full">
                                 <img src={doctor.image} alt={doctor.name} class="w-full h-full object-cover" />
                             </div>
-                            <h3 class="text-xl font-semibold mb-1">{doctor.name}</h3>
-                            <p class="text-gray-600 mb-6">{doctor.description}</p>
-                            <PrimaryButton>Learn More</PrimaryButton>
+                            <h3 class="text-xl font-semibold mb-1 text-white">{doctor.name}</h3>
+                            <p class="text-white mb-6" style="text-transform: uppercase;">{doctor.description}</p>
+                            <PrimaryButton variant="primary">Learn More</PrimaryButton>
                         </div>
                     </div>
                 ))}
@@ -113,6 +126,7 @@ const assistant = [
             </div>
         </div>
     </div>
+</div>
 </div>
 
 <script>

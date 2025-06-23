@@ -10,10 +10,11 @@ import contactBg from "../../public/Contact-us.webp";
 import BlogGrid from "../components/BlogGrid.astro";
 ---
 <Layout title="Blog Overview | Sydney Chiropractor CBD">
-    <HeaderImage backgroundImage={contactBg.src} headerText="Blog Overview" buttonText="Book an Appointment" />
+  <HeaderImage backgroundImage={contactBg.src} headerText="SYDNEY CBD CHIROPRACTORS" buttonText="Book an Appointment" />
+
     <!-- Two Column Grid Layout -->
     <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-16">
-      <UnderlinedHeader>Our Blogs</UnderlinedHeader>
+      <UnderlinedHeader left={true}>OUR BLOGS</UnderlinedHeader>
       <BlogGrid />
     </div>
 </Layout>

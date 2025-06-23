@@ -7,7 +7,7 @@ const reverse = index !== undefined ? index % 2 === 0 : false;
         <img src={image} alt={title} class="w-full h-full object-cover" />
     </div>
     <div class={`w-full flex flex-col justify-center p-8 ${reverse ? 'order-1 pr-10' : 'order-2 pl-10'}`}>
-        <h2 class="text-3xl font-bold mb-4">{title}</h2>
+        <h2 class="text-3xl font-bold mb-4 text-custom-purple">{title}</h2>
         <div class="space-y-3">
             {Array.isArray(description) ? 
                 description.map(paragraph => (
