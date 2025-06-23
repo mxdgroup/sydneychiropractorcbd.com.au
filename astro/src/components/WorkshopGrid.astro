@@ -1,0 +1,59 @@
+---
+import WorkshopCard from "./workshop/WorkshopCard.astro";
+
+type Workshop = {
+  imageUrl: string;
+  title: string;
+  timeFrom: string;
+};
+
+type Props = {
+  workshops?: Workshop[];
+};
+
+// Default workshop data if none provided
+const defaultWorkshops: Workshop[] = [
+  {
+    imageUrl: "https://sydneychiropractorcbd.com.au/wp-content/uploads/2024/12/The-Main-Reasons-for-Lower-Back-Pain-1024x1024.jpg",
+    title: "January 15, 2025",
+    timeFrom: "1:30 p.m. Book Now"
+  },
+  {
+    imageUrl: "https://sydneychiropractorcbd.com.au/wp-content/uploads/2024/12/The-Main-Reasons-for-Lower-Back-Pain-1024x1024.jpg",
+    title: "January 22, 2025",
+    timeFrom: "2:00 p.m. Book Now"
+  },
+  {
+    imageUrl: "https://sydneychiropractorcbd.com.au/wp-content/uploads/2024/12/The-Main-Reasons-for-Lower-Back-Pain-1024x1024.jpg",
+    title: "January 29, 2025",
+    timeFrom: "10:00 a.m. Book Now"
+  },
+  {
+    imageUrl: "https://sydneychiropractorcbd.com.au/wp-content/uploads/2024/12/The-Main-Reasons-for-Lower-Back-Pain-1024x1024.jpg",
+    title: "February 5, 2025",
+    timeFrom: "3:30 p.m. Book Now"
+  },
+  {
+    imageUrl: "https://sydneychiropractorcbd.com.au/wp-content/uploads/2024/12/The-Main-Reasons-for-Lower-Back-Pain-1024x1024.jpg",
+    title: "February 12, 2025",
+    timeFrom: "1:00 p.m. Book Now"
+  },
+  {
+    imageUrl: "https://sydneychiropractorcbd.com.au/wp-content/uploads/2024/12/The-Main-Reasons-for-Lower-Back-Pain-1024x1024.jpg",
+    title: "February 19, 2025",
+    timeFrom: "11:30 a.m. Book Now"
+  }
+];
+
+const { workshops = defaultWorkshops } = Astro.props;
+---
+
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-10">
+    {workshops.map(workshop => (
+        <WorkshopCard 
+            imageUrl={workshop.imageUrl}
+            title={workshop.title}
+            timeFrom={workshop.timeFrom}
+        />
+    ))}
+</div> 

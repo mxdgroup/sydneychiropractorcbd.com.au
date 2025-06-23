@@ -1,20 +1,51 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import Image from "astro/components/Image.astro";
 import videos from "../../public/videos.webp";
 ---
 <Layout title="Sydney Chiropractor CBD Videos">
-    <section 
-        class="h-screen bg-cover bg-center flex flex-col justify-center items-center"
-        style={`background-image: url(${videos.src})`}
-    >
-    <div class="container mx-auto">
-        <div class="bg-black w-1/2 mx-auto" style="height: 400px;">
-            a
+    <div class="relative min-h-screen w-full">
+        <!-- Background Image -->
+        <Image 
+            src={videos} 
+            alt="Videos" 
+            class="absolute inset-0 w-full h-full object-cover"
+            style="z-index: 1;" 
+        />
+        
+        <!-- Content Container -->
+        <div class="relative flex flex-col items-center justify-center min-h-screen p-8" style="z-index: 2;">
+            <!-- Large Rectangle -->
+            <div class="bg-white/90 backdrop-blur-sm rounded-lg shadow-xl p-12 max-w-4xl w-full mb-8">
+                <h1 class="text-4xl font-bold text-center text-gray-800 mb-6">
+                    Educational Videos
+                </h1>
+                <p class="text-lg text-center text-gray-600 mb-8">
+                    Watch our comprehensive collection of chiropractic care videos to learn more about 
+                    treatments, exercises, and wellness tips from our experienced professionals.
+                </p>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="bg-gray-50 p-6 rounded-lg">
+                        <h3 class="text-xl font-semibold mb-3">Treatment Videos</h3>
+                        <p class="text-gray-600">Learn about our various treatment methods and techniques.</p>
+                    </div>
+                    <div class="bg-gray-50 p-6 rounded-lg">
+                        <h3 class="text-xl font-semibold mb-3">Exercise Guides</h3>
+                        <p class="text-gray-600">Follow along with our therapeutic exercise demonstrations.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Text Below Rectangle -->
+            <div class="text-center text-white">
+                <h2 class="text-2xl font-semibold mb-4">
+                    Professional Chiropractic Care in Sydney CBD
+                </h2>
+                <p class="text-lg max-w-2xl mx-auto">
+                    Our video library provides valuable insights into chiropractic care, 
+                    helping you understand treatments and maintain your spinal health.
+                </p>
+            </div>
         </div>
-        <p class="text-white text-xl mt-4">
-            Learn more about our practice through our videos.
-        </p>
     </div>
-
-    </section>
 </Layout>
