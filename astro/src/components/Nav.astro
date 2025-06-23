@@ -1,18 +1,20 @@
 ---
 import "../global.css";
 import { Search } from "lucide-static";
+
+const currentPath = Astro.url.pathname;
 ---
 
-<nav class="flex justify-between items-center mx-auto py-4" style="width:85%">
-    <div class="flex items-center gap-4">
-        <a class="text-lg font-bold" href="/">Home</a>
-        <a class="text-lg font-bold" href="/treatments">Treatments</a>
-        <a class="text-lg font-bold" href="/massage">Massage</a>
-        <a class="text-lg font-bold" href="/workshops">Workshops</a>
-        <a class="text-lg font-bold" href="/videos">Videos</a>
-        <a class="text-lg font-bold" href="/about">About</a>
-        <a class="text-lg font-bold" href="/blog-overview">Blog</a>
-        <a class="text-lg font-bold" href="/contact">Contact</a>
+<nav class="flex justify-between items-center mx-auto py-8" style="width:85%">
+    <div class="flex items-center gap-x-6">
+        <a class={`text-lg font-bold ${currentPath === '/' ? 'text-custom-purple' : 'text-custom-pink'} hover:text-custom-purple transition-colors duration-300`} href="/">HOME</a>
+        <a class={`text-lg font-bold ${currentPath === '/treatments' ? 'text-custom-purple' : 'text-custom-pink'} hover:text-custom-purple transition-colors duration-300`} href="/treatments">TREATMENTS</a>
+        <a class={`text-lg font-bold ${currentPath === '/massage' ? 'text-custom-purple' : 'text-custom-pink'} hover:text-custom-purple transition-colors duration-300`} href="/massage">MASSAGE</a>
+        <a class={`text-lg font-bold ${currentPath === '/workshops' ? 'text-custom-purple' : 'text-custom-pink'} hover:text-custom-purple transition-colors duration-300`} href="/workshops">WORKSHOPS</a>
+        <a class={`text-lg font-bold ${currentPath === '/videos' ? 'text-custom-purple' : 'text-custom-pink'} hover:text-custom-purple transition-colors duration-300`} href="/videos">VIDEOS</a>
+        <a class={`text-lg font-bold ${currentPath === '/about' ? 'text-custom-purple' : 'text-custom-pink'} hover:text-custom-purple transition-colors duration-300`} href="/about">ABOUT</a>
+        <a class={`text-lg font-bold ${currentPath === '/blog-overview' ? 'text-custom-purple' : 'text-custom-pink'} hover:text-custom-purple transition-colors duration-300`} href="/blog-overview">BLOG</a>
+        <a class={`text-lg font-bold ${currentPath === '/contact' ? 'text-custom-purple' : 'text-custom-pink'} hover:text-custom-purple transition-colors duration-300`} href="/contact">CONTACT</a>
     </div>
     <div class="flex items-center gap-4">
         <Search />

@@ -1,7 +1,7 @@
 ---
-
+const { left = false } = Astro.props;
 ---
-<h2 class="text-4xl font-bold text-center" style="color:#333b55">
+<h2 class={`text-4xl font-bold ${left ? "text-left" : "text-center"}`} style="color:#333b55;font-weight: 900;">
     <slot />
-    <div class="w-1/12 mt-2 mx-auto border-b-2 border-red-500"></div>
+    <div class={`w-1/12 mt-2 ${left ? "mx-0" : "mx-auto"} border-b-2 border-red-500`}></div>
 </h2>

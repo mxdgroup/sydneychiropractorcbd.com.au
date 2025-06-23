@@ -1,5 +1,6 @@
 ---
+const { variant = "primary" } = Astro.props;
 ---
-<button class="bg-black text-white px-10 py-4  text-xl font-semibold">
+<button class={`px-6 py-3 ${variant === "primary" ? "bg-custom-pink text-white" : "bg-custom-purple text-white"} text-md font-semibold`}>
     <slot />
 </button>
