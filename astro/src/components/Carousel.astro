@@ -1,0 +1,169 @@
+---
+export interface Props {
+  itemCount: number;
+}
+
+const { itemCount } = Astro.props;
+---
+
+<div class="w-full relative">
+  <!-- Carousel Container -->
+  <div class="overflow-hidden w-full">
+    <div 
+      id="carousel-track" 
+      class="flex transition-transform duration-300 ease-in-out"
+      style="width: 100%;"
+    >
+      <slot />
+    </div>
+  </div>
+  
+  <!-- Navigation Arrows -->
+  <div class="flex justify-center items-center mt-6 gap-4">
+    <!-- Left Arrow (smaller) -->
+    <button 
+      id="prev-btn"
+      class="bg-custom-purple text-white p-3 rounded-full hover:bg-opacity-80 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-custom-purple focus:ring-opacity-50"
+      aria-label="Previous items"
+    >
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M15 18l-6-6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </button>
+    
+    <!-- Right Arrow (larger) -->
+    <button 
+      id="next-btn"
+      class="bg-custom-purple text-white p-4 rounded-full hover:bg-opacity-80 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-custom-purple focus:ring-opacity-50"
+      aria-label="Next items"
+    >
+      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M9 18l6-6-6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </button>
+  </div>
+</div>
+
+<script define:vars={{ itemCount }}>
+  let currentIndex = 0;
+  const itemsVisible = 7;
+  const track = document.getElementById('carousel-track');
+  const prevBtn = document.getElementById('prev-btn');
+  const nextBtn = document.getElementById('next-btn');
+  
+  // Calculate item width based on visible items
+  const itemWidth = 100 / itemsVisible; // percentage
+  let isTransitioning = false;
+  
+  // Set up infinite carousel by cloning elements
+  function setupInfiniteCarousel() {
+    const originalItems = Array.from(track.children);
+    
+    // Clone items for infinite effect
+    // Clone first 7 items and append to end
+    for (let i = 0; i < Math.min(itemsVisible, itemCount); i++) {
+      const clone = originalItems[i].cloneNode(true);
+      clone.classList.add('carousel-clone');
+      track.appendChild(clone);
+    }
+    
+    // Clone last 7 items and prepend to beginning
+    for (let i = Math.max(0, itemCount - itemsVisible); i < itemCount; i++) {
+      const clone = originalItems[i].cloneNode(true);
+      clone.classList.add('carousel-clone');
+      track.insertBefore(clone, track.firstChild);
+    }
+    
+    // Set starting position to show real elements
+    currentIndex = Math.min(itemsVisible, itemCount);
+    
+    // Set width for all items
+    const allItems = track.children;
+    for (let i = 0; i < allItems.length; i++) {
+      allItems[i].style.minWidth = `${itemWidth}%`;
+      allItems[i].style.flex = `0 0 ${itemWidth}%`;
+    }
+    
+    updateCarousel(false);
+  }
+  
+  // Update carousel position
+  function updateCarousel(withTransition = true) {
+    if (withTransition) {
+      track.style.transition = 'transform 0.3s ease-in-out';
+    } else {
+      track.style.transition = 'none';
+    }
+    
+    const translateX = -(currentIndex * itemWidth);
+    track.style.transform = `translateX(${translateX}%)`;
+  }
+  
+  // Handle infinite loop transitions
+  function handleInfiniteLoop() {
+    const totalItems = track.children.length;
+    const cloneCount = Math.min(itemsVisible, itemCount);
+    
+    // If we're at the end clones, jump to beginning of real items
+    if (currentIndex >= totalItems - cloneCount) {
+      setTimeout(() => {
+        isTransitioning = true;
+        currentIndex = cloneCount;
+        updateCarousel(false);
+        setTimeout(() => { isTransitioning = false; }, 50);
+      }, 300);
+    }
+    
+    // If we're at the beginning clones, jump to end of real items
+    if (currentIndex <= 0) {
+      setTimeout(() => {
+        isTransitioning = true;
+        currentIndex = totalItems - (cloneCount * 2);
+        updateCarousel(false);
+        setTimeout(() => { isTransitioning = false; }, 50);
+      }, 300);
+    }
+  }
+  
+  // Move to next items
+  function nextSlide() {
+    if (isTransitioning) return;
+    
+    currentIndex++;
+    updateCarousel(true);
+    handleInfiniteLoop();
+  }
+  
+  // Move to previous items
+  function prevSlide() {
+    if (isTransitioning) return;
+    
+    currentIndex--;
+    updateCarousel(true);
+    handleInfiniteLoop();
+  }
+  
+  // Event listeners
+  nextBtn.addEventListener('click', nextSlide);
+  prevBtn.addEventListener('click', prevSlide);
+  
+  // Initialize carousel
+  setupInfiniteCarousel();
+</script>
+
+<style>
+  #carousel-track {
+    display: flex;
+    align-items: stretch;
+  }
+  
+  /* Ensure smooth transitions */
+  #carousel-track > * {
+    transition: none;
+  }
+  
+  /* Hide clone indicators for cleaner appearance */
+  .carousel-clone {
+    /* Optional: add subtle styling to distinguish clones during development */
+  }
+</style> 

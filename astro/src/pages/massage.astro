@@ -125,7 +125,8 @@ const secondPart =[
                 <UnderlinedHeader left={true}>{part.title}</UnderlinedHeader>
                 <div class="mt-10"></div>
                 <Paragraphs paragraphs={
-                part.paragraphs} />
+                part.paragraphs} 
+                left={index % 2 === 0 ? true : false}/>
             </div>
         ))}
     </div>
@@ -143,7 +144,8 @@ const secondPart =[
                 <UnderlinedHeader left={true}>{part.title}</UnderlinedHeader>
                 <div class="mt-10"></div>
                 <Paragraphs paragraphs={
-                part.paragraphs} />
+                part.paragraphs} 
+                left={index % 2 === 0 ? true : false}/>
             </div>
         ))}
     </div>
