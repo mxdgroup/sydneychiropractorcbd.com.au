@@ -1,18 +1,31 @@
 ---
 export interface Props {
   paragraphs: string[];
+  left?: boolean;
 }
 
-const { paragraphs } = Astro.props;
+const { paragraphs, left = true } = Astro.props;
 ---
 
-<div class="paragraphs-container">
-  {paragraphs.map((paragraph) => (
-    <p class="paragraph">{paragraph}</p>
-  ))}
-</div>
-
 <style>
+  .slide-in-left {
+    opacity: 0;
+    transform: translateX(-250px);
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+  }
+  
+  .slide-in-right {
+    opacity: 0;
+    transform: translateX(250px);
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+  }
+  
+  .slide-in-left.animate,
+  .slide-in-right.animate {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  
   .paragraph {
     margin-bottom: 1rem;
     text-align: left;
@@ -22,3 +35,36 @@ const { paragraphs } = Astro.props;
     margin-bottom: 0;
   }
 </style>
+
+<div class="paragraphs-container">
+  {paragraphs.map((paragraph) => (
+    <p 
+      class={`paragraph ${left ? "slide-in-left" : "slide-in-right"}`}
+      data-animate="true"
+    >
+      {paragraph}
+    </p>
+  ))}
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const paragraphs = document.querySelectorAll('.paragraph[data-animate="true"]');
+    
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('animate');
+          observer.unobserve(entry.target); // Stop observing once animated
+        }
+      });
+    }, {
+      threshold: 0.2, // Trigger when 20% of the element is visible
+      rootMargin: '0px 0px -50px 0px' // Start animation slightly before fully in view
+    });
+    
+    paragraphs.forEach((paragraph) => {
+      observer.observe(paragraph);
+    });
+  });
+</script>
