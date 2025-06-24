@@ -5,6 +5,34 @@ export interface Props {
 }
 
 const { paragraphs, left = true } = Astro.props;
+
+// Function to detect if a paragraph should be a bullet point
+function isBulletPoint(text: string): boolean {
+  // Consider it a bullet point if it's relatively short and doesn't end with a period
+  // or if it looks like a list item
+  const trimmed = text.trim();
+  return trimmed.length < 100 && !trimmed.endsWith('.') && !trimmed.endsWith('!') && !trimmed.endsWith('?') && !trimmed.includes('.') && !trimmed.includes(':');
+}
+
+// Function to format text with bold and italic
+function formatText(text: string): string {
+  return text
+    .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>') // **bold**
+    .replace(/\*(.*?)\*/g, '<em>$1</em>'); // *italic*
+}
+
+// Process paragraphs to determine bullet points and spacing
+const processedParagraphs = paragraphs.map((paragraph, index) => {
+  const isBullet = isBulletPoint(paragraph);
+  const prevIsBullet = index > 0 ? isBulletPoint(paragraphs[index - 1]) : false;
+  const formattedText = formatText(paragraph);
+  
+  return {
+    text: formattedText,
+    isBullet,
+    marginClass: isBullet && prevIsBullet ? 'mt-1' : 'mt-4'
+  };
+});
 ---
 
 <style>
@@ -27,23 +55,42 @@ const { paragraphs, left = true } = Astro.props;
   }
   
   .paragraph {
-    margin-bottom: 1rem;
     text-align: left;
   }
   
-  .paragraph:last-child {
-    margin-bottom: 0;
+  .paragraph:first-child {
+    margin-top: 0;
+  }
+  
+  .bullet-point {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+  
+  .bullet-dot {
+    color: #ef4444; /* red-500 to match the underline */
+    font-weight: bold;
+    margin-top: 0.125rem; /* slight offset to align with text */
+    flex-shrink: 0;
   }
 </style>
 
 <div class="paragraphs-container">
-  {paragraphs.map((paragraph) => (
-    <p 
-      class={`paragraph ${left ? "slide-in-left" : "slide-in-right"} text-lg`}
+  {processedParagraphs.map((item, index) => (
+    <div 
+      class={`paragraph ${left ? "slide-in-left" : "slide-in-right"} text-lg ${item.marginClass}`}
       data-animate="true"
     >
-      {paragraph}
-    </p>
+      {item.isBullet ? (
+        <div class="bullet-point">
+          <span class="bullet-dot">•</span>
+          <span set:html={item.text}></span>
+        </div>
+      ) : (
+        <p set:html={item.text}></p>
+      )}
+    </div>
   ))}
 </div>
 
