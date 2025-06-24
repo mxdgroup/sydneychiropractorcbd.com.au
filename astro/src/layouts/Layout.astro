@@ -25,7 +25,28 @@ const { title } = Astro.props;
     <main>
       <slot />
     </main>
-    <div class="mt-80"></div>
+    <div class="h-40 relative flex justify-center pt-10">
+      <div class=" bg-black mx-auto z-10 grid grid-cols-2 text-white" style="width: 40%;">
+        <div class="bg-custom-pink p-10 flex flex-col justify-center items-start ">
+          <h1 class="text-xl font-bold mb-4">Clinic 27</h1>
+          <p class="text-md mb-2">
+            (02) 8059 7743
+          </p>
+          <p class="text-md">
+            Suite 1, Level 1, 44 Bridge Street, Sydney NSW 2000
+          </p>
+        </div>
+        <div class="bg-custom-purple p-10 flex flex-col justify-center items-start ">
+          <h1 class="text-xl font-bold mb-4">Complete Chiropractic</h1>
+          <p class="text-md mb-2">
+            (02) 9972 0040
+          </p>
+          <p class="text-md">
+            Suite 1/32 Fisher Rd, Dee Why NSW 2099
+          </p>
+        </div>
+      </div>
+    </div>
     <Footer />
   </body>
 </html> 

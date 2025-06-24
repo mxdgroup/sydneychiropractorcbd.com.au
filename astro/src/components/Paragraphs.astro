@@ -39,7 +39,7 @@ const { paragraphs, left = true } = Astro.props;
 <div class="paragraphs-container">
   {paragraphs.map((paragraph) => (
     <p 
-      class={`paragraph ${left ? "slide-in-left" : "slide-in-right"}`}
+      class={`paragraph ${left ? "slide-in-left" : "slide-in-right"} text-lg`}
       data-animate="true"
     >
       {paragraph}
