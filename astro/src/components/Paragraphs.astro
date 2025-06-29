@@ -79,7 +79,7 @@ const processedParagraphs = paragraphs.map((paragraph, index) => {
 <div class="paragraphs-container">
   {processedParagraphs.map((item, index) => (
     <div 
-      class={`paragraph ${left ? "slide-in-left" : "slide-in-right"} text-lg ${item.marginClass}`}
+      class={`paragraph ${left ? "slide-in-left" : "slide-in-right"} text-base sm:text-lg ${item.marginClass}`}
       data-animate="true"
     >
       {item.isBullet ? (
