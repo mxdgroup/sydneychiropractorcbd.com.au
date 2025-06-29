@@ -15,8 +15,18 @@ const normalizedHeight = typeof height === 'number' ? `${height}px` : height;
 const componentId = `scrollcrop-${Math.random().toString(36).substr(2, 9)}`;
 ---
 
+<!-- Mobile: Normal Image -->
+<img 
+  src={src} 
+  alt={alt} 
+  class={`md:hidden w-full object-cover ${className}`} 
+  style={`height: ${normalizedHeight};`}
+  loading="lazy"
+/>
+
+<!-- Desktop: Scroll Crop Effect -->
 <div 
-  class={`scrollcrop ${className}`}
+  class={`scrollcrop hidden md:block ${className}`}
   id={componentId}
   data-src={src}
   style={`height: ${normalizedHeight}`}

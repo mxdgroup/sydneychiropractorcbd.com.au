@@ -2,6 +2,8 @@
 import "../global.css";
 import { Search } from "lucide-static";
 import { getCollection } from 'astro:content';
+import { Image } from 'astro:assets';
+import logo from '../../public/logo-header.webp';
 
 
 const currentPath = Astro.url.pathname;
@@ -62,43 +64,158 @@ const treatments = await getCollection('treatments');
   .dropdown:hover .dropdown-content {
     display: block;
   }
+
+  .fixed-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    z-index: 1000;
+    transition: transform 0.3s ease;
+  }
 </style>
 
-<nav class="flex justify-between items-center mx-auto py-8" style="width:85%">
-    <div class="flex items-center gap-x-6">
-        <a class={`nav-link text-lg font-bold ${currentPath === '/' ? 'text-custom-purple' : 'text-custom-pink'} hover:text-custom-purple transition-colors duration-300`} href="/">HOME</a>
-        <div class="dropdown">
-            <a class={`nav-link text-lg font-bold flex items-center gap-x-1 ${currentPath.startsWith('/treatments') ? 'text-custom-purple' : 'text-custom-pink'} hover:text-custom-purple transition-colors duration-300`} href="#">
-                TREATMENTS
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  class="w-5 h-5"
-                >
-                  <path d="m6 9 6 6 6-6" />
-                </svg>
-            </a>
-            <div class="dropdown-content">
-                {treatments.map(treatment => (
-                    <a href={`/treatments/${treatment.slug}`}>{treatment.data.title}</a>
-                ))}
-            </div>
-        </div>
-        <a class={`nav-link text-lg font-bold ${currentPath === '/massage' ? 'text-custom-purple' : 'text-custom-pink'} hover:text-custom-purple transition-colors duration-300`} href="/massage">MASSAGE</a>
-        <a class={`nav-link text-lg font-bold ${currentPath === '/workshops' ? 'text-custom-purple' : 'text-custom-pink'} hover:text-custom-purple transition-colors duration-300`} href="/workshops">WORKSHOPS</a>
-        <a class={`nav-link text-lg font-bold ${currentPath === '/videos' ? 'text-custom-purple' : 'text-custom-pink'} hover:text-custom-purple transition-colors duration-300`} href="/videos">VIDEOS</a>
-        <a class={`nav-link text-lg font-bold ${currentPath === '/about' ? 'text-custom-purple' : 'text-custom-pink'} hover:text-custom-purple transition-colors duration-300`} href="/about">ABOUT</a>
-        <a class={`nav-link text-lg font-bold ${currentPath === '/blog-overview' ? 'text-custom-purple' : 'text-custom-pink'} hover:text-custom-purple transition-colors duration-300`} href="/blog-overview">BLOG</a>
-        <a class={`nav-link text-lg font-bold ${currentPath === '/contact' ? 'text-custom-purple' : 'text-custom-pink'} hover:text-custom-purple transition-colors duration-300`} href="/contact">CONTACT</a>
+<div id="nav-wrapper">
+  <nav id="main-nav" class="py-4 md:py-8 w-full transition-all duration-300">
+    <div class="mx-auto" style="width:85%">
+      <!-- Mobile Nav -->
+      <div class="md:hidden flex justify-between items-center">
+          <a href="/">
+              <Image src={logo} alt="Clinic 27 Logo" class="w-auto h-12" />
+          </a>
+          <button id="hamburger" aria-label="Open Menu">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+              </svg>
+          </button>
+      </div>
+
+      <!-- Desktop Nav & Mobile Menu Content -->
+      <div id="nav-menu" class="hidden md:flex flex-col md:flex-row md:justify-between md:items-center mt-4 md:mt-0">
+          <div class="flex flex-col md:flex-row md:items-center gap-y-4 md:gap-x-6">
+              <a class={`nav-link text-lg font-bold ${currentPath === '/' ? 'text-custom-purple' : 'text-custom-pink'} hover:text-custom-purple transition-colors duration-300`} href="/">HOME</a>
+              
+              <div class="relative">
+                  <!-- Desktop Dropdown -->
+                  <a class={`hidden md:flex nav-link text-lg font-bold items-center gap-x-1 ${currentPath.startsWith('/treatments') ? 'text-custom-purple' : 'text-custom-pink'} hover:text-custom-purple transition-colors duration-300`} href="#">
+                      TREATMENTS
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        class="w-5 h-5"
+                      >
+                        <path d="m6 9 6 6 6-6" />
+                      </svg>
+                  </a>
+                  <div class="dropdown-content hidden md:block">
+                      {treatments.map(treatment => (
+                          <a href={`/treatments/${treatment.slug}`}>{treatment.data.title}</a>
+                      ))}
+                  </div>
+
+                  <!-- Mobile Accordion -->
+                  <div class="md:hidden">
+                      <button id="treatments-toggle" class={`w-full text-left nav-link text-lg font-bold flex items-center justify-between ${currentPath.startsWith('/treatments') ? 'text-custom-purple' : 'text-custom-pink'} hover:text-custom-purple transition-colors duration-300`}>
+                          <span>TREATMENTS</span>
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            class="w-5 h-5 transition-transform duration-300"
+                            id="treatments-arrow"
+                          >
+                            <path d="m6 9 6 6 6-6" />
+                          </svg>
+                      </button>
+                      <div id="treatments-content" class="hidden pl-4 mt-2 flex flex-col gap-y-2">
+                          {treatments.map(treatment => (
+                              <a class="text-custom-pink hover:text-custom-purple" href={`/treatments/${treatment.slug}`}>{treatment.data.title}</a>
+                          ))}
+                      </div>
+                  </div>
+              </div>
+
+              <a class={`nav-link text-lg font-bold ${currentPath === '/massage' ? 'text-custom-purple' : 'text-custom-pink'} hover:text-custom-purple transition-colors duration-300`} href="/massage">MASSAGE</a>
+              <a class={`nav-link text-lg font-bold ${currentPath === '/workshops' ? 'text-custom-purple' : 'text-custom-pink'} hover:text-custom-purple transition-colors duration-300`} href="/workshops">WORKSHOPS</a>
+              <a class={`nav-link text-lg font-bold ${currentPath === '/videos' ? 'text-custom-purple' : 'text-custom-pink'} hover:text-custom-purple transition-colors duration-300`} href="/videos">VIDEOS</a>
+              <a class={`nav-link text-lg font-bold ${currentPath === '/about' ? 'text-custom-purple' : 'text-custom-pink'} hover:text-custom-purple transition-colors duration-300`} href="/about">ABOUT</a>
+              <a class={`nav-link text-lg font-bold ${currentPath === '/blog-overview' ? 'text-custom-purple' : 'text-custom-pink'} hover:text-custom-purple transition-colors duration-300`} href="/blog-overview">BLOG</a>
+              <a class={`nav-link text-lg font-bold ${currentPath === '/contact' ? 'text-custom-purple' : 'text-custom-pink'} hover:text-custom-purple transition-colors duration-300`} href="/contact">CONTACT</a>
+          </div>
+      </div>
     </div>
-    <div class="flex items-center gap-4">
-        <Search />
-    </div>
-</nav>
+  </nav>
+</div>
+
+<script>
+    document.getElementById('hamburger')?.addEventListener('click', () => {
+        const navMenu = document.getElementById('nav-menu');
+        if (navMenu) {
+            navMenu.classList.toggle('hidden');
+        }
+    });
+
+    document.getElementById('treatments-toggle')?.addEventListener('click', () => {
+        const treatmentsContent = document.getElementById('treatments-content');
+        const treatmentsArrow = document.getElementById('treatments-arrow');
+        if (treatmentsContent && treatmentsArrow) {
+            treatmentsContent.classList.toggle('hidden');
+            treatmentsArrow.classList.toggle('rotate-180');
+        }
+    });
+
+    // Make desktop dropdown work with hover
+    const dropdown = document.querySelector('.relative');
+    const dropdownContent = document.querySelector('.dropdown-content');
+
+    if (dropdown && dropdownContent) {
+        dropdown.addEventListener('mouseenter', () => {
+            if (window.innerWidth >= 768) { // md breakpoint
+                dropdownContent.classList.remove('hidden');
+            }
+        });
+        dropdown.addEventListener('mouseleave', () => {
+            if (window.innerWidth >= 768) {
+                dropdownContent.classList.add('hidden');
+            }
+        });
+    }
+
+    // Sticky nav on scroll
+    const nav = document.getElementById('main-nav');
+    const navWrapper = document.getElementById('nav-wrapper');
+    const scrollThreshold = 100;
+
+    const handleScroll = () => {
+      if (window.scrollY > scrollThreshold) {
+        if (nav && !nav.classList.contains('fixed-nav')) {
+          const navHeight = nav.offsetHeight;
+          if(navWrapper) navWrapper.style.height = `${navHeight}px`;
+          nav.classList.add('fixed-nav');
+        }
+      } else {
+        if (nav && nav.classList.contains('fixed-nav')) {
+          nav.classList.remove('fixed-nav');
+          if(navWrapper) navWrapper.style.height = '';
+        }
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll, { passive: true });
+</script>
