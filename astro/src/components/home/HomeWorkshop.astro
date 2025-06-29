@@ -2,7 +2,10 @@
 import PrimaryButton from "../PrimaryButton.astro";
 import UnderlinedHeader from "../UnderlinedHeader.astro";
 import Image from "astro/components/Image.astro";
-import hcf from "../../../public/hcf.webp";
+import ahm from "../../../public/partners/ahm-min.webp";
+import spire from "../../../public/partners/logo-sprite-copy-min.webp";
+import bupa from "../../../public/partners/bupa-logo-min.webp";
+import medibank from "../../../public/partners/medibank-private-min.webp";
 ---
 <div class="w-full py-10" style="background-color:#f2f4f6">
     <div class="mb-20 mx-auto flex flex-col justify-center items-center bg-white w-1/2 border border-gray-300 p-10" >
@@ -11,11 +14,11 @@ import hcf from "../../../public/hcf.webp";
       <PrimaryButton variant="primary">Register</PrimaryButton>
     </div>
     <UnderlinedHeader>Health Insurance Accepted</UnderlinedHeader>
-    <div class="mx-auto flex flex-row justify-center items-center w-1/2 gap-10 mt-10">
-      <Image src={hcf} alt="HCF" class="w-1/4" loading="lazy" />
-      <Image src={hcf} alt="HCF" class="w-1/4" loading="lazy" />
-      <Image src={hcf} alt="HCF" class="w-1/4" loading="lazy" />
-      <Image src={hcf} alt="HCF" class="w-1/4" loading="lazy" />
+    <div class="mx-auto container flex flex-row justify-center items-center w-full gap-10 mt-10">
+      <Image src={ahm} alt="AHM" class="w-1/4" loading="lazy" />
+      <Image src={bupa} alt="Bupa" class="w-1/4" loading="lazy" />
+      <Image src={medibank} alt="Medibank" class="w-1/4" loading="lazy" />
+      <Image src={spire} alt="Spire" class="w-1/4" loading="lazy" />
 
     </div>
   </div>
