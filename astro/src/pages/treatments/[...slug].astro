@@ -1,0 +1,74 @@
+---
+import { type CollectionEntry, getCollection } from 'astro:content';
+import Layout from '../../layouts/Layout.astro';
+import HeaderImage from '../../components/HeaderImage.astro';
+
+export async function getStaticPaths() {
+  const treatments = await getCollection('treatments');
+  return treatments.map((treatment) => ({
+    params: { slug: treatment.slug },
+    props: treatment,
+  }));
+}
+
+type Props = CollectionEntry<'treatments'>;
+
+const treatment = Astro.props;
+const { Content } = await treatment.render();
+---
+
+<Layout title={`${treatment.data.title} | Sydney Chiropractor CBD`}>
+  <!-- Header Image Section -->
+  <HeaderImage 
+    backgroundImage={treatment.data.heroImage} 
+    headerText={treatment.data.title}
+    buttonText="Book an Appointment" 
+  />
+
+  <!-- Treatment Content -->
+  <article class="container mx-auto px-4 sm:px-6 lg:px-8 py-16">
+    <div class="max-w-4xl mx-auto prose prose-lg prose-blue max-w-none">
+        <Content />
+    </div>
+  </article>
+</Layout>
+
+<style is:global>
+  /* Blog content container */
+  .prose p{
+    color: #7a7a7a;
+     line-height: 1.7;
+     font-size: 1.1rem;
+    max-width: none;
+  }
+  
+  /* Headings */
+  .prose h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #111827;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    line-height: 1.2;
+  }
+  
+  .prose h2 {
+    font-size: 2rem;
+    font-weight: 600;
+    color: #111827;
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+    line-height: 1.3;
+    border-bottom: 2px solid #e5e7eb;
+    padding-bottom: 0.5rem;
+  }
+  
+  .prose h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #1f2937;
+    margin-top: 2rem;
+    margin-bottom: 0.75rem;
+    line-height: 1.4;
+  }
+</style> 

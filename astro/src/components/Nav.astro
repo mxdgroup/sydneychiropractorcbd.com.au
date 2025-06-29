@@ -1,8 +1,11 @@
 ---
 import "../global.css";
 import { Search } from "lucide-static";
+import { getCollection } from 'astro:content';
+
 
 const currentPath = Astro.url.pathname;
+const treatments = await getCollection('treatments');
 ---
 
 <style>
@@ -25,12 +28,69 @@ const currentPath = Astro.url.pathname;
   .nav-link:hover::after {
     width: 100%;
   }
+
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 200px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 50;
+    border-radius: 4px;
+    padding: 0.5rem 0;
+  }
+
+  .dropdown-content a {
+    color: var(--color-custom-pink);
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    font-size: 1rem;
+    font-weight: 500;
+  }
+
+  .dropdown-content a:hover {
+    background-color: #f1f1f1;
+    color: var(--color-custom-purple);
+  }
+
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
 </style>
 
 <nav class="flex justify-between items-center mx-auto py-8" style="width:85%">
     <div class="flex items-center gap-x-6">
         <a class={`nav-link text-lg font-bold ${currentPath === '/' ? 'text-custom-purple' : 'text-custom-pink'} hover:text-custom-purple transition-colors duration-300`} href="/">HOME</a>
-        <a class={`nav-link text-lg font-bold ${currentPath === '/treatments' ? 'text-custom-purple' : 'text-custom-pink'} hover:text-custom-purple transition-colors duration-300`} href="/treatments">TREATMENTS</a>
+        <div class="dropdown">
+            <a class={`nav-link text-lg font-bold flex items-center gap-x-1 ${currentPath.startsWith('/treatments') ? 'text-custom-purple' : 'text-custom-pink'} hover:text-custom-purple transition-colors duration-300`} href="#">
+                TREATMENTS
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="w-5 h-5"
+                >
+                  <path d="m6 9 6 6 6-6" />
+                </svg>
+            </a>
+            <div class="dropdown-content">
+                {treatments.map(treatment => (
+                    <a href={`/treatments/${treatment.slug}`}>{treatment.data.title}</a>
+                ))}
+            </div>
+        </div>
         <a class={`nav-link text-lg font-bold ${currentPath === '/massage' ? 'text-custom-purple' : 'text-custom-pink'} hover:text-custom-purple transition-colors duration-300`} href="/massage">MASSAGE</a>
         <a class={`nav-link text-lg font-bold ${currentPath === '/workshops' ? 'text-custom-purple' : 'text-custom-pink'} hover:text-custom-purple transition-colors duration-300`} href="/workshops">WORKSHOPS</a>
         <a class={`nav-link text-lg font-bold ${currentPath === '/videos' ? 'text-custom-purple' : 'text-custom-pink'} hover:text-custom-purple transition-colors duration-300`} href="/videos">VIDEOS</a>
