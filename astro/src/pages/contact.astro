@@ -57,28 +57,13 @@ import PrimaryButton from "../components/PrimaryButton.astro";
       </div>
       
       <!-- Right Column - Background Image with Overlay -->
-      <div class="relative h-96 md:h-full min-h-[400px]">
-        <div 
-          class="bg-cover bg-center h-full rounded-lg overflow-hidden relative"
-          style={`background-image: url(${contactBg.src})`}
-        >
-          <!-- Dark overlay for background -->
-          <div class="absolute inset-0 bg-black/40"></div>
-          
-          <!-- Overlay image at bottom -->
-          <img 
-            src={overlay.src} 
-            alt="" 
-            class="absolute inset-x-0 bottom-0 w-full h-auto object-cover"
-          />
-          
-          <!-- Centered button -->
-          <div class="absolute inset-0 flex items-center justify-center z-10">
-            <button class="bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-md px-6 py-3 shadow-lg transition-colors duration-200 transform hover:scale-105">
-              Book an Appointment
-            </button>
-          </div>
-        </div>
+      <div class="relative h-96 md:h-full min-h-[400px] bg-custom-purple flex flex-col p-8">
+          <p class="text-white text-2xl font-bold">Clinic 27</p>
+          <p class="text-white text-md my-4">Suite 1, Level 1, 44 Bridge Street, Sydney NSW 2000​</p>
+          <p class="text-white text-2xl font-bold">Email</p>
+          <p class="text-white text-md my-4">info@clinic27.com.au</p>
+          <p class="text-white text-2xl font-bold">Call</p>
+          <p class="text-white text-4xl font-bold">02 8059 7743</p>
       </div>
       
     </div>
