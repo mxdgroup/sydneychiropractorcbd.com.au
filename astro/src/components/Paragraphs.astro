@@ -2,9 +2,10 @@
 export interface Props {
   paragraphs: string[];
   left?: boolean;
+  white?: boolean;
 }
 
-const { paragraphs, left = true } = Astro.props;
+const { paragraphs, left = true, white = false } = Astro.props;
 
 // Function to detect if a paragraph should be a bullet point
 function isBulletPoint(text: string): boolean {
@@ -79,7 +80,7 @@ const processedParagraphs = paragraphs.map((paragraph, index) => {
 <div class="paragraphs-container">
   {processedParagraphs.map((item, index) => (
     <div 
-      class={`paragraph ${left ? "slide-in-left" : "slide-in-right"} text-base sm:text-lg ${item.marginClass}`}
+      class={`paragraph ${left ? "slide-in-left" : "slide-in-right"} text-base sm:text-lg ${item.marginClass} ${white ? "text-white" : "text-black"}`}
       data-animate="true"
     >
       {item.isBullet ? (

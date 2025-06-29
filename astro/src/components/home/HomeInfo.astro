@@ -1,0 +1,76 @@
+---
+import UnderlinedHeader from "../UnderlinedHeader.astro";
+import Paragraphs from "../Paragraphs.astro";
+import PrimaryButton from "../PrimaryButton.astro";
+---
+<div class="min-h-screen py-20" style="background: linear-gradient(180deg, #1A2496 30%, #FFFFFF 100%);">
+    <div class="container mx-auto">
+        <UnderlinedHeader white={true} left={true}>Chiropractor Sydney CBD</UnderlinedHeader>
+        <div class="mt-6 sm:mt-8 md:mt-10"></div>   
+        <Paragraphs paragraphs={
+            ["The team of Sydney CBD Chiropractors at Clinic 27 is dedicated to the provision of chiropractic care with a difference, helping business professionals achieve their health care goals and maintain a high level of performance."]
+        } white={true}/>
+        <div class="mt-6 sm:mt-8 md:mt-10"></div>   
+        <UnderlinedHeader white={true} left={true}>Sydney Chiropractic Treatments</UnderlinedHeader>
+        <div class="mt-6 sm:mt-8 md:mt-10"></div>   
+        <Paragraphs paragraphs={
+            ["Clinic 27 is one of only a handful of Australian clinics to promote Advanced Biostructural Correction (ABC™). This technique reverses the effects of the body’s natural compensation for old injuries and physical trauma and provides a long-term solution to pain and discomfort. We treat all kinds of pain, from bruxism headaches, to ear pain, back pain, jaw discomfort, etc."]
+        } white={true}/>
+        <div class="mt-6 sm:mt-8 md:mt-10"></div>   
+        <PrimaryButton>SEE ALL TREATMENTS</PrimaryButton>
+        <div class="mt-6 sm:mt-8 md:mt-10"></div>   
+    </div>
+    <div class="container mx-auto grid grid-cols-3 gap-4">
+        {/* Find us */}
+        <div class="bg-white min-h-60">
+            <p class="bg-custom-pink text-white text-center py-4 font-bold text-2xl">FIND US</p>
+            <div class="h-72">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d26504.213217261957!2d151.210973!3d-33.863204!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6b12ae69e5775307%3A0x7050e7d6a83ea056!2s44%20Bridge%20St%2C%20Sydney%20NSW%202000%2C%20Australia!5e0!3m2!1sen!2sus!4v1751226505241!5m2!1sen!2sus" class="w-full h-full" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+        {/* Times */}
+        <div class="bg-white min-h-60">
+            <p class="bg-custom-pink text-white text-center py-4 font-bold text-2xl">OUR HOURS</p>
+            <div class="flex flex-row justify-between px-4 py-2 border-b border-custom-pink font-bold">
+                <p>Monday</p>
+                <p>7:30am - 5pm</p>
+            </div>            
+            <div class="flex flex-row justify-between px-4 py-2 border-b border-custom-pink font-bold">
+                <p>Tuesday</p>
+                <p>7:30am - 5pm</p>
+            </div>            
+            <div class="flex flex-row justify-between px-4 py-2 border-b border-custom-pink font-bold">
+                <p>Wednesday</p>
+                <p>7:30am - 5pm</p>
+            </div>            
+            <div class="flex flex-row justify-between px-4 py-2 border-b border-custom-pink font-bold">
+                <p>Thursday</p>
+                <p>7:30am - 5pm</p>
+            </div>
+            <div class="flex flex-row justify-between px-4 py-2 border-b border-custom-pink font-bold">
+                <p>Friday</p>
+                <p>7:30am - 3pm</p>
+            </div>
+            <div class="flex flex-row justify-between px-4 py-2 border-b border-custom-pink font-bold">
+                <p>Saturday</p>
+                <p>8m - 12pm</p>
+            </div>
+            <div class="flex flex-row justify-between px-4 py-2 border-b border-custom-pink font-bold">
+                <p>Sunday</p>
+                <p class="text-custom-pink">Closed</p>
+            </div>
+        </div>
+        {/* Text */}
+        <div class="bg-white min-h-60">
+            <p class="bg-custom-pink text-white text-center py-4 font-bold text-2xl">WHAT MAKES US AWESOME</p>
+            <div class="flex flex-col justify-center gap-2 px-4 py-2">
+                <p>- Experienced male and female practitioners </p>
+                <p>- We're centrally located in the CBD</p>
+                <p>- Unique postural technique</p>
+                <p>- Clinic owner a published author</p>
+                <p>- Using advanced Core Score TM technology to measure the areas of concern</p>
+                <p>- Co-founding member of growing technique with in chiropractic</p>
+            </div>
+        </div>
+    </div>
+</div>
