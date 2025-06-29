@@ -5,50 +5,63 @@ import "../global.css";
 <footer class="relative w-full text-white" style="min-height: 40vh; background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('https://sydneychiropractorcbd.com.au/wp-content/uploads/2021/04/footerbackground-1.jpg'); background-size: cover; background-position: center;">
 
   <!-- Main footer content -->
-  <div class="relative z-10 pt-32 pb-8">
+  <div class="relative z-10 pt-16 md:pt-32 pb-8">
     <!-- Four column grid -->
     <div class="container mx-auto px-4">
+      <!-- Mobile-only location info -->
+      <div class="md:hidden mb-8">
+        <div class="bg-custom-pink p-6 text-white mb-4">
+          <h3 class="text-lg font-bold mb-2">Clinic 27</h3>
+          <p class="text-sm mb-1">(02) 8059 7743</p>
+          <p class="text-sm">Suite 1, Level 1, 44 Bridge Street, Sydney NSW 2000</p>
+        </div>
+        <div class="bg-custom-purple p-6 text-white">
+          <h3 class="text-lg font-bold mb-2">Complete Chiropractic</h3>
+          <p class="text-sm mb-1">(02) 9972 0040</p>
+          <p class="text-sm">Suite 1/32 Fisher Rd, Dee Why NSW 2099</p>
+        </div>
+      </div>
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
         
         <!-- Column 1: Opening Hours -->
-        <div>
+        <div class="text-center md:text-left">
           <h3 class="text-xl font-bold mb-6 uppercase">Clinic 27 Opening Hours</h3>
           <table class="w-full">
             <tbody>
               <tr class="border-b border-gray-700">
                 <td class="py-2">Monday</td>
-                <td class="py-2 text-right">8:00am - 6:00pm</td>
+                <td class="py-2 text-center md:text-right">8:00am - 6:00pm</td>
               </tr>
               <tr class="border-b border-gray-700">
                 <td class="py-2">Tuesday</td>
-                <td class="py-2 text-right">8:00am - 6:00pm</td>
+                <td class="py-2 text-center md:text-right">8:00am - 6:00pm</td>
               </tr>
               <tr class="border-b border-gray-700">
                 <td class="py-2">Wednesday</td>
-                <td class="py-2 text-right">8:00am - 6:00pm</td>
+                <td class="py-2 text-center md:text-right">8:00am - 6:00pm</td>
               </tr>
               <tr class="border-b border-gray-700">
                 <td class="py-2">Thursday</td>
-                <td class="py-2 text-right">8:00am - 6:00pm</td>
+                <td class="py-2 text-center md:text-right">8:00am - 6:00pm</td>
               </tr>
               <tr class="border-b border-gray-700">
                 <td class="py-2">Friday</td>
-                <td class="py-2 text-right">8:00am - 6:00pm</td>
+                <td class="py-2 text-center md:text-right">8:00am - 6:00pm</td>
               </tr>
               <tr class="border-b border-gray-700">
                 <td class="py-2">Saturday</td>
-                <td class="py-2 text-right">9:00am - 1:00pm</td>
+                <td class="py-2 text-center md:text-right">9:00am - 1:00pm</td>
               </tr>
               <tr class="border-b border-gray-700">
                 <td class="py-2">Sunday</td>
-                <td class="py-2 text-right text-[#e6007e]">Closed</td>
+                <td class="py-2 text-center md:text-right text-[#e6007e]">Closed</td>
               </tr>
             </tbody>
           </table>
         </div>
 
         <!-- Column 2: Useful Links -->
-        <div>
+        <div class="text-center md:text-left">
           <h3 class="text-xl font-bold mb-6 uppercase">Useful Links</h3>
           <ul class="space-y-3">
             <li><a href="/" class="hover:text-[#e6007e] transition-colors">Home</a></li>
@@ -61,7 +74,7 @@ import "../global.css";
         </div>
 
         <!-- Column 3: Treatments -->
-        <div>
+        <div class="text-center md:text-left">
           <h3 class="text-xl font-bold mb-6 uppercase">Treatments</h3>
           <ul class="space-y-3">
             <li><a href="/treatments/vertigo" class="hover:text-[#e6007e] transition-colors">Vertigo Treatment in Sydney</a></li>
@@ -75,7 +88,7 @@ import "../global.css";
         </div>
 
         <!-- Column 4: Recent Videos -->
-        <div>
+        <div class="text-center md:text-left">
           <h3 class="text-xl font-bold mb-6 uppercase">Recent Videos</h3>
           
           <!-- Video 1 -->

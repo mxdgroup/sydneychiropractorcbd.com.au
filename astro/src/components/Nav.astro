@@ -98,10 +98,38 @@ const treatments = await getCollection('treatments');
           <div class="flex flex-col md:flex-row md:items-center gap-y-4 md:gap-x-6">
               <a class={`nav-link text-lg font-bold ${currentPath === '/' ? 'text-custom-purple' : 'text-custom-pink'} hover:text-custom-purple transition-colors duration-300`} href="/">HOME</a>
               
-              <div class="relative">
-                  <!-- Desktop Dropdown -->
-                  <a class={`hidden md:flex nav-link text-lg font-bold items-center gap-x-1 ${currentPath.startsWith('/treatments') ? 'text-custom-purple' : 'text-custom-pink'} hover:text-custom-purple transition-colors duration-300`} href="#">
-                      TREATMENTS
+              <!-- Desktop Dropdown -->
+              <div class="hidden md:inline-block">
+                <div class="dropdown">
+                    <a class={`nav-link text-lg font-bold flex items-center gap-x-1 ${currentPath.startsWith('/treatments') ? 'text-custom-purple' : 'text-custom-pink'} hover:text-custom-purple transition-colors duration-300`} href="#">
+                        TREATMENTS
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="24"
+                          height="24"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          class="w-5 h-5"
+                        >
+                          <path d="m6 9 6 6 6-6" />
+                        </svg>
+                    </a>
+                    <div class="dropdown-content">
+                        {treatments.map(treatment => (
+                            <a href={`/treatments/${treatment.slug}`}>{treatment.data.title}</a>
+                        ))}
+                    </div>
+                </div>
+              </div>
+
+              <!-- Mobile Accordion -->
+              <div class="md:hidden">
+                  <button id="treatments-toggle" class={`w-full text-left nav-link text-lg font-bold flex items-center justify-between ${currentPath.startsWith('/treatments') ? 'text-custom-purple' : 'text-custom-pink'} hover:text-custom-purple transition-colors duration-300`}>
+                      <span>TREATMENTS</span>
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         width="24"
@@ -112,42 +140,16 @@ const treatments = await getCollection('treatments');
                         stroke-width="2"
                         stroke-linecap="round"
                         stroke-linejoin="round"
-                        class="w-5 h-5"
+                        class="w-5 h-5 transition-transform duration-300"
+                        id="treatments-arrow"
                       >
                         <path d="m6 9 6 6 6-6" />
                       </svg>
-                  </a>
-                  <div class="dropdown-content hidden md:block">
+                  </button>
+                  <div id="treatments-content" class="hidden pl-4 mt-2 flex flex-col gap-y-2">
                       {treatments.map(treatment => (
-                          <a href={`/treatments/${treatment.slug}`}>{treatment.data.title}</a>
+                          <a class="text-custom-pink hover:text-custom-purple" href={`/treatments/${treatment.slug}`}>{treatment.data.title}</a>
                       ))}
-                  </div>
-
-                  <!-- Mobile Accordion -->
-                  <div class="md:hidden">
-                      <button id="treatments-toggle" class={`w-full text-left nav-link text-lg font-bold flex items-center justify-between ${currentPath.startsWith('/treatments') ? 'text-custom-purple' : 'text-custom-pink'} hover:text-custom-purple transition-colors duration-300`}>
-                          <span>TREATMENTS</span>
-                          <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            width="24"
-                            height="24"
-                            viewBox="0 0 24 24"
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-width="2"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            class="w-5 h-5 transition-transform duration-300"
-                            id="treatments-arrow"
-                          >
-                            <path d="m6 9 6 6 6-6" />
-                          </svg>
-                      </button>
-                      <div id="treatments-content" class="hidden pl-4 mt-2 flex flex-col gap-y-2">
-                          {treatments.map(treatment => (
-                              <a class="text-custom-pink hover:text-custom-purple" href={`/treatments/${treatment.slug}`}>{treatment.data.title}</a>
-                          ))}
-                      </div>
                   </div>
               </div>
 
@@ -179,23 +181,6 @@ const treatments = await getCollection('treatments');
             treatmentsArrow.classList.toggle('rotate-180');
         }
     });
-
-    // Make desktop dropdown work with hover
-    const dropdown = document.querySelector('.relative');
-    const dropdownContent = document.querySelector('.dropdown-content');
-
-    if (dropdown && dropdownContent) {
-        dropdown.addEventListener('mouseenter', () => {
-            if (window.innerWidth >= 768) { // md breakpoint
-                dropdownContent.classList.remove('hidden');
-            }
-        });
-        dropdown.addEventListener('mouseleave', () => {
-            if (window.innerWidth >= 768) {
-                dropdownContent.classList.add('hidden');
-            }
-        });
-    }
 
     // Sticky nav on scroll
     const nav = document.getElementById('main-nav');
