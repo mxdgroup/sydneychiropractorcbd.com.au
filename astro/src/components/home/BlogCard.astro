@@ -4,9 +4,11 @@ interface Props {
   date: string;
   title: string;
   excerpt: string;
+  slug?: string;
 }
 
-const { imageUrl, date, title, excerpt } = Astro.props;
+const { imageUrl, date, title, excerpt, slug } = Astro.props;
+const blogUrl = slug ? `/blog/${slug}` : '#';
 ---
 
 <div class="blog-card overflow-hidden shadow-xl mb-8 flex flex-col bg-white cursor-pointer">
@@ -22,6 +24,6 @@ const { imageUrl, date, title, excerpt } = Astro.props;
     </div>
     <h3 class="title text-xl font-semibold text-gray-800 mb-2">{title}</h3>
     <p class="excerpt text-gray-600 mb-4">{excerpt}</p>
-    <a href="#" class="text-blue-600 hover:text-blue-800 font-bold mt-auto">→ Continue Reading</a>
+    <a href={blogUrl} class="text-blue-600 hover:text-blue-800 font-bold mt-auto">→ Continue Reading</a>
   </div>
 </div> 

@@ -1,79 +1,31 @@
 ---
+import { getCollection } from 'astro:content';
 import BlogCard from "./home/BlogCard.astro";
 
-type Blog = {
-  imageUrl: string;
-  date: string;
-  title: string;
-  excerpt: string;
+// Get blog posts from content collection
+const allPosts = await getCollection('blog');
+
+// Sort posts by date (newest first)
+const posts = allPosts.sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+
+// Format date function
+const formatDate = (date: Date) => {
+  return new Intl.DateTimeFormat('en-AU', {
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric',
+  }).format(date);
 };
-
-type Props = {
-  blogs?: Blog[];
-};
-
-// Default blog data if none provided
-const defaultBlogs: Blog[] = [
-  {
-    imageUrl: "https://sydneychiropractorcbd.com.au/wp-content/uploads/2024/12/The-Main-Reasons-for-Lower-Back-Pain-1024x1024.jpg",
-    date: "December 30, 2024",
-    title: "How To Know If Shoulder Pain Is Serious",
-    excerpt: "Shoulder pain is a common complaint that can stem from various causes, ranging from minor strains to more serious conditions..."
-  },
-  {
-    imageUrl: "https://sydneychiropractorcbd.com.au/wp-content/uploads/2024/12/The-Main-Reasons-for-Lower-Back-Pain-1024x1024.jpg",
-    date: "December 25, 2024",
-    title: "5 Exercises to Relieve Lower Back Pain",
-    excerpt: "Lower back pain affects millions of people worldwide. These simple exercises can help alleviate discomfort and improve mobility..."
-  },
-  {
-    imageUrl: "https://sydneychiropractorcbd.com.au/wp-content/uploads/2024/12/The-Main-Reasons-for-Lower-Back-Pain-1024x1024.jpg",
-    date: "December 18, 2024",
-    title: "Benefits of Regular Chiropractic Adjustments",
-    excerpt: "Regular chiropractic care offers numerous benefits beyond pain relief, including improved posture, better sleep, and enhanced overall wellness..."
-  },
-  {
-    imageUrl: "https://sydneychiropractorcbd.com.au/wp-content/uploads/2024/12/The-Main-Reasons-for-Lower-Back-Pain-1024x1024.jpg",
-    date: "December 12, 2024",
-    title: "Improving Your Posture at Work",
-    excerpt: "Poor posture while working can lead to chronic pain and other health issues. Learn how to set up your workspace for optimal spinal health..."
-  },
-  {
-    imageUrl: "https://sydneychiropractorcbd.com.au/wp-content/uploads/2024/12/The-Main-Reasons-for-Lower-Back-Pain-1024x1024.jpg",
-    date: "December 5, 2024",
-    title: "Chiropractic Solutions for Chronic Headaches",
-    excerpt: "Chronic headaches can significantly impact quality of life. Discover how chiropractic care can address the root causes of persistent headaches..."
-  },
-  {
-    imageUrl: "https://sydneychiropractorcbd.com.au/wp-content/uploads/2024/12/The-Main-Reasons-for-Lower-Back-Pain-1024x1024.jpg",
-    date: "November 28, 2024",
-    title: "Recovering from Sports Injuries with Chiropractic Care",
-    excerpt: "Athletes can benefit greatly from specialized chiropractic treatments designed to speed recovery and prevent future injuries..."
-  },
-  {
-    imageUrl: "https://sydneychiropractorcbd.com.au/wp-content/uploads/2024/12/The-Main-Reasons-for-Lower-Back-Pain-1024x1024.jpg",
-    date: "November 20, 2024",
-    title: "How Your Sleeping Position Affects Your Spine",
-    excerpt: "The way you sleep can have a profound impact on your spinal health. Learn which positions are best and how to optimize your sleep setup..."
-  },
-  {
-    imageUrl: "https://sydneychiropractorcbd.com.au/wp-content/uploads/2024/12/The-Main-Reasons-for-Lower-Back-Pain-1024x1024.jpg",
-    date: "November 15, 2024",
-    title: "Nutrition Tips for Better Joint Health",
-    excerpt: "What you eat plays a crucial role in maintaining healthy joints and reducing inflammation. Discover the best foods for joint health..."
-  }
-];
-
-const { blogs = defaultBlogs } = Astro.props;
 ---
 
 <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-10">
-    {blogs.map(blog => (
+    {posts.map(post => (
         <BlogCard 
-            imageUrl={blog.imageUrl}
-            date={blog.date}
-            title={blog.title}
-            excerpt={blog.excerpt}
+            imageUrl={post.data.heroImage}
+            date={formatDate(post.data.pubDate)}
+            title={post.data.title}
+            excerpt={post.data.description}
+            slug={post.slug}
         />
     ))}
 </div> 
