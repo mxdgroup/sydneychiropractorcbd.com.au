@@ -1,0 +1,14 @@
+---
+import Image from "astro/components/Image.astro";
+import heroOverlay from "../../../public/hero-overlay.webp";
+---
+
+<div class="relative flex flex-col justify-center items-center" style="background-image: url('../../../public/hero-bg.png'); background-size: cover; background-position: center; background-repeat: no-repeat; min-height:80vh;">
+    <Image src={heroOverlay} alt="Hero Background" class="w-full h-full object-cover absolute bottom-0 right-0" />
+    <!-- <div class="flex flex-row justify-start items-center w-1/2">
+        <h1 class="text-center text-5xl font-bold">Posture <span class="text-custom-pink">Correction</span></h1>
+        <div class="mt-6 sm:mt-8 md:mt-10"></div>   
+        <h1 class="text-center text-4xl font-bold w-1/2 mx-auto">Let us help you achieve optimal health, happiness and your full human potential</h1>
+        <div class="mt-6 sm:mt-8 md:mt-10"></div>   
+    </div> -->
+</div>
