@@ -5,9 +5,10 @@ export interface Props {
   backgroundImage: string;
   headerText: string;
   buttonText: string;
+  displayTextAndButton?: boolean;
 }
 
-const { backgroundImage, headerText, buttonText } = Astro.props;
+const { backgroundImage, headerText, buttonText,displayTextAndButton = true } = Astro.props;
 ---
 
 <style>
@@ -81,14 +82,17 @@ const { backgroundImage, headerText, buttonText } = Astro.props;
     <h1 class="slide-up-content text-4xl font-bold text-white mb-4">
       {headerText}
     </h1>
-    <h1 class="slide-up-content text-5xl font-bold text-white mb-12" style="font-weight: 900;">
-      CLINIC 27
-    </h1>
+    {displayTextAndButton && (
+      <>
+        <h1 class="slide-up-content text-5xl font-bold text-white mb-12" style="font-weight: 900;">
+          CLINIC 27
+        </h1>
     
     <!-- Call-to-Action Button -->
     <div class="slide-up-content">
       <PrimaryButton variant="secondary">Book an Appointment</PrimaryButton> 
     </div>
-
+      </>
+    )}
   </div>
 </section>
