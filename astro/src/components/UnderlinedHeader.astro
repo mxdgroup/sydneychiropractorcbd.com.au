@@ -16,7 +16,7 @@ const { left = false,white = false } = Astro.props;
 </style>
 
 <h2 
-  class={`text-2xl sm:text-3xl md:text-4xl ${left ? "text-left slide-in-left" : "text-center"} ${white ? "text-white" : "text-[#333b55]" }`} 
+  class={`text-2xl sm:text-3xl md:text-4xl ${left ? "text-left slide-in-left" : "text-center"} ${white ? "text-white" : "text-custom-dark" }`} 
   style="font-weight: 900;"
   data-animate={left}
 >
@@ -26,7 +26,7 @@ const { left = false,white = false } = Astro.props;
 
 <script>
   document.addEventListener('DOMContentLoaded', () => {
-    const headers = document.querySelectorAll('[data-animate="true"]');
+    const headers = document.querySelectorAll('[data-animate]');
     
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {

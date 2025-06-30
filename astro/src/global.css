@@ -1,11 +1,11 @@
-@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-@theme {
+@layer base {
+  :root {
     --color-custom-pink: #ed2279;
     --color-custom-purple: #1F2BA3;
-    --color-text:#7A7A7A;
-}
-
-.container{
-    max-width: 80rem;
+    --color-text: #7A7A7A;
+  }
 }
