@@ -4,7 +4,7 @@ const reverse = index !== undefined ? index % 2 === 0 : false;
 ---
 <div class="grid mb-20 shadow-lg overflow-hidden shadow-xl" style={reverse ? "grid-template-columns: 3fr 1fr;" : "grid-template-columns: 1fr 3fr;"}>
     <div class={`w-full ${reverse ? 'order-2' : 'order-1'}`}>
-        <img src={image} alt={title} class="w-full h-full object-cover" />
+        <img src={image} alt={title} class="w-full h-full object-cover" loading="lazy" />
     </div>
     <div class={`w-full flex flex-col justify-center p-8 ${reverse ? 'order-1 pr-10' : 'order-2 pl-10'}`}>
         <h2 class="text-3xl font-bold mb-4 text-custom-purple">{title}</h2>
