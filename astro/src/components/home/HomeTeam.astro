@@ -2,6 +2,7 @@
 import UnderlinedHeader from "../UnderlinedHeader.astro";
 import PrimaryButton from "../PrimaryButton.astro";
 import ScrollCrop from "../ScrollCrop.astro";
+import personalPlan from "/public/Personal-Plan-img.webp";
 const doctors = [
     {
         name: "Dr. Hooman Zahedi",
@@ -83,16 +84,6 @@ const assistant = [
     
     <!-- Doctor Carousel Section -->
     <div class="mt-20 relative overflow-hidden">
-        <!-- Background layer: ScrollCrop -->
-        <ScrollCrop 
-            src="https://sydneychiropractorcbd.com.au/wp-content/uploads/2021/06/Personal-Plan-img.jpg"
-            height="auto"
-            class="absolute top-0 left-0 w-full h-full"
-        />
-        
-        <!-- Overlay layer: Dark semi-transparent overlay -->
-        <div class="absolute top-0 left-0 w-full h-full bg-black/40"></div>
-        
         <!-- Content layer: Carousel -->
         <div class="relative z-10 py-16">
             <div class="carousel relative">
