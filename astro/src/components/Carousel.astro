@@ -46,7 +46,7 @@ const { itemCount } = Astro.props;
 
 <script define:vars={{ itemCount }}>
   let currentIndex = 0;
-  const itemsVisible = 2; // Show 2 items at a time
+  let itemsVisible = window.innerWidth < 768 ? 1 : 2; // 1 for mobile, 2 for desktop
   const track = document.getElementById('carousel-track');
   const prevBtn = document.getElementById('prev-btn');
   const nextBtn = document.getElementById('next-btn');
@@ -57,17 +57,20 @@ const { itemCount } = Astro.props;
   
   // Set up infinite carousel by cloning elements
   function setupInfiniteCarousel() {
-    const originalItems = Array.from(track.children);
+    // Clear existing clones if any
+    const existingClones = track.querySelectorAll('.carousel-clone');
+    existingClones.forEach(clone => clone.remove());
+    
+    const originalItems = Array.from(track.children).filter(child => !child.classList.contains('carousel-clone'));
     
     // Clone items for infinite effect
-    // Clone first 2 items and append to end
     for (let i = 0; i < Math.min(itemsVisible, itemCount); i++) {
       const clone = originalItems[i].cloneNode(true);
       clone.classList.add('carousel-clone');
       track.appendChild(clone);
     }
     
-    // Clone last 2 items and prepend to beginning
+    // Clone last items and prepend to beginning
     for (let i = Math.max(0, itemCount - itemsVisible); i < itemCount; i++) {
       const clone = originalItems[i].cloneNode(true);
       clone.classList.add('carousel-clone');
@@ -147,6 +150,15 @@ const { itemCount } = Astro.props;
   nextBtn.addEventListener('click', nextSlide);
   prevBtn.addEventListener('click', prevSlide);
   
+  // Recalculate on resize
+  window.addEventListener('resize', () => {
+    const newItemsVisible = window.innerWidth < 768 ? 1 : 2;
+    if (newItemsVisible !== itemsVisible) {
+      itemsVisible = newItemsVisible;
+      setupInfiniteCarousel();
+    }
+  });
+
   // Initialize carousel
   setupInfiniteCarousel();
 </script>

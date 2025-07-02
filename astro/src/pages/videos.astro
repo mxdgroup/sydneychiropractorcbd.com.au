@@ -7,51 +7,54 @@ import Carousel from "../components/Carousel.astro";
 
 ---
 <Layout title="Sydney Chiropractor CBD Videos">
-    <div class="relative min-h-screen w-full" style={`background-image: url('${videos.src}'); background-repeat: no-repeat; background-size: contain; background-position: top;`}>
+    <div class="relative w-full" style={`background-image: url('${videos.src}'); background-repeat: no-repeat; background-size: contain; background-position: top;`}>
         <!-- Content Container -->
-        <div class="relative flex flex-col items-center justify-center min-h-screen py-16" style="z-index: 2;">
-            {/* video here */}   
-            <div class="bg-black w-1/2 mx-auto h-[500px]">
-                <iframe class="w-full h-full" loading="lazy" src="https://www.youtube.com/embed/Sg9jNdPj6rI?si=wypASJqeyLxWMadO" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-            </div>         
-            <p class="text-text text-center mt-4">Is your phone affecting your posture?</p>
-            <h1 class="text-4xl font-bold text-center text-custom-dark mt-12" style="font-weight: 900;"> Helpful Sydney Chiropractor Videos</h1>
-            <div class="flex flex-col items-center justify-center mt-8">
-                <PrimaryButton variant="secondary" class="mt-8 mx-auto w-full">
-                    <a href="/https://www.youtube.com/channel/UC9hBMtr0amB5mrKbEskzTNw">
-                        Visit Our YouTube Channel
-                    </a>
-                </PrimaryButton>
+        <div class="relative py-16 md:py-24" style="z-index: 2;">
+            <div class="container mx-auto px-4 text-center">
+                {/* video here */}   
+                <div class="bg-black w-full md:w-2/3 mx-auto aspect-video">
+                    <iframe class="w-full h-full" loading="lazy" src="https://www.youtube.com/embed/Sg9jNdPj6rI?si=wypASJqeyLxWMadO" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>         
+                <p class="text-text text-center mt-4">Is your phone affecting your posture?</p>
+                <h1 class="text-3xl md:text-4xl font-bold text-center text-custom-dark mt-12" style="font-weight: 900;"> Helpful Sydney Chiropractor Videos</h1>
+                <div class="flex flex-col items-center justify-center mt-8">
+                    <PrimaryButton variant="secondary" class="mt-8 mx-auto w-auto">
+                        <a href="/https://www.youtube.com/channel/UC9hBMtr0amB5mrKbEskzTNw" class="block px-8 py-3">
+                            Visit Our YouTube Channel
+                        </a>
+                    </PrimaryButton>
+                </div>
             </div>
-        </div>
-        <div class="container mx-auto px-4">
-            <Carousel itemCount={5}>
-                <div class="px-2">
-                    <div class="bg-black w-full aspect-video rounded-lg overflow-hidden">
-                        <iframe class="w-full h-full" src="https://www.youtube.com/embed/bHH_XIGUj2g?si=5e1WWYkSTCV1pNp5" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+            <div class="container mx-auto px-4 mt-16">
+                <Carousel itemCount={5}>
+                    <div class="px-2">
+                        <div class="bg-black w-full aspect-video rounded-lg overflow-hidden">
+                            <iframe class="w-full h-full" src="https://www.youtube.com/embed/bHH_XIGUj2g?si=5e1WWYkSTCV1pNp5" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
                     </div>
-                </div>
-                <div class="px-2">
-                    <div class="bg-black w-full aspect-video rounded-lg overflow-hidden">
-                        <iframe class="w-full h-full" src="https://www.youtube.com/embed/a0sROEArPZA?si=-HtIaROHvirXwgDu" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <div class="px-2">
+                        <div class="bg-black w-full aspect-video rounded-lg overflow-hidden">
+                            <iframe class="w-full h-full" src="https://www.youtube.com/embed/a0sROEArPZA?si=-HtIaROHvirXwgDu" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
                     </div>
-                </div>
-                <div class="px-2">
-                    <div class="bg-black w-full aspect-video rounded-lg overflow-hidden">
-                        <iframe class="w-full h-full" src="https://www.youtube.com/embed/fEh1uWG7K7U?si=VBoLTdWxzxDlBYZT" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <div class="px-2">
+                        <div class="bg-black w-full aspect-video rounded-lg overflow-hidden">
+                            <iframe class="w-full h-full" src="https://www.youtube.com/embed/fEh1uWG7K7U?si=VBoLTdWxzxDlBYZT" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
                     </div>
-                </div>
-                <div class="px-2">
-                    <div class="bg-black w-full aspect-video rounded-lg overflow-hidden">
-                        <iframe class="w-full h-full" src="https://www.youtube.com/embed/g-SSwuuA61I?si=cjOCNEoJmXltL1CX" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <div class="px-2">
+                        <div class="bg-black w-full aspect-video rounded-lg overflow-hidden">
+                            <iframe class="w-full h-full" src="https://www.youtube.com/embed/g-SSwuuA61I?si=cjOCNEoJmXltL1CX" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
                     </div>
-                </div>
-                <div class="px-2">
-                    <div class="bg-black w-full aspect-video rounded-lg overflow-hidden">
-                        <iframe class="w-full h-full" src="https://www.youtube.com/embed/WpMUKz-L2Bc?si=Xfk7AhCepCOsjWGR" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <div class="px-2">
+                        <div class="bg-black w-full aspect-video rounded-lg overflow-hidden">
+                            <iframe class="w-full h-full" src="https://www.youtube.com/embed/WpMUKz-L2Bc?si=Xfk7AhCepCOsjWGR" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
                     </div>
-                </div>
-            </Carousel>
+                </Carousel>
+            </div>
         </div>
         <div class="mt-12"></div>
     </div>
