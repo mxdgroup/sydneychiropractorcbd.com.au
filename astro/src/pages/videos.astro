@@ -4,6 +4,7 @@ import Image from "astro/components/Image.astro";
 import videos from "../../public/videos.webp";
 import PrimaryButton from "../components/PrimaryButton.astro";
 import Carousel from "../components/Carousel.astro";
+
 ---
 <Layout title="Sydney Chiropractor CBD Videos">
     <div class="relative min-h-screen w-full" style={`background-image: url('${videos.src}'); background-repeat: no-repeat; background-size: contain; background-position: top;`}>
@@ -23,47 +24,35 @@ import Carousel from "../components/Carousel.astro";
                 </PrimaryButton>
             </div>
         </div>
-        <Carousel itemCount={12}>
-            <!-- 12 Black Squares for testing -->
-            <div class="bg-black aspect-square mx-2 rounded-lg flex items-center justify-center">
-                <span class="text-white font-bold text-xl">1</span>
-            </div>
-            <div class="bg-black aspect-square mx-2 rounded-lg flex items-center justify-center">
-                <span class="text-white font-bold text-xl">2</span>
-            </div>
-            <div class="bg-black aspect-square mx-2 rounded-lg flex items-center justify-center">
-                <span class="text-white font-bold text-xl">3</span>
-            </div>
-            <div class="bg-black aspect-square mx-2 rounded-lg flex items-center justify-center">
-                <span class="text-white font-bold text-xl">4</span>
-            </div>
-            <div class="bg-black aspect-square mx-2 rounded-lg flex items-center justify-center">
-                <span class="text-white font-bold text-xl">5</span>
-            </div>
-            <div class="bg-black aspect-square mx-2 rounded-lg flex items-center justify-center">
-                <span class="text-white font-bold text-xl">6</span>
-            </div>
-            <div class="bg-black aspect-square mx-2 rounded-lg flex items-center justify-center">
-                <span class="text-white font-bold text-xl">7</span>
-            </div>
-            <div class="bg-black aspect-square mx-2 rounded-lg flex items-center justify-center">
-                <span class="text-white font-bold text-xl">8</span>
-            </div>
-            <div class="bg-black aspect-square mx-2 rounded-lg flex items-center justify-center">
-                <span class="text-white font-bold text-xl">9</span>
-            </div>
-            <div class="bg-black aspect-square mx-2 rounded-lg flex items-center justify-center">
-                <span class="text-white font-bold text-xl">10</span>
-            </div>
-            <div class="bg-black aspect-square mx-2 rounded-lg flex items-center justify-center">
-                <span class="text-white font-bold text-xl">11</span>
-            </div>
-            <div class="bg-black aspect-square mx-2 rounded-lg flex items-center justify-center">
-                <span class="text-white font-bold text-xl">12</span>
-            </div>
-        </Carousel>
+        <div class="container mx-auto px-4">
+            <Carousel itemCount={5}>
+                <div class="px-2">
+                    <div class="bg-black w-full aspect-video rounded-lg overflow-hidden">
+                        <iframe class="w-full h-full" src="https://www.youtube.com/embed/bHH_XIGUj2g?si=5e1WWYkSTCV1pNp5" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                </div>
+                <div class="px-2">
+                    <div class="bg-black w-full aspect-video rounded-lg overflow-hidden">
+                        <iframe class="w-full h-full" src="https://www.youtube.com/embed/a0sROEArPZA?si=-HtIaROHvirXwgDu" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                </div>
+                <div class="px-2">
+                    <div class="bg-black w-full aspect-video rounded-lg overflow-hidden">
+                        <iframe class="w-full h-full" src="https://www.youtube.com/embed/fEh1uWG7K7U?si=VBoLTdWxzxDlBYZT" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                </div>
+                <div class="px-2">
+                    <div class="bg-black w-full aspect-video rounded-lg overflow-hidden">
+                        <iframe class="w-full h-full" src="https://www.youtube.com/embed/g-SSwuuA61I?si=cjOCNEoJmXltL1CX" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                </div>
+                <div class="px-2">
+                    <div class="bg-black w-full aspect-video rounded-lg overflow-hidden">
+                        <iframe class="w-full h-full" src="https://www.youtube.com/embed/WpMUKz-L2Bc?si=Xfk7AhCepCOsjWGR" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </Carousel>
+        </div>
         <div class="mt-12"></div>
     </div>
-    
-
 </Layout>

@@ -1,5 +1,8 @@
 ---
 import "../global.css";
+import thumbnail1 from "../../public/videos/sit-better-at-work.jpg.webp";
+import thumbnail2 from "../../public/videos/sitting-all-day.jpg.webp";
+import { Image } from "astro:assets";
 ---
 
 <footer class="relative w-full text-white" style="min-height: 40vh; background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('https://sydneychiropractorcbd.com.au/wp-content/uploads/2021/04/footerbackground-1.jpg'); background-size: cover; background-position: center;">
@@ -92,43 +95,49 @@ import "../global.css";
           <h3 class="text-xl font-bold mb-6 uppercase">Recent Videos</h3>
           
           <!-- Video 1 -->
-          <div class="mb-6">
-            <div class="relative mb-2">
-              <img 
-                src="https://via.placeholder.com/300x200" 
+          <div class="flex items-start space-x-4 mb-4">
+            <div class="relative flex-shrink-0" style="width: 100px;">
+              <Image 
+                src={thumbnail1} 
                 alt="Video thumbnail" 
                 class="w-full h-auto rounded"
+                loading="lazy"
               />
               <div class="absolute inset-0 flex items-center justify-center">
-                <div class="w-12 h-12 bg-[#e6007e] rounded-full flex items-center justify-center cursor-pointer">
-                  <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <div class="w-8 h-8 bg-[#e6007e] rounded-full flex items-center justify-center cursor-pointer">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" />
                   </svg>
                 </div>
               </div>
             </div>
-            <h4 class="font-medium">Chiropractic Adjustment Techniques</h4>
-            <p class="text-sm text-gray-300">April 15, 2023</p>
+            <div class="flex-grow">
+              <h4 class="font-medium text-sm">Wear your backpack correctly</h4>
+              <p class="text-xs text-gray-300">Feb 27, 2018</p>
+            </div>
           </div>
           
           <!-- Video 2 -->
-          <div>
-            <div class="relative mb-2">
-              <img 
-                src="https://via.placeholder.com/300x200" 
+          <div class="flex items-start space-x-4">
+            <div class="relative flex-shrink-0" style="width: 100px;">
+              <Image 
+                src={thumbnail2} 
                 alt="Video thumbnail" 
                 class="w-full h-auto rounded"
+                loading="lazy"
               />
               <div class="absolute inset-0 flex items-center justify-center">
-                <div class="w-12 h-12 bg-[#e6007e] rounded-full flex items-center justify-center cursor-pointer">
-                  <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <div class="w-8 h-8 bg-[#e6007e] rounded-full flex items-center justify-center cursor-pointer">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" />
                   </svg>
                 </div>
               </div>
             </div>
-            <h4 class="font-medium">Relieving Back Pain at Home</h4>
-            <p class="text-sm text-gray-300">March 28, 2023</p>
+            <div class="flex-grow">
+              <h4 class="font-medium text-sm">How can I sit better at work?</h4>
+              <p class="text-xs text-gray-300">Feb 27, 2018</p>
+            </div>
           </div>
         </div>
       </div>
