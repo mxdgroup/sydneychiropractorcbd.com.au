@@ -21,14 +21,14 @@ const { title, preloadImage } = Astro.props;
     <title>{title}</title>
     {preloadImage && <link rel="preload" href={preloadImage} as="image" />}
   </head>
-  <body>
+  <body class="overflow-x-hidden">
     <Header />
     <Nav />
-    <main>
+    <main class="overflow-x-hidden">
       <slot />
     </main>
-    <div class="h-40 relative hidden md:flex justify-center pt-10">
-      <div class=" bg-black mx-auto z-10 grid grid-cols-2 text-white w-2/3 2xl:w-2/5">
+    <div class={`h-40 relative hidden md:flex justify-center pt-10 ${Astro.url.pathname === '/' ? 'bg-[#e4e6f2]' : ''}`}>
+      <div class={`mx-auto z-10 grid grid-cols-2 text-white w-2/3 2xl:w-2/5 ${Astro.url.pathname === '/' ? 'bg-[#e4e6f2]' : ''}`}>
         <div class="bg-custom-pink p-10 flex flex-col justify-center items-start ">
           <h1 class="text-xl font-bold mb-4">Clinic 27</h1>
           <p class="text-md mb-2">
