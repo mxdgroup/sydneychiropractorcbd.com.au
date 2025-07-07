@@ -59,19 +59,13 @@ const blogs = [
   }
 ];
 ---
-<div class="w-full bg-gray-50">
+<div class="w-full bg-gray-50 py-10">
     <div class="container mx-auto px-4">
         <UnderlinedHeader>Chiropractic Credentials And Accreditations</UnderlinedHeader>
-        <div class="mx-auto container flex flex-row justify-center items-center w-full md:w-3/4 gap-10 mb-16 mt-10">
-            <div class="w-1/3">
-                <Image src={medibank} alt="Chiropractic Credentials And Accreditations" />
-            </div>
-            <div class="w-1/3">
-                <Image src={hcf} alt="Chiropractic Credentials And Accreditations" />
-            </div>
-            <div class="w-1/3">
-                <Image src={spire} alt="Chiropractic Credentials And Accreditations" />
-            </div>
+        <div class="mx-auto container grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-10 place-items-center w-full md:w-3/4 mb-16 mt-10">
+            <Image src={medibank} alt="Medibank" class="w-48 md:w-full" />
+            <Image src={hcf} alt="HCF" class="w-48 md:w-full" />
+            <Image src={spire} alt="Spire" class="w-48 md:w-full" />
         </div>
         
         <UnderlinedHeader>Latest Blogs</UnderlinedHeader>

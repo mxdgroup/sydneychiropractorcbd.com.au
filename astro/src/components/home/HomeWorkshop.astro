@@ -8,17 +8,17 @@ import bupa from "../../../public/partners/bupa-logo-min.webp";
 import medibank from "../../../public/partners/medibank-private-min.webp";
 ---
 <div class="w-full py-10" style="background-color:#f2f4f6">
-    <div class="mb-20 mx-auto flex flex-col justify-center items-center bg-white container border border-gray-300 p-10" >
-      <h1 class="text-2xl font-bold">Book A Clinic 27</h1>
-      <h2 class="text-4xl mb-8 mt-4">Workshop Online</h2>
+    <div class="mb-20 mx-auto flex flex-col justify-center items-center bg-white container border border-gray-300 p-6 md:p-10" >
+      <h1 class="text-xl md:text-2xl font-bold text-center">Book A Clinic 27</h1>
+      <h2 class="text-3xl md:text-4xl mb-8 mt-4 text-center">Workshop Online</h2>
       <PrimaryButton variant="primary">Register</PrimaryButton>
     </div>
     <UnderlinedHeader>Health Insurance Accepted</UnderlinedHeader>
-    <div class="mx-auto container flex flex-row justify-center items-center w-full gap-20 mt-10">
-      <Image src={ahm} alt="AHM" loading="lazy" />
-      <Image src={bupa} alt="Bupa" loading="lazy" />
-      <Image src={medibank} alt="Medibank" loading="lazy" />
-      <Image src={spire} alt="Spire" loading="lazy" />
+    <div class="mx-auto container grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-20 mt-10 place-items-center">
+      <Image src={ahm} alt="AHM" loading="lazy" class="w-32 md:w-auto" />
+      <Image src={bupa} alt="Bupa" loading="lazy" class="w-32 md:w-auto" />
+      <Image src={medibank} alt="Medibank" loading="lazy" class="w-32 md:w-auto" />
+      <Image src={spire} alt="Spire" loading="lazy" class="w-32 md:w-auto" />
 
     </div>
   </div>

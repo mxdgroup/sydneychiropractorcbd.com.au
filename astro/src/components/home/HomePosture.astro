@@ -7,10 +7,10 @@ import postureWoman from "../../../public/posture-woman.webp";
 <div class="min-h-screen pt-20 bg-white relative">
     <h1 class="text-center text-5xl font-bold">Posture <span class="text-custom-pink">Correction</span></h1>
     <div class="mt-6 sm:mt-8 md:mt-10"></div>   
-    <h1 class="text-center text-4xl font-bold w-1/2 mx-auto">Let us help you achieve optimal health, happiness and your full human potential</h1>
+    <h1 class="text-center text-4xl font-bold w-full md:w-3/4 lg:w-1/2 mx-auto">Let us help you achieve optimal health, happiness and your full human potential</h1>
     <div class="mt-6 sm:mt-8 md:mt-10"></div>   
-    <div  class="min-h-[700px] w-full bg-cover bg-no-repeat flex flex-col justify-end items-start relative px-20 pb-12" style={`background-image: url('${postureWoman.src}');z-index: 100;`}>
-        <div class="w-1/2 relative z-10">
+    <div  class="min-h-[700px] w-full bg-cover bg-no-repeat flex flex-col justify-end items-start relative px-4 sm:px-8 md:px-20 pb-12" style={`background-image: url('${postureWoman.src}');z-index: 100;`}>
+        <div class="w-full md:w-1/2 relative z-10">
             <UnderlinedHeader left={true} white={true}>Sydney Chiropractic Workshops</UnderlinedHeader>
             <div class="mt-6 sm:mt-8 md:mt-10"></div>   
             <i class="text-white text-xl">Better Results, Faster!</i>
@@ -21,5 +21,5 @@ import postureWoman from "../../../public/posture-woman.webp";
             <p class="text-white text-xl">Patients now have the option to book longer consultations in addition to standard ones.</p>
         </div>
     </div>
-    <Image src={posture} alt="Posture Correction" class="object-cover absolute bottom-0 right-0 w-1/2 z-0" loading="lazy" />
+    <Image src={posture} alt="Posture Correction" class="object-cover absolute bottom-0 right-0 w-1/2 z-0 hidden md:block" loading="lazy" />
 </div>

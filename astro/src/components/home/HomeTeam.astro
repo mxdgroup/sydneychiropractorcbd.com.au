@@ -65,7 +65,7 @@ const assistant = [
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
             {doctors.map((doctor) => (
                 <div class="flex flex-col items-center">
-                    <div class="w-52 h-52 mb-4 overflow-hidden rounded-full">
+                    <div class="w-40 h-40 md:w-52 md:h-52 mb-4 overflow-hidden rounded-full">
                         <img src={doctor.image} alt={doctor.name} class="w-full h-full object-cover" />
                     </div>
                     <h3 class="text-xl font-semibold mb-1 text-custom-purple">{doctor.name}</h3>
@@ -78,7 +78,7 @@ const assistant = [
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
             {assistant.map((person) => (
                 <div class="flex flex-col items-center">
-                    <div class="w-72 h-72 mb-4 overflow-hidden rounded-full">
+                    <div class="w-48 h-48 md:w-72 md:h-72 mb-4 overflow-hidden rounded-full">
                         <img src={person.image} alt={person.name} class="w-full h-full object-cover" />
                     </div>
                     <h3 class="text-xl font-semibold mb-1 text-custom-purple">{person.name}</h3>

@@ -12,5 +12,5 @@ const phoneImage = await getImage({src: heroBgPhone, format: 'webp'});
         <source media="(max-width: 768px)" srcset={phoneImage.src} />
         <Image src={heroBg} alt="Hero Background" class="w-full h-full object-cover" loading="eager" />
     </picture>
-    <Image src={heroOverlay} alt="Hero Overlay" class="w-full h-full object-cover absolute bottom-0 right-0" loading="eager" />
+    <Image src={heroOverlay} alt="Hero Overlay" class="w-full h-full object-cover absolute bottom-0 right-0 hidden md:block" loading="eager" />
 </div>
