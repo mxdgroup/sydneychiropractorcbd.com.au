@@ -4,6 +4,8 @@ import Layout from '../../layouts/Layout.astro';
 import HeaderImage from '../../components/HeaderImage.astro';
 import UnderlinedHeader from '../../components/UnderlinedHeader.astro';
 import ScrollCrop from '../../components/ScrollCrop.astro';
+import Carousel from '../../components/Carousel.astro';
+import CarouselItem from '../../components/CarouselItem.astro';
 
 export async function getStaticPaths() {
   const treatments = await getCollection('treatments');
@@ -17,6 +19,19 @@ type Props = CollectionEntry<'treatments'>;
 
 const treatment = Astro.props;
 const { Content } = await treatment.render();
+
+const carouselTreatments = [
+    { title: "Back Pain", imageUrl: "/treatments/circles/backpain.png" },
+    { title: "Carpal Tunnel", imageUrl: "/treatments/circles/carpal.png" },
+    { title: "City Workers", imageUrl: "/treatments/circles/city.webp" },
+    { title: "ENP", imageUrl: "/treatments/circles/enp.png" },
+    { title: "Massage", imageUrl: "/treatments/circles/mass.webp" },
+    { title: "Neck Pain", imageUrl: "/treatments/circles/neck-pain.webp" },
+    { title: "Posture Correction", imageUrl: "/treatments/circles/posture.png" },
+    { title: "Pregnancy", imageUrl: "/treatments/circles/preg.webp" },
+    { title: "Sciatica", imageUrl: "/treatments/circles/scia.webp" },
+    { title: "Scoliosis", imageUrl: "/treatments/circles/scoli.webp" },
+];
 ---
 
 <Layout title={`${treatment.data.title} | Sydney Chiropractor CBD`}>
@@ -33,8 +48,18 @@ const { Content } = await treatment.render();
     <Content />
 
   </article>
-  <ScrollCrop src={"https://sydneychiropractorcbd.com.au/wp-content/uploads/2021/03/backpain-min.png"} />
-  <div class="mt-6 sm:mt-8 md:mt-10"></div>   
+  <div class="relative w-full">
+    <ScrollCrop src={"https://sydneychiropractorcbd.com.au/wp-content/uploads/2021/03/backpain-min.png"} />
+    <img src="/rectangle-overlay.webp" alt="Rectangle Overlay" class="absolute bottom-0 left-0 w-full h-auto z-10 pointer-events-none" />
+  </div>
+  <div class="relative z-20" style="margin-top: -128px;">
+      <Carousel itemCount={carouselTreatments.length}>
+          {carouselTreatments.map(item => (
+              <CarouselItem title={item.title} imageUrl={item.imageUrl} />
+          ))}
+      </Carousel>
+  </div>
+  <div class="mt-12 sm:mt-16 md:mt-20"></div>   
   <h2 style="color: #1F2BA3;" class="text-center text-2xl font-bold">WANT TO FIND OUT MORE ABOUT OUR TREATMENTS, SERVICES AND RATES?</h2>
   <div class="mt-6 sm:mt-8 md:mt-10"></div>   
   <p class="text-center text-lg max-w-1/3 mx-auto">Give the team at Clinic 27 a call today at (02) 80597743

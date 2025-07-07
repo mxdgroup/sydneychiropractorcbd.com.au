@@ -46,7 +46,14 @@ const { itemCount } = Astro.props;
 
 <script define:vars={{ itemCount }}>
   let currentIndex = 0;
-  let itemsVisible = window.innerWidth < 768 ? 1 : 2; // 1 for mobile, 2 for desktop
+  
+  function getItemsVisible() {
+    if (window.innerWidth < 768) return 1; // Mobile
+    if (window.innerWidth < 1024) return 2; // Tablet
+    return 4; // Desktop
+  }
+  
+  let itemsVisible = getItemsVisible();
   const track = document.getElementById('carousel-track');
   const prevBtn = document.getElementById('prev-btn');
   const nextBtn = document.getElementById('next-btn');
@@ -152,7 +159,7 @@ const { itemCount } = Astro.props;
   
   // Recalculate on resize
   window.addEventListener('resize', () => {
-    const newItemsVisible = window.innerWidth < 768 ? 1 : 2;
+    const newItemsVisible = getItemsVisible();
     if (newItemsVisible !== itemsVisible) {
       itemsVisible = newItemsVisible;
       setupInfiniteCarousel();
