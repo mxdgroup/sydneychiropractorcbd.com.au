@@ -18,7 +18,7 @@ import PrimaryButton from "../components/PrimaryButton.astro";
       
       <!-- Left Column - Form (60% width) -->
       <div class="md:w-full md:col-span-1 md:pr-4">
-        <form id="contactForm" class="space-y-6">
+        <form id="contactForm" method="POST" action="/api/contact" class="space-y-6">
           <!-- First Name and Email Row -->
           <div class="flex flex-col md:flex-row md:space-x-4 space-y-6 md:space-y-0">
             <div class="flex-1">
@@ -44,15 +44,16 @@ import PrimaryButton from "../components/PrimaryButton.astro";
           
           <!-- Message TextArea -->
           <TextArea 
-            label="Message" 
+            label="Message*" 
             placeholder="Your Message" 
             id="message" 
             name="message" 
             rows={6}
+            required={true}
           />
           
           <!-- Submit Button -->
-           <PrimaryButton variant="primary">SUBMIT</PrimaryButton>
+           <PrimaryButton variant="primary" type="submit">SUBMIT</PrimaryButton>
         </form>
       </div>
       
@@ -73,12 +74,51 @@ import PrimaryButton from "../components/PrimaryButton.astro";
 
 <script>
   const form = document.getElementById('contactForm') as HTMLFormElement;
+  
   if (form) {
-    form.addEventListener('submit', function(e) {
+    form.addEventListener('submit', async function(e) {
       e.preventDefault();
-      // Here you would normally handle the form submission
-      alert('Thank you for your message! We will get back to you soon.');
-      form.reset();
+      
+      const submitButton = form.querySelector('button') as HTMLButtonElement;
+      const originalText = submitButton.textContent;
+      
+      // Show loading state
+      submitButton.disabled = true;
+      submitButton.textContent = 'Sending...';
+      
+      try {
+        // Use URLSearchParams to mimic form submission
+        const formData = new FormData(form);
+        const params = new URLSearchParams();
+        
+        for (const [key, value] of formData.entries()) {
+          params.append(key, value as string);
+        }
+        
+        const response = await fetch('/api/contact', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/x-www-form-urlencoded',
+          },
+          body: params,
+        });
+        
+        const result = await response.json();
+        
+        if (response.ok) {
+          alert('Thank you for your message! We will get back to you soon.');
+          form.reset();
+        } else {
+          alert(result.error || 'Failed to send message. Please try again.');
+        }
+      } catch (error) {
+        console.error('Error submitting form:', error);
+        alert('Failed to send message. Please try again.');
+      } finally {
+        // Reset button state
+        submitButton.disabled = false;
+        submitButton.textContent = originalText;
+      }
     });
   }
 </script> 
