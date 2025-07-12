@@ -1,0 +1,211 @@
+---
+import { type CollectionEntry, getCollection } from 'astro:content';
+import Layout from '../../layouts/Layout.astro';
+import HeaderImage from '../../components/HeaderImage.astro';
+
+export async function getStaticPaths() {
+  const workshops = await getCollection('workshops');
+  return workshops.map((workshop: CollectionEntry<'workshops'>) => ({
+    params: { slug: workshop.slug },
+    props: workshop,
+  }));
+}
+
+type Props = CollectionEntry<'workshops'>;
+
+const workshop = Astro.props;
+const { Content } = await workshop.render();
+
+// Format date
+const formattedDate = new Intl.DateTimeFormat('en-AU', {
+  year: 'numeric',
+  month: 'long',
+  day: 'numeric',
+}).format(workshop.data.pubDate);
+---
+
+<Layout title={`${workshop.data.title} | Sydney Chiropractor CBD`}>
+  <!-- Header Image Section -->
+  <HeaderImage 
+    backgroundImage={workshop.data.heroImage} 
+    headerText={workshop.data.title}
+    buttonText="Book an Appointment" 
+    displayTextAndButton={false}
+  />
+
+  <!-- Workshop Content -->
+  <article class="container mx-auto px-4 sm:px-6 lg:px-8 py-16">
+    <!-- Workshop Content -->
+    <div class="max-w-4xl mx-auto">
+      <!-- Workshop Title -->
+      <h1 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">{workshop.data.title}</h1>
+      
+      <!-- Workshop Start Time -->
+      <div class="mb-8">
+        <p class="text-xl text-gray-700">
+          <strong>Start Time:</strong> {workshop.data.startTime}
+        </p>
+      </div>
+
+      <!-- Workshop Description -->
+      <div class="prose prose-lg prose-blue max-w-none">
+        <Content />
+      </div>
+    </div>
+  </article>
+</Layout>
+
+<style is:global>
+  .prose {
+    color: #7a7a7a;
+  }
+  
+  .prose p {
+    font-size: 1.2rem;
+    max-width: none;
+    margin-bottom: 1rem;
+  }
+  
+  .prose h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: black;
+    margin-bottom: 1.5rem;
+  }
+  
+  .prose h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: black;
+    margin-bottom: 1rem;
+  }
+  
+  .prose ul,
+  .prose ol {
+    margin-bottom: 1.5rem;
+    padding-left: 2rem;
+  }
+  
+  .prose li {
+    margin-bottom: 0.5rem;
+    line-height: 1.6;
+  }
+  
+  .prose ul li {
+    list-style-type: disc;
+  }
+  
+  .prose ol li {
+    list-style-type: decimal;
+  }
+  
+  .prose ul ul,
+  .prose ol ol {
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .prose a {
+    color: #2563eb;
+    text-decoration: underline;
+    text-decoration-color: #93c5fd;
+    transition: all 0.2s ease;
+  }
+  
+  .prose a:hover {
+    color: #1d4ed8;
+    text-decoration-color: #2563eb;
+  }
+  
+  .prose strong {
+    font-weight: 600;
+    color: #111827;
+  }
+  
+  .prose em {
+    font-style: italic;
+    color: #1f2937;
+  }
+  
+  .prose blockquote {
+    border-left: 4px solid #2563eb;
+    padding-left: 1.5rem;
+    margin: 2rem 0;
+    font-style: italic;
+    color: #4b5563;
+    background-color: #f9fafb;
+    padding: 1rem 1.5rem;
+    border-radius: 0.25rem;
+  }
+  
+  .prose pre {
+    background-color: #1f2937;
+    color: #f9fafb;
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    overflow-x: auto;
+    margin: 1.5rem 0;
+    font-size: 0.9rem;
+    line-height: 1.5;
+  }
+  
+  .prose code {
+    background-color: #f3f4f6;
+    color: #1f2937;
+    padding: 0.2rem 0.4rem;
+    border-radius: 0.25rem;
+    font-size: 0.9em;
+    font-family: 'Courier New', monospace;
+  }
+  
+  .prose pre code {
+    background-color: transparent;
+    color: inherit;
+    padding: 0;
+    border-radius: 0;
+  }
+  
+  .prose img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 0.5rem;
+    margin: 2rem 0;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  }
+  
+  .prose hr {
+    border: none;
+    border-top: 2px solid #e5e7eb;
+    margin: 3rem 0;
+  }
+  
+  .prose > p:first-child {
+    font-size: 1.2rem;
+    color: #1f2937;
+    font-weight: 400;
+    margin-bottom: 2rem;
+  }
+  
+  @media (max-width: 768px) {
+    .prose {
+      font-size: 1rem;
+    }
+    
+    .prose h1 {
+      font-size: 2rem;
+    }
+    
+    .prose h2 {
+      font-size: 1.75rem;
+    }
+    
+    .prose h3 {
+      font-size: 1.4rem;
+    }
+    
+    .prose ul,
+    .prose ol {
+      padding-left: 1.5rem;
+    }
+  }
+</style> 

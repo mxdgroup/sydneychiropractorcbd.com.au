@@ -28,7 +28,21 @@ const treatmentCollection = defineCollection({
   }),
 });
 
+const workshopCollection = defineCollection({
+  type: 'content',
+  schema: z.object({
+    title: z.string(),
+    description: z.string(),
+    pubDate: z.date(),
+    startTime: z.string(),
+    heroImage: z.string(),
+    tags: z.array(z.string()).default([]),
+    author: z.string().default('Sydney Chiropractor CBD'),
+  }),
+});
+
 export const collections = {
   'blog': blogCollection,
   'treatments': treatmentCollection,
+  'workshops': workshopCollection,
 }; 
