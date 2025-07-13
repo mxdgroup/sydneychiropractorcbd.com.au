@@ -20,45 +20,53 @@ type Props = CollectionEntry<'treatments'>;
 const treatment = Astro.props;
 const { Content } = await treatment.render();
 
-const carouselTreatments = [
-    { title: "Back Pain", imageUrl: "/treatments/circles/backpain.png" },
-    { title: "Carpal Tunnel", imageUrl: "/treatments/circles/carpal.png" },
-    { title: "City Workers", imageUrl: "/treatments/circles/city.webp" },
-    { title: "ENP", imageUrl: "/treatments/circles/enp.png" },
-    { title: "Massage", imageUrl: "/treatments/circles/mass.webp" },
-    { title: "Neck Pain", imageUrl: "/treatments/circles/neck-pain.webp" },
-    { title: "Posture Correction", imageUrl: "/treatments/circles/posture.png" },
-    { title: "Pregnancy", imageUrl: "/treatments/circles/preg.webp" },
-    { title: "Sciatica", imageUrl: "/treatments/circles/scia.webp" },
-    { title: "Scoliosis", imageUrl: "/treatments/circles/scoli.webp" },
-];
+// Generate image filename from treatment title
+const generateImageName = (title: string) => {
+  return title.toLowerCase().split(' ').join('-');
+};
+
+const topExtension = 'jpg';
+const bottomExtension = 'png';
+const imageName = generateImageName(treatment.data.title);
+const normalImagePath = `/treatments/normal/${imageName}.${topExtension}`;
+const bottomImagePath = `/treatments/bottom/${imageName}.${bottomExtension}`;
+
+// Get all treatments for carousel
+const allTreatments = await getCollection('treatments');
+const carouselTreatments = allTreatments.map(t => ({
+    title: t.data.title,
+    imageUrl: `/treatments/normal/${generateImageName(t.data.title)}.${topExtension}`
+}));
 ---
 
 <Layout title={`${treatment.data.title} | Sydney Chiropractor CBD`}>
   <!-- Header Image Section -->
   <HeaderImage 
-    backgroundImage={treatment.data.heroImage} 
+    backgroundImage={normalImagePath} 
     headerText={"SYDNEY CBD CHIROPRACTORS"}
     buttonText="Book an Appointment" 
   />
 
   <!-- Treatment Content -->
   <article class="container mx-auto px-4 sm:px-6 lg:px-8 py-16 prose prose-lg prose-blue">
-    <UnderlinedHeader left={true}>{treatment.data.title}</UnderlinedHeader>
+    <UnderlinedHeader left={true}>{treatment.data.title.toUpperCase()}</UnderlinedHeader>
     <Content />
 
   </article>
+  {treatment.data.title !== "Cranial Chiropractic" && (
+
   <div class="relative w-full">
-    <ScrollCrop src={"https://sydneychiropractorcbd.com.au/wp-content/uploads/2021/03/backpain-min.png"} />
-    <img src="/rectangle-overlay.webp" alt="Rectangle Overlay" class="absolute bottom-0 left-0 w-full h-auto z-10 pointer-events-none" />
+    <ScrollCrop src={bottomImagePath} />
+    <img src="/rectangle-overlay.webp" alt="Bottom Treatment Image" class="absolute bottom-0 left-0 w-full h-auto z-10 pointer-events-none" />
   </div>
-  <div class="relative z-20" style="margin-top: -128px;">
-      <Carousel itemCount={carouselTreatments.length}>
-          {carouselTreatments.map(item => (
-              <CarouselItem title={item.title} imageUrl={item.imageUrl} />
-          ))}
-      </Carousel>
-  </div>
+    <div class="relative z-20" style="margin-top: -128px;">
+        <Carousel itemCount={carouselTreatments.length}>
+            {carouselTreatments.map(item => (
+                <CarouselItem title={item.title} imageUrl={item.imageUrl} />
+            ))}
+        </Carousel>
+    </div>
+  )}
   <div class="mt-12 sm:mt-16 md:mt-20"></div>   
   <h2 style="color: #1F2BA3;" class="text-center text-2xl font-bold">WANT TO FIND OUT MORE ABOUT OUR TREATMENTS, SERVICES AND RATES?</h2>
   <div class="mt-6 sm:mt-8 md:mt-10"></div>   
