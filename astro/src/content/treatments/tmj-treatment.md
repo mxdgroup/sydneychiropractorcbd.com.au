@@ -6,34 +6,36 @@ heroImage: "https://sydneychiropractorcbd.com.au/wp-content/uploads/2024/12/The-
 tags: ["spinal decompression", "back pain", "non-surgical"]
 ---
 
-Millions of people in the world suffer from headaches and migraines. Accidents, injuries, diets, insomnia and stressful lives are some of the leading causes of these debilitating conditions, making everyday life that much harder to manage.
+Are you suffering from jaw clicking, facial pain, or persistent headaches? These symptoms may indicate temporomandibular joint disorder (TMJ) or related cranial issues.
+ 
+At clinic 27, we now offer TMJ/Cranial chiropractic care designed to gently realign your jaw and cranium, helping restore function, relieve pain, and rebalance your nervous system.
+ 
+Here is all you need to know about the symptoms, as well as the treatment:
 
-A Migraine or headache can cause symptoms such as throbbing sensations on one side of the head, often accompanied by symptoms of nausea and impaired vision. It is believed that genetics and environmental factors play a role in the onset of headaches or migraines, speaking to imbalances in brain chemicals and hormones. Our Sydney CBD chiropractors offer treatment and relief if you’re suffering from such headaches or migraines.
+## About TMJ and Cranial Dysfunction
 
-## CAN YOU MAKE THEM GO AWAY?
+Many individuals don’t realise how much stress they hold in their face. Facial tension can contribute to jaw pain, headaches, ear discomfort, and even affect your posture. Over time, this can also affect the skin’s elasticity—contributing to the appearance of wrinkles and facial asymmetry.
 
-There are many types and causes of headaches. Regardless of the cause, if you have a headache, you want it to end. Fast! 
+## Common Symptoms to Recognise
 
-This has produced a huge market for medications that cover up the symptoms of headaches. Powerful drugs can numb your nervous system so the pain doesn’t register. While these approaches may be convenient, they can cause adverse effects and kidney or liver damage. Worse, they don’t correct the underlying cause of the headache. 
+TMJ dysfunction doesn’t just present as clicking jaws or limited mouth opening. Symptoms may include facial pain, pressure around the eyes or cheeks, neck stiffness, and even sensations similar to Bell’s palsy, such as numbness or muscle fatigue on one side of the face.
+ 
+After facial trauma—such as from an accident, dental procedure, or surgery—the body’s natural protective patterns can lead to further restriction in the soft tissues of the face and jaw.
+This is where facial fascial release becomes essential. The fascia is the connective tissue that wraps every muscle and organ in the body, including those in the face.
+ 
+When it becomes restricted, it can trap inflammation, limit movement, and block natural drainage pathways such as those for lymphatic flow or sinus relief.
 
-Headaches may be common, but they’re not normal! 
+## What Causes TMJ and Cranial Problems?
 
-A cause of headaches can be from spinal bones in the neck that aren’t supporting your head properly. They’re not moving right. This can affect nerves, muscles and even the blood supply to your head. 
+Understanding what causes TMJ issues helps in both prevention and effective treatment. Jaw misalignment (malocclusion) is a primary cause, forcing your jaw to work harder during normal functions and creating strain on the joint and surrounding muscles.
 
-Headaches can be related to vision problems and other causes. Our examinations can show if you are likely to be helped with chiropractic. 
-
-Chiropractic doctors locate areas of the spine that aren’t moving properly. They notice if proper spinal curves are present. They look at your posture and your ability to turn and bend. These and many other examinations can help determine if you are likely to benefit from chiropractic care. 
-
-Your body does not have an aspirin shortage! Medications merely numb your body, ignoring the underlying cause. 
-
-If you’re a good chiropractic candidate, your care will consist of a schedule of chiropractic adjustments. These help normalise spinal function, help restore essential spinal curves, improve circulation and reduce nerve irritation. Many patients report fewer and less severe headaches. 
-
-Just as the foundation affects a building, headaches and neck pain can be a reaction to problems in the pelvis or lower back. 
-
-While we can’t guarantee results, our office has a high success rate with patients who get headaches.
-
-Many headaches are the result of a loss of curve in the neck, affecting nerves, muscles and blood supply to the head. 
-
-## THE DEEP-ROOTED CAUSES OF MIGRAINES
-
-Whatever the cause, the pain is real and can often be excessive, preventing people from partaking in activities of daily living. With the onset of nausea or impaired vision, headaches can be more than a simple painful sensation. As such, many Australians are searching for headache and migraine treatment to help them get on with their day as healthily as possible.
+Poor posture significantly impacts jaw alignment. Forward head posture places additional stress on the jaw joint and contributes to TMJ problems by disrupting the natural alignment of your head, neck, and jaw.
+ 
+Stress is one of the most significant contributors to TMJ dysfunction. When under stress, many people unconsciously clench their jaw or grind their teeth, placing enormous pressure on the temporomandibular joint. This stress response creates chronic tension and structural changes that perpetuate jaw pain.
+ 
+Common risk factors include:
+- Chronic teeth grinding (bruxism)
+- Previous jaw injuries
+- Arthritis affecting the jaw joint
+- Connective tissue disorders
+- Chronic stress and anxiety

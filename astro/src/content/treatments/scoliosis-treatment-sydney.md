@@ -6,34 +6,49 @@ heroImage: "https://sydneychiropractorcbd.com.au/wp-content/uploads/2024/12/The-
 tags: ["spinal decompression", "back pain", "non-surgical"]
 ---
 
-Millions of people in the world suffer from headaches and migraines. Accidents, injuries, diets, insomnia and stressful lives are some of the leading causes of these debilitating conditions, making everyday life that much harder to manage.
+Many people worldwide are affected by an unfortunate condition of the spine called Scoliosis. Essentially it details a curvature of the spine, scoliosis can cause pain and discomfort to those who are afflicted with the condition.
 
-A Migraine or headache can cause symptoms such as throbbing sensations on one side of the head, often accompanied by symptoms of nausea and impaired vision. It is believed that genetics and environmental factors play a role in the onset of headaches or migraines, speaking to imbalances in brain chemicals and hormones. Our Sydney CBD chiropractors offer treatment and relief if you’re suffering from such headaches or migraines.
+Unfortunately, this often makes daily life a struggle due to the pain and difficulties scoliosis sufferers face when they walk, sit or partake in any activities. We, at Clinic 27, are a group of trained Sydney chiropractors who strive to help people suffering from this crippling condition. We can apply non-invasive methods to provide relief of the pains and symptoms associated to the condition.
 
-## CAN YOU MAKE THEM GO AWAY?
+Scoliosis consists of a curvature of the spine, caused by many different factors. The different types of scoliosis are:
 
-There are many types and causes of headaches. Regardless of the cause, if you have a headache, you want it to end. Fast! 
+- Congenital – This is caused by a bone abnormality at birth.
+- Neuromuscular – Resulting from paralysis, this type of scoliosis is cause by abnormal muscles or nerves.
+- Degenerative – This type is due to degenerative bone disease, extreme surgery or severe back trauma.
+- Idiopathic – This is considered the most common type of scoliosis and no clear identifiable cause has been found.
+Scoliosis is detected through X-Ray screenings and two of the most common treatments for the condition consist of the use of braces and invasive surgery.
 
-This has produced a huge market for medications that cover up the symptoms of headaches. Powerful drugs can numb your nervous system so the pain doesn’t register. While these approaches may be convenient, they can cause adverse effects and kidney or liver damage. Worse, they don’t correct the underlying cause of the headache. 
+## A Non-Invasive Scoliosis Treatment
+Using the Advanced Bio structural Correction (ABC) Method, a Scoliosis chiropractor will hone in on the specific places in the spine where the condition is at its worst.
 
-Headaches may be common, but they’re not normal! 
+Small movements will then be applied to manipulate tension areas to help realign the spine. With frequent therapy sessions, the patient may see significant improvements in their overall movements, energy levels and spinal alignment. We have seen the successful recovery of many scoliosis sufferers due to our treatment, which is the most non-invasive method available in the medical field today. Individual results may vary and we suggest you make an appointment with our Chiropractor team today to discuss your specific case and see if we too may be able to help you.
 
-A cause of headaches can be from spinal bones in the neck that aren’t supporting your head properly. They’re not moving right. This can affect nerves, muscles and even the blood supply to your head. 
+## Can it be Prevented?
 
-Headaches can be related to vision problems and other causes. Our examinations can show if you are likely to be helped with chiropractic. 
+Scoliosis is tragic. It causes both physical pain and emotional suffering. This sideways bending of the spine shows up as abnormal posture and then finally, deformity. If allowed to advance, it can interfere with the lungs, heart and many other vital organs. 
 
-Chiropractic doctors locate areas of the spine that aren’t moving properly. They notice if proper spinal curves are present. They look at your posture and your ability to turn and bend. These and many other examinations can help determine if you are likely to benefit from chiropractic care. 
+## There is hope.
 
-Your body does not have an aspirin shortage! Medications merely numb your body, ignoring the underlying cause. 
+Scoliosis affects boys, but more frequently girls, between the ages of 8 and 18. The cause varies. Some are born with this spinal deviation (congenital). Others get it from assuming a distorted head or hip position (habitual). Sadly, in many cases the cause is still unknown. 
 
-If you’re a good chiropractic candidate, your care will consist of a schedule of chiropractic adjustments. These help normalise spinal function, help restore essential spinal curves, improve circulation and reduce nerve irritation. Many patients report fewer and less severe headaches. 
+Clothing that doesn’t fit correctly can be an early sign of scoliosis. 
 
-Just as the foundation affects a building, headaches and neck pain can be a reaction to problems in the pelvis or lower back. 
+In the beginning, when it is easiest to correct, there are rarely symptoms. However, an alert parent may notice that a high shoulder or low hip makes clothing fit poorly. Back and leg pains may develop but are often overlooked as merely “growing pains”. Neglect is the biggest danger. 
 
-While we can’t guarantee results, our office has a high success rate with patients who get headaches.
+Make sure your children use both straps on their backpacks and their load doesn’t exceed 15% of their body weight. 
 
-Many headaches are the result of a loss of curve in the neck, affecting nerves, muscles and blood supply to the head. 
+Some theorise that using devices that hasten early walking may interrupt the crawling stage, essential for proper spinal development. 
 
-## THE DEEP-ROOTED CAUSES OF MIGRAINES
+If allowed to run its course, scoliosis can steadily worsen. Early detection is critical. Severe cases can involve surgery. This procedure attaches steel rods to the spine to force it to straighten. 
 
-Whatever the cause, the pain is real and can often be excessive, preventing people from partaking in activities of daily living. With the onset of nausea or impaired vision, headaches can be more than a simple painful sensation. As such, many Australians are searching for headache and migraine treatment to help them get on with their day as healthily as possible.
+Chiropractic care has helped many young women avoid the unhappy effects of scoliosis. The procedure is simple. 
+
+Surgical intervention often involved bolting a steel rod to the child’s spinal column.
+
+First, a thorough examination helps detect scoliosis in its early stage. Then, corrective action can begin at once. The primary course of care is a program of specific chiropractic adjustments. These help improve the function and structure of the spine. Muscles strengthen. Posture can improve. 
+
+Chiropractic care has helped countless young women reclaim their health, posture and their self-esteem. 
+
+Scoliosis sufferers carry the burden of exhausting leg pain on a daily basis. Directly affecting the sciatic nerve, the largest nerve in the body, it is a condition that must be treated with care and attention. Unfortunately, sufferers of this crippling condition can go years without proper treatment, affecting their quality of living overall.
+
+The team at Clinic 27 strives to tackle scoliosis with non-invasive therapies. Many patients have consulted our team of Chiropractors when other treatments have been of limited or no effect and found our treatments to look at the body as a whole rather than a specific area which may have a better outcome for their case

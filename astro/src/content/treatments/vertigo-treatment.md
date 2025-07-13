@@ -26,3 +26,16 @@ BPPV – Benign Paroxysmal Positional Vertigo is caused by the build-up of small
 Unfortunately, the causes of vertigo are many, which makes vertigo treatment all that much trickier. Trained Chiropractors who treat vertigo, can be found in our Sydney CBD clinic. A consultation with our team for a vertigo treatment in Sydney is recommended for this disorder so that we may understand the cause and if it suits the criteria for Chiropractic intervention, it may be treated by our team of Chiropractors in Sydney ². 
 
 Among other things, we provide benign positional vertigo treatment in Sydney at Clinic 27.
+
+## Symptoms and Vertigo Treatment
+
+Vertigo can be an uncomfortable feeling that gives off the sensation of a lack of balance. As such,
+many sufferers will have a difficult time sitting or standing upright. The most common symptoms are:
+
+- Nausea
+- Tilting
+- Lack of balance
+- Sweating
+- Headaches or migraines
+
+To best target the symptoms and the vertigo itself, rehabilition is a necessary vertigo treatment. Is you need a vertigo treatment in Sydney, you can always visit us.

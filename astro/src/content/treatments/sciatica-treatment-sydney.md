@@ -6,34 +6,35 @@ heroImage: "https://sydneychiropractorcbd.com.au/wp-content/uploads/2024/12/The-
 tags: ["spinal decompression", "back pain", "non-surgical"]
 ---
 
-Millions of people in the world suffer from headaches and migraines. Accidents, injuries, diets, insomnia and stressful lives are some of the leading causes of these debilitating conditions, making everyday life that much harder to manage.
+Sciatica can affect many people from all walks of life, it is often caused by a spinal disc herniation. This herniation is usually the cause of age-related degeneration due to injuries incurred. With time, and without sciatica treatment, it can worsen and have negative consequences on a person’s quality of life.
 
-A Migraine or headache can cause symptoms such as throbbing sensations on one side of the head, often accompanied by symptoms of nausea and impaired vision. It is believed that genetics and environmental factors play a role in the onset of headaches or migraines, speaking to imbalances in brain chemicals and hormones. Our Sydney CBD chiropractors offer treatment and relief if you’re suffering from such headaches or migraines.
+Sciatic pain can make it difficult to sleep and walk, sciatica is a debilitating condition that requires extra attention and care when treating it. The pain is usually described as a sharp shooting type, stemming from below the knee all the way down to the foot. This level of inflammation can persist for years and worsen if the area is not treated with regular therapy and care.
 
-## CAN YOU MAKE THEM GO AWAY?
+An experienced sciatica chiropractor can assess such a medical condition, understanding the reasons for its initial onset and the ways to prevent aggravating it further. Our team of Sydney Chiropractors at Clinic 27 are trained to diagnose and make recommendations specific to these conditions.
 
-There are many types and causes of headaches. Regardless of the cause, if you have a headache, you want it to end. Fast! 
+Our chiropractors will look at your spine, to see the issues and the injuries it is unable to correct on its own. Using a series of Chiropractic adjustments following the Advanced Bio structural Correction Method, the chiropractor may make small corrections to your spine in order to change the alignment of the body.
 
-This has produced a huge market for medications that cover up the symptoms of headaches. Powerful drugs can numb your nervous system so the pain doesn’t register. While these approaches may be convenient, they can cause adverse effects and kidney or liver damage. Worse, they don’t correct the underlying cause of the headache. 
+Being able to enjoy outdoor activities or go out for a simple walk without pain will directly improve a patient’s quality of life and we may be able to provide you the necessary treatment to help you achieve this.
 
-Headaches may be common, but they’re not normal! 
+## How Will I Get Relief?
+Sciatica can be a distracting pain that starts in the lower back and extends down into one or both legs. Chiropractic care has proven to be quite helpful. 
 
-A cause of headaches can be from spinal bones in the neck that aren’t supporting your head properly. They’re not moving right. This can affect nerves, muscles and even the blood supply to your head. 
+ Before submitting to dangerous and irreversible surgery, more and more patients are seeking the natural approach offered by chiropractic. 
 
-Headaches can be related to vision problems and other causes. Our examinations can show if you are likely to be helped with chiropractic. 
+ Those suffering from sciatica are often in their 40s and 50s. It usually begins as an acute pain in the lower back and then extends down the back of either leg. The pain usually worsens with long periods of sitting or standing. 
 
-Chiropractic doctors locate areas of the spine that aren’t moving properly. They notice if proper spinal curves are present. They look at your posture and your ability to turn and bend. These and many other examinations can help determine if you are likely to benefit from chiropractic care. 
+ Like the visible part of an iceberg, symptoms are obvious. Yet there can be years of hidden and undetected spinal problems. 
 
-Your body does not have an aspirin shortage! Medications merely numb your body, ignoring the underlying cause. 
+ Like a large river created by smaller streams, five pairs of nerves exit the spine in the lower back to form the two sciatic nerves. The soft, pulpy disc between each spinal bone is often involved. While a disc can’t “slip,” it can bulge, herniate or rupture. This can put direct pressure on the nearby nerves. The result? Swelling. Inflammation. Pain when coughing, sneezing or with others kinds of movement. 
 
-If you’re a good chiropractic candidate, your care will consist of a schedule of chiropractic adjustments. These help normalise spinal function, help restore essential spinal curves, improve circulation and reduce nerve irritation. Many patients report fewer and less severe headaches. 
+ Chiropractic adjustments can be very helpful in improving spinal biomechanics and reducing nerve pressure to the sciatic nerve roots. 
 
-Just as the foundation affects a building, headaches and neck pain can be a reaction to problems in the pelvis or lower back. 
+ Sciatica often worsens with extended bed rest. Pain pills or muscle relaxers are unable to correct the nerve compression caused by the bulging disc. Physical therapy merely works the area to increase your tolerance to pain. Surgery often involves cutting away disc tissue or removing bone to make room for the nerve. 
 
-While we can’t guarantee results, our office has a high success rate with patients who get headaches.
+ Fortunately, sciatica often responds to safe, natural chiropractic care. 
 
-Many headaches are the result of a loss of curve in the neck, affecting nerves, muscles and blood supply to the head. 
+ Like the changing shape of soft ice cream, a common cause of sciatica is a bulging disc that puts pressure on nearby nerves. 
 
-## THE DEEP-ROOTED CAUSES OF MIGRAINES
+ Improving joint motion with a series of chiropractic adjustments has produced results for millions. “Before” and “after” images of the lower back often show improved disc height and spacing. Many patients report that they can resume their lives and that their symptoms disappear. Without resorting to drugs or surgery.
 
-Whatever the cause, the pain is real and can often be excessive, preventing people from partaking in activities of daily living. With the onset of nausea or impaired vision, headaches can be more than a simple painful sensation. As such, many Australians are searching for headache and migraine treatment to help them get on with their day as healthily as possible.
+ Your chiropractic doctor is uniquely skilled to evaluate and reduce the most common cause of sciatica nerve pain. It’s the natural approach to relief and better health. There is hope! 
