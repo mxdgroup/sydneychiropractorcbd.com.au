@@ -1,0 +1,150 @@
+---
+import Layout from '../layouts/Layout.astro';
+import OrbitDiagram from '../components/OrbitDiagram.astro';
+---
+
+<Layout title="Orbit Diagram Test | Sydney Chiropractor CBD">
+  <main class="flex flex-col items-center justify-center min-h-screen bg-gray-50 p-8">
+    <div class="max-w-4xl w-full">
+      <h1 class="text-4xl font-bold text-center mb-8 text-gray-800">
+        Orbit Diagram Component Test
+      </h1>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <!-- Example 1: Basic usage as per requirements -->
+        <div class="flex flex-col items-center">
+          <h2 class="text-2xl font-semibold mb-4 text-gray-700">Example 1: Basic Usage</h2>
+          <OrbitDiagram
+            width={500}
+            height={500}
+            center={{ size: 100, color: '#4F46E5' }}
+            orbit={{
+              count: 6,
+              size: 50,
+              color: '#10B981',
+              lineColor: '#374151',
+              arcRadius: 20
+            }}
+          />
+        </div>
+        
+        <!-- Example 2: Different configuration with fast rotation -->
+        <div class="flex flex-col items-center">
+          <h2 class="text-2xl font-semibold mb-4 text-gray-700">Example 2: Fast Rotation</h2>
+          <OrbitDiagram
+            width={400}
+            height={400}
+            center={{ size: 80, color: '#EF4444' }}
+            orbit={{
+              count: 8,
+              size: 30,
+              color: '#F59E0B',
+              lineColor: '#6B7280',
+              arcRadius: 15,
+              lineThickness: 1.5,
+              distance: 120,
+              rotationDuration: 5
+            }}
+          />
+        </div>
+        
+        <!-- Example 3: Minimal configuration -->
+        <div class="flex flex-col items-center">
+          <h2 class="text-2xl font-semibold mb-4 text-gray-700">Example 3: Minimal Setup</h2>
+          <OrbitDiagram
+            width={300}
+            height={300}
+            center={{ size: 60, color: '#8B5CF6' }}
+            orbit={{
+              count: 4,
+              size: 40,
+              color: '#EC4899',
+              lineColor: '#9CA3AF',
+              arcRadius: 10
+            }}
+          />
+        </div>
+        
+        <!-- Example 4: Large orbit with slow rotation -->
+        <div class="flex flex-col items-center">
+          <h2 class="text-2xl font-semibold mb-4 text-gray-700">Example 4: Slow Rotation</h2>
+          <OrbitDiagram
+            width={600}
+            height={600}
+            center={{ size: 120, color: '#059669' }}
+            orbit={{
+              count: 12,
+              size: 35,
+              color: '#3B82F6',
+              lineColor: '#4B5563',
+              arcRadius: 25,
+              lineThickness: 2.5,
+              distance: 200,
+              rotationDuration: 40
+            }}
+          />
+        </div>
+      </div>
+      
+      <!-- Documentation -->
+      <div class="mt-16 bg-white rounded-lg shadow-lg p-8">
+        <h2 class="text-3xl font-bold mb-6 text-gray-800">OrbitDiagram Component Documentation</h2>
+        
+        <div class="prose max-w-none">
+          <h3 class="text-xl font-semibold mb-4 text-gray-700">Props</h3>
+          
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div>
+              <h4 class="text-lg font-medium mb-2 text-gray-600">Basic Props</h4>
+              <ul class="space-y-1 text-sm text-gray-600">
+                <li><code class="bg-gray-100 px-2 py-1 rounded">width</code> - SVG width in pixels</li>
+                <li><code class="bg-gray-100 px-2 py-1 rounded">height</code> - SVG height in pixels</li>
+              </ul>
+            </div>
+            
+            <div>
+              <h4 class="text-lg font-medium mb-2 text-gray-600">Center Object</h4>
+              <ul class="space-y-1 text-sm text-gray-600">
+                <li><code class="bg-gray-100 px-2 py-1 rounded">size</code> - Diameter of center circle</li>
+                <li><code class="bg-gray-100 px-2 py-1 rounded">color</code> - Fill color of center circle</li>
+              </ul>
+            </div>
+            
+            <div>
+              <h4 class="text-lg font-medium mb-2 text-gray-600">Orbit Object</h4>
+              <ul class="space-y-1 text-sm text-gray-600">
+                <li><code class="bg-gray-100 px-2 py-1 rounded">count</code> - Number of orbiting circles</li>
+                <li><code class="bg-gray-100 px-2 py-1 rounded">size</code> - Diameter of orbiting circles</li>
+                <li><code class="bg-gray-100 px-2 py-1 rounded">color</code> - Fill color of orbiting circles</li>
+                <li><code class="bg-gray-100 px-2 py-1 rounded">lineColor</code> - Color of connecting lines</li>
+              </ul>
+            </div>
+            
+            <div>
+              <h4 class="text-lg font-medium mb-2 text-gray-600">Optional Orbit Props</h4>
+              <ul class="space-y-1 text-sm text-gray-600">
+                <li><code class="bg-gray-100 px-2 py-1 rounded">lineThickness</code> - Line stroke width (default: 2)</li>
+                <li><code class="bg-gray-100 px-2 py-1 rounded">arcRadius</code> - Curvature of arcs (default: 20)</li>
+                <li><code class="bg-gray-100 px-2 py-1 rounded">distance</code> - Distance from center (default: auto)</li>
+                <li><code class="bg-gray-100 px-2 py-1 rounded">rotationDuration</code> - Rotation speed in seconds (default: 20)</li>
+              </ul>
+            </div>
+          </div>
+          
+          <h3 class="text-xl font-semibold mb-4 mt-8 text-gray-700">Features</h3>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li>• <strong>Fixed dimensions:</strong> Configurable width and height</li>
+            <li>• <strong>Central circle:</strong> Customizable size and color (static)</li>
+            <li>• <strong>Orbiting circles:</strong> Arbitrary count, evenly spaced</li>
+            <li>• <strong>Rotation animation:</strong> Smooth rotation around center with configurable speed</li>
+            <li>• <strong>Inward arcs:</strong> Curved connections between orbiting circles curving toward center</li>
+            <li>• <strong>Labels:</strong> Numbered labels on orbiting circles</li>
+            <li>• <strong>Visual guide:</strong> Dotted orbit circle outline</li>
+            <li>• <strong>Styling:</strong> Tailwind CSS with shadows and borders</li>
+            <li>• <strong>Future-ready:</strong> Designed to support circular images</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </main>
+</Layout> 
