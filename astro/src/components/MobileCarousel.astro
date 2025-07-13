@@ -1,0 +1,110 @@
+---
+export interface Props {
+  items: any[];
+  renderItem: (item: any, index: number) => string;
+  class?: string;
+  showDots?: boolean;
+  autoHeight?: boolean;
+}
+
+const { items, renderItem, class: className = "", showDots = true, autoHeight = false } = Astro.props;
+const carouselId = `carousel-${Math.random().toString(36).substr(2, 9)}`;
+---
+
+<div class={`md:hidden w-full ${className}`}>
+  <!-- Carousel Container -->
+  <div class="relative overflow-hidden">
+    <div 
+      class={`flex transition-transform duration-300 ease-in-out ${autoHeight ? '' : 'h-auto'}`}
+      id={`${carouselId}-container`}
+      style="transform: translateX(0%)"
+    >
+      {items.map((item, index) => (
+        <div class="w-full flex-shrink-0 px-4" set:html={renderItem(item, index)} />
+      ))}
+    </div>
+  </div>
+
+  <!-- Navigation Dots -->
+  {showDots && items.length > 1 && (
+    <div class="flex justify-center mt-6 space-x-2">
+      {items.map((_, index) => (
+        <button 
+          class={`w-3 h-3 rounded-full transition-colors duration-200 ${index === 0 ? 'bg-custom-pink' : 'bg-gray-300'}`}
+          data-carousel={carouselId}
+          data-index={index}
+          aria-label={`Go to slide ${index + 1}`}
+        />
+      ))}
+    </div>
+  )}
+</div>
+
+<script define:vars={{ carouselId, itemsLength: items.length }}>
+  document.addEventListener('DOMContentLoaded', () => {
+    const container = document.getElementById(`${carouselId}-container`);
+    const dots = document.querySelectorAll(`[data-carousel="${carouselId}"]`);
+    
+    if (!container || dots.length === 0) return;
+    
+    let currentIndex = 0;
+    
+    // Update carousel position
+    function updateCarousel(index) {
+      const translateX = -index * 100;
+      container.style.transform = `translateX(${translateX}%)`;
+      
+      // Update dots
+      dots.forEach((dot, i) => {
+        if (i === index) {
+          dot.classList.remove('bg-gray-300');
+          dot.classList.add('bg-custom-pink');
+        } else {
+          dot.classList.remove('bg-custom-pink');
+          dot.classList.add('bg-gray-300');
+        }
+      });
+      
+      currentIndex = index;
+    }
+    
+    // Add click events to dots
+    dots.forEach((dot, index) => {
+      dot.addEventListener('click', () => {
+        updateCarousel(index);
+      });
+    });
+    
+    // Touch/swipe functionality
+    let startX = 0;
+    let currentX = 0;
+    let isDragging = false;
+    
+    container.addEventListener('touchstart', (e) => {
+      startX = e.touches[0].clientX;
+      isDragging = true;
+    });
+    
+    container.addEventListener('touchmove', (e) => {
+      if (!isDragging) return;
+      currentX = e.touches[0].clientX;
+      e.preventDefault();
+    });
+    
+    container.addEventListener('touchend', () => {
+      if (!isDragging) return;
+      isDragging = false;
+      
+      const diffX = startX - currentX;
+      const threshold = 50;
+      
+      if (Math.abs(diffX) > threshold) {
+        if (diffX > 0 && currentIndex < itemsLength - 1) {
+          updateCarousel(currentIndex + 1);
+        } else if (diffX < 0 && currentIndex > 0) {
+          updateCarousel(currentIndex - 1);
+        }
+      }
+    });
+  });
+</script> 

@@ -2,6 +2,7 @@
 import UnderlinedHeader from "../UnderlinedHeader.astro";
 import PrimaryButton from "../PrimaryButton.astro";
 import ScrollCrop from "../ScrollCrop.astro";
+import MobileCarousel from "../MobileCarousel.astro";
 import personalPlan from "/public/Personal-Plan-img.webp";
 import hooman from "/public/team/hooman.webp";
 import angus from "/public/team/angus.png.webp";
@@ -52,6 +53,27 @@ const assistant = [
         description: "Chiropractic Assistant"
     },
 ]
+
+// Render functions for mobile carousels
+const renderDoctor = (doctor: any, index: number) => `
+    <div class="flex flex-col items-center">
+        <div class="w-40 h-40 mb-4 overflow-hidden rounded-full">
+            <img src="${doctor.image}" alt="${doctor.name}" class="w-full h-full object-cover" />
+        </div>
+        <h3 class="text-xl font-semibold mb-1 text-custom-purple">${doctor.name}</h3>
+        <p class="text-gray-600">${doctor.description}</p>
+    </div>
+`;
+
+const renderAssistant = (person: any, index: number) => `
+    <div class="flex flex-col items-center">
+        <div class="w-48 h-48 mb-4 overflow-hidden rounded-full">
+            <img src="${person.image}" alt="${person.name}" class="w-full h-full object-cover" />
+        </div>
+        <h3 class="text-xl font-semibold mb-1 text-custom-purple">${person.name}</h3>
+        <p class="text-gray-600">${person.description}</p>
+    </div>
+`;
 ---
 <div class="w-full py-20">
     <div class="mx-auto container">
@@ -61,8 +83,8 @@ const assistant = [
             </UnderlinedHeader>
         </div>
 
-        <!-- Doctors Grid - 4 columns -->
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+        <!-- Doctors Grid - Desktop -->
+        <div class="hidden md:grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
             {doctors.map((doctor) => (
                 <div class="flex flex-col items-center">
                     <div class="w-40 h-40 md:w-52 md:h-52 mb-4 overflow-hidden rounded-full">
@@ -74,8 +96,17 @@ const assistant = [
             ))}
         </div>
 
-        <!-- Assistants Grid - 3 columns -->
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <!-- Doctors Carousel - Mobile -->
+        <div class="mb-16">
+            <MobileCarousel 
+                items={doctors} 
+                renderItem={renderDoctor}
+                class="mb-8"
+            />
+        </div>
+
+        <!-- Assistants Grid - Desktop -->
+        <div class="hidden md:grid grid-cols-1 md:grid-cols-3 gap-8">
             {assistant.map((person) => (
                 <div class="flex flex-col items-center">
                     <div class="w-48 h-48 md:w-72 md:h-72 mb-4 overflow-hidden rounded-full">
@@ -86,6 +117,13 @@ const assistant = [
                 </div>
             ))}
         </div>
+
+        <!-- Assistants Carousel - Mobile -->
+        <MobileCarousel 
+            items={assistant} 
+            renderItem={renderAssistant}
+        />
+
         <div class="flex justify-center mt-10">
             <PrimaryButton>Book Now</PrimaryButton>
         </div>
@@ -130,7 +168,6 @@ const assistant = [
             </div>
         </div>
     </div>
-</div>
 </div>
 
 <script>

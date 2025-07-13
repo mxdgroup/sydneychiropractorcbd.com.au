@@ -1,11 +1,24 @@
 import type { APIRoute } from 'astro';
 import { Resend } from 'resend';
 
-const resend = new Resend("re_43MSkjeo_9NfhgUUsivNPY4YuUWohCtyv");
+// Get API key from environment variables
+const resendApiKey = process.env.RESEND_API_KEY;
+if (!resendApiKey) {
+  console.error("RESEND_API_KEY environment variable is not set");
+}
+
+const resend = new Resend(resendApiKey);
 
 export const prerender = false;
 
 export const POST: APIRoute = async ({ request }) => {
+  if (!resendApiKey) {
+    return new Response(
+      JSON.stringify({ error: 'Internal server error: missing configuration' }),
+      { status: 500, headers: { 'Content-Type': 'application/json' } }
+    );
+  }
+
   try {
     // Handle URL-encoded form data
     const body = await request.text();
@@ -77,6 +90,7 @@ export const POST: APIRoute = async ({ request }) => {
 
   } catch (error) {
     console.error('Error processing contact form:', error);
+    console.error('Request body:', await request.text());
     return new Response(
       JSON.stringify({ error: 'Internal server error' }),
       { status: 500, headers: { 'Content-Type': 'application/json' } }

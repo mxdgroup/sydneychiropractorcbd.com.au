@@ -1,6 +1,7 @@
 ---
 import UnderlinedHeader from "../UnderlinedHeader.astro";
 import BlogGrid from "../BlogGrid.astro";
+import MobileCarousel from "../MobileCarousel.astro";
 import Image from "astro/components/Image.astro";
 import medibank from "../../../public/partners/medibank-private-min.webp";
 import hcf from "../../../public/partners/hcf.webp";
@@ -58,18 +59,72 @@ const blogs = [
     excerpt: "What you eat plays a crucial role in maintaining healthy joints and reducing inflammation. Discover the best foods for joint health..."
   }
 ];
+
+const credentials = [
+  {
+    image: medibank.src,
+    alt: "Medibank"
+  },
+  {
+    image: hcf.src,
+    alt: "HCF"
+  },
+  {
+    image: spire.src,
+    alt: "Spire"
+  }
+];
+
+// Render functions for mobile carousels
+const renderCredential = (credential: any, index: number) => `
+    <div class="flex justify-center items-center">
+        <img src="${credential.image}" alt="${credential.alt}" class="w-48 h-auto" />
+    </div>
+`;
+
+const renderBlog = (blog: any, index: number) => `
+    <div class="bg-white rounded-lg shadow-md overflow-hidden">
+        <img src="${blog.imageUrl}" alt="${blog.title}" class="w-full h-48 object-cover" />
+        <div class="p-6">
+            <p class="text-sm text-gray-500 mb-2">${blog.date}</p>
+            <h3 class="text-xl font-semibold mb-3">${blog.title}</h3>
+            <p class="text-gray-600 text-sm leading-relaxed">${blog.excerpt}</p>
+        </div>
+    </div>
+`;
 ---
 <div class="w-full bg-gray-50 py-10">
     <div class="container mx-auto px-4">
         <UnderlinedHeader>Chiropractic Credentials And Accreditations</UnderlinedHeader>
-        <div class="mx-auto container grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-10 place-items-center w-full md:w-3/4 mb-16 mt-10">
+        
+        <!-- Credentials Grid - Desktop -->
+        <div class="hidden md:grid mx-auto container grid-cols-1 md:grid-cols-3 gap-8 md:gap-10 place-items-center w-full md:w-3/4 mb-16 mt-10">
             <Image src={medibank} alt="Medibank" class="w-48 md:w-full" />
             <Image src={hcf} alt="HCF" class="w-48 md:w-full" />
             <Image src={spire} alt="Spire" class="w-48 md:w-full" />
         </div>
         
+        <!-- Credentials Carousel - Mobile -->
+        <div class="mt-10 mb-16">
+            <MobileCarousel 
+                items={credentials} 
+                renderItem={renderCredential}
+            />
+        </div>
+        
         <UnderlinedHeader>Latest Blogs</UnderlinedHeader>
         
-        <BlogGrid blogs={blogs} />
+        <!-- Blog Grid - Desktop -->
+        <div class="hidden md:block">
+            <BlogGrid blogs={blogs} />
+        </div>
+        
+        <!-- Blog Carousel - Mobile -->
+        <div class="mt-10">
+            <MobileCarousel 
+                items={blogs} 
+                renderItem={renderBlog}
+            />
+        </div>
     </div>
 </div>

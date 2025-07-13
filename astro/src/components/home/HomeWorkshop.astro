@@ -1,11 +1,38 @@
 ---
 import PrimaryButton from "../PrimaryButton.astro";
 import UnderlinedHeader from "../UnderlinedHeader.astro";
+import MobileCarousel from "../MobileCarousel.astro";
 import Image from "astro/components/Image.astro";
 import ahm from "../../../public/partners/ahm-min.webp";
 import spire from "../../../public/partners/logo-sprite-copy-min.webp";
 import bupa from "../../../public/partners/bupa-logo-min.webp";
 import medibank from "../../../public/partners/medibank-private-min.webp";
+
+const partners = [
+  {
+    image: ahm.src,
+    alt: "AHM"
+  },
+  {
+    image: bupa.src,
+    alt: "Bupa"
+  },
+  {
+    image: medibank.src,
+    alt: "Medibank"
+  },
+  {
+    image: spire.src,
+    alt: "Spire"
+  }
+];
+
+// Render function for mobile carousel
+const renderPartner = (partner: any, index: number) => `
+    <div class="flex justify-center items-center">
+        <img src="${partner.image}" alt="${partner.alt}" class="w-32 h-auto" />
+    </div>
+`;
 ---
 <div class="w-full py-10" style="background-color:#f2f4f6">
     <div class="mb-20 mx-auto flex flex-col justify-center items-center bg-white container border border-gray-300 p-6 md:p-10" >
@@ -14,11 +41,20 @@ import medibank from "../../../public/partners/medibank-private-min.webp";
       <PrimaryButton variant="primary">Register</PrimaryButton>
     </div>
     <UnderlinedHeader>Health Insurance Accepted</UnderlinedHeader>
-    <div class="mx-auto container grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-20 mt-10 place-items-center">
+    
+    <!-- Partners Grid - Desktop -->
+    <div class="hidden md:grid mx-auto container grid-cols-2 md:grid-cols-4 gap-8 md:gap-20 mt-10 place-items-center">
       <Image src={ahm} alt="AHM" loading="lazy" class="w-32 md:w-auto" />
       <Image src={bupa} alt="Bupa" loading="lazy" class="w-32 md:w-auto" />
       <Image src={medibank} alt="Medibank" loading="lazy" class="w-32 md:w-auto" />
       <Image src={spire} alt="Spire" loading="lazy" class="w-32 md:w-auto" />
-
     </div>
-  </div>
+    
+    <!-- Partners Carousel - Mobile -->
+    <div class="mt-10">
+      <MobileCarousel 
+        items={partners} 
+        renderItem={renderPartner}
+      />
+    </div>
+</div>
