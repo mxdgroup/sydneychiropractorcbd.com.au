@@ -3,58 +3,61 @@ export interface Props {
   width: number;
   height: number;
   center: {
+    /** Size (diameter) of the central element */
     size: number;
-    color: string;
+    /** Fallback background colour if no image is supplied */
+    color?: string;
+    /** Optional image path for the central element */
+    image?: string;
   };
   orbit: {
-    count: number;
+    /**
+     * If images are supplied, the number of orbiting elements will be derived
+     * from the length of this array.  When omitted, `count` + `color` behave
+     * just like the old API and render coloured circles.
+     */
+    images?: string[];
+    /** Number of orbiting circles to render (ignored when `images` is given) */
+    count?: number;
+    /** Diameter for orbit elements */
     size: number;
-    color: string;
-    lineColor: string;
+    /** Fallback background colour for orbit circles (when no images) */
+    color?: string;
+    /** Stroke colour for the connecting arc/path lines */
+    lineColor?: string;
     lineThickness?: number;
     arcRadius?: number;
     distance?: number;
     rotationDuration?: number; // seconds for one full rotation
   };
+  /** Whether to draw a light gray border around the SVG (debug / dev only) */
+  showBorder?: boolean;
 }
 
-const { width, height, center, orbit } = Astro.props;
+const { width, height, center, orbit, showBorder = true } = Astro.props as Props;
 
-// Default values for optional props
-const lineThickness = orbit.lineThickness || 2;
-const arcRadius = orbit.arcRadius || 20;
-const orbitDistance = orbit.distance || Math.min(width, height) / 3;
-const rotationDuration = orbit.rotationDuration || 20;
+// Thickness and arc radius values were used for connecting lines which we have removed.
+const orbitDistance = orbit.distance ?? Math.min(width, height) / 3;
+const rotationDuration = orbit.rotationDuration ?? 20;
+
+// Determine how many orbiting elements we need
+const orbitCount = orbit.images ? orbit.images.length : (orbit.count ?? 0);
+
+if (!orbitCount) {
+  throw new Error("OrbitDiagram: either orbit.images or orbit.count must be provided and non-empty");
+}
 
 // Calculate center position
 const centerX = width / 2;
 const centerY = height / 2;
 
-// Calculate positions for orbiting circles
-const orbitPositions = Array.from({ length: orbit.count }, (_, i) => {
-  const angle = (i * 2 * Math.PI) / orbit.count;
+// Calculate positions for orbiting circles/images
+const orbitPositions = Array.from({ length: orbitCount }, (_, i) => {
+  const angle = (i * 2 * Math.PI) / orbitCount;
   const x = centerX + Math.cos(angle) * orbitDistance;
   const y = centerY + Math.sin(angle) * orbitDistance;
   return { x, y, angle };
 });
-
-// Function to create arc path (curved inward toward center)
-const createArcPath = (startX: number, startY: number, endX: number, endY: number, radius: number) => {
-  const midX = (startX + endX) / 2;
-  const midY = (startY + endY) / 2;
-  
-  // Calculate perpendicular offset for arc - reversed to curve inward
-  const dx = endX - startX;
-  const dy = endY - startY;
-  const length = Math.sqrt(dx * dx + dy * dy);
-  const offsetX = (dy / length) * radius; // Reversed direction
-  const offsetY = (-dx / length) * radius; // Reversed direction
-  
-  const controlX = midX + offsetX;
-  const controlY = midY + offsetY;
-  
-  return `M ${startX} ${startY} Q ${controlX} ${controlY} ${endX} ${endY}`;
-};
 ---
 
 <style>
@@ -92,76 +95,69 @@ const createArcPath = (startX: number, startY: number, endX: number, endY: numbe
     width={width} 
     height={height} 
     viewBox={`0 0 ${width} ${height}`}
-    class="border border-gray-200 rounded-lg shadow-sm"
+    class={`${showBorder ? 'border border-gray-200 rounded-lg shadow-sm' : ''}`}
     style={`--rotation-duration: ${rotationDuration}s; --center-x: ${centerX}px; --center-y: ${centerY}px;`}
   >
-    <!-- Orbit circle outline (optional visual guide) -->
-    <circle 
-      cx={centerX} 
-      cy={centerY} 
-      r={orbitDistance} 
-      fill="none" 
-      stroke="#e5e7eb" 
-      stroke-width="1" 
-      stroke-dasharray="5,5"
-      opacity="0.3"
+    
+    <!-- Orbit outline -->
+    <circle
+      cx={centerX}
+      cy={centerY}
+      r={orbitDistance}
+      fill="none"
+      stroke={orbit.lineColor ?? '#ffffff'}
+      stroke-width={orbit.lineThickness ?? 2}
     />
     
     <!-- Rotating group for orbiting elements -->
     <g class="orbit-rotation">
-      <!-- Arc connections between orbiting circles -->
-      {orbitPositions.map((pos, i) => {
-        const nextPos = orbitPositions[(i + 1) % orbitPositions.length];
-        return (
-          <path
-            d={createArcPath(pos.x, pos.y, nextPos.x, nextPos.y, arcRadius)}
-            stroke={orbit.lineColor}
-            stroke-width={lineThickness * 0.7}
-            fill="none"
-            opacity="0.6"
-          />
-        );
-      })}
-      
-      <!-- Orbiting circles with counter-rotation -->
+      <!-- Orbiting images with counter-rotation -->
       {orbitPositions.map((pos, i) => (
         <g class="orbit-circle" style={`--circle-x: ${pos.x}px; --circle-y: ${pos.y}px;`}>
-          <circle
-            cx={pos.x}
-            cy={pos.y}
-            r={orbit.size / 2}
-            fill={orbit.color}
-            stroke="#ffffff"
-            stroke-width="2"
-            class="drop-shadow-sm"
-          />
-          
-          <!-- Optional: Add labels or numbers to orbiting circles -->
-          <text
-            x={pos.x}
-            y={pos.y}
-            text-anchor="middle"
-            dominant-baseline="middle"
-            fill="white"
-            font-size="14"
-            font-weight="bold"
-            class="pointer-events-none select-none"
-          >
-            {i + 1}
-          </text>
+          {orbit.images ? (
+            <foreignObject
+              x={pos.x - orbit.size / 2}
+              y={pos.y - orbit.size / 2}
+              width={orbit.size}
+              height={orbit.size}
+            >
+              <img src={orbit.images[i]} alt="" loading="eager" class="w-full h-full object-cover rounded-full" />
+            </foreignObject>
+          ) : (
+            <circle
+              cx={pos.x}
+              cy={pos.y}
+              r={orbit.size / 2}
+              fill={orbit.color}
+              stroke="#ffffff"
+              stroke-width="2"
+              class="drop-shadow-sm"
+            />
+          )}
         </g>
       ))}
     </g>
     
-    <!-- Center circle (static, not rotating) -->
-    <circle
-      cx={centerX}
-      cy={centerY}
-      r={center.size / 2}
-      fill={center.color}
-      stroke="#ffffff"
-      stroke-width="3"
-      class="drop-shadow-md"
-    />
+    <!-- Center element (static, not rotating) -->
+    {center.image ? (
+      <foreignObject
+        x={centerX - center.size / 2}
+        y={centerY - center.size / 2}
+        width={center.size}
+        height={center.size}
+      >
+        <img src={center.image} alt="" loading="eager" class="w-full h-full object-cover rounded-full" />
+      </foreignObject>
+    ) : (
+      <circle
+        cx={centerX}
+        cy={centerY}
+        r={center.size / 2}
+        fill={center.color ?? '#4F46E5'}
+        stroke="#ffffff"
+        stroke-width="3"
+        class="drop-shadow-md"
+      />
+    )}
   </svg>
 </div> 

@@ -2,23 +2,58 @@
 import UnderlinedHeader from "../UnderlinedHeader.astro";
 import Paragraphs from "../Paragraphs.astro";
 import PrimaryButton from "../PrimaryButton.astro";
+import OrbitDiagram from "../OrbitDiagram.astro";
 ---
 <div class="min-h-screen py-20" style="background: linear-gradient(180deg, #1A2496 30%, #FFFFFF 100%);">
-    <div class="container mx-auto">
-        <UnderlinedHeader white={true} left={true}>Chiropractor Sydney CBD</UnderlinedHeader>
-        <div class="mt-6 sm:mt-8 md:mt-10"></div>   
-        <Paragraphs paragraphs={
-            ["The team of Sydney CBD Chiropractors at Clinic 27 is dedicated to the provision of chiropractic care with a difference, helping business professionals achieve their health care goals and maintain a high level of performance."]
-        } white={true}/>
-        <div class="mt-6 sm:mt-8 md:mt-10"></div>   
-        <UnderlinedHeader white={true} left={true}>Sydney Chiropractic Treatments</UnderlinedHeader>
-        <div class="mt-6 sm:mt-8 md:mt-10"></div>   
-        <Paragraphs paragraphs={
-            ["Clinic 27 is one of only a handful of Australian clinics to promote Advanced Biostructural Correction (ABC™). This technique reverses the effects of the body’s natural compensation for old injuries and physical trauma and provides a long-term solution to pain and discomfort. We treat all kinds of pain, from bruxism headaches, to ear pain, back pain, jaw discomfort, etc."]
-        } white={true}/>
-        <div class="mt-6 sm:mt-8 md:mt-10"></div>   
-        <PrimaryButton>SEE ALL TREATMENTS</PrimaryButton>
-        <div class="mt-6 sm:mt-8 md:mt-10"></div>   
+    <div class="mx-auto lg:mx-0 lg:px-0 flex flex-col lg:flex-row items-center container">
+        <!-- Orbit (visible only on large screens) -->
+        <div class="hidden lg:block lg:w-1/2 overflow-hidden">
+            <div class="-ml-[60%]">
+                <OrbitDiagram
+                    width={700}
+                    height={700}
+                    center={{ size: 330, image: '/treatments/circles/backpain.png' }}
+                    orbit={{
+                        images: [
+                            '/treatments/circles/backpain.png',
+                            '/treatments/circles/carpal.png',
+                            '/treatments/circles/neck-pain.webp',
+                            '/treatments/circles/vertigo.webp',
+                            '/treatments/circles/scia.webp',
+                            '/treatments/circles/scoli.webp',
+                            '/treatments/circles/mass.webp',
+                            '/treatments/circles/preg.webp',
+                            '/treatments/circles/city.webp',
+                            '/treatments/circles/posture.png'
+                        ],
+                        size: 110,
+                        distance: 300,
+                        rotationDuration: 60,
+                        color: '#ffffff',
+                        lineColor: '#ffffff',
+                    }}
+                    showBorder={false}
+                />
+            </div>
+        </div>
+
+        <!-- Text content -->
+        <div class="w-full lg:w-10/12">
+            <UnderlinedHeader white={true} left={true}>Chiropractor Sydney CBD</UnderlinedHeader>
+            <div class="mt-6 sm:mt-8 md:mt-10"></div>   
+            <Paragraphs paragraphs={[
+                "The team of Sydney CBD Chiropractors at Clinic 27 is dedicated to the provision of chiropractic care with a difference, helping business professionals achieve their health care goals and maintain a high level of performance."
+            ]} white={true}/>
+            <div class="mt-6 sm:mt-8 md:mt-10"></div>   
+            <UnderlinedHeader white={true} left={true}>Sydney Chiropractic Treatments</UnderlinedHeader>
+            <div class="mt-6 sm:mt-8 md:mt-10"></div>   
+            <Paragraphs paragraphs={[
+                "Clinic 27 is one of only a handful of Australian clinics to promote Advanced Biostructural Correction (ABC™). This technique reverses the effects of the body’s natural compensation for old injuries and physical trauma and provides a long-term solution to pain and discomfort. We treat all kinds of pain, from bruxism headaches, to ear pain, back pain, jaw discomfort, etc."
+            ]} white={true}/>
+            <div class="mt-6 sm:mt-8 md:mt-10"></div>   
+            <PrimaryButton>SEE ALL TREATMENTS</PrimaryButton>
+            <div class="mt-6 sm:mt-8 md:mt-10"></div>   
+        </div>
     </div>
     <div class="container mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
         {/* Find us */}
