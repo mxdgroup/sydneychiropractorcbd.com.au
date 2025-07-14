@@ -7,6 +7,7 @@ import medibank from "../../../public/partners/medibank-private-min.webp";
 import hcf from "../../../public/partners/hcf.webp";
 import spire from "../../../public/partners/logo-sprite-copy-min.webp";
 import { getCollection } from 'astro:content';
+import PrimaryButton from "../PrimaryButton.astro";
 
 const blogs = await getCollection('blog');
 
@@ -77,6 +78,9 @@ const renderBlog = (blog: any, index: number) => `
                 items={blogs.slice(0,8)} 
                 renderItem={renderBlog}
             />
+        </div>
+        <div class="mt-10 flex justify-center">
+            <PrimaryButton href="/blog-overview/">View more</PrimaryButton>
         </div>
     </div>
 </div>

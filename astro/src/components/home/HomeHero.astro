@@ -22,18 +22,22 @@ const phoneImage = await getImage({src: heroBgPhone, format: 'webp'});
             <div class="text-xl xl:text-2xl">CHIROPRACTORS</div>
             <div class="text-4xl xl:text-4xl mb-4">CLINIC 27</div>
         </div>
-        <PrimaryButton variant="secondary" href="/book-appointment">
+        <PrimaryButton variant="secondary" href="https://clinic27intake.bookings.pracsuite.com/guest?_gl=1*ish5tk*_gcl_au*MTE4MzYwMjQ1Ny4xNzUyNDc4Mzk3*_ga*MTgyODUzMzI5Ni4xNzUyNDc4Mzk3*_ga_DVEN4QQTPM*czE3NTI0NzgzOTckbzEkZzAkdDE3NTI0NzgzOTckajYwJGwwJGgw*_ga_S36TR91H9N*czE3NTI0NzgzOTckbzEkZzAkdDE3NTI0NzgzOTckajYwJGwwJGgw*_ga_NTMX2EEDN4*czE3NTI0NzgzOTckbzEkZzAkdDE3NTI0NzgzOTckajYwJGwwJGgw*_ga_8J9DNH249S*czE3NTI0NzgzOTckbzEkZzAkdDE3NTI0NzgzOTckajYwJGwwJGgw">
             BOOK APPOINTMENT
         </PrimaryButton>
     </div>
     <!-- Book now -->
-    <div class="absolute -bottom-20 left-2/4 hidden lg:flex rounded-full w-[250px] h-[250px] items-center justify-center">
+    <a 
+    href="https://clinic27intake.bookings.pracsuite.com/guest?_gl=1*ish5tk*_gcl_au*MTE4MzYwMjQ1Ny4xNzUyNDc4Mzk3*_ga*MTgyODUzMzI5Ni4xNzUyNDc4Mzk3*_ga_DVEN4QQTPM*czE3NTI0NzgzOTckbzEkZzAkdDE3NTI0NzgzOTckajYwJGwwJGgw*_ga_S36TR91H9N*czE3NTI0NzgzOTckbzEkZzAkdDE3NTI0NzgzOTckajYwJGwwJGgw*_ga_NTMX2EEDN4*czE3NTI0NzgzOTckbzEkZzAkdDE3NTI0NzgzOTckajYwJGwwJGgw*_ga_8J9DNH249S*czE3NTI0NzgzOTckbzEkZzAkdDE3NTI0NzgzOTckajYwJGwwJGgw"
+    target="_blank"
+    rel="noopener noreferrer"
+    class="absolute -bottom-20 left-2/4 hidden lg:flex rounded-full w-[250px] h-[250px] items-center justify-center cursor-pointer">
         <Image src="/pink-circle.webp" alt="Book now" loading="eager" width={250} height={250} class="rounded-full" />
         <div class="absolute inset-0 flex flex-col items-center justify-center text-white text-center">
             <div class="text-3xl font-bold">BOOK</div>
             <div class="text-xl">NOW</div>
         </div>
-    </div>
+    </a>
     <div class="absolute bottom-0 left-1/4 hidden lg:flex rounded-full w-[250px] h-[250px] items-center justify-center">
         <Image src="/pink-circle.webp" alt="Find us" loading="eager" width={250} height={250} class="rounded-full" />
         <div class="absolute inset-0 flex flex-col items-center justify-center text-white text-center">
