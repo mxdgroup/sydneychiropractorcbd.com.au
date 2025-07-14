@@ -8,6 +8,7 @@ import "../global.css";
 import Header from "../components/Header.astro";
 import Nav from "../components/Nav.astro";
 import Footer from "../components/Footer.astro";
+import LeftLinks from "../components/LeftLinks.astro";
 
 const { title, preloadImage } = Astro.props;
 ---
@@ -24,6 +25,10 @@ const { title, preloadImage } = Astro.props;
   <body class="overflow-x-hidden">
     <Header />
     <Nav />
+    <!-- Left Links -->
+    <div class="hidden lg:block absolute top-1/2 right-0 z-50">
+      <LeftLinks />
+    </div>
     <main class="overflow-x-hidden">
       <slot />
     </main>
