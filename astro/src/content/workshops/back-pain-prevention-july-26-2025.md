@@ -3,7 +3,7 @@ title: "Back Pain Prevention Workshop - July 26, 2025"
 description: "Learn effective strategies to prevent back pain and maintain a healthy spine through proper movement and daily habits."
 pubDate: 2025-07-26
 startTime: "10:00 a.m."
-heroImage: "https://sydneychiropractorcbd.com.au/wp-content/uploads/2024/12/The-Main-Reasons-for-Lower-Back-Pain-1024x1024.jpg"
+index : 0
 tags: ["back pain", "prevention", "workshop"]
 ---
 

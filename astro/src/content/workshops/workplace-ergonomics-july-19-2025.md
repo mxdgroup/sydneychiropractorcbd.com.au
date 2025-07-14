@@ -3,7 +3,7 @@ title: "Workplace Ergonomics Workshop - July 19, 2025"
 description: "Learn how to set up your workspace for optimal spinal health and prevent workplace injuries. Essential tips for Sydney CBD professionals."
 pubDate: 2025-07-19
 startTime: "2:00 p.m."
-heroImage: "https://sydneychiropractorcbd.com.au/wp-content/uploads/2024/12/The-Main-Reasons-for-Lower-Back-Pain-1024x1024.jpg"
+index : 5
 tags: ["ergonomics", "workplace health", "workshop"]
 ---
 

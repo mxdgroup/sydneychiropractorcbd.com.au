@@ -27,8 +27,8 @@ const formattedDate = new Intl.DateTimeFormat('en-AU', {
 <Layout title={`${workshop.data.title} | Sydney Chiropractor CBD`}>
   <!-- Header Image Section -->
   <HeaderImage 
-    backgroundImage={workshop.data.heroImage} 
-    headerText={workshop.data.title}
+    backgroundImage={`/workshops/workshop${(workshop.data.index%4)+1}.webp`} 
+    headerText={formattedDate}
     buttonText="Book an Appointment" 
     displayTextAndButton={false}
   />

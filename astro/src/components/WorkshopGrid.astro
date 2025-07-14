@@ -6,7 +6,7 @@ import WorkshopCard from "./workshop/WorkshopCard.astro";
 const allWorkshops = await getCollection('workshops');
 
 // Sort workshops by date (newest first)
-const workshops = allWorkshops.sort((a: CollectionEntry<'workshops'>, b: CollectionEntry<'workshops'>) => a.data.pubDate.valueOf() - b.data.pubDate.valueOf());
+const workshops = allWorkshops.sort((a: CollectionEntry<'workshops'>, b: CollectionEntry<'workshops'>) => a.data.index - b.data.index);
 
 // Format date function
 const formatDate = (date: Date) => {
@@ -19,10 +19,10 @@ const formatDate = (date: Date) => {
 ---
 
 <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-10">
-    {workshops.map(workshop => (
+    {workshops.map((workshop,index) => (
         <WorkshopCard 
-            imageUrl={workshop.data.heroImage}
-            title={formatDate(workshop.data.pubDate)}
+            imageUrl={`/workshops/workshop${(index%4)+1}.webp`}
+            title={workshop.data.title}
             timeFrom={`${workshop.data.startTime} Book Now`}
             slug={workshop.slug}
         />

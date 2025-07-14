@@ -6,7 +6,7 @@ import BlogCard from "./home/BlogCard.astro";
 const allPosts = await getCollection('blog');
 
 // Sort posts by date (newest first)
-const posts = allPosts.sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+const posts = allPosts.sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
 
 // Format date function
 const formatDate = (date: Date) => {
@@ -16,15 +16,18 @@ const formatDate = (date: Date) => {
     day: 'numeric',
   }).format(date);
 };
+
+const {homepage = false} = Astro.props;
+const blogs = homepage ? posts.slice(0, 8) : posts;
 ---
 
 <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 py-10">
-    {posts.map(post => (
+    {blogs.map(post => (
         <BlogCard 
-            imageUrl={post.data.heroImage}
-            date={formatDate(post.data.pubDate)}
+            imageUrl={`/thumbnails/${post.data.thumbnail}`}
+            date={formatDate(post.data.date)}
             title={post.data.title}
-            excerpt={post.data.description}
+            excerpt={post.body.slice(0, 120) + '...'}
             slug={post.slug}
         />
     ))}

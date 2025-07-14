@@ -3,7 +3,7 @@ title: "Nutrition & Wellness Workshop - August 16, 2025"
 description: "Discover how nutrition affects your musculoskeletal health and learn dietary strategies to support your chiropractic treatment."
 pubDate: 2025-08-16
 startTime: "11:30 a.m."
-heroImage: "https://sydneychiropractorcbd.com.au/wp-content/uploads/2024/12/The-Main-Reasons-for-Lower-Back-Pain-1024x1024.jpg"
+index : 2
 tags: ["nutrition", "wellness", "workshop"]
 ---
 

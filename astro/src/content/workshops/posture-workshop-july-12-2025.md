@@ -3,7 +3,7 @@ title: "Posture Correction Workshop - July 12, 2025"
 description: "Learn practical workplace tips to help improve your posture at our Sydney Chiropractic CBD premises, and discover how you can keep your posture effortlessly upright!"
 pubDate: 2025-07-12
 startTime: "1:30 p.m."
-heroImage: "https://sydneychiropractorcbd.com.au/wp-content/uploads/2024/12/The-Main-Reasons-for-Lower-Back-Pain-1024x1024.jpg"
+index : 3
 tags: ["posture", "workplace health", "workshop"]
 ---
 
