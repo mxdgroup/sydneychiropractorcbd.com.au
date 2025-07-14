@@ -2,7 +2,6 @@
 import UnderlinedHeader from "../UnderlinedHeader.astro";
 import PrimaryButton from "../PrimaryButton.astro";
 import ScrollCrop from "../ScrollCrop.astro";
-import MobileCarousel from "../MobileCarousel.astro";
 import personalPlan from "/public/Personal-Plan-img.webp";
 import hooman from "/public/team/hooman.webp";
 import angus from "/public/team/angus.png.webp";
@@ -54,26 +53,6 @@ const assistant = [
     },
 ]
 
-// Render functions for mobile carousels
-const renderDoctor = (doctor: any, index: number) => `
-    <div class="flex flex-col items-center">
-        <div class="w-40 h-40 mb-4 overflow-hidden rounded-full">
-            <img src="${doctor.image}" alt="${doctor.name}" class="w-full h-full object-cover" />
-        </div>
-        <h3 class="text-xl font-semibold mb-1 text-custom-purple">${doctor.name}</h3>
-        <p class="text-gray-600">${doctor.description}</p>
-    </div>
-`;
-
-const renderAssistant = (person: any, index: number) => `
-    <div class="flex flex-col items-center">
-        <div class="w-48 h-48 mb-4 overflow-hidden rounded-full">
-            <img src="${person.image}" alt="${person.name}" class="w-full h-full object-cover" />
-        </div>
-        <h3 class="text-xl font-semibold mb-1 text-custom-purple">${person.name}</h3>
-        <p class="text-gray-600">${person.description}</p>
-    </div>
-`;
 ---
 <div class="w-full py-20">
     <div class="mx-auto container">
@@ -96,13 +75,17 @@ const renderAssistant = (person: any, index: number) => `
             ))}
         </div>
 
-        <!-- Doctors Carousel - Mobile -->
-        <div class="mb-16">
-            <MobileCarousel 
-                items={doctors} 
-                renderItem={renderDoctor}
-                class="mb-8"
-            />
+        <!-- Doctors Grid - Mobile -->
+        <div class="grid md:hidden grid-cols-1 gap-8 mb-16">
+            {doctors.map((doctor) => (
+                <div class="flex flex-col items-center">
+                    <div class="w-48 h-48 mb-4 overflow-hidden rounded-full">
+                        <img src={doctor.image} alt={doctor.name} class="w-full h-full object-cover" />
+                    </div>
+                    <h3 class="text-xl font-semibold mb-1 text-custom-purple">{doctor.name}</h3>
+                    <p class="text-gray-600">{doctor.description}</p>
+                </div>
+            ))}
         </div>
 
         <!-- Assistants Grid - Desktop -->
@@ -118,11 +101,18 @@ const renderAssistant = (person: any, index: number) => `
             ))}
         </div>
 
-        <!-- Assistants Carousel - Mobile -->
-        <MobileCarousel 
-            items={assistant} 
-            renderItem={renderAssistant}
-        />
+        <!-- Assistants Grid - Mobile -->
+        <div class="grid md:hidden grid-cols-1 gap-8">
+            {assistant.map((person) => (
+                <div class="flex flex-col items-center">
+                    <div class="w-48 h-48 mb-4 overflow-hidden rounded-full">
+                        <img src={person.image} alt={person.name} class="w-full h-full object-cover" />
+                    </div>
+                    <h3 class="text-xl font-semibold mb-1 text-custom-purple">{person.name}</h3>
+                    <p class="text-gray-600">{person.description}</p>
+                </div>
+            ))}
+        </div>
 
         <div class="flex justify-center mt-10">
             <PrimaryButton href="https://clinic27intake.bookings.pracsuite.com/guest?_gl=1*ish5tk*_gcl_au*MTE4MzYwMjQ1Ny4xNzUyNDc4Mzk3*_ga*MTgyODUzMzI5Ni4xNzUyNDc4Mzk3*_ga_DVEN4QQTPM*czE3NTI0NzgzOTckbzEkZzAkdDE3NTI0NzgzOTckajYwJGwwJGgw*_ga_S36TR91H9N*czE3NTI0NzgzOTckbzEkZzAkdDE3NTI0NzgzOTckajYwJGwwJGgw*_ga_NTMX2EEDN4*czE3NTI0NzgzOTckbzEkZzAkdDE3NTI0NzgzOTckajYwJGwwJGgw*_ga_8J9DNH249S*czE3NTI0NzgzOTckbzEkZzAkdDE3NTI0NzgzOTckajYwJGwwJGgw">Book Now</PrimaryButton>
