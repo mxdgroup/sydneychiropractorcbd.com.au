@@ -95,7 +95,7 @@ const treatments = await getCollection('treatments');
           <h3 class="text-xl font-bold mb-6 uppercase">Recent Videos</h3>
           
           <!-- Video 1 -->
-          <div class="flex items-start space-x-4 mb-4">
+          <a class="flex items-start space-x-4 mb-4" href="/videos">
             <div class="relative flex-shrink-0" style="width: 100px;">
               <Image 
                 src={thumbnail1} 
@@ -115,10 +115,10 @@ const treatments = await getCollection('treatments');
               <h4 class="font-medium text-sm">Wear your backpack correctly</h4>
               <p class="text-xs text-gray-300">Feb 27, 2018</p>
             </div>
-          </div>
+          </a>
           
           <!-- Video 2 -->
-          <div class="flex items-start space-x-4">
+          <a class="flex items-start space-x-4" href="/videos">
             <div class="relative flex-shrink-0" style="width: 100px;">
               <Image 
                 src={thumbnail2} 
@@ -138,7 +138,7 @@ const treatments = await getCollection('treatments');
               <h4 class="font-medium text-sm">How can I sit better at work?</h4>
               <p class="text-xs text-gray-300">Feb 27, 2018</p>
             </div>
-          </div>
+          </a>
         </div>
       </div>
     </div>

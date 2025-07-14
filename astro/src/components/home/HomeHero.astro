@@ -9,7 +9,7 @@ const phoneImage = await getImage({src: heroBgPhone, format: 'png'});
 ---
 
 <div class="relative flex flex-col justify-center items-center min-h-[30vh] md:min-h-[90vh]">
-    <Image src={heroBg} alt="Hero Background" class="absolute inset-0 w-full h-full object-cover -z-10" loading="eager" />
+    <Image src={heroBg} alt="Hero Background" class="absolute inset-0 w-full h-full object-cover -z-10" loading="eager" fetchpriority="high" />
     <Image src={heroOverlay} alt="Hero Overlay" class="w-full h-full object-cover absolute bottom-0 right-0 hidden md:block" loading="eager" />
     
     <!-- Hero Text Overlay - Only visible on large screens -->
