@@ -4,6 +4,7 @@ description: Test
 pubDate: 2024-06-14
 heroImage: "https://sydneychiropractorcbd.com.au/wp-content/uploads/2024/12/The-Main-Reasons-for-Lower-Back-Pain-1024x1024.jpg"
 tags: ["spinal decompression", "back pain", "non-surgical"]
+slug: carpal-tunnel-syndrome-treatment-sydney-cbd
 ---
 
 Carpal Tunnel Syndrome is a common ailment for many people; the prevalence in women is up to three times more likely. Females generally have a smaller carpal tunnel, a narrow passageway in the wrist, that opens into the hand. This tunnel has the bones within the wrist beneath it and a special nerve known as the median nerve runs through this area. When there is pressure on the large median nerve this can cause irritation, numbness and sometimes pain which is commonly associated with the ifk.

@@ -4,6 +4,7 @@ description: Test
 pubDate: 2024-06-14
 heroImage: "https://sydneychiropractorcbd.com.au/wp-content/uploads/2024/12/The-Main-Reasons-for-Lower-Back-Pain-1024x1024.jpg"
 tags: ["spinal decompression", "back pain", "non-surgical"]
+slug: neck-pain-treatment-sydney-cbd
 ---
 
 These days, many of us find ourselves overextending our necks due to the slouching position we often make when we work with our computers or use our mobile phones. This often causes debilitating neck pain that will make it difficult to get through a productive day.

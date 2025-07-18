@@ -72,7 +72,7 @@ const treatments = await getCollection('treatments');
           <h3 class="text-xl font-bold mb-6 uppercase">Useful Links</h3>
           <ul class="space-y-3">
             <li><a href="/" class="hover:text-[#e6007e] transition-colors">Home</a></li>
-            <li><a href="/treatments/back-pain-treatment/" class="hover:text-[#e6007e] transition-colors">Treatments</a></li>
+                            <li><a href="/back-pain-treatment/" class="hover:text-[#e6007e] transition-colors">Treatments</a></li>
             <li><a href="/workshops" class="hover:text-[#e6007e] transition-colors">Workshop</a></li>
             <li><a href="/about" class="hover:text-[#e6007e] transition-colors">About</a></li>
             <li><a href="/blog-overview" class="hover:text-[#e6007e] transition-colors">Blog</a></li>
@@ -85,7 +85,7 @@ const treatments = await getCollection('treatments');
           <h3 class="text-xl font-bold mb-6 uppercase">Treatments</h3>
           <ul class="space-y-3">
             {treatments.map((treatment) => (
-              <li><a href={`/treatments/${treatment.slug}`} class="hover:text-[#e6007e] transition-colors">{treatment.data.title}</a></li>
+              <li><a href={`/${treatment.slug}`} class="hover:text-[#e6007e] transition-colors">{treatment.data.title}</a></li>
             ))}
           </ul>
         </div>

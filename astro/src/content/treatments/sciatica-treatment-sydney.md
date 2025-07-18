@@ -4,6 +4,7 @@ description: Test
 pubDate: 2024-06-14
 heroImage: "https://sydneychiropractorcbd.com.au/wp-content/uploads/2024/12/The-Main-Reasons-for-Lower-Back-Pain-1024x1024.jpg"
 tags: ["spinal decompression", "back pain", "non-surgical"]
+slug: sciatica-treatment-sydney-cbd
 ---
 
 Sciatica can affect many people from all walks of life, it is often caused by a spinal disc herniation. This herniation is usually the cause of age-related degeneration due to injuries incurred. With time, and without sciatica treatment, it can worsen and have negative consequences on a person’s quality of life.

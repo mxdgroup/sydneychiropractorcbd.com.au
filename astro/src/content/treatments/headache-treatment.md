@@ -4,6 +4,7 @@ description: Test
 pubDate: 2024-06-14
 heroImage: "https://sydneychiropractorcbd.com.au/wp-content/uploads/2024/12/The-Main-Reasons-for-Lower-Back-Pain-1024x1024.jpg"
 tags: ["spinal decompression", "back pain", "non-surgical"]
+slug: headaches-migraines-treatment-sydney-cbd
 ---
 
 Millions of people in the world suffer from headaches and migraines. Accidents, injuries, diets, insomnia and stressful lives are some of the leading causes of these debilitating conditions, making everyday life that much harder to manage.

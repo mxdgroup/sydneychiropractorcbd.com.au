@@ -4,6 +4,7 @@ description: Test
 pubDate: 2024-06-14
 heroImage: "https://sydneychiropractorcbd.com.au/wp-content/uploads/2024/12/The-Main-Reasons-for-Lower-Back-Pain-1024x1024.jpg"
 tags: ["spinal decompression", "back pain", "non-surgical"]
+slug: scoliosis-treatment-sydney-cbd
 ---
 
 Many people worldwide are affected by an unfortunate condition of the spine called Scoliosis. Essentially it details a curvature of the spine, scoliosis can cause pain and discomfort to those who are afflicted with the condition.
