@@ -1,0 +1,44 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Pain from "../components/pain/pain.astro";
+
+const component1 = {
+  title: "What Is Spine Pain?",
+  body: [
+    { text: "Spinal pain can refer to discomfort anywhere along the cervical, thoracic or lumbar segments of the spine.", type: "paragraph" },
+    { text: "Impact on Daily Life", type: "header" },
+    { text: "Chronic spine pain can limit movement, disturb sleep and reduce quality of life.", type: "paragraph" },
+  ],
+};
+
+const component2 = {
+  title: "Key Contributors to Spine Pain",
+  body: [
+    { text: "Postural imbalance, degenerative disc disease and previous injuries often create ongoing spinal irritation.", type: "paragraph" },
+    { text: "Nerve Compression", type: "header" },
+    { text: "Bulging discs or arthritic changes may pinch nerves, producing radiating pain.", type: "paragraph" },
+  ],
+};
+
+const component3 = {
+  title: "Potential Complications",
+  body: [
+    { text: "Left untreated, spine pain can progress to chronic inflammation and compensatory issues in surrounding joints and muscles.", type: "paragraph" },
+  ],
+};
+
+const solutionComponent = {
+  imageSrc: "/treatments/normal/sciatica-treatment-sydney.jpg",
+  title: "Comprehensive Spine Care at Clinic 27",
+  solutions: "We perform detailed structural assessments to identify misalignments, then apply chiropractic adjustments, spinal decompression and rehabilitative protocols to alleviate pain and improve overall spinal function.",
+};
+---
+
+<Layout title="Spine Pain | Clinic 27">
+  <Pain
+    component1={component1}
+    component2={component2}
+    component3={component3}
+    solutionComponent={solutionComponent}
+  />
+</Layout> 

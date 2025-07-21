@@ -1,0 +1,44 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Pain from "../components/pain/pain.astro";
+
+const component1 = {
+  title: "Shoulder Pain Basics",
+  body: [
+    { text: "The shoulder joint is incredibly mobile, making it vulnerable to instability and over-use injuries.", type: "paragraph" },
+    { text: "Symptoms", type: "header" },
+    { text: "Sharp pain when lifting the arm, aching at night and weakness are common indicators.", type: "paragraph" },
+  ],
+};
+
+const component2 = {
+  title: "Typical Causes of Shoulder Pain",
+  body: [
+    { text: "Rotator cuff strains or tears, bursitis and impingement syndrome frequently produce shoulder discomfort.", type: "paragraph" },
+    { text: "Referred Pain", type: "header" },
+    { text: "Dysfunction in the cervical spine or mid-back can refer pain into the shoulder region.", type: "paragraph" },
+  ],
+};
+
+const component3 = {
+  title: "Risk Factors",
+  body: [
+    { text: "Repetitive overhead tasks, poor posture and previous injuries increase susceptibility to shoulder problems.", type: "paragraph" },
+  ],
+};
+
+const solutionComponent = {
+  imageSrc: "/treatments/normal/posture-treatment-sydney.jpg",
+  title: "Shoulder Pain Relief at Clinic 27",
+  solutions: "Our approach combines spinal alignment, shoulder-specific mobilisation and strength training to correct biomechanics and alleviate pain.",
+};
+---
+
+<Layout title="Shoulder Pain | Clinic 27">
+  <Pain
+    component1={component1}
+    component2={component2}
+    component3={component3}
+    solutionComponent={solutionComponent}
+  />
+</Layout> 

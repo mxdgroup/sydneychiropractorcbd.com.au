@@ -1,0 +1,46 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Pain from "../components/pain/pain.astro";
+
+const component1 = {
+  title: "Understanding Back Pain",
+  body: [
+    { text: "Back pain can range from a dull, constant ache to a sudden, sharp sensation that leaves you incapacitated.", type: "paragraph" },
+    { text: "Prevalence", type: "header" },
+    { text: "It is estimated that 80% of adults will experience back pain at some point in their lives.", type: "paragraph" },
+  ],
+};
+
+const component2 = {
+  title: "Typical Causes of Back Pain",
+  body: [
+    { text: "Muscle or ligament strain from heavy lifting or awkward movements can injure spinal structures.", type: "paragraph" },
+    { text: "Herniated Discs", type: "header" },
+    { text: "Bulging or ruptured discs may press on nerves, causing severe pain and sciatica.", type: "paragraph" },
+    { text: "Poor Ergonomics", type: "header" },
+    { text: "Long periods of sitting with inadequate support place chronic stress on the lumbar spine.", type: "paragraph" },
+  ],
+};
+
+const component3 = {
+  title: "Warning Signs To Watch For",
+  body: [
+    { text: "If your pain radiates down the leg, is accompanied by weakness, or persists longer than two weeks, professional evaluation is recommended.", type: "paragraph" },
+  ],
+};
+
+const solutionComponent = {
+  imageSrc: "/treatments/normal/back-pain-treatment-sydney.jpg",
+  title: "Back Pain Treatment at Clinic 27",
+  solutions: "Through a combination of gentle spinal decompression, targeted adjustments and corrective exercise plans, we work to restore normal spinal mechanics and relieve back pain at its source.",
+};
+---
+
+<Layout title="Back Pain | Clinic 27">
+  <Pain
+    component1={component1}
+    component2={component2}
+    component3={component3}
+    solutionComponent={solutionComponent}
+  />
+</Layout> 

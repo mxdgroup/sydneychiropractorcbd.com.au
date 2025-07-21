@@ -1,0 +1,46 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Pain from "../components/pain/pain.astro";
+
+const component1 = {
+  title: "What Is Disc Pain?",
+  body: [
+    { text: "Intervertebral discs act as shock absorbers between vertebrae. When damaged or degenerated, they can cause intense, localised or radiating pain.", type: "paragraph" },
+    { text: "Symptoms", type: "header" },
+    { text: "Shooting pain, numbness or tingling down the arms or legs may indicate disc involvement.", type: "paragraph" },
+  ],
+};
+
+const component2 = {
+  title: "Common Disc Problems",
+  body: [
+    { text: "Herniation occurs when the inner nucleus pushes through the outer annulus, often compressing nearby nerves.", type: "paragraph" },
+    { text: "Bulging Discs", type: "header" },
+    { text: "A bulge may narrow spinal canals and create inflammatory changes.", type: "paragraph" },
+    { text: "Degenerative Disc Disease", type: "header" },
+    { text: "Age-related dehydration and wear reduce disc height and shock-absorption capacity.", type: "paragraph" },
+  ],
+};
+
+const component3 = {
+  title: "Red Flags",
+  body: [
+    { text: "Loss of bladder or bowel control, progressive weakness or severe numbness require urgent medical attention.", type: "paragraph" },
+  ],
+};
+
+const solutionComponent = {
+  imageSrc: "/treatments/normal/sciatica-treatment-sydney.jpg",
+  title: "Disc Pain Treatment at Clinic 27",
+  solutions: "We utilise non-surgical spinal decompression, gentle adjustments and therapeutic exercise to reduce disc pressure, encourage healing and relieve nerve irritation.",
+};
+---
+
+<Layout title="Disc Pain | Clinic 27">
+  <Pain
+    component1={component1}
+    component2={component2}
+    component3={component3}
+    solutionComponent={solutionComponent}
+  />
+</Layout> 

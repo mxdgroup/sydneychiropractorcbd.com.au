@@ -1,0 +1,47 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Pain from "../components/pain/pain.astro";
+
+const component1 = {
+  title: "Understanding Neck Pain",
+  body: [
+    { text: "Neck pain is one of the most common musculoskeletal complaints we treat at Clinic 27.", type: "paragraph" },
+    { text: "Symptoms", type: "header" },
+    { text: "Stiffness, reduced range of motion and shooting pains into the shoulders or arms are typical signs that something isn’t right.", type: "paragraph" },
+  ],
+};
+
+const component2 = {
+  title: "Common Causes of Neck Pain",
+  body: [
+    { text: "Poor posture at the desk or when looking at a phone places extra stress on the cervical spine.", type: "paragraph" },
+    { text: "Whiplash Injuries", type: "header" },
+    { text: "Sudden acceleration–deceleration forces from car accidents may damage joints, discs or soft-tissue structures.", type: "paragraph" },
+    { text: "Degenerative Changes", type: "header" },
+    { text: "Age-related wear of discs and facet joints can create chronic irritation and pain.", type: "paragraph" },
+  ],
+};
+
+const component3 = {
+  title: "When To Seek Professional Help",
+  body: [
+    { text: "Persistent pain lasting longer than a few days, numbness, tingling or weakness in the arms warrants a thorough examination.", type: "paragraph" },
+    { text: "Early assessment helps prevent minor irritation evolving into long-term dysfunction.", type: "paragraph" },
+  ],
+};
+
+const solutionComponent = {
+  imageSrc: "/treatments/normal/neck-pain-treatment-sydney.jpg",
+  title: "Neck Pain Treatment at Clinic 27",
+  solutions: "Our chiropractors combine advanced Bio-Structural Correction (ABC) adjustments with tailored rehabilitation exercises to restore proper cervical alignment, reduce inflammation and help you return to pain-free movement as fast as possible.",
+};
+---
+
+<Layout title="Neck Pain | Clinic 27">
+  <Pain
+    component1={component1}
+    component2={component2}
+    component3={component3}
+    solutionComponent={solutionComponent}
+  />
+</Layout> 

@@ -1,3 +1,103 @@
 ---
-const {component1, solutionComponent, component2, component3, component4 } = Astro.props;
+import { getCollection } from 'astro:content';
+import BlogCard from "../home/BlogCard.astro";
+
+// Define TypeScript interfaces for better DX
+interface BodyItem {
+  text: string;
+  type: 'paragraph' | 'header';
+}
+
+interface ContentSection {
+  title: string;
+  body: BodyItem[];
+}
+
+interface SolutionSection {
+  imageSrc: string;
+  title: string;
+  solutions: string;
+}
+
+const {
+  component1,
+  solutionComponent,
+  component2,
+  component3,
+} = Astro.props as {
+  component1: ContentSection;
+  component2: ContentSection;
+  component3: ContentSection;
+  solutionComponent: SolutionSection;
+};
+
+// Fetch latest 4 blog posts
+const allPosts = await getCollection('blog');
+const latestPosts = allPosts
+  .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf())
+  .slice(0, 4);
+
+// Helper to format dates consistently
+const formatDate = (date: Date) =>
+  new Intl.DateTimeFormat('en-AU', {
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric',
+  }).format(date);
 ---
+
+<!-- Utility to render a generic content section -->
+{[component1, component2, component3].map((section) => (
+  <section class="container mx-auto px-4 mb-8">
+    <h2 class="text-3xl md:text-4xl font-bold mb-2 text-center md:text-left text-custom-purple">
+      {section.title}
+    </h2>
+    <div class="space-y-4 leading-relaxed text-lg text-gray-700">
+      {section.body.map((item) => (
+        item.type === 'header' ? (
+          <h3 class="font-bold text-2xl mt-4 mb-4">{item.text}</h3>
+        ) : (
+          <p>{item.text}</p>
+        )
+      ))}
+    </div>
+  </section>
+))}
+
+<!-- Solution Section -->
+<section class="bg-gray-50 py-12">
+  <div class="container mx-auto px-4 flex flex-col md:flex-row items-center gap-8">
+    {solutionComponent.imageSrc && (
+      <img
+        src={solutionComponent.imageSrc}
+        alt={solutionComponent.title}
+        class="w-full md:w-1/2 rounded-lg shadow-lg"
+        loading="lazy"
+      />
+    )}
+    <div class="flex-1">
+      <h2 class="text-3xl md:text-4xl font-bold mb-6">
+        {solutionComponent.title}
+      </h2>
+      <p class="text-lg leading-relaxed text-gray-700">
+        {solutionComponent.solutions}
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- Latest Blogs -->
+<section class="container mx-auto px-4 my-12">
+  <h2 class="text-3xl md:text-4xl font-bold mb-8 text-center">Latest Blogs</h2>
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+    {latestPosts.map(post => (
+      <BlogCard
+        imageUrl={`/thumbnails/${post.data.thumbnail}`}
+        date={formatDate(post.data.date)}
+        title={post.data.title}
+        excerpt={post.body.slice(0, 120) + '...'}
+        slug={post.slug}
+      />
+    ))}
+  </div>
+</section>
