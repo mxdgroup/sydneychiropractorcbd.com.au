@@ -1,0 +1,40 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Nav from '../components/Nav.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout title="Page Not Found | Sydney Chiropractor CBD">
+  
+  <!-- 404 Content -->
+  <div class="min-h-screen bg-white flex flex-col justify-center py-12 sm:px-6 lg:px-8">
+    <div class="mt-8 sm:mx-auto sm:w-full sm:max-w-md">
+        <!-- Main 404 heading - big black text -->
+        <h1 class="text-4xl md:text-5xl font-bold text-black mb-6">
+          This page could not be found!
+        </h1>
+        
+        <!-- Secondary message -->
+        <p class="text-lg text-gray-600 mb-8">
+          We are sorry. But the page you are looking for is not available.
+        </p>
+        
+        <!-- Optional: Add a button to go back home -->
+        <div class="mt-6">
+          <a href="/" class="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-[#1F2BA3] hover:bg-[#1a2490] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#1F2BA3] transition-colors">
+            Go Back Home
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+</Layout>
+
+<style>
+  /* Additional styling for 404 page if needed */
+  body {
+    background-color: #f9fafb;
+  }
+</style> 
