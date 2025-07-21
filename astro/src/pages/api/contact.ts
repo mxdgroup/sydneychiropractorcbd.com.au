@@ -1,18 +1,22 @@
 import type { APIRoute } from 'astro';
 import { Resend } from 'resend';
 
-// Get API key from environment variables
-const resendApiKey = process.env.RESEND_API_KEY;
-if (!resendApiKey) {
-  console.error("RESEND_API_KEY environment variable is not set");
-}
-
-const resend = new Resend(resendApiKey);
+// Retrieve API key inside POST handler to avoid errors during build time
+const getResendClient = () => {
+  const resendApiKey = "re_4gMvsZSF_JbZJGcNbEK7JAnLp8ProxBbN";
+  if (!resendApiKey) {
+    console.error("RESEND_API_KEY environment variable is not set");
+    return null;
+  }
+  return new Resend(resendApiKey);
+};
 
 export const prerender = false;
 
 export const POST: APIRoute = async ({ request }) => {
-  if (!resendApiKey) {
+  const resend = getResendClient();
+
+  if (!resend) {
     return new Response(
       JSON.stringify({ error: 'Internal server error: missing configuration' }),
       { status: 500, headers: { 'Content-Type': 'application/json' } }
