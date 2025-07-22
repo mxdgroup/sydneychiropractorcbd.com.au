@@ -22,12 +22,10 @@ interface SolutionSection {
 const {
   component1,
   solutionComponent,
-  component2,
-  component3,
+  otherComponents,
 } = Astro.props as {
   component1: ContentSection;
-  component2: ContentSection;
-  component3: ContentSection;
+  otherComponents: ContentSection[];
   solutionComponent: SolutionSection;
 };
 
@@ -46,23 +44,21 @@ const formatDate = (date: Date) =>
   }).format(date);
 ---
 
-<!-- Utility to render a generic content section -->
-{[component1, component2, component3].map((section) => (
-  <section class="container mx-auto px-4 mb-8">
-    <h2 class="text-3xl md:text-4xl font-bold mb-2 text-center md:text-left text-custom-purple">
-      {section.title}
-    </h2>
-    <div class="space-y-4 leading-relaxed text-lg text-gray-700">
-      {section.body.map((item) => (
-        item.type === 'header' ? (
-          <h3 class="font-bold text-2xl mt-4 mb-4">{item.text}</h3>
-        ) : (
-          <p>{item.text}</p>
-        )
-      ))}
-    </div>
-  </section>
-))}
+<!-- Component 1 -->
+<section class="container mx-auto px-4 mb-8">
+  <h2 class="text-3xl md:text-4xl font-bold mb-2 text-center md:text-left text-custom-purple">
+    {component1.title}
+  </h2>
+  <div class="space-y-4 leading-relaxed text-lg text-gray-700">
+    {component1.body.map((item) => (
+      item.type === 'header' ? (
+        <h3 class="font-bold text-2xl mt-4 mb-4">{item.text}</h3>
+      ) : (
+        <p>{item.text}</p>
+      )
+    ))}
+  </div>
+</section>
 
 <!-- Solution Section -->
 <section class="bg-gray-50 py-12">
@@ -85,6 +81,25 @@ const formatDate = (date: Date) =>
     </div>
   </div>
 </section>
+
+{otherComponents.map((component) => (
+
+    <section class="container mx-auto px-4 mb-8">
+      <h2 class="text-3xl md:text-4xl font-bold mb-2 text-center md:text-left text-custom-purple">
+        {component.title}
+  </h2>
+  <div class="space-y-4 leading-relaxed text-lg text-gray-700">
+    {component.body.map((item) => (
+      item.type === 'header' ? (
+        <h3 class="font-bold text-2xl mt-4 mb-4">{item.text}</h3>
+      ) : (
+        <p>{item.text}</p>
+      )
+    ))}
+  </div>
+</section>
+))}
+
 
 <!-- Latest Blogs -->
 <section class="container mx-auto px-4 my-12">
