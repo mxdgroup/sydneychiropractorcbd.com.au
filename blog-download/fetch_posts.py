@@ -4,6 +4,7 @@ from datetime import datetime
 import re
 import os
 from urllib.parse import urlparse
+import html
 
 def download_image(url, filename, thumbnails_dir):
     """Download an image from URL and save it to the thumbnails directory"""
@@ -27,6 +28,58 @@ def get_image_extension(url):
     path = parsed_url.path
     _, ext = os.path.splitext(path)
     return ext if ext else '.jpg'
+
+def html_to_markdown(html_content):
+    """Convert HTML content to markdown format - only headings, paragraphs, and lists"""
+    if not html_content:
+        return ""
+    
+    # First decode HTML entities
+    content = html.unescape(html_content)
+    
+    # Convert headings (h1-h6 to #-######)
+    for i in range(6, 0, -1):  # Start from h6 down to h1
+        pattern = rf'<h{i}[^>]*>(.*?)</h{i}>'
+        replacement = '#' * i + r' \1'
+        content = re.sub(pattern, replacement, content, flags=re.IGNORECASE | re.DOTALL)
+    
+    # Convert paragraphs
+    content = re.sub(r'<p[^>]*>(.*?)</p>', r'\1\n\n', content, flags=re.IGNORECASE | re.DOTALL)
+    
+    # Convert unordered lists
+    content = re.sub(r'<ul[^>]*>', '\n', content, flags=re.IGNORECASE)
+    content = re.sub(r'</ul>', '\n', content, flags=re.IGNORECASE)
+    content = re.sub(r'<li[^>]*>(.*?)</li>', r'- \1\n', content, flags=re.IGNORECASE | re.DOTALL)
+    
+    # Convert ordered lists
+    content = re.sub(r'<ol[^>]*>', '\n', content, flags=re.IGNORECASE)
+    content = re.sub(r'</ol>', '\n', content, flags=re.IGNORECASE)
+    
+    # For ordered lists, we need to track numbers - this is a simplified approach
+    ol_counter = 1
+    def replace_ol_li(match):
+        nonlocal ol_counter
+        result = f"{ol_counter}. {match.group(1)}\n"
+        ol_counter += 1
+        return result
+    
+    # Reset counter for each ordered list block
+    ol_blocks = re.split(r'(<ol[^>]*>.*?</ol>)', content, flags=re.IGNORECASE | re.DOTALL)
+    for i, block in enumerate(ol_blocks):
+        if re.match(r'<ol[^>]*>', block, re.IGNORECASE):
+            ol_counter = 1
+            ol_blocks[i] = re.sub(r'<li[^>]*>(.*?)</li>', replace_ol_li, block, flags=re.IGNORECASE | re.DOTALL)
+    content = ''.join(ol_blocks)
+    
+    # Remove any remaining HTML tags (everything else kept as original content but tags removed)
+    content = re.sub(r'<[^>]+>', '', content)
+    
+    # Clean up extra whitespace and line breaks
+    content = re.sub(r'\n\s*\n\s*\n', '\n\n', content)  # Replace multiple line breaks with double
+    content = re.sub(r'[ \t]+', ' ', content)  # Replace multiple spaces/tabs with single space
+    content = content.strip()
+    
+    return content
 
 def fetch_and_display_posts():
     # WordPress API endpoint
@@ -61,6 +114,9 @@ def fetch_and_display_posts():
             link = post.get('link', 'N/A')
             content = post.get('content', {}).get('rendered', '')
             excerpt = post.get('excerpt', {}).get('rendered', '')
+            
+            # Decode HTML entities in title
+            title = html.unescape(title)
             
             # Find image URL from schema graph
             thumbnail_url = None
@@ -99,12 +155,11 @@ def fetch_and_display_posts():
                 formatted_date = 'N/A'
                 iso_date = 'N/A'
             
-            # Clean content - remove HTML tags and fix formatting
-            content_clean = re.sub(r'<[^>]+>', '', content)
-            content_clean = re.sub(r'\s+', ' ', content_clean).strip()
+            # Convert HTML content to markdown
+            content_markdown = html_to_markdown(content)
             
-            # Clean excerpt
-            excerpt_clean = re.sub(r'<[^>]+>', '', excerpt).strip()
+            # Convert excerpt to markdown
+            excerpt_markdown = html_to_markdown(excerpt)
             
             # Create markdown content with frontmatter
             thumbnail_field = thumbnail_filename if thumbnail_filename else 'N/A'
@@ -115,11 +170,11 @@ slug: "{slug}"
 status: "{status}"
 id: {post_id}
 link: "{link}"
-excerpt: "{excerpt_clean}"
+excerpt: "{excerpt_markdown}"
 thumbnail: "{thumbnail_field}"
 ---
 
-{content_clean}
+{content_markdown}
 """
             
             # Create filename from slug
