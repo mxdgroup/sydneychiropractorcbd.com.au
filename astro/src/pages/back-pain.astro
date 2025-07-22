@@ -1,6 +1,7 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Pain from "../components/pain/pain.astro";
+import PainBlogs from "../components/pain/PainBlogs.astro";
 
 const component1 = {
   title: "Understanding Back Pain",
@@ -32,7 +33,12 @@ const component3 = {
 const solutionComponent = {
   imageSrc: "/treatments/normal/back-pain-treatment-sydney.jpg",
   title: "Back Pain Treatment at Clinic 27",
-  solutions: "Through a combination of gentle spinal decompression, targeted adjustments and corrective exercise plans, we work to restore normal spinal mechanics and relieve back pain at its source.",
+  solutions: [
+    "Gentle spinal decompression to relieve pressure on compressed nerves",
+    "Targeted chiropractic adjustments to restore proper spinal alignment",
+    "Corrective exercise plans tailored to strengthen supporting muscles",
+    "Comprehensive approach to restore normal spinal mechanics and eliminate pain at its source"
+  ],
 };
 ---
 
@@ -42,4 +48,5 @@ const solutionComponent = {
     otherComponents={[component2, component3]}
     solutionComponent={solutionComponent}
   />
+  <PainBlogs painType="back" />
 </Layout> 

@@ -1,0 +1,71 @@
+---
+import { getCollection } from 'astro:content';
+
+
+interface Props {
+  painType: string;
+  imageSrc: string;
+}
+
+const { painType, imageSrc } = Astro.props;
+
+// Fetch latest 4 blog posts
+const allPosts = await getCollection('blog');
+const latestPosts = allPosts
+  .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf())
+  .slice(0, 4);
+
+// Helper to format dates consistently
+const formatDate = (date: Date) =>
+  new Intl.DateTimeFormat('en-AU', {
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric',
+  }).format(date);
+---
+
+<section class="container mx-auto px-4 my-12">
+  <!-- Title with full-width border -->
+  <div class="mb-8">
+    <h2 class="text-3xl md:text-4xl font-bold text-custom-purple pb-4 border-b-2 border-gray-300">
+      {painType.charAt(0).toUpperCase() + painType.slice(1)} Pain
+    </h2>
+  </div>
+
+  <!-- Content Layout: Image left, Blogs right -->
+  <div class="flex flex-col lg:flex-row gap-8">
+    <!-- Left side: Image -->
+    <div class="lg:w-1/3">
+      <img 
+        src={imageSrc} 
+        alt={`${painType} pain treatment`}
+        class="w-full h-full object-cover shadow-lg"
+        loading="lazy"
+      />
+    </div>
+
+    <!-- Right side: Blog cards -->
+    <div class="lg:w-2/3 space-y-6">
+      {latestPosts.map(post => (
+        <a href={`/${post.slug}`} class="block group">
+          <div class="border-b border-gray-200 pb-4 hover:bg-gray-50 transition-colors duration-200 p-4 rounded">
+            <h3 class="text-lg font-semibold text-gray-800 group-hover:text-custom-purple mb-2">
+              {post.data.title}
+            </h3>
+            <p class="text-gray-600 text-sm mb-2 line-clamp-2">
+              {post.body.slice(0, 100)}...
+            </p>
+            <div class="flex items-center justify-between">
+              <span class="text-sm text-gray-500">
+                Sydney Chiropractor
+              </span>
+              <span class="text-sm text-gray-500">
+                {formatDate(post.data.date)}
+              </span>
+            </div>
+          </div>
+        </a>
+      ))}
+    </div>
+  </div>
+</section>

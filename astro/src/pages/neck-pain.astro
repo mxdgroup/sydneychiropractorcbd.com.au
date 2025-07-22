@@ -1,6 +1,7 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Pain from "../components/pain/pain.astro";
+import PainBlogs from "../components/pain/PainBlogs.astro";
 
 const component1 = {
   title: "Neck Pain: Causes, Symptoms, and Treatments",
@@ -62,10 +63,14 @@ const component5 = {
     { text: "Stress Management", type: "header" },
     { text: "Stress management is another important aspect of neck pain prevention and treatment. Techniques such as deep breathing exercises, meditation, or progressive muscle relaxation can help reduce tension in the neck and shoulder muscles. Chiropractors often provide guidance on these stress-reduction techniques as part of their holistic approach to neck sprain treatment.", type: "paragraph" },
     { text: "Multidisciplinary Collaboration", type: "header" },
+    {text:"For patients with more complex cases, chiropractors can work as part of a multidisciplinary team, collaborating with other healthcare professionals to ensure comprehensive care. This integrated approach can be particularly beneficial for patients with chronic or severe pain.",type:"paragraph"},
     { text: "Proactive Neck Pain Management", type: "header" },
+    {text:"Effective management of neck pain often involves a combination of lifestyle changes and professional chiropractic care. By adopting healthier habits, practicing good posture, engaging in regular exercise, and seeking targeted chiropractic treatments, most people can find significant relief and improve their overall quality of life.",type:"paragraph"},
+
     { text: "Therapeutic Approaches for Specific Conditions", type: "header" },
+    {text:"A variety of therapeutic approaches are available, tailored to specific conditions and causes. For those seeking treatment for a pinched nerve in the neck, chiropractic care offers targeted spinal adjustments that can help relieve pressure on affected nerves. These precise manipulations aim to realign the vertebrae, creating more space for nerve roots and reducing inflammation.",type:"paragraph"},
     { text: "Complementary Therapies and Neck Muscle Sprain Treatment", type: "header" },
-    { text: "Patient Education", type: "paragraph" },
+    { text: "Complementary therapies such as spinal decompression may also be employed, gently stretching the neck to promote healing and alleviate nerve compression. For individuals dealing with neck muscle sprain, a combination of rest, gentle exercises, and manual therapies often proves effective. Chiropractors may use soft tissue techniques like massage or myofascial release to reduce tension and promote blood flow to the affected area.", type: "paragraph" },
     { text: "Neck Muscle Strain Treatment", type: "header" },
     { text: "Similarly, neck muscle strain treatment focuses on reducing pain and inflammation while promoting healing of the damaged tissues. This may involve a multi-faceted approach including gentle mobilization techniques, therapeutic ultrasound to stimulate healing at the cellular level, and electrical stimulation to control pain and reduce muscle spasms.", type: "paragraph" },
     { text: "Chiropractors often work with patients to identify and correct postural issues or repetitive motions that may have contributed to the strain, incorporating ergonomic advice and lifestyle modifications into the treatment plan.", type: "paragraph" },
@@ -78,17 +83,32 @@ const component5 = {
   ],
 };
 
+const component6 = {
+  title: "Dealing With Neck Pain - Summary",
+  body: [
+    { text: "Chiropractic care provides a drug-free solution, addressing the spine, muscles, and nervous system to relieve pain and improve function. Chiropractors offer various neck ache treatments, including spinal adjustments, ergonomic advice, and exercises to strengthen and stretch the neck.", type: "paragraph" },
+    { text: "They also use therapies like hot and cold treatments, soft tissue massages, and stress reduction techniques. For severe cases, advanced treatments such as spinal decompression are available.", type: "paragraph" },
+    { text: "Education on proper posture and lifestyle changes is essential for preventing future pain. Chiropractors often work with other healthcare professionals to provide comprehensive care tailored to individual needs. This holistic approach ensures not only immediate relief but also long-term neck health.", type: "paragraph" },
+  ],
+};
+
 const solutionComponent = {
   imageSrc: "/treatments/normal/neck-pain-treatment-sydney.jpg",
-  title: "Neck Pain Treatment at Clinic 27",
-  solutions: "Our chiropractors combine advanced Bio-Structural Correction (ABC) adjustments with tailored rehabilitation exercises to restore proper cervical alignment, reduce inflammation and help you return to pain-free movement as fast as possible.",
+  title: "Solutions for Neck Pain",
+  solutions: [
+    "Lifestyle Modifications",
+    "Hot and Cold Therapy",
+    "Spinal Adjustments",
+    "Soft Tissue Therapies",
+    "Stress Management Therapies"
+  ],
 };
 ---
 
 <Layout title="Neck Pain | Clinic 27">
   <Pain
     component1={component1}
-    otherComponents={[component2, component3, component4, component5]}
+    otherComponents={[component2, component3, component4, component5,component6]}
     solutionComponent={solutionComponent}
   />
 </Layout> 
