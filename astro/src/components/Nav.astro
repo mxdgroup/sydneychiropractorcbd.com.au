@@ -91,9 +91,9 @@ const treatments = await getCollection('treatments');
 
 <div id="nav-wrapper">
   <nav id="main-nav" class="py-4 md:py-8 w-full transition-all duration-300">
-    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="container mx-auto px-0 sm:px-6 lg:px-8">
       <!-- Mobile Nav -->
-      <div class="md:hidden flex justify-between items-center">
+      <div class="md:hidden flex justify-between items-center px-4">
           <a href="/">
               <Image src={logo} alt="Clinic 27 Logo" class="w-auto h-12" />
           </a>
@@ -122,13 +122,13 @@ const treatments = await getCollection('treatments');
       <!-- Desktop Nav & Mobile Menu Content -->
       <div id="nav-menu" class="hidden md:flex flex-col md:flex-row md:justify-between md:items-center mt-4 md:mt-0">
           <!-- Mobile Search Bar -->
-          <div class="md:hidden mb-4">
+          <div class="md:hidden mb-4 px-4">
             <form action="/search/" method="GET">
                 <input type="search" name="q" placeholder="Search..." class="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-custom-purple" />
             </form>
           </div>
 
-          <div class="flex flex-col md:flex-row md:items-center gap-y-4 md:gap-x-6">
+          <div class="flex flex-col md:flex-row md:items-center gap-y-4 md:gap-x-6 px-4 md:px-0">
               <a class={`nav-link text-lg font-bold ${currentPath === '/' ? 'text-custom-purple' : 'text-custom-pink'} hover:text-custom-purple transition-colors duration-300`} href="/">HOME</a>
               
               <!-- Desktop Dropdown -->
