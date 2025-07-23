@@ -93,7 +93,7 @@ const treatments = await getCollection('treatments');
   <nav id="main-nav" class="py-4 md:py-8 w-full transition-all duration-300">
     <div class="container mx-auto px-0 sm:px-6 lg:px-8">
       <!-- Mobile Nav -->
-      <div class="md:hidden flex justify-between items-center px-4">
+      <div class="md:hidden flex justify-between items-center px-4 gap-2">
           <a href="/">
               <Image src={logo} alt="Clinic 27 Logo" class="w-auto h-12" />
           </a>
@@ -105,8 +105,8 @@ const treatments = await getCollection('treatments');
       </div>
 
       <!-- Mobile Sticky Menu - Integrated into nav -->
-      <div class="md:hidden w-full mt-0 p-0 m-0">
-        <div class="flex w-full gap-0">
+      <div class="md:hidden w-full mt-0 p-0 m-0 leading-none">
+        <div class="flex w-full gap-0 leading-none">
           <!-- BOOK APPOINTMENT Button -->
           <a href="https://clinic27intake.bookings.pracsuite.com/?_gl=1*78zlvn*_gcl_au*MzY2OTQyMzQyLjE3NTA3NzI2MjU.*_ga*MTc5NDAwODQ2NC4xNzUwNzcyNjI1*_ga_DVEN4QQTPM*czE3NTMyNTcxNTYkbzgkZzEkdDE3NTMyNjIyMzgkajEzJGwwJGgw*_ga_S36TR91H9N*czE3NTMyNTcxNTYkbzgkZzEkdDE3NTMyNjIyMzgkajEzJGwwJGgw*_ga_NTMX2EEDN4*czE3NTMyNTcxNTYkbzgkZzEkdDE3NTMyNjIyMzgkajEzJGwwJGgw*_ga_8J9DNH249S*czE3NTMyNTcxNTYkbzgkZzEkdDE3NTMyNjIyMzgkajEzJGwwJGgw" target="_blank" rel="noopener noreferrer" class="flex-1 bg-custom-purple text-white text-center py-3 px-3 font-semibold text-xs hover:bg-purple-700 transition-colors duration-300 whitespace-nowrap min-w-0">
             BOOK APPOINTMENT
