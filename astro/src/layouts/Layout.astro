@@ -75,8 +75,59 @@ const finalCanonicalUrl = canonicalUrl || autoMetaData.canonicalUrl;
     
     <!-- DNS prefetch for external resources -->
     <link rel="dns-prefetch" href="//clinic27intake.bookings.pracsuite.com" />
+    <link rel="dns-prefetch" href="//maps.googleapis.com" />
+    <link rel="dns-prefetch" href="//maps.gstatic.com" />
+    <link rel="preconnect" href="https://maps.googleapis.com" crossorigin />
+    <link rel="preconnect" href="https://maps.gstatic.com" crossorigin />
     
-    <!-- Critical CSS preload -->
+    <!-- Critical CSS - Inline for immediate rendering -->
+    <style is:inline>
+      /* Critical CSS for above-the-fold content */
+      body { margin: 0; font-family: system-ui, -apple-system, sans-serif; }
+      .overflow-x-hidden { overflow-x: hidden; }
+      .container { width: 100%; margin: 0 auto; padding: 0 1rem; }
+      .text-center { text-align: center; }
+      .font-bold { font-weight: 700; }
+      .text-3xl { font-size: 1.875rem; line-height: 2.25rem; }
+      .text-4xl { font-size: 2.25rem; line-height: 2.5rem; }
+      .text-lg { font-size: 1.125rem; line-height: 1.75rem; }
+      .text-gray-900 { color: rgb(17 24 39); }
+      .text-gray-600 { color: rgb(75 85 99); }
+      .bg-gray-50 { background-color: rgb(249 250 251); }
+      .py-16 { padding-top: 4rem; padding-bottom: 4rem; }
+      .mb-12 { margin-bottom: 3rem; }
+      .mb-4 { margin-bottom: 1rem; }
+      .max-w-2xl { max-width: 42rem; }
+      .mx-auto { margin-left: auto; margin-right: auto; }
+      .max-w-6xl { max-width: 72rem; }
+      .grid { display: grid; }
+      .gap-8 { gap: 2rem; }
+      .bg-white { background-color: rgb(255 255 255); }
+      .rounded-lg { border-radius: 0.5rem; }
+      .shadow-lg { box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1); }
+      .overflow-hidden { overflow: hidden; }
+      .p-8 { padding: 2rem; }
+      .text-2xl { font-size: 1.5rem; line-height: 2rem; }
+      .mb-6 { margin-bottom: 1.5rem; }
+      .leading-relaxed { line-height: 1.625; }
+      .inline-block { display: inline-block; }
+      .px-6 { padding-left: 1.5rem; padding-right: 1.5rem; }
+      .py-3 { padding-top: 0.75rem; padding-bottom: 0.75rem; }
+      .bg-custom-pink { background-color: #e6007e; }
+      .text-white { color: rgb(255 255 255); }
+      .font-semibold { font-weight: 600; }
+      .rounded { border-radius: 0.25rem; }
+      .transition-colors { transition-property: color, background-color, border-color, text-decoration-color, fill, stroke; }
+      .duration-300 { transition-duration: 300ms; }
+      .hover\:bg-custom-purple:hover { background-color: #333b55; }
+      .hover\:shadow-xl:hover { box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1); }
+      .transition-shadow { transition-property: box-shadow; }
+      .hidden { display: none; }
+      .md\:grid { display: none; }
+      @media (min-width: 768px) { .md\:grid { display: grid; } .md\:grid-cols-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+    </style>
+    
+    <!-- Non-critical CSS - Load asynchronously -->
     <link rel="preload" href="/_astro/global.css" as="style" onload="this.onload=null;this.rel='stylesheet'" />
     <noscript><link rel="stylesheet" href="/_astro/global.css" /></noscript>
     

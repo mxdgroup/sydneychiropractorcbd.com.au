@@ -95,7 +95,14 @@ const treatments = await getCollection('treatments');
       <!-- Mobile Nav -->
       <div class="md:hidden flex justify-between items-center px-4 gap-2">
           <a href="/">
-              <Image src={logo} alt="Clinic 27 Logo" class="w-auto h-12" />
+              <Image 
+                src={logo} 
+                alt="Clinic 27 Logo" 
+                class="w-auto h-12"
+                widths={[48, 96, 192]}
+                sizes="48px"
+                formats={['webp', 'avif']}
+              />
           </a>
           <button id="hamburger" aria-label="Open Menu">
               <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">

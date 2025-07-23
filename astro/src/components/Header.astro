@@ -16,7 +16,15 @@ import logo from "../../public/logo-header.webp";
             </div>
         </div>
 		<div class="flex-shrink-0 mx-8">
-			<Image src={logo} alt="Logo" loading="eager" class="w-auto h-32"/>
+			<Image 
+				src={logo} 
+				alt="Logo" 
+				loading="eager" 
+				class="w-auto h-32"
+				widths={[64, 128, 256]}
+				sizes="128px"
+				formats={['webp', 'avif']}
+			/>
 		</div>
         <div class="flex flex-row-reverse items-center gap-4 flex-1">
             <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-black flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">

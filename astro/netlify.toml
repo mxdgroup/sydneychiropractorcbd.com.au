@@ -38,6 +38,8 @@
     X-Robots-Tag = "index, follow"
     # Permissions Policy for better security
     Permissions-Policy = "camera=(), microphone=(), geolocation=()"
+    # Performance headers
+    Accept-Encoding = "gzip, deflate, br"
 
 # Long-term caching for static assets
 [[headers]]
