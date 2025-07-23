@@ -121,7 +121,7 @@ const orbitPositions = Array.from({ length: orbitCount }, (_, i) => {
               width={orbit.size}
               height={orbit.size}
             >
-              <img src={orbit.images[i]} alt="" loading="eager" class="w-full h-full object-cover rounded-full" />
+              <img src={orbit.images[i]} alt={`Treatment icon ${i + 1}`} loading="eager" class="w-full h-full object-cover rounded-full" />
             </foreignObject>
           ) : (
             <circle
@@ -146,7 +146,7 @@ const orbitPositions = Array.from({ length: orbitCount }, (_, i) => {
         width={center.size}
         height={center.size}
       >
-        <img src={center.image} alt="" loading="eager" class="w-full h-full object-cover rounded-full" />
+        <img src={center.image} alt="Back pain treatment icon" loading="eager" class="w-full h-full object-cover rounded-full" />
       </foreignObject>
     ) : (
       <circle

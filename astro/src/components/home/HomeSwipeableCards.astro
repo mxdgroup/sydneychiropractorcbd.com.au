@@ -106,10 +106,31 @@
         </div>
 
         <!-- Navigation Dots -->
-        <div class="flex justify-center mt-6 space-x-2">
-          <button class="w-2 h-2 rounded-full bg-custom-pink opacity-100 transition-opacity duration-300" data-slide="0" onclick="goToSlide(0)"></button>
-          <button class="w-2 h-2 rounded-full bg-gray-300 opacity-50 transition-opacity duration-300" data-slide="1" onclick="goToSlide(1)"></button>
-          <button class="w-2 h-2 rounded-full bg-gray-300 opacity-50 transition-opacity duration-300" data-slide="2" onclick="goToSlide(2)"></button>
+        <div class="flex justify-center mt-6 space-x-2" role="tablist" aria-label="Pain relief treatment cards">
+          <button 
+            class="w-2 h-2 rounded-full bg-custom-pink opacity-100 transition-opacity duration-300" 
+            data-slide="0" 
+            onclick="goToSlide(0)"
+            aria-label="Go to spine pain treatment card"
+            aria-selected="true"
+            role="tab"
+          ></button>
+          <button 
+            class="w-2 h-2 rounded-full bg-gray-300 opacity-50 transition-opacity duration-300" 
+            data-slide="1" 
+            onclick="goToSlide(1)"
+            aria-label="Go to shoulder pain treatment card"
+            aria-selected="false"
+            role="tab"
+          ></button>
+          <button 
+            class="w-2 h-2 rounded-full bg-gray-300 opacity-50 transition-opacity duration-300" 
+            data-slide="2" 
+            onclick="goToSlide(2)"
+            aria-label="Go to disc pain treatment card"
+            aria-selected="false"
+            role="tab"
+          ></button>
         </div>
       </div>
     </div>
@@ -212,9 +233,11 @@
         if (index === currentSlide) {
           dot.classList.remove('bg-gray-300', 'opacity-50');
           dot.classList.add('bg-custom-pink', 'opacity-100');
+          dot.setAttribute('aria-selected', 'true');
         } else {
           dot.classList.remove('bg-custom-pink', 'opacity-100');
           dot.classList.add('bg-gray-300', 'opacity-50');
+          dot.setAttribute('aria-selected', 'false');
         }
       });
     }
