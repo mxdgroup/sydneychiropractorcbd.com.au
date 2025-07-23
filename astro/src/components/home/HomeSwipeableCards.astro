@@ -1,0 +1,258 @@
+---
+// HomeSwipeableCards.astro
+---
+
+<section class="py-16 bg-gray-50">
+  <div class="container mx-auto px-4">
+    <div class="text-center mb-12">
+      <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+        Specialized Pain Relief
+      </h2>
+      <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+        Targeted treatments for specific pain conditions with proven results
+      </p>
+    </div>
+
+    <!-- Desktop Grid Layout -->
+    <div class="hidden md:grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+      <!-- Spine Pain Card -->
+      <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+        <div class="p-8">
+          <h3 class="text-2xl font-bold text-gray-900 mb-4">Fix Spine Pain</h3>
+          <p class="text-gray-600 mb-6 leading-relaxed">
+            Get back your spinal health and enjoy non-surgical relief from lower back pain, chronic spinal discomfort, and posture-related stiffness.
+          </p>
+          <a href="/spine-pain/" class="inline-block px-6 py-3 bg-custom-pink text-white font-semibold rounded hover:bg-custom-purple transition-colors duration-300">
+            Fix Spine Pain
+          </a>
+        </div>
+      </div>
+
+      <!-- Shoulder Pain Card -->
+      <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+        <div class="p-8">
+          <h3 class="text-2xl font-bold text-gray-900 mb-4">Fix Shoulder Pain</h3>
+          <p class="text-gray-600 mb-6 leading-relaxed">
+            Get a complete examination to find the source of your shoulder pain, including posture correction, range of motion assessment, and muscle strength evaluation to help permanently fix shoulder pain.
+          </p>
+          <a href="/shoulder-pain/" class="inline-block px-6 py-3 bg-custom-pink text-white font-semibold rounded hover:bg-custom-purple transition-colors duration-300">
+            Fix Shoulder Pain
+          </a>
+        </div>
+      </div>
+
+      <!-- Disc Pain Card -->
+      <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+        <div class="p-8">
+          <h3 class="text-2xl font-bold text-gray-900 mb-4">Fix Disc Pain</h3>
+          <p class="text-gray-600 mb-6 leading-relaxed">
+            Get effective disc pain treatment options that can provide significant relief without resorting to invasive procedures or heavy reliance on medication. We address root causes to regain your comfort and functionality.
+          </p>
+          <a href="/disc-pain/" class="inline-block px-6 py-3 bg-custom-pink text-white font-semibold rounded hover:bg-custom-purple transition-colors duration-300">
+            Fix Disc Pain
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile Swipeable Cards -->
+    <div class="md:hidden">
+      <div class="swipeable-cards-container relative overflow-hidden">
+        <div class="swipeable-cards-wrapper flex transition-transform duration-300 ease-in-out" id="swipeableCards">
+          <!-- Spine Pain Card -->
+          <div class="swipeable-card flex-shrink-0 w-full px-4">
+            <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+              <div class="p-6">
+                <h3 class="text-xl font-bold text-gray-900 mb-3">Fix Spine Pain</h3>
+                <p class="text-gray-600 mb-4 leading-relaxed text-sm">
+                  Get back your spinal health and enjoy non-surgical relief from lower back pain, chronic spinal discomfort, and posture-related stiffness.
+                </p>
+                <a href="/spine-pain/" class="inline-block px-4 py-2 bg-custom-pink text-white font-semibold rounded hover:bg-custom-purple transition-colors duration-300 text-sm">
+                  Fix Spine Pain
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Shoulder Pain Card -->
+          <div class="swipeable-card flex-shrink-0 w-full px-4">
+            <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+              <div class="p-6">
+                <h3 class="text-xl font-bold text-gray-900 mb-3">Fix Shoulder Pain</h3>
+                <p class="text-gray-600 mb-4 leading-relaxed text-sm">
+                  Get a complete examination to find the source of your shoulder pain, including posture correction, range of motion assessment, and muscle strength evaluation to help permanently fix shoulder pain.
+                </p>
+                <a href="/shoulder-pain/" class="inline-block px-4 py-2 bg-custom-pink text-white font-semibold rounded hover:bg-custom-purple transition-colors duration-300 text-sm">
+                  Fix Shoulder Pain
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Disc Pain Card -->
+          <div class="swipeable-card flex-shrink-0 w-full px-4">
+            <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+              <div class="p-6">
+                <h3 class="text-xl font-bold text-gray-900 mb-3">Fix Disc Pain</h3>
+                <p class="text-gray-600 mb-4 leading-relaxed text-sm">
+                  Get effective disc pain treatment options that can provide significant relief without resorting to invasive procedures or heavy reliance on medication. We address root causes to regain your comfort and functionality.
+                </p>
+                <a href="/disc-pain/" class="inline-block px-4 py-2 bg-custom-pink text-white font-semibold rounded hover:bg-custom-purple transition-colors duration-300 text-sm">
+                  Fix Disc Pain
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Navigation Dots -->
+        <div class="flex justify-center mt-6 space-x-2">
+          <button class="w-2 h-2 rounded-full bg-custom-pink opacity-100 transition-opacity duration-300" data-slide="0" onclick="goToSlide(0)"></button>
+          <button class="w-2 h-2 rounded-full bg-gray-300 opacity-50 transition-opacity duration-300" data-slide="1" onclick="goToSlide(1)"></button>
+          <button class="w-2 h-2 rounded-full bg-gray-300 opacity-50 transition-opacity duration-300" data-slide="2" onclick="goToSlide(2)"></button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  // Swipeable cards functionality
+  let currentSlide = 0;
+  const totalSlides = 3;
+  let startX = 0;
+  let currentX = 0;
+  let isDragging = false;
+
+  const wrapper = document.getElementById('swipeableCards');
+  const dots = document.querySelectorAll('[data-slide]');
+
+  if (wrapper) {
+    // Touch events
+    wrapper.addEventListener('touchstart', handleTouchStart, { passive: false });
+    wrapper.addEventListener('touchmove', handleTouchMove, { passive: false });
+    wrapper.addEventListener('touchend', handleTouchEnd, { passive: false });
+
+    // Mouse events for desktop testing
+    wrapper.addEventListener('mousedown', handleMouseDown);
+    wrapper.addEventListener('mousemove', handleMouseMove);
+    wrapper.addEventListener('mouseup', handleMouseUp);
+    wrapper.addEventListener('mouseleave', handleMouseUp);
+
+    function handleTouchStart(e) {
+      startX = e.touches[0].clientX;
+      isDragging = true;
+    }
+
+    function handleTouchMove(e) {
+      if (!isDragging) return;
+      e.preventDefault();
+      currentX = e.touches[0].clientX;
+      const diff = currentX - startX;
+      const translateX = -currentSlide * 100 + (diff / wrapper.offsetWidth) * 100;
+      wrapper.style.transform = `translateX(${translateX}%)`;
+    }
+
+    function handleTouchEnd() {
+      if (!isDragging) return;
+      isDragging = false;
+      const diff = currentX - startX;
+      const threshold = wrapper.offsetWidth * 0.3;
+
+      if (Math.abs(diff) > threshold) {
+        if (diff > 0 && currentSlide > 0) {
+          currentSlide--;
+        } else if (diff < 0 && currentSlide < totalSlides - 1) {
+          currentSlide++;
+        }
+      }
+
+      updateSlide();
+    }
+
+    function handleMouseDown(e) {
+      startX = e.clientX;
+      isDragging = true;
+      wrapper.style.cursor = 'grabbing';
+    }
+
+    function handleMouseMove(e) {
+      if (!isDragging) return;
+      currentX = e.clientX;
+      const diff = currentX - startX;
+      const translateX = -currentSlide * 100 + (diff / wrapper.offsetWidth) * 100;
+      wrapper.style.transform = `translateX(${translateX}%)`;
+    }
+
+    function handleMouseUp() {
+      if (!isDragging) return;
+      isDragging = false;
+      wrapper.style.cursor = 'grab';
+      const diff = currentX - startX;
+      const threshold = wrapper.offsetWidth * 0.3;
+
+      if (Math.abs(diff) > threshold) {
+        if (diff > 0 && currentSlide > 0) {
+          currentSlide--;
+        } else if (diff < 0 && currentSlide < totalSlides - 1) {
+          currentSlide++;
+        }
+      }
+
+      updateSlide();
+    }
+
+    function updateSlide() {
+      wrapper.style.transform = `translateX(-${currentSlide * 100}%)`;
+      updateDots();
+    }
+
+    function updateDots() {
+      dots.forEach((dot, index) => {
+        if (index === currentSlide) {
+          dot.classList.remove('bg-gray-300', 'opacity-50');
+          dot.classList.add('bg-custom-pink', 'opacity-100');
+        } else {
+          dot.classList.remove('bg-custom-pink', 'opacity-100');
+          dot.classList.add('bg-gray-300', 'opacity-50');
+        }
+      });
+    }
+
+    // Auto-advance slides every 5 seconds
+    setInterval(() => {
+      currentSlide = (currentSlide + 1) % totalSlides;
+      updateSlide();
+    }, 5000);
+  }
+
+  // Function to go to specific slide
+  function goToSlide(slideIndex) {
+    currentSlide = slideIndex;
+    updateSlide();
+  }
+</script>
+
+<style>
+  .swipeable-cards-container {
+    max-width: 100%;
+  }
+  
+  .swipeable-cards-wrapper {
+    width: 300%;
+  }
+  
+  .swipeable-card {
+    width: 33.333%;
+  }
+  
+  @media (max-width: 768px) {
+    .swipeable-cards-wrapper {
+      cursor: grab;
+    }
+    
+    .swipeable-cards-wrapper:active {
+      cursor: grabbing;
+    }
+  }
+</style> 
