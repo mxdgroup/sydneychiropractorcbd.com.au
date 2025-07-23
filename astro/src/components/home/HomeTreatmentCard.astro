@@ -4,6 +4,7 @@ const reverse = index !== undefined ? index % 2 === 0 : false;
 const isBackPainTreatment = title === "Back Pain Treatment In The CBD";
 const isNeckPainTreatment = title === "Neck Pain Treatment In The CBD";
 const isCarpalTunnelTreatment = title === "Carpal Tunnel Syndrome Treatment & Diagnosis In The CBD";
+const isVertigoTreatment = title === "Vertigo Treatment In The CBD";
 ---
 <div class="grid grid-cols-1 lg:grid-cols-3 mb-20 shadow-lg overflow-hidden shadow-xl">
     <div class={`w-full ${reverse ? 'lg:order-2' : 'lg:order-1'}`}>
@@ -40,6 +41,14 @@ const isCarpalTunnelTreatment = title === "Carpal Tunnel Syndrome Treatment & Di
             <div class="mt-6">
                 <a href="/carpal-tunnel-syndrome-treatment-sydney-cbd/" class="inline-block px-6 py-3 bg-custom-pink text-white font-semibold rounded hover:bg-custom-purple transition-colors duration-300">
                     Carpal Tunnel Syndrome Treatment
+                </a>
+            </div>
+        )}
+        
+        {isVertigoTreatment && (
+            <div class="mt-6">
+                <a href="/vertigo-treatment-sydney-cbd/" class="inline-block px-6 py-3 bg-custom-pink text-white font-semibold rounded hover:bg-custom-purple transition-colors duration-300">
+                    Fix Vertigo
                 </a>
             </div>
         )}
