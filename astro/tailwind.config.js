@@ -19,4 +19,10 @@ export default {
     },
   },
   plugins: [],
+  // Performance optimizations
+  corePlugins: {
+    // Disable unused features to reduce bundle size
+    preflight: true,
+    container: true,
+  },
 } 

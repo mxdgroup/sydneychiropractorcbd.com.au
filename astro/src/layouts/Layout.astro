@@ -33,10 +33,23 @@ const { title, preloadImage } = Astro.props;
     <!-- Web App Manifest -->
     <link rel="manifest" href="/site.webmanifest" />
     
-    <meta name="viewport" content="width=device-width" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
+    
+    <!-- Critical Resource Preloading -->
     {preloadImage && <link rel="preload" href={preloadImage} as="image" />}
+    
+    <!-- Preload critical fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    
+    <!-- DNS prefetch for external resources -->
+    <link rel="dns-prefetch" href="//clinic27intake.bookings.pracsuite.com" />
+    
+    <!-- Critical CSS preload -->
+    <link rel="preload" href="/_astro/global.css" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+    <noscript><link rel="stylesheet" href="/_astro/global.css" /></noscript>
   </head>
   <body class="overflow-x-hidden">
     <Header />

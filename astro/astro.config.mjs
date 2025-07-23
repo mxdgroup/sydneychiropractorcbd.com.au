@@ -17,7 +17,23 @@ export default defineConfig({
   ],
   trailingSlash: "always",
   build: {
-    format: "directory"
+    format: "directory",
+    inlineStylesheets: "auto", // Inline critical CSS
+  },
+  vite: {
+    build: {
+      cssCodeSplit: false, // Bundle all CSS to reduce requests
+      rollupOptions: {
+        output: {
+          manualChunks: {
+            vendor: ['astro'], // Separate vendor chunks
+          }
+        }
+      }
+    },
+    css: {
+      devSourcemap: false, // Disable source maps in production
+    }
   },
   site: "https://sydneychiropractorcbd.com.au"
 });
