@@ -60,14 +60,18 @@ import OrbitDiagram from "../OrbitDiagram.astro";
         <div class="bg-white min-h-60">
             <p class="bg-custom-pink text-white text-center py-4 font-bold text-2xl">FIND US</p>
             <div class="h-72 relative" id="map-container">
-                <!-- Static map image (loaded immediately) -->
-                <img 
-                    src="https://maps.googleapis.com/maps/api/staticmap?center=-33.863204,151.2095156&zoom=16&size=400x300&markers=color:red%7Clabel:C%7C-33.863204,151.2095156&key=AIzaSyB41DRUbKWJHPxaFjMAwdrzWzbVKartNGg" 
-                    alt="Clinic 27 location at 44 Bridge Street, Sydney CBD"
-                    class="w-full h-full object-cover cursor-pointer"
-                    id="static-map"
-                    loading="lazy"
-                />
+                <!-- Static map placeholder (no API key needed) -->
+                <div class="w-full h-full bg-gray-100 flex items-center justify-center cursor-pointer" id="static-map">
+                    <div class="text-center">
+                        <div class="w-16 h-16 mx-auto mb-4 bg-custom-pink rounded-full flex items-center justify-center">
+                            <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd" />
+                            </svg>
+                        </div>
+                        <p class="text-gray-600 font-semibold">44 Bridge Street</p>
+                        <p class="text-gray-500 text-sm">Sydney CBD, NSW 2000</p>
+                    </div>
+                </div>
                 <!-- Interactive map (loaded on demand) -->
                 <iframe 
                     src="about:blank"
