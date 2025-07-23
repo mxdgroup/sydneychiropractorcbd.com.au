@@ -31,7 +31,7 @@ const carouselTreatments: CarouselItem[] = allTreatments.map(t => ({
     type: 'treatment',
     title: t.data.title,
     imageUrl: `/treatments/normal/${generateImageName(t.data.title)}.${topExtension}`,
-    href: `/${t.slug}`
+    href: `/${t.slug}/`
 }));
 ---
 
