@@ -50,6 +50,42 @@ const { title, preloadImage } = Astro.props;
     <!-- Critical CSS preload -->
     <link rel="preload" href="/_astro/global.css" as="style" onload="this.onload=null;this.rel='stylesheet'" />
     <noscript><link rel="stylesheet" href="/_astro/global.css" /></noscript>
+    
+    <!-- Analytics Section - Add your analytics code here -->
+    <!-- Google Analytics (GA4) -->
+    <!-- 
+    <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'GA_MEASUREMENT_ID');
+    </script>
+    -->
+    
+    <!-- Facebook Pixel -->
+    <!-- 
+    <script>
+      !function(f,b,e,v,n,t,s)
+      {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+      n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+      if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+      n.queue=[];t=b.createElement(e);t.async=!0;
+      t.src=v;s=b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t,s)}(window, document,'script',
+      'https://connect.facebook.net/en_US/fbevents.js');
+      fbq('init', 'YOUR_PIXEL_ID');
+      fbq('track', 'PageView');
+    </script>
+    <noscript>
+      <img height="1" width="1" style="display:none"
+        src="https://www.facebook.com/tr?id=YOUR_PIXEL_ID&ev=PageView&noscript=1"/>
+    </noscript>
+    -->
+    
+    <!-- Other Analytics Services -->
+    <!-- Add other analytics services here (Hotjar, Mixpanel, etc.) -->
+    
   </head>
   <body class="overflow-x-hidden">
     <Header />
@@ -84,5 +120,18 @@ const { title, preloadImage } = Astro.props;
       </div>
     </div>
     <Footer />
+    
+    <!-- Analytics Section - End of Body -->
+    <!-- Add any analytics that need to run after page load here -->
+    <!-- 
+    <script>
+      // Example: Track specific events after page load
+      // gtag('event', 'page_view', {
+      //   page_title: document.title,
+      //   page_location: window.location.href
+      // });
+    </script>
+    -->
+    
   </body>
 </html> 
