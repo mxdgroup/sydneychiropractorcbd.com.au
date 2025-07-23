@@ -145,10 +145,10 @@ const assistant = [
             </div>
             
             <!-- Carousel navigation dots -->
-            <div class="carousel-dots flex justify-center mt-8" role="tablist" aria-label="Doctor team carousel">
+            <div class="carousel-dots flex justify-center mt-8 space-x-3" role="tablist" aria-label="Doctor team carousel">
                 {doctors.map((_, index) => (
                     <button 
-                        class="carousel-dot mx-2 w-3 h-3 rounded-full bg-gray-300 focus:outline-none" 
+                        class="carousel-dot w-4 h-4 rounded-full bg-gray-300 focus:outline-none p-2 touch-manipulation" 
                         data-slide={index}
                         aria-label={`Go to slide ${index + 1} - ${doctors[index].name}`}
                         aria-selected={index === 0 ? 'true' : 'false'}
