@@ -10,6 +10,7 @@ const isPostureTreatment = title === "Posture Correction Treatment In The CBD";
 const isHeadacheTreatment = title === "Headache & Migraine Treatment";
 const isSciaticaTreatment = title === "Sciatica Treatment In The CBD";
 const isScoliosisTreatment = title === "Scoliosis Treatment In The CBD";
+const isMassageTreatment = title === "Sydney Massage In The CBD With Roberto";
 ---
 <div class="grid grid-cols-1 lg:grid-cols-3 mb-20 shadow-lg overflow-hidden shadow-xl">
     <div class={`w-full ${reverse ? 'lg:order-2' : 'lg:order-1'}`}>
@@ -94,6 +95,14 @@ const isScoliosisTreatment = title === "Scoliosis Treatment In The CBD";
             <div class="mt-6">
                 <a href="/scoliosis-treatment-sydney-cbd/" class="inline-block px-6 py-3 bg-custom-pink text-white font-semibold rounded hover:bg-custom-purple transition-colors duration-300">
                     Scoliosis Treatment
+                </a>
+            </div>
+        )}
+        
+        {isMassageTreatment && (
+            <div class="mt-6">
+                <a href="/massage-sydney-cbd-best-massage-sydney/" class="inline-block px-6 py-3 bg-custom-pink text-white font-semibold rounded hover:bg-custom-purple transition-colors duration-300">
+                    Sydney CBD Massage
                 </a>
             </div>
         )}
