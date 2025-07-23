@@ -5,11 +5,28 @@
 [build.environment]
   NODE_VERSION = "18"
 
+# Functions configuration for API routes
+[functions]
+  directory = ".netlify/functions"
+
+# Redirects for better SEO and user experience
+[[redirects]]
+  from = "/home"
+  to = "/"
+  status = 301
+
+[[redirects]]
+  from = "/index"
+  to = "/"
+  status = 301
+
+# Custom 404 page
 [[redirects]]
   from = "/*"
   to = "/404"
   status = 404
 
+# Security headers for all pages
 [[headers]]
   for = "/*"
   [headers.values]
@@ -17,8 +34,62 @@
     X-XSS-Protection = "1; mode=block"
     X-Content-Type-Options = "nosniff"
     Referrer-Policy = "strict-origin-when-cross-origin"
+    X-Robots-Tag = "index, follow"
+    # Permissions Policy for better security
+    Permissions-Policy = "camera=(), microphone=(), geolocation=()"
 
+# Long-term caching for static assets
 [[headers]]
   for = "/assets/*"
   [headers.values]
-    Cache-Control = "public, max-age=31536000, immutable" 
+    Cache-Control = "public, max-age=31536000, immutable"
+
+# Cache images with longer expiration
+[[headers]]
+  for = "/*.webp"
+  [headers.values]
+    Cache-Control = "public, max-age=7776000"
+
+[[headers]]
+  for = "/*.jpg"
+  [headers.values]
+    Cache-Control = "public, max-age=7776000"
+
+[[headers]]
+  for = "/*.jpeg"
+  [headers.values]
+    Cache-Control = "public, max-age=7776000"
+
+[[headers]]
+  for = "/*.png"
+  [headers.values]
+    Cache-Control = "public, max-age=7776000"
+
+# Cache CSS and JS files
+[[headers]]
+  for = "/*.css"
+  [headers.values]
+    Cache-Control = "public, max-age=7776000"
+
+[[headers]]
+  for = "/*.js"
+  [headers.values]
+    Cache-Control = "public, max-age=7776000"
+
+# Shorter cache for HTML pages
+[[headers]]
+  for = "/*.html"
+  [headers.values]
+    Cache-Control = "public, max-age=3600"
+
+# Font optimization
+[[headers]]
+  for = "/*.woff2"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+# API routes caching
+[[headers]]
+  for = "/api/*"
+  [headers.values]
+    Cache-Control = "no-cache, no-store, must-revalidate" 
