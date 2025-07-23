@@ -155,10 +155,10 @@
     wrapper.addEventListener('touchend', handleTouchEnd, { passive: false });
 
     // Mouse events for desktop testing
-    wrapper.addEventListener('mousedown', handleMouseDown);
-    wrapper.addEventListener('mousemove', handleMouseMove);
-    wrapper.addEventListener('mouseup', handleMouseUp);
-    wrapper.addEventListener('mouseleave', handleMouseUp);
+    wrapper.addEventListener('mousedown', handleMouseDown, { passive: true });
+    wrapper.addEventListener('mousemove', handleMouseMove, { passive: true });
+    wrapper.addEventListener('mouseup', handleMouseUp, { passive: true });
+    wrapper.addEventListener('mouseleave', handleMouseUp, { passive: true });
 
     function handleTouchStart(e) {
       startX = e.touches[0].clientX;

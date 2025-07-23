@@ -180,7 +180,7 @@ const assistant = [
                 const target = e.currentTarget as HTMLElement;
                 const index = parseInt(target.getAttribute('data-index') || '0', 10);
                 showSlide(index);
-            });
+            }, { passive: true });
         });
         
         // Function to show a specific slide

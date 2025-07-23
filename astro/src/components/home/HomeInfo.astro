@@ -59,18 +59,74 @@ import OrbitDiagram from "../OrbitDiagram.astro";
         {/* Find us */}
         <div class="bg-white min-h-60">
             <p class="bg-custom-pink text-white text-center py-4 font-bold text-2xl">FIND US</p>
-            <div class="h-72">
+            <div class="h-72 relative" id="map-container">
+                <!-- Static map image (loaded immediately) -->
+                <img 
+                    src="https://maps.googleapis.com/maps/api/staticmap?center=-33.863204,151.2095156&zoom=16&size=400x300&markers=color:red%7Clabel:C%7C-33.863204,151.2095156&key=AIzaSyB41DRUbKWJHPxaFjMAwdrzWzbVKartNGg" 
+                    alt="Clinic 27 location at 44 Bridge Street, Sydney CBD"
+                    class="w-full h-full object-cover cursor-pointer"
+                    id="static-map"
+                    loading="lazy"
+                />
+                <!-- Interactive map (loaded on demand) -->
                 <iframe 
-                    src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d26504.213217261957!2d151.210973!3d-33.863204!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6b12ae69e5775307%3A0x7050e7d6a83ea056!2s44%20Bridge%20St%2C%20Sydney%20NSW%202000%2C%20Australia!5e0!3m2!1sen!2sus!4v1751226505241!5m2!1sen!2sus" 
-                    class="w-full h-full" 
+                    src="about:blank"
+                    class="w-full h-full absolute top-0 left-0 opacity-0 pointer-events-none transition-opacity duration-300" 
                     style="border:0;" 
                     allowfullscreen="" 
                     loading="lazy" 
                     referrerpolicy="no-referrer-when-downgrade"
                     title="Interactive map showing Clinic 27 location at 44 Bridge Street, Sydney CBD"
+                    id="interactive-map"
                 ></iframe>
+                <!-- Overlay with click instruction -->
+                <div class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-20 opacity-100 transition-opacity duration-300" id="map-overlay">
+                    <div class="bg-white px-4 py-2 rounded-lg shadow-lg text-center">
+                        <p class="text-sm font-semibold text-gray-800">Click to view interactive map</p>
+                    </div>
+                </div>
             </div>
         </div>
+
+        <script>
+            // Load interactive map only when user clicks
+            document.addEventListener('DOMContentLoaded', function() {
+                const mapContainer = document.getElementById('map-container');
+                const staticMap = document.getElementById('static-map');
+                const interactiveMap = document.getElementById('interactive-map');
+                const mapOverlay = document.getElementById('map-overlay');
+                
+                if (mapContainer && staticMap && interactiveMap && mapOverlay) {
+                    const loadInteractiveMap = () => {
+                        // Set the actual Google Maps embed URL
+                        interactiveMap.src = "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d26504.213217261957!2d151.210973!3d-33.863204!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6b12ae69e5775307%3A0x7050e7d6a83ea056!2s44%20Bridge%20St%2C%20Sydney%20NSW%202000%2C%20Australia!5e0!3m2!1sen!2sus!4v1751226505241!5m2!1sen!2sus";
+                        
+                        // Show interactive map and hide static map
+                        setTimeout(() => {
+                            interactiveMap.classList.remove('opacity-0', 'pointer-events-none');
+                            staticMap.classList.add('opacity-0');
+                            mapOverlay.classList.add('opacity-0');
+                        }, 100);
+                    };
+                    
+                    // Load on click
+                    mapContainer.addEventListener('click', loadInteractiveMap, { passive: true });
+                    
+                    // Also load on intersection observer (when map comes into view)
+                    const observer = new IntersectionObserver((entries) => {
+                        entries.forEach(entry => {
+                            if (entry.isIntersecting) {
+                                // Preload the interactive map but don't show it yet
+                                interactiveMap.src = "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d26504.213217261957!2d151.210973!3d-33.863204!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6b12ae69e5775307%3A0x7050e7d6a83ea056!2s44%20Bridge%20St%2C%20Sydney%20NSW%202000%2C%20Australia!5e0!3m2!1sen!2sus!4v1751226505241!5m2!1sen!2sus";
+                                observer.unobserve(entry.target);
+                            }
+                        });
+                    }, { threshold: 0.1 });
+                    
+                    observer.observe(mapContainer);
+                }
+            });
+        </script>
         {/* Times */}
         <div class="bg-white min-h-60 z-[1000]">
             <p class="bg-custom-pink text-white text-center py-4 font-bold text-2xl">OUR HOURS</p>

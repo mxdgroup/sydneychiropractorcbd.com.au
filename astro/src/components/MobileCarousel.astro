@@ -87,13 +87,13 @@ const carouselId = `carousel-${Math.random().toString(36).substr(2, 9)}`;
     container.addEventListener('touchstart', (e) => {
       startX = e.touches[0].clientX;
       isDragging = true;
-    });
+    }, { passive: true });
     
     container.addEventListener('touchmove', (e) => {
       if (!isDragging) return;
       currentX = e.touches[0].clientX;
       e.preventDefault();
-    });
+    }, { passive: false });
     
     container.addEventListener('touchend', () => {
       if (!isDragging) return;
@@ -109,6 +109,6 @@ const carouselId = `carousel-${Math.random().toString(36).substr(2, 9)}`;
           updateCarousel(currentIndex - 1);
         }
       }
-    });
+    }, { passive: true });
   });
 </script> 

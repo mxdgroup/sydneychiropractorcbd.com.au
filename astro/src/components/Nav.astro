@@ -221,7 +221,7 @@ const treatments = await getCollection('treatments');
         if (navMenu) {
             navMenu.classList.toggle('hidden');
         }
-    });
+    }, { passive: true });
 
     document.getElementById('search-icon')?.addEventListener('click', () => {
       const searchBar = document.getElementById('search-bar');
@@ -232,7 +232,7 @@ const treatments = await getCollection('treatments');
       if (!searchBar?.classList.contains('hidden')) {
         searchInput?.focus();
       }
-    });
+    }, { passive: true });
 
     document.getElementById('treatments-toggle')?.addEventListener('click', () => {
         const treatmentsContent = document.getElementById('treatments-content');
@@ -241,7 +241,7 @@ const treatments = await getCollection('treatments');
             treatmentsContent.classList.toggle('hidden');
             treatmentsArrow.classList.toggle('rotate-180');
         }
-    });
+    }, { passive: true });
 
     // Sticky nav on scroll
     const nav = document.getElementById('main-nav');

@@ -205,8 +205,8 @@ const itemsPerView = Math.max(1, Math.floor(items.length / 2));
       }
       
       // Add event listeners
-      nextBtn.addEventListener('click', nextSlide);
-      prevBtn.addEventListener('click', prevSlide);
+      nextBtn.addEventListener('click', nextSlide, { passive: true });
+      prevBtn.addEventListener('click', prevSlide, { passive: true });
       
       // Set initial position
       updateCarousel(false);
