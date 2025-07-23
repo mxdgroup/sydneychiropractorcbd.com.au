@@ -18,12 +18,12 @@ const treatments = await getCollection('treatments');
       <!-- Mobile-only location info -->
       <div class="md:hidden mb-8">
         <div class="bg-custom-pink p-6 text-white mb-4">
-          <h3 class="text-lg font-bold mb-2">Clinic 27</h3>
+          <h2 class="text-lg font-bold mb-2">Clinic 27</h2>
           <p class="text-sm mb-1">(02) 8059 7743</p>
           <p class="text-sm">Suite 1, Level 1, 44 Bridge Street, Sydney NSW 2000</p>
         </div>
         <div class="bg-custom-purple p-6 text-white">
-          <h3 class="text-lg font-bold mb-2">Complete Chiropractic</h3>
+          <h2 class="text-lg font-bold mb-2">Complete Chiropractic</h2>
           <p class="text-sm mb-1">(02) 9972 0040</p>
           <p class="text-sm">Suite 1/32 Fisher Rd, Dee Why NSW 2099</p>
         </div>
@@ -32,7 +32,7 @@ const treatments = await getCollection('treatments');
         
         <!-- Column 1: Opening Hours -->
         <div class="text-center md:text-left">
-          <h3 class="text-xl font-bold mb-6 uppercase">Clinic 27 Opening Hours</h3>
+          <h2 class="text-xl font-bold mb-6 uppercase">Clinic 27 Opening Hours</h2>
           <table class="w-full">
             <tbody>
               <tr class="border-b border-gray-700">
@@ -69,7 +69,7 @@ const treatments = await getCollection('treatments');
 
         <!-- Column 2: Useful Links -->
         <div class="text-center md:text-left">
-          <h3 class="text-xl font-bold mb-6 uppercase">Useful Links</h3>
+          <h2 class="text-xl font-bold mb-6 uppercase">Useful Links</h2>
           <ul class="space-y-3">
             <li><a href="/" class="hover:text-[#e6007e] transition-colors">Home</a></li>
                             <li><a href="/neck-pain-treatment-sydney-cbd/" class="hover:text-[#e6007e] transition-colors">Treatments</a></li>
@@ -82,7 +82,7 @@ const treatments = await getCollection('treatments');
 
         <!-- Column 3: Treatments -->
         <div class="text-center md:text-left">
-          <h3 class="text-xl font-bold mb-6 uppercase">Treatments</h3>
+          <h2 class="text-xl font-bold mb-6 uppercase">Treatments</h2>
           <ul class="space-y-3">
             {treatments.map((treatment) => (
               <li><a href={`/${treatment.slug}/`} class="hover:text-[#e6007e] transition-colors">{treatment.data.title}</a></li>
@@ -92,7 +92,7 @@ const treatments = await getCollection('treatments');
 
         <!-- Column 4: Recent Videos -->
         <div class="text-center md:text-left">
-          <h3 class="text-xl font-bold mb-6 uppercase">Recent Videos</h3>
+          <h2 class="text-xl font-bold mb-6 uppercase">Recent Videos</h2>
           
           <!-- Video 1 -->
           <a class="flex items-start space-x-4 mb-4" href="/videos/">
