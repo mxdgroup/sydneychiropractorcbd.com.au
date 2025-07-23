@@ -1,0 +1,152 @@
+---
+import Layout from "../layouts/Layout.astro";
+import HeaderImage from "../components/HeaderImage.astro";
+import UnderlinedHeader from "../components/UnderlinedHeader.astro";
+import Paragraphs from "../components/Paragraphs.astro";
+import massageBg from "../../public/header-images/massage.webp";
+import ScrollCrop from "../components/ScrollCrop.astro";
+import rectangleOverlay from "../../public/rectangle-overlay.webp";
+
+const firstPart =[
+    {
+        title:"Physical Benefits of a Relaxation Massage",
+        paragraphs:[
+            "We all know that the immediate benefit of having a massage is deep relaxation. The massage stimulates the release of endorphins that in turn produce the feeling of wellbeing and happiness. Massage can increase the level of serotonin in your body, producing an overall sense of calm and stress levels are lowered which help you maintain a good immunity. Some other benefits manchester.kiev:",
+            "Reduced muscle stiffness",
+            "Increased joint flexibility and mobility",
+            "Reduced anxiety and depression",
+            "Better circulation and skin tone",
+            "Mentally more alert",
+        ]
+    },
+    {
+        title:"About Roberto's Sydney Massage Background",
+        paragraphs:[
+            "Roberto grew up in Messina, Sicily and studied Physiotherapy at the “University of Bologna” where he discovered his passion for rehabilitation and injury prevention.",
+            "He worked for 2 years as a junior physiotherapist in Italy and moved to Australia in 2016 where he obtained a Diploma of Remedial Massage. Combining a knowledge of physiotherapy and massage allows Roberto to develop a comprehensive whole body and holistic approach.",
+
+        ]
+    },
+    {
+        title:"Benefits of Stretching for Long-Term Pain Relief",
+        paragraphs:[
+            "Roberto believes that stretching is a vital tool for long-term pain relief and injury prevention. Stretching helps improve muscle flexibility, range of motion, and overall muscular performance. It also reduces the risk of injury, improves posture, and relieves stress and tension build-up in a patient’s muscles.",
+            "Roberto often includes stretching as a part of his massage treatments, but he also encourages clients to incorporate stretching into their daily routine for continued benefits. So next time you’re feeling sore or stiff from a hard day hunched over at the desk in your Sydney CBD office, take a few minutes to stretch and feel the difference it can make to your overall sense of well-being. When combined with controlled breathing techniques, stretching can really help negate long-term chronic pain. Especially as you age.",
+        ]
+    },
+    {
+        title:"What is Remedial Massage?",
+        paragraphs:[
+            "Remedial massage is a deep-tissue treatment that addresses muscle imbalances, chronic pain, and injuries. It involves applying pressure to specific areas of the body to release tension, improve flexibility, and promote healing. Remedial massage is often used in combination with other therapies such as physiotherapy or chiropractic care for injury rehabilitation and pain management.",
+        ]
+    },
+    {
+        title:"Remedial Massage Techniques Explained",
+        paragraphs:[
+            "Roberto uses a variety of techniques in his remedial massage treatments, including myofascial release and muscle energy techniques. Myofascial release involves targeting the connective tissue (known as fascia) that surrounds muscles to improve flexibility and reduce pain. The muscle energy technique, also known as MET, is an active form of treatment where the client is asked to contract and relax specific muscles in order to improve the range of motion. Roberto also uses myofascial cupping, a technique where suction cups are used on the skin to release tension and improve circulation.",
+        ]
+    },
+    {
+        title:"What Sort of Strokes are Used in Remedial Massage?",
+        paragraphs:[
+            "Remedial massage uses a variety of strokes, including effleurage (long, gliding strokes), petrissage (kneading or squeezing), and friction (deep circular movements). The specific strokes used on each massage patient will vary depending on the client’s needs.",
+        ]
+    },
+]
+
+const secondPart =[
+    {
+        title:"Benefits of Remedial Massage",
+        paragraphs:[
+            "**Remedial massage can provide a range of benefits, including:**",
+            "Relief from muscular aches and pains",
+            "Improved flexibility and range of motion",
+            "Reduced stress and anxiety",
+            "Better sleep quality ",
+            "Help relieve migraines ",
+            "Enhanced immune system function",
+            "Relief from chronic, long-term pain",
+
+        ]
+    },
+    {
+        title:"What is Trigger Point Therapy?",
+        paragraphs:[
+            "Trigger point therapy is a type of remedial massage technique that targets specific points in the muscle that can cause pain in other areas of the body, known as trigger points. ",
+            "Trigger Point Therapy dates to the early 1900s when it was developed by a doctor named Janet Travell. It has since been extensively researched and is used widely in conjunction with other therapies and healing modalities for pain management.",
+        ]
+    },
+    {
+        title:"What is Swedish Massage?",
+        paragraphs:[
+            "Swedish massage is a wonderful relaxation technique that involves long, kneading strokes and penetrating finger pressure to reduce muscle tension and improve circulation. It can provide stress relief and promote overall well-being.",
+        ]
+    },
+    {
+        title:"What Strokes are Used in Swedish Massage?",
+        paragraphs:[
+            "Swedish massage primarily uses effleurage and petrissage strokes, but may also include friction and tapotement (rhythmic tapping or pounding).",
+        ]
+    },
+    {
+        title:"Benefits of Swedish Massage in the Sydney CBD",
+        paragraphs:[
+            "Swedish massage can offer a variety of benefits, including improved circulation and lymphatic drainage, reduced stress and anxiety, and improved sleep quality. It can also help with muscle tension, headaches, and overall relaxation.",
+        ]
+    },    
+    {
+        title:"Benefits of Combining Massage with Chiropractic Treatments",
+        paragraphs:[
+            "Massage and chiropractic care can be a powerful combination for injury rehabilitation, pain management, and overall wellness. Massage can help to relax muscles, improve circulation, and reduce inflammation, while chiropractic adjustments address issues with the skeletal system and body alignment. Together, massage and chiropractic care can provide a comprehensive and holistic approach to improving your health and well-being.",
+        ]
+    },
+    {
+        title:"Benefits of Chiropractic Care",
+        paragraphs:[
+            "Chiropractic care is a drug-free and non-invasive approach to treating musculoskeletal issues and improving overall health and well-being. It can offer benefits such as pain relief, improved range of motion, and improved athletic performance. And naturally, our team of experienced chiropractors at Clinic 27 are the Sydney CBD’s leading chiropractic practitioners; and are available to work alongside the massages you book in with Roberto, as we operate out of the same building in the Sydney CBD.",
+        ]
+    },
+    {
+        title:"Why Choose Roberto as Your Sydney CBD Massage Therapist?",
+        paragraphs:[
+            "At Clinic 27, we believe in providing our clients with the best possible care. That’s why we’ve chosen to work with Roberto, an experienced and highly-skilled Remedial Massage Therapist. His massage training allows him to provide personalized and effective treatment for your specific needs. Whether you just need a lovely, relaxing massage to melt away those aches and pains, or else need a deep-tissue Remedial Massage to really get stuck in to release those pesky knots in your neck or back, Roberto is the Sydney CBD massage therapist for you! ",
+            "So, if your job in the Sydney CBD is leaving you overworked, over-stressed, and just not feeling like your old self, then maybe it’s time to book an appointment with Roberto today. ",
+            "Trust us, your body will thank you!",
+        ]
+    },
+]
+---
+<Layout title="Massage | Sydney Chiropractor CBD">
+    <HeaderImage backgroundImage={massageBg.src} headerText="SYDNEY CBD CHIROPRACTORS" buttonText="Book an Appointment" />
+
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        {firstPart.map((part, index) => (
+            <div class="mt-20">
+                <UnderlinedHeader left={true}>{part.title}</UnderlinedHeader>
+                <div class="mt-10"></div>
+                <Paragraphs paragraphs={
+                part.paragraphs} 
+                left={index % 2 === 0 ? true : false}/>
+            </div>
+        ))}
+    </div>
+    <div class="relative">
+        <ScrollCrop src={"https://sydneychiropractorcbd.com.au/wp-content/uploads/2022/11/Personal-Plan-2-1.jpg"}/>
+        <img 
+            src={rectangleOverlay.src} 
+            alt="Rectangle overlay" 
+            class="absolute bottom-0 left-0 w-full h-auto z-10 pointer-events-none"
+        />
+    </div>
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        {secondPart.map((part, index) => (
+            <div class="mt-20">
+                <UnderlinedHeader left={true}>{part.title}</UnderlinedHeader>
+                <div class="mt-10"></div>
+                <Paragraphs paragraphs={
+                part.paragraphs} 
+                left={index % 2 === 0 ? true : false}/>
+            </div>
+        ))}
+    </div>
+</Layout> 

@@ -1,0 +1,39 @@
+---
+import { type CollectionEntry, getCollection } from 'astro:content';
+import BlogPost from '../components/BlogPost.astro';
+import Treatment from '../components/Treatment.astro';
+
+export async function getStaticPaths() {
+  const [posts, treatments] = await Promise.all([
+    getCollection('blog'),
+    getCollection('treatments')
+  ]);
+  
+  // Create routes for blog posts
+  const blogRoutes = posts.map((post) => ({
+    params: { slug: post.slug },
+    props: { ...post, contentType: 'blog' },
+  }));
+  
+  // Create routes for treatments  
+  const treatmentRoutes = treatments.map((treatment) => ({
+    params: { slug: treatment.slug },
+    props: { ...treatment, contentType: 'treatments' },
+  }));
+  
+  return [...blogRoutes, ...treatmentRoutes];
+}
+
+type Props = CollectionEntry<'blog'> | CollectionEntry<'treatments'>;
+
+const content = Astro.props;
+const contentType = (content as any).contentType;
+---
+
+{contentType === 'blog' ? (
+  <BlogPost post={content as CollectionEntry<'blog'>} />
+) : (
+  <Treatment treatment={content as CollectionEntry<'treatments'>} />
+)}
+
+ 

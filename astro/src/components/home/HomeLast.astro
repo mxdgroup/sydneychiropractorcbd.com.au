@@ -1,54 +1,48 @@
 ---
 import HomeTreatmentCard from "./HomeTreatmentCard.astro";
+import google from "/public/treatments/circles/map.png"
+import city from "/public/treatments/circles/city.webp"
+import women from "/public/treatments/circles/women.webp"
+import rob from "/public/treatments/circles/rv.png.webp"
 
 const treatments = [
   {
-    title: "Back and Neck Pain",
+    title: "How To Find The Best Sydney Chiropractor ‘Near Me’ On Google",
     description: [
-      "Back and neck pain is a common condition that can be caused by a variety of factors, including poor posture, injury, and age-related changes.",
-      "Our chiropractors can help you manage your back and neck pain through a range of treatments, including manual therapy, massage, and exercise."
+      "Family, friends, and workmates can often recommend a chiropractor they have used before. Which is always handy when searching for a chiro near you. But if you’re not lucky enough to know someone who can suggest a chiropractor to you, the next best thing is to do a quick search on Google, and judge them based on their chiropractic industry training, their years in the industry, their online review profile, and their position in Google. Because these things, more than anything else, will help you make an informed decision prior to booking in for your initial chiropractic consultation.",
     ],
-    image: "https://sydneychiropractorcbd.com.au/wp-content/uploads/2021/12/backpain.png"
+    image: google.src
   },
   {
-    title: "Headaches and Migraines",
+    title: "When Should I See A Chiropractor Near Me In The Sydney CBD?",
     description: [
-      "Headaches and migraines can be debilitating and affect your quality of life. They can be caused by tension, stress, or underlying health conditions.",
-      "Our team specializes in identifying the root cause of your headaches and providing effective treatment to reduce their frequency and intensity."
+      "If you are wondering, “when should I see a chiropractor near me in the Sydney CBD,” there are a few things you should know. Generally, people tend to see a chiropractor when they are experiencing chronic back pain. However, you can also see a chiropractor if you are experiencing numbness, muscle aches, digestive problems, lack of energy, tennis elbow, golfer’s elbow, sciatica, nerve pain, fibromyalgia, headaches and fatigue (to name just a few symptoms chiropractic treatments may be able to help treat)."
     ],
-    image: "https://sydneychiropractorcbd.com.au/wp-content/uploads/2021/12/backpain.png"
+    image: city.src
   },
   {
-    title: "Posture Correction",
+    title: "How Often Should You See A Chiropractor?",
     description: [
-      "Poor posture can lead to a range of health issues, including back pain, neck pain, and headaches.",
-      "Our chiropractors can help you improve your posture through targeted exercises and adjustments, helping you stand taller and feel better."
+      "There are those who think you should only see a chiropractor when you start experiencing chronic back pain, etc. And while this is true, there are many people who benefit from preventative chiropractic treatments, such as performed by the experienced chiropractic team at Clinic 27.",
+      "Whether you’ve searched for a ‘chiropractor near me’ and attend our clinic in the Sydney CBD once, or over multiple visits, will naturally depend on your personal symptoms and underlying medical condition, as there is no ‘one size fits all’ approach to pain management."
     ],
-    image: "https://sydneychiropractorcbd.com.au/wp-content/uploads/2021/12/backpain.png"
+    image: women.src
   },
   {
-    title: "Sciatica Treatment",
+    title: "Sydney Massage Therapist",
     description: [
-      "Sciatica is characterized by pain that radiates along the path of the sciatic nerve, which branches from your lower back through your hips and down each leg.",
-      "Our treatments focus on relieving pressure on the sciatic nerve and reducing inflammation to alleviate your pain and discomfort."
+      "Are you feeling tense or stressed out after spending way too many hours hunched over your desk at your Sydney CBD office? Then boy-oh-boy have we got some good news for you! Because Clinic 27 now offers both deep tissue Remedial Massage, and oh-so-relaxing Swedish Massage, with Roberto, our expert masseur! With extensive training and AMT qualifications behind him, Roberto will work out all the kinks in your body and leave you feeling so relaxed and refreshed, you’ll think you’ve just come back from a holiday at a luxury resort!",
+      "So, if you’re looking to de-stress, book a massage in the Sydney CBD with Roberto, today. Your body will thank you for it!"
     ],
-    image: "https://sydneychiropractorcbd.com.au/wp-content/uploads/2021/12/backpain.png"
+    image: rob.src
   }
 ];
 ---
 <div class="w-full py-10" style="background-color: #e4e6f2;">
-    <div class="mx-auto container">
-        <h1 class="text-4xl font-bold text-white text-center mb-4" style="color:#333b55">Chiropractor Sydney CBD - Clinic 27</h1>
-        <p class="text-md text-center">
-            Our team of qualified and highly experienced chiropractors at Clinic 27 provide professional individualised care to clients who want to improve their health and experience total wellbeing.
-        </p>
-        <br/>
-        <p class="text-md text-center">
-            Clinic 27 is only one of the few Australian chiropractic clinics that use the Advanced Biostructural Correction™ (ABC™) technique designed to reverse the ill effects of how the body naturally compensates for physical trauma and old injuries, resolving pain and discomfort efficiently.
-        </p>
-        <br/>
-        <p class="text-md text-center mb-20">
-            So if you are afflicted with problems involving back and neck pain, carpal tunnel syndrome, poor posture, tightness in jaw, vertigo, sciatica, pain in jaw and temples, scoliosis, ear pain, pregnancy pain or pain in the endocranial area, we can assess your condition. We will then recommend and implement the appropriate mode of treatment so you can go back to living a pain-free, healthy life.
+    <div class="mx-auto container px-4 sm:px-6 lg:px-8">
+        <h1 class="text-3xl md:text-4xl font-bold text-center mb-4 text-custom-dark">Chiropractor Sydney CBD - Clinic 27</h1>
+        <p class="text-md text-left md:text-center">
+          Not every chiropractor can offer effective treatments that suit an individual patient’s requirements. And not every chiropractor is situated near where you live or work (especially when you need a chiropractor in the Sydney CBD!). Fortunately, Clinic 27, with 30+ years’ chiropractic experience behind them, are situated smack-bang in the middle of the Sydney CBD, just minutes from where you live or work!
         </p>
         
         {treatments.map((treatment, index) => (
@@ -59,14 +53,17 @@ const treatments = [
                 index={index}
             />
         ))}
-        <h1 class="text-4xl font-bold text-white text-center mt-4" style="color:#333b55">Book Your Treatment At Clinic 27 In Sydney’s CBD Today!</h1>
-        <p class="text-md text-center">
-            Whatever type of pain you may be experiencing right now, know that it’s not something
-you need to live with every day.
+        <h1 class="text-3xl md:text-4xl font-bold text-center mb-4 text-custom-dark">Clinic 27 - A Sydney CBD Chiropractor You Can Trust</h1>
+        <p class="text-md text-left">
+          If you have been trying to find a “chiropractor near me in the Sydney CBD,” chances are you’re working or living in the CBD. In which case Clinic 27 is just around the corner
         </p>
-        <p class="text-md text-center">
-            You may schedule an appointment with Clinic 27 by using our online booking form.
-            Alternatively, you can call us on 02 9972 0040 or 02 8059 7743.
+        <br/>
+        <p class="text-md text-left">
+          Clinic 27 provide an exceptional level of chiropractic care from friendly, trained professionals. And whereas many chiros just dump you on a table and crack you in record time, just so they can move onto the next patient, Hooman and the team at Clinic 27 make a point of taking time to diagnose the root cause of the problem, and to listen to their patients. And it’s this more holistic approach to wellness that ultimately gets the best results. And at Clinic 27 you’ll never feel rushed, never feel like ‘just another patient’. Because old fashioned patient-centric care is the at the heart of what we do.
+        </p>
+        <br/>
+        <p class="text-md text-left">
+          Call Clinic 27 today on: (02) 8059 7743 to book your next chiropractic visit goloskarpat
         </p>
 
     </div>

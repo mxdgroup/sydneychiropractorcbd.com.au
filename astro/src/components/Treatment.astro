@@ -1,0 +1,250 @@
+---
+import { type CollectionEntry, getCollection } from 'astro:content';
+import Layout from '../layouts/Layout.astro';
+import HeaderImage from './HeaderImage.astro';
+import UnderlinedHeader from './UnderlinedHeader.astro';
+import ScrollCrop from './ScrollCrop.astro';
+import Carousel from './Carousel.astro';
+import type { CarouselItem } from '../types';
+
+interface Props {
+  treatment: CollectionEntry<'treatments'>;
+}
+
+const { treatment } = Astro.props;
+const { Content } = await treatment.render();
+
+// Generate image filename from treatment title
+const generateImageName = (title: string) => {
+  return title.toLowerCase().split(' ').join('-');
+};
+
+const topExtension = 'jpg';
+const bottomExtension = 'png';
+const imageName = generateImageName(treatment.data.title);
+const normalImagePath = `/treatments/normal/${imageName}.${topExtension}`;
+const bottomImagePath = `/treatments/bottom/${imageName}.${bottomExtension}`;
+
+// Get all treatments for carousel
+const allTreatments = await getCollection('treatments');
+const carouselTreatments: CarouselItem[] = allTreatments.map(t => ({
+    type: 'treatment',
+    title: t.data.title,
+    imageUrl: `/treatments/normal/${generateImageName(t.data.title)}.${topExtension}`,
+    href: `/${t.slug}`
+}));
+---
+
+<Layout title={`${treatment.data.title} | Sydney Chiropractor CBD`}>
+  <!-- Header Image Section -->
+  <HeaderImage 
+    backgroundImage={normalImagePath} 
+    headerText={"SYDNEY CBD CHIROPRACTORS"}
+    buttonText="Book an Appointment" 
+  />
+
+  <!-- Treatment Content -->
+  <article class="container mx-auto px-4 sm:px-6 lg:px-8 py-16 prose prose-lg prose-blue">
+    <UnderlinedHeader left={true}>{treatment.data.title.toUpperCase()}</UnderlinedHeader>
+    <Content />
+  </article>
+  
+  {treatment.data.title !== "Cranial Chiropractic" && (
+    <>
+      <div class="relative w-full">
+        <ScrollCrop src={bottomImagePath} />
+        <img src="/rectangle-overlay.webp" alt="Bottom Treatment Image" class="absolute bottom-0 left-0 w-full h-auto z-10 pointer-events-none" />
+      </div>
+      <div class="relative z-20 hidden md:block" style="margin-top: -128px;">
+          <Carousel items={carouselTreatments} />
+      </div>
+    </>
+  )}
+  
+  <div class="mt-12 sm:mt-16 md:mt-20"></div>   
+  <h2 style="color: #1F2BA3;" class="text-center text-2xl font-bold">WANT TO FIND OUT MORE ABOUT OUR TREATMENTS, SERVICES AND RATES?</h2>
+  <div class="mt-6 sm:mt-8 md:mt-10"></div>   
+  <p class="text-center text-lg max-w-1/3 mx-auto">Give the team at Clinic 27 a call today at (02) 80597743
+    and we would be happy to assist you with any questions you may have.</p>
+</Layout>
+
+<style is:global>
+  .prose {
+    color: #7a7a7a;
+  }
+  
+  /* Blog content container */
+  .prose p{
+    font-size: 1.2rem;
+    max-width: none;
+    margin-bottom: 1rem;
+  }
+  
+  .prose h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color:black;
+    margin-bottom: 1rem;
+  }
+  
+  /* Lists */
+  .prose ul,
+  .prose ol {
+    margin-bottom: 1.5rem;
+    padding-left: 2rem;
+  }
+  
+  .prose li {
+    margin-bottom: 0.5rem;
+    line-height: 1.6;
+  }
+  
+  .prose ul li {
+    list-style-type: disc;
+  }
+  
+  .prose ol li {
+    list-style-type: decimal;
+  }
+  
+  /* Nested lists */
+  .prose ul ul,
+  .prose ol ol {
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  /* Links */
+  .prose a {
+    color: #2563eb;
+    text-decoration: underline;
+    text-decoration-color: #93c5fd;
+    transition: all 0.2s ease;
+  }
+  
+  .prose a:hover {
+    color: #1d4ed8;
+    text-decoration-color: #2563eb;
+  }
+  
+  /* Strong/Bold text */
+  .prose strong {
+    font-weight: 600;
+    color: #111827;
+  }
+  
+  /* Emphasis/Italic text */
+  .prose em {
+    font-style: italic;
+    color: #1f2937;
+  }
+  
+  /* Blockquotes */
+  .prose blockquote {
+    border-left: 4px solid #2563eb;
+    padding-left: 1.5rem;
+    margin: 2rem 0;
+    font-style: italic;
+    color: #4b5563;
+    background-color: #f9fafb;
+    padding: 1rem 1.5rem;
+    border-radius: 0.25rem;
+  }
+  
+  /* Code blocks */
+  .prose pre {
+    background-color: #1f2937;
+    color: #f9fafb;
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    overflow-x: auto;
+    margin: 1.5rem 0;
+    font-size: 0.9rem;
+    line-height: 1.5;
+  }
+  
+  /* Inline code */
+  .prose code {
+    background-color: #f3f4f6;
+    color: #1f2937;
+    padding: 0.2rem 0.4rem;
+    border-radius: 0.25rem;
+    font-size: 0.9em;
+    font-family: 'Courier New', monospace;
+  }
+  
+  .prose pre code {
+    background-color: transparent;
+    color: inherit;
+    padding: 0;
+    border-radius: 0;
+  }
+  
+  /* Tables */
+  .prose table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 2rem 0;
+  }
+  
+  .prose th,
+  .prose td {
+    border: 1px solid #d1d5db;
+    padding: 0.75rem;
+    text-align: left;
+  }
+  
+  .prose th {
+    background-color: #f9fafb;
+    font-weight: 600;
+    color: #111827;
+  }
+  
+  /* Images */
+  .prose img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 0.5rem;
+    margin: 2rem 0;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Horizontal rules */
+  .prose hr {
+    border: none;
+    border-top: 2px solid #e5e7eb;
+    margin: 3rem 0;
+  }
+  
+  /* First paragraph styling */
+  .prose > p:first-child {
+    font-size: 1.2rem;
+    color: #1f2937;
+    font-weight: 400;
+    margin-bottom: 2rem;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .prose {
+      font-size: 1rem;
+    }
+    
+    .prose h1 {
+      font-size: 2rem;
+    }
+    
+    .prose h2 {
+      font-size: 1.75rem;
+    }
+    
+    .prose h3 {
+      font-size: 1.4rem;
+    }
+    
+    .prose ul,
+    .prose ol {
+      padding-left: 1.5rem;
+    }
+  }
+</style> 

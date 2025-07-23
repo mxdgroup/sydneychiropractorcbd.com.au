@@ -39,14 +39,24 @@ const processedParagraphs = paragraphs.map((paragraph, index) => {
 <style>
   .slide-in-left {
     opacity: 0;
-    transform: translateX(-250px);
+    transform: translateX(-100px);
     transition: opacity 0.5s ease-out, transform 0.5s ease-out;
   }
   
   .slide-in-right {
     opacity: 0;
-    transform: translateX(250px);
+    transform: translateX(100px);
     transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+  }
+  
+  @media (min-width: 768px) {
+    .slide-in-left {
+      transform: translateX(-250px);
+    }
+    
+    .slide-in-right {
+      transform: translateX(250px);
+    }
   }
   
   .slide-in-left.animate,

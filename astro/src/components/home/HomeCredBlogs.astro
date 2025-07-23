@@ -1,81 +1,86 @@
 ---
 import UnderlinedHeader from "../UnderlinedHeader.astro";
 import BlogGrid from "../BlogGrid.astro";
+import MobileCarousel from "../MobileCarousel.astro";
 import Image from "astro/components/Image.astro";
 import medibank from "../../../public/partners/medibank-private-min.webp";
 import hcf from "../../../public/partners/hcf.webp";
 import spire from "../../../public/partners/logo-sprite-copy-min.webp";
+import { getCollection } from 'astro:content';
+import PrimaryButton from "../PrimaryButton.astro";
+
+const blogs = await getCollection('blog');
 
 
-// Sample blog data
-const blogs = [
+
+const credentials = [
   {
-    imageUrl: "https://sydneychiropractorcbd.com.au/wp-content/uploads/2024/12/The-Main-Reasons-for-Lower-Back-Pain-1024x1024.jpg",
-    date: "December 30, 2024",
-    title: "How To Know If Shoulder Pain Is Serious",
-    excerpt: "Shoulder pain is a common complaint that can stem from various causes, ranging from minor strains to more serious conditions..."
+    image: medibank.src,
+    alt: "Medibank"
   },
   {
-    imageUrl: "https://sydneychiropractorcbd.com.au/wp-content/uploads/2024/12/The-Main-Reasons-for-Lower-Back-Pain-1024x1024.jpg",
-    date: "December 25, 2024",
-    title: "5 Exercises to Relieve Lower Back Pain",
-    excerpt: "Lower back pain affects millions of people worldwide. These simple exercises can help alleviate discomfort and improve mobility..."
+    image: hcf.src,
+    alt: "HCF"
   },
   {
-    imageUrl: "https://sydneychiropractorcbd.com.au/wp-content/uploads/2024/12/The-Main-Reasons-for-Lower-Back-Pain-1024x1024.jpg",
-    date: "December 18, 2024",
-    title: "Benefits of Regular Chiropractic Adjustments",
-    excerpt: "Regular chiropractic care offers numerous benefits beyond pain relief, including improved posture, better sleep, and enhanced overall wellness..."
-  },
-  {
-    imageUrl: "https://sydneychiropractorcbd.com.au/wp-content/uploads/2024/12/The-Main-Reasons-for-Lower-Back-Pain-1024x1024.jpg",
-    date: "December 12, 2024",
-    title: "Improving Your Posture at Work",
-    excerpt: "Poor posture while working can lead to chronic pain and other health issues. Learn how to set up your workspace for optimal spinal health..."
-  },
-  {
-    imageUrl: "https://sydneychiropractorcbd.com.au/wp-content/uploads/2024/12/The-Main-Reasons-for-Lower-Back-Pain-1024x1024.jpg",
-    date: "December 5, 2024",
-    title: "Chiropractic Solutions for Chronic Headaches",
-    excerpt: "Chronic headaches can significantly impact quality of life. Discover how chiropractic care can address the root causes of persistent headaches..."
-  },
-  {
-    imageUrl: "https://sydneychiropractorcbd.com.au/wp-content/uploads/2024/12/The-Main-Reasons-for-Lower-Back-Pain-1024x1024.jpg",
-    date: "November 28, 2024",
-    title: "Recovering from Sports Injuries with Chiropractic Care",
-    excerpt: "Athletes can benefit greatly from specialized chiropractic treatments designed to speed recovery and prevent future injuries..."
-  },
-  {
-    imageUrl: "https://sydneychiropractorcbd.com.au/wp-content/uploads/2024/12/The-Main-Reasons-for-Lower-Back-Pain-1024x1024.jpg",
-    date: "November 20, 2024",
-    title: "How Your Sleeping Position Affects Your Spine",
-    excerpt: "The way you sleep can have a profound impact on your spinal health. Learn which positions are best and how to optimize your sleep setup..."
-  },
-  {
-    imageUrl: "https://sydneychiropractorcbd.com.au/wp-content/uploads/2024/12/The-Main-Reasons-for-Lower-Back-Pain-1024x1024.jpg",
-    date: "November 15, 2024",
-    title: "Nutrition Tips for Better Joint Health",
-    excerpt: "What you eat plays a crucial role in maintaining healthy joints and reducing inflammation. Discover the best foods for joint health..."
+    image: spire.src,
+    alt: "Spire"
   }
 ];
+
+// Render functions for mobile carousels
+const renderCredential = (credential: any, index: number) => `
+    <div class="flex justify-center items-center">
+        <img src="${credential.image}" alt="${credential.alt}" class="w-48 h-auto" />
+    </div>
+`;
+
+const renderBlog = (blog: any, index: number) => `
+    <div class="bg-white rounded-lg shadow-md overflow-hidden">
+        <img src="${blog.imageUrl}" alt="${blog.title}" class="w-full h-48 object-cover" />
+        <div class="p-6">
+            <p class="text-sm text-gray-500 mb-2">${blog.date}</p>
+            <h3 class="text-xl font-semibold mb-3">${blog.title}</h3>
+            <p class="text-gray-600 text-sm leading-relaxed">${blog.excerpt}</p>
+        </div>
+    </div>
+`;
 ---
-<div class="w-full bg-gray-50">
+<div class="w-full bg-gray-50 py-10">
     <div class="container mx-auto px-4">
         <UnderlinedHeader>Chiropractic Credentials And Accreditations</UnderlinedHeader>
-        <div class="mx-auto container flex flex-row justify-center items-center w-full md:w-3/4 gap-10 mb-16 mt-10">
-            <div class="w-1/3">
-                <Image src={medibank} alt="Chiropractic Credentials And Accreditations" />
-            </div>
-            <div class="w-1/3">
-                <Image src={hcf} alt="Chiropractic Credentials And Accreditations" />
-            </div>
-            <div class="w-1/3">
-                <Image src={spire} alt="Chiropractic Credentials And Accreditations" />
-            </div>
+        
+        <!-- Credentials Grid - Desktop -->
+        <div class="hidden md:grid mx-auto container grid-cols-1 md:grid-cols-3 gap-8 md:gap-10 place-items-center w-full md:w-3/4 mb-16 mt-10">
+            <Image src={medibank} alt="Medibank" class="w-48 md:w-full" />
+            <Image src={hcf} alt="HCF" class="w-48 md:w-full" />
+            <Image src={spire} alt="Spire" class="w-48 md:w-full" />
+        </div>
+        
+        <!-- Credentials Carousel - Mobile -->
+        <div class="mt-10 mb-16">
+            <MobileCarousel 
+                items={credentials} 
+                renderItem={renderCredential}
+            />
         </div>
         
         <UnderlinedHeader>Latest Blogs</UnderlinedHeader>
         
-        <BlogGrid blogs={blogs} />
+        <!-- Blog Grid - Desktop -->
+        <div class="hidden md:block">
+            <BlogGrid homepage={true} />
+        </div>
+        
+        <!-- Blog Carousel - Mobile -->
+        <div class="mt-10">
+            <MobileCarousel 
+                items={blogs.slice(0,8)} 
+                renderItem={renderBlog}
+            />
+        </div>
+        <div class="mt-10 flex justify-center">
+            <PrimaryButton href="/blog-overview/">View more</PrimaryButton>
+        </div>
     </div>
 </div>

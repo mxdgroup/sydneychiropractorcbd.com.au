@@ -2,18 +2,18 @@
 const { title, description, image, index } = Astro.props;
 const reverse = index !== undefined ? index % 2 === 0 : false;
 ---
-<div class="grid mb-20 shadow-lg overflow-hidden shadow-xl" style={reverse ? "grid-template-columns: 3fr 1fr;" : "grid-template-columns: 1fr 3fr;"}>
-    <div class={`w-full ${reverse ? 'order-2' : 'order-1'}`}>
-        <img src={image} alt={title} class="w-full h-full object-cover" />
+<div class="grid grid-cols-1 lg:grid-cols-3 mb-20 shadow-lg overflow-hidden shadow-xl">
+    <div class={`w-full ${reverse ? 'lg:order-2' : 'lg:order-1'}`}>
+        <img src={image} alt={title} class="w-full h-full object-cover" loading="lazy" />
     </div>
-    <div class={`w-full flex flex-col justify-center p-8 ${reverse ? 'order-1 pr-10' : 'order-2 pl-10'}`}>
-        <h2 class="text-3xl font-bold mb-4 text-custom-purple">{title}</h2>
+    <div class={`w-full flex flex-col justify-center p-6 md:p-8 lg:col-span-2 ${reverse ? 'lg:order-1' : 'lg:order-2'}`}>
+        <h2 class="text-2xl md:text-3xl font-bold mb-4 text-custom-purple">{title}</h2>
         <div class="space-y-3">
             {Array.isArray(description) ? 
                 description.map(paragraph => (
-                    <p class="text-lg text-gray-700">{paragraph}</p>
+                    <p class="text-base md:text-lg text-gray-700">{paragraph}</p>
                 )) : 
-                <p class="text-lg text-gray-700">{description}</p>
+                <p class="text-base md:text-lg text-gray-700">{description}</p>
             }
         </div>
     </div>

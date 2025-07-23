@@ -1,0 +1,135 @@
+---
+import { getCollection } from 'astro:content';
+import BlogCard from "../home/BlogCard.astro";
+import PainBlogs from "./PainBlogs.astro";
+
+import neckPainImage from "../../../public/treatments/normal/neck-pain-treatment-sydney.jpg";
+import backPainImage from "../../../public/treatments/normal/posture-treatment-sydney.jpg";
+import discPainImage from "../../../public/treatments/normal/scoliosis-treatment-sydney.jpg";
+import shoulderPainImage from "../../../public/treatments/normal/vertigo-treatment-sydney.jpg";
+import spinePainImage from "../../../public/treatments/normal/back-pain-treatment-sydney.jpg";
+
+// Define TypeScript interfaces for better DX
+interface BodyItem {
+  text: string;
+  type: 'paragraph' | 'header';
+}
+
+interface ContentSection {
+  title: string;
+  body: BodyItem[];
+}
+
+interface SolutionSection {
+  imageSrc: string;
+  title: string;
+  solutions: string[];
+}
+
+const {
+  component1,
+  solutionComponent,
+  otherComponents,
+} = Astro.props as {
+  component1: ContentSection;
+  otherComponents: ContentSection[];
+  solutionComponent: SolutionSection;
+};
+
+// Fetch latest 4 blog posts
+const allPosts = await getCollection('blog');
+const latestPosts = allPosts
+  .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf())
+  .slice(0, 4);
+
+// Helper to format dates consistently
+const formatDate = (date: Date) =>
+  new Intl.DateTimeFormat('en-AU', {
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric',
+  }).format(date);
+---
+
+<!-- Component 1 -->
+<section class="container mx-auto px-4 mb-8">
+  <h2 class="text-3xl md:text-4xl font-bold mb-2 text-center md:text-left text-custom-purple">
+    {component1.title}
+  </h2>
+  <div class="space-y-4 leading-relaxed text-lg text-gray-700">
+    {component1.body.map((item) => (
+      item.type === 'header' ? (
+        <h3 class="font-bold text-2xl mt-4 mb-4">{item.text}</h3>
+      ) : (
+        <p>{item.text}</p>
+      )
+    ))}
+  </div>
+</section>
+
+<!-- Solution Section -->
+<section class="py-12">
+  <div class="container mx-auto px-4 flex flex-col md:flex-row items-center gap-8">
+    {solutionComponent.imageSrc && (
+      <img
+        src={solutionComponent.imageSrc}
+        alt={solutionComponent.title}
+        class="w-full md:w-1/2 shadow-lg"
+        loading="lazy"
+      />
+    )}
+    <div class="flex-1 flex flex-col justify-start items-start">
+      <h2 class="text-xl md:text-2xl font-bold mb-6 border-b-4 text-custom-purple border-custom-pink pb-2 w-full">
+        {solutionComponent.title}
+      </h2>
+      <ul class="space-y-3 w-full">
+        {solutionComponent.solutions.map((point: string) => (
+          <li class="text-lg leading-relaxed text-gray-700 border-b-2 border-custom-pink pb-2 w-full">
+            {point}
+          </li>
+        ))}
+      </ul>
+    </div>
+  </div>
+</section>
+
+{otherComponents.map((component) => (
+
+    <section class="container mx-auto px-4 mb-8">
+      <h2 class="text-3xl md:text-4xl font-bold mb-2 text-center md:text-left text-custom-purple">
+        {component.title}
+  </h2>
+  <div class="space-y-4 leading-relaxed text-lg text-gray-700">
+    {component.body.map((item) => (
+      item.type === 'header' ? (
+        <h3 class="font-bold text-2xl mt-4 mb-4">{item.text}</h3>
+      ) : (
+        <p>{item.text}</p>
+      )
+    ))}
+  </div>
+</section>
+))}
+
+
+<!-- Latest Blogs -->
+<!-- <section class="container mx-auto px-4 my-12">
+  <h2 class="text-3xl md:text-4xl font-bold mb-8 text-center">Latest Blogs</h2>
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+    {latestPosts.map(post => (
+      <BlogCard
+        imageUrl={`/thumbnails/${post.data.thumbnail}`}
+        date={formatDate(post.data.date)}
+        title={post.data.title}
+        excerpt={post.body.slice(0, 120) + '...'}
+        slug={post.slug}
+      />
+    ))}
+  </div>
+</section> -->
+
+<PainBlogs painType={"Neck "} imageSrc={neckPainImage.src} />
+<PainBlogs painType={"Back "} imageSrc={backPainImage.src} />
+<PainBlogs painType={"Disc "} imageSrc={discPainImage.src} />
+<PainBlogs painType={"Shoulder "} imageSrc={shoulderPainImage.src} />
+<PainBlogs painType={"Spine "} imageSrc={spinePainImage.src} />

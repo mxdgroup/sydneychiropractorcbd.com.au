@@ -1,0 +1,99 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { getCollection, type CollectionEntry } from 'astro:content';
+
+const allPosts: CollectionEntry<'blog'>[] = await getCollection('blog');
+
+const postsForClient = allPosts.map(post => ({
+    slug: post.slug,
+    title: post.data.title,
+    excerpt: post.data.excerpt,
+    body: post.body,
+    thumbnail: post.data.thumbnail,
+}));
+---
+
+<Layout title={`Search Results`}>
+    <div class="container mx-auto px-4 py-8">
+
+        <p id="results-text" class="mb-8 text-lg"></p>
+
+        <div id="search-results" class="flex flex-col">
+            {/* Results will be injected here by the script */}
+        </div>
+
+        <div id="pagination-controls" class="mt-12">
+            {/* Pagination controls will be injected here */}
+        </div>
+    </div>
+</Layout>
+
+<script define:vars={{ posts: postsForClient }}>
+    const resultsContainer = document.getElementById('search-results');
+    const paginationContainer = document.getElementById('pagination-controls');
+    const resultsText = document.getElementById('results-text');
+    
+    const urlParams = new URLSearchParams(window.location.search);
+    const query = urlParams.get('q')?.toLowerCase();
+    const page = parseInt(urlParams.get('page') || '1', 10);
+    const pageSize = 20;
+
+    if (query && resultsContainer && resultsText && paginationContainer) {
+        const filteredPosts = posts.filter(post => {
+            const titleMatch = post.title.toLowerCase().includes(query);
+            const excerptMatch = post.excerpt?.toLowerCase().includes(query);
+            const bodyMatch = post.body.toLowerCase().includes(query);
+            return titleMatch || excerptMatch || bodyMatch;
+        });
+
+        const totalPages = Math.ceil(filteredPosts.length / pageSize);
+        const paginatedPosts = filteredPosts.slice((page - 1) * pageSize, page * pageSize);
+
+        const startRange = (page - 1) * pageSize + 1;
+        const endRange = Math.min(page * pageSize, filteredPosts.length);
+        
+        resultsText.innerHTML = `Showing ${filteredPosts.length > 0 ? `${startRange}-${endRange}` : 0} of ${filteredPosts.length} results for "<span class="font-semibold">${query}</span>"`;
+
+        if (paginatedPosts.length > 0) {
+            resultsContainer.innerHTML = paginatedPosts.map(post => `
+                <a href="/${post.slug}" class="block border-b py-6 group hover:bg-gray-50">
+                    <div class="flex flex-col md:flex-row gap-6">
+                        <div class="md:w-1/4">
+                            <img src="/thumbnails/${post.thumbnail}" alt="${post.title}" class="w-full h-auto object-cover rounded-md" />
+                        </div>
+                        <div class="md:w-3/4">
+                            <h3 class="text-2xl font-bold text-custom-purple group-hover:underline">${post.title}</h3>
+                            <p class="text-gray-700 mt-2">
+                                ${(post.excerpt || post.body).slice(0, 150) + '...'}
+                            </p>
+                            <span class="text-custom-pink font-bold mt-4 inline-block">→ Continue Reading</span>
+                        </div>
+                    </div>
+                </a>
+            `).join('');
+
+            if (totalPages > 1) {
+                let paginationHTML = '<div class="flex justify-center items-center gap-x-4">';
+                const hasPrevPage = page > 1;
+                const hasNextPage = page < totalPages;
+
+                if (hasPrevPage) {
+                    paginationHTML += `<a href="/search?q=${query}&page=${page - 1}" class="px-4 py-2 bg-custom-purple text-white rounded hover:bg-opacity-90">&larr; Previous</a>`;
+                }
+
+                paginationHTML += `<span>Page ${page} of ${totalPages}</span>`;
+
+                if (hasNextPage) {
+                    paginationHTML += `<a href="/search?q=${query}&page=${page + 1}" class="px-4 py-2 bg-custom-purple text-white rounded hover:bg-opacity-90">Next &rarr;</a>`;
+                }
+                paginationHTML += '</div>';
+                paginationContainer.innerHTML = paginationHTML;
+            }
+
+        } else {
+            resultsContainer.innerHTML = `<p class="text-center text-xl text-gray-600 py-16">No results found. Please try another search term.</p>`;
+        }
+    } else if (resultsText) {
+        resultsText.textContent = "Please enter a search term in the navigation bar to see results.";
+    }
+</script> 

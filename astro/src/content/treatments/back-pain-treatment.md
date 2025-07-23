@@ -4,6 +4,7 @@ description: "Non-surgical spinal decompression therapy is a safe and effective 
 pubDate: 2024-06-14
 heroImage: "https://sydneychiropractorcbd.com.au/wp-content/uploads/2024/12/The-Main-Reasons-for-Lower-Back-Pain-1024x1024.jpg"
 tags: ["spinal decompression", "back pain", "non-surgical"]
+slug: back-pain-treatment-sydney-cbd
 ---
 
 Back pain treatment is one of the most common requests that patients present to our clinic. Many people worldwide are afflicted with debilitating back pain, in many cases this can prevent them engaging in day to day bathtime.

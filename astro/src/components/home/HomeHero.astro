@@ -1,14 +1,52 @@
 ---
-import Image from "astro/components/Image.astro";
-import heroOverlay from "../../../public/hero-overlay.webp";
+import { Image, getImage } from "astro:assets";
+import heroOverlay from "../../assets/hero-overlay.webp";
+import heroBg from "../../assets/hero-bg.webp";
+import heroBgPhone from "../../assets/hero-bg-phone.webp";
+import PrimaryButton from "../PrimaryButton.astro";
+
+const phoneImage = await getImage({src: heroBgPhone, format: 'png'});
 ---
 
-<div class="relative flex flex-col justify-center items-center" style="background-image: url('../../../public/hero-bg.png'); background-size: cover; background-position: center; background-repeat: no-repeat; min-height:80vh;">
-    <Image src={heroOverlay} alt="Hero Background" class="w-full h-full object-cover absolute bottom-0 right-0" />
-    <!-- <div class="flex flex-row justify-start items-center w-1/2">
-        <h1 class="text-center text-5xl font-bold">Posture <span class="text-custom-pink">Correction</span></h1>
-        <div class="mt-6 sm:mt-8 md:mt-10"></div>   
-        <h1 class="text-center text-4xl font-bold w-1/2 mx-auto">Let us help you achieve optimal health, happiness and your full human potential</h1>
-        <div class="mt-6 sm:mt-8 md:mt-10"></div>   
-    </div> -->
+<div class="relative flex flex-col justify-center items-center min-h-[30vh] max-h-[40h] md:min-h-[90vh]">
+    <Image src={heroBg} alt="Hero Background" class="absolute inset-0 w-full h-full object-cover -z-10" loading="eager" fetchpriority="high" />
+    <Image src={heroOverlay} alt="Hero Overlay" class="w-full h-full object-cover absolute bottom-0 right-0 hidden md:block" loading="eager" />
+    
+    <!-- Hero Text Overlay - Only visible on large screens -->
+    <div class="absolute -top-1/4 left-1/12 inset-0 w-full h-full hidden lg:flex flex-col justify-center items-start px-8 xl:px-16 z-10">
+        <div class="text-left text-white font-bold leading-tight">
+            <div class="text-xl xl:text-2xl">SYDNEY CBD</div>
+            <div class="text-xl xl:text-2xl">CHIROPRACTORS</div>
+            <div class="text-4xl xl:text-4xl mb-4">CLINIC 27</div>
+        </div>
+        <PrimaryButton variant="secondary" href="https://clinic27intake.bookings.pracsuite.com/guest?_gl=1*ish5tk*_gcl_au*MTE4MzYwMjQ1Ny4xNzUyNDc4Mzk3*_ga*MTgyODUzMzI5Ni4xNzUyNDc4Mzk3*_ga_DVEN4QQTPM*czE3NTI0NzgzOTckbzEkZzAkdDE3NTI0NzgzOTckajYwJGwwJGgw*_ga_S36TR91H9N*czE3NTI0NzgzOTckbzEkZzAkdDE3NTI0NzgzOTckajYwJGwwJGgw*_ga_NTMX2EEDN4*czE3NTI0NzgzOTckbzEkZzAkdDE3NTI0NzgzOTckajYwJGwwJGgw*_ga_8J9DNH249S*czE3NTI0NzgzOTckbzEkZzAkdDE3NTI0NzgzOTckajYwJGwwJGgw">
+            BOOK APPOINTMENT
+        </PrimaryButton>
+    </div>
+    <!-- Book now -->
+    <a 
+    href="https://clinic27intake.bookings.pracsuite.com/guest?_gl=1*ish5tk*_gcl_au*MTE4MzYwMjQ1Ny4xNzUyNDc4Mzk3*_ga*MTgyODUzMzI5Ni4xNzUyNDc4Mzk3*_ga_DVEN4QQTPM*czE3NTI0NzgzOTckbzEkZzAkdDE3NTI0NzgzOTckajYwJGwwJGgw*_ga_S36TR91H9N*czE3NTI0NzgzOTckbzEkZzAkdDE3NTI0NzgzOTckajYwJGwwJGgw*_ga_NTMX2EEDN4*czE3NTI0NzgzOTckbzEkZzAkdDE3NTI0NzgzOTckajYwJGwwJGgw*_ga_8J9DNH249S*czE3NTI0NzgzOTckbzEkZzAkdDE3NTI0NzgzOTckajYwJGwwJGgw"
+    target="_blank"
+    rel="noopener noreferrer"
+    class="absolute -bottom-20 left-2/4 hidden lg:flex rounded-full w-[250px] h-[250px] items-center justify-center cursor-pointer">
+        <Image src="/pink-circle.webp" alt="Book now" loading="eager" width={250} height={250} class="rounded-full" />
+        <div class="absolute inset-0 flex flex-col items-center justify-center text-white text-center">
+            <div class="text-3xl font-bold">BOOK</div>
+            <div class="text-xl">NOW</div>
+        </div>
+    </a>
+    <div class="absolute bottom-0 left-1/4 hidden lg:flex rounded-full w-[250px] h-[250px] items-center justify-center">
+        <Image src="/pink-circle.webp" alt="Find us" loading="eager" width={250} height={250} class="rounded-full" />
+        <div class="absolute inset-0 flex flex-col items-center justify-center text-white text-center">
+            <div class="text-3xl font-bold">FIND</div>
+            <div class="text-xl">US</div>
+        </div>
+    </div>
+    <div class="absolute -bottom-12 left-3/4 hidden lg:flex rounded-full w-[250px] h-[250px] items-center justify-center">
+        <Image src="/pink-circle.webp" alt="Our hours" loading="eager" width={250} height={250} class="rounded-full" />
+        <div class="absolute inset-0 flex flex-col items-center justify-center text-white text-center">
+            <div class="text-xl">OUR</div>
+            <div class="text-3xl font-bold">HOURS</div>
+        </div>
+    </div>
 </div>

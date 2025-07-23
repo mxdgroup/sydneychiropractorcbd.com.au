@@ -5,8 +5,14 @@ const { left = false,white = false } = Astro.props;
 <style>
   .slide-in-left {
     opacity: 0;
-    transform: translateX(-250px);
+    transform: translateX(-100px);
     transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+  }
+  
+  @media (min-width: 768px) {
+    .slide-in-left {
+      transform: translateX(-250px);
+    }
   }
   
   .slide-in-left.animate {

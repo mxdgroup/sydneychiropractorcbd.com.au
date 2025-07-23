@@ -3,20 +3,31 @@ import "../global.css";
 import { Image } from "astro:assets";
 import logo from "../../public/logo-header.webp";
 ---
-<header class="border-b border-black pb-2 w-full hidden md:block" >
-	<div class="mx-auto flex justify-between items-center" style="width:85%">
-		<div class="flex items-center gap-4">
+<header class="border-b border-black py-2 w-full hidden md:block" >
+	<div class="mx-auto flex justify-between items-center container px-4">
+		<div class="flex items-center gap-4 flex-1">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-black flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+            </svg>
             <div class="flex flex-col" >
                 <h1 class="text-xl font-bold">Clinic 27 (CBD) </h1>
                 <p class="text-sm "><b>Ph</b> : 02 8059 7743</p>
             </div>
         </div>
-		<Image src={logo} alt="Logo" class="max-w-40" loading="eager"/>
-        <div class="flex flex-row-reverse items-center gap-4">
+		<div class="flex-shrink-0 mx-8">
+			<Image src={logo} alt="Logo" loading="eager" class="w-auto h-32"/>
+		</div>
+        <div class="flex flex-row-reverse items-center gap-4 flex-1">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-black flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+            </svg>
             <div class="flex flex-col" >
                 <h1 class="text-xl font-bold">Complete Chiropractic (Dee Why) </h1>
-                <p class="text-sm "><b>Ph</b> : 02 9972 0040</p>
+                <p class="text-sm text-right"><b>Ph</b> : 02 9972 0040</p>
             </div>
+
         </div>
 	</div>
 </header>

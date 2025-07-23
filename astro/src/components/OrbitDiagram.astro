@@ -1,0 +1,163 @@
+---
+export interface Props {
+  width: number;
+  height: number;
+  center: {
+    /** Size (diameter) of the central element */
+    size: number;
+    /** Fallback background colour if no image is supplied */
+    color?: string;
+    /** Optional image path for the central element */
+    image?: string;
+  };
+  orbit: {
+    /**
+     * If images are supplied, the number of orbiting elements will be derived
+     * from the length of this array.  When omitted, `count` + `color` behave
+     * just like the old API and render coloured circles.
+     */
+    images?: string[];
+    /** Number of orbiting circles to render (ignored when `images` is given) */
+    count?: number;
+    /** Diameter for orbit elements */
+    size: number;
+    /** Fallback background colour for orbit circles (when no images) */
+    color?: string;
+    /** Stroke colour for the connecting arc/path lines */
+    lineColor?: string;
+    lineThickness?: number;
+    arcRadius?: number;
+    distance?: number;
+    rotationDuration?: number; // seconds for one full rotation
+  };
+  /** Whether to draw a light gray border around the SVG (debug / dev only) */
+  showBorder?: boolean;
+}
+
+const { width, height, center, orbit, showBorder = true } = Astro.props as Props;
+
+// Thickness and arc radius values were used for connecting lines which we have removed.
+const orbitDistance = orbit.distance ?? Math.min(width, height) / 3;
+const rotationDuration = orbit.rotationDuration ?? 20;
+
+// Determine how many orbiting elements we need
+const orbitCount = orbit.images ? orbit.images.length : (orbit.count ?? 0);
+
+if (!orbitCount) {
+  throw new Error("OrbitDiagram: either orbit.images or orbit.count must be provided and non-empty");
+}
+
+// Calculate center position
+const centerX = width / 2;
+const centerY = height / 2;
+
+// Calculate positions for orbiting circles/images
+const orbitPositions = Array.from({ length: orbitCount }, (_, i) => {
+  const angle = (i * 2 * Math.PI) / orbitCount;
+  const x = centerX + Math.cos(angle) * orbitDistance;
+  const y = centerY + Math.sin(angle) * orbitDistance;
+  return { x, y, angle };
+});
+---
+
+<style>
+  .orbit-rotation {
+    animation: rotate var(--rotation-duration) linear infinite;
+    transform-origin: var(--center-x) var(--center-y);
+  }
+  
+  .orbit-circle {
+    animation: counter-rotate var(--rotation-duration) linear infinite;
+    transform-origin: var(--circle-x) var(--circle-y);
+  }
+  
+  @keyframes rotate {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
+  @keyframes counter-rotate {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(-360deg);
+    }
+  }
+</style>
+
+<div class="inline-block">
+  <svg 
+    width={width} 
+    height={height} 
+    viewBox={`0 0 ${width} ${height}`}
+    class={`${showBorder ? 'border border-gray-200 rounded-lg shadow-sm' : ''}`}
+    style={`--rotation-duration: ${rotationDuration}s; --center-x: ${centerX}px; --center-y: ${centerY}px;`}
+  >
+    
+    <!-- Orbit outline -->
+    <circle
+      cx={centerX}
+      cy={centerY}
+      r={orbitDistance}
+      fill="none"
+      stroke={orbit.lineColor ?? '#ffffff'}
+      stroke-width={orbit.lineThickness ?? 2}
+    />
+    
+    <!-- Rotating group for orbiting elements -->
+    <g class="orbit-rotation">
+      <!-- Orbiting images with counter-rotation -->
+      {orbitPositions.map((pos, i) => (
+        <g class="orbit-circle" style={`--circle-x: ${pos.x}px; --circle-y: ${pos.y}px;`}>
+          {orbit.images ? (
+            <foreignObject
+              x={pos.x - orbit.size / 2}
+              y={pos.y - orbit.size / 2}
+              width={orbit.size}
+              height={orbit.size}
+            >
+              <img src={orbit.images[i]} alt="" loading="eager" class="w-full h-full object-cover rounded-full" />
+            </foreignObject>
+          ) : (
+            <circle
+              cx={pos.x}
+              cy={pos.y}
+              r={orbit.size / 2}
+              fill={orbit.color}
+              stroke="#ffffff"
+              stroke-width="2"
+              class="drop-shadow-sm"
+            />
+          )}
+        </g>
+      ))}
+    </g>
+    
+    <!-- Center element (static, not rotating) -->
+    {center.image ? (
+      <foreignObject
+        x={centerX - center.size / 2}
+        y={centerY - center.size / 2}
+        width={center.size}
+        height={center.size}
+      >
+        <img src={center.image} alt="" loading="eager" class="w-full h-full object-cover rounded-full" />
+      </foreignObject>
+    ) : (
+      <circle
+        cx={centerX}
+        cy={centerY}
+        r={center.size / 2}
+        fill={center.color ?? '#4F46E5'}
+        stroke="#ffffff"
+        stroke-width="3"
+        class="drop-shadow-md"
+      />
+    )}
+  </svg>
+</div> 
