@@ -37,11 +37,15 @@ const renderCredential = (credential: any, index: number) => `
 
 const renderBlog = (blog: any, index: number) => `
     <div class="bg-white rounded-lg shadow-md overflow-hidden">
-        <img src="${blog.imageUrl}" alt="${blog.title}" class="w-full h-48 object-cover" />
+        <img src="/thumbnails/${blog.data.thumbnail}" alt="${blog.data.title}" class="w-full h-48 object-cover" />
         <div class="p-6">
-            <p class="text-sm text-gray-500 mb-2">${blog.date}</p>
-            <h3 class="text-xl font-semibold mb-3">${blog.title}</h3>
-            <p class="text-gray-600 text-sm leading-relaxed">${blog.excerpt}</p>
+            <p class="text-sm text-gray-500 mb-2">${new Intl.DateTimeFormat('en-AU', {
+              year: 'numeric',
+              month: 'long',
+              day: 'numeric',
+            }).format(blog.data.date)}</p>
+            <h3 class="text-xl font-semibold mb-3">${blog.data.title}</h3>
+            <p class="text-gray-600 text-sm leading-relaxed">${blog.data.excerpt}</p>
         </div>
     </div>
 `;
