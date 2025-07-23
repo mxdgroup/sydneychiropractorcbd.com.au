@@ -2,6 +2,9 @@
 interface Props {
   title: string;
   preloadImage?: string;
+  metaDescription?: string;
+  metaKeywords?: string;
+  canonicalUrl?: string;
 }
 
 import "../global.css";
@@ -9,8 +12,17 @@ import Header from "../components/Header.astro";
 import Nav from "../components/Nav.astro";
 import Footer from "../components/Footer.astro";
 import LeftLinks from "../components/LeftLinks.astro";
+import { getMetaData, getPageType } from "../utils/metaData";
 
-const { title, preloadImage } = Astro.props;
+const { title, preloadImage, metaDescription, metaKeywords, canonicalUrl } = Astro.props;
+
+// Auto-generate meta data if not provided
+const pageType = getPageType(Astro.url.pathname);
+const autoMetaData = getMetaData(Astro.url.pathname, title, '', pageType);
+
+const finalMetaDescription = metaDescription || autoMetaData.metaDescription;
+const finalMetaKeywords = metaKeywords || autoMetaData.metaKeywords;
+const finalCanonicalUrl = canonicalUrl || autoMetaData.canonicalUrl;
 ---
 
 <html lang="en">
@@ -36,6 +48,23 @@ const { title, preloadImage } = Astro.props;
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content={finalMetaDescription} />
+    <meta name="keywords" content={finalMetaKeywords} />
+    <link rel="canonical" href={finalCanonicalUrl} />
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={finalMetaDescription} />
+    <meta property="og:url" content={finalCanonicalUrl} />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Clinic 27 - Sydney CBD Chiropractors" />
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={finalMetaDescription} />
     
     <!-- Critical Resource Preloading -->
     {preloadImage && <link rel="preload" href={preloadImage} as="image" />}
