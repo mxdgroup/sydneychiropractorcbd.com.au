@@ -78,7 +78,7 @@ const treatments = await getCollection('treatments');
     width: 100%;
     background-color: white;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    z-index: 1000;
+    z-index: 1001;
     transition: transform 0.3s ease;
   }
 
@@ -251,6 +251,19 @@ const treatments = await getCollection('treatments');
         }
       }
     };
+
+    // Initial positioning for mobile sticky menu
+    const initialPosition = () => {
+      if (mobileStickyMenu && nav) {
+        const navHeight = nav.offsetHeight;
+        mobileStickyMenu.style.top = `${navHeight}px`;
+      }
+    };
+
+    // Set initial position when page loads
+    window.addEventListener('load', initialPosition);
+    // Also set position after a short delay to ensure nav is rendered
+    setTimeout(initialPosition, 100);
 
     window.addEventListener('scroll', handleScroll, { passive: true });
 </script>
