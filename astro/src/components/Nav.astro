@@ -224,6 +224,7 @@ const treatments = await getCollection('treatments');
     // Sticky nav on scroll
     const nav = document.getElementById('main-nav');
     const navWrapper = document.getElementById('nav-wrapper');
+    const mobileStickyMenu = document.getElementById('mobileStickyMenu');
     const scrollThreshold = 100;
 
     const handleScroll = () => {
@@ -232,11 +233,21 @@ const treatments = await getCollection('treatments');
           const navHeight = nav.offsetHeight;
           if(navWrapper) navWrapper.style.height = `${navHeight}px`;
           nav.classList.add('fixed-nav');
+          
+          // Position mobile sticky menu below the fixed nav
+          if (mobileStickyMenu) {
+            mobileStickyMenu.style.top = `${navHeight}px`;
+          }
         }
       } else {
         if (nav && nav.classList.contains('fixed-nav')) {
           nav.classList.remove('fixed-nav');
           if(navWrapper) navWrapper.style.height = '';
+          
+          // Reset mobile sticky menu position
+          if (mobileStickyMenu) {
+            mobileStickyMenu.style.top = '0px';
+          }
         }
       }
     };
