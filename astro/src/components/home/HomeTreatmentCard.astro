@@ -1,6 +1,7 @@
 ---
 const { title, description, image, index } = Astro.props;
 const reverse = index !== undefined ? index % 2 === 0 : false;
+const isBackPainTreatment = title === "Back Pain Treatment In The CBD";
 ---
 <div class="grid grid-cols-1 lg:grid-cols-3 mb-20 shadow-lg overflow-hidden shadow-xl">
     <div class={`w-full ${reverse ? 'lg:order-2' : 'lg:order-1'}`}>
@@ -16,5 +17,13 @@ const reverse = index !== undefined ? index % 2 === 0 : false;
                 <p class="text-base md:text-lg text-gray-700">{description}</p>
             }
         </div>
+        
+        {isBackPainTreatment && (
+            <div class="mt-6">
+                <a href="/back-pain/" class="inline-block px-6 py-3 bg-custom-pink text-white font-semibold rounded hover:bg-custom-purple transition-colors duration-300">
+                    Fix Back Pain
+                </a>
+            </div>
+        )}
     </div>
 </div>
