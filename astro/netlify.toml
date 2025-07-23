@@ -4,6 +4,7 @@
 
 [build.environment]
   NODE_VERSION = "18"
+  TRAILING_SLASH = "always"
 
 # Functions configuration for API routes
 [functions]
@@ -23,7 +24,7 @@
 # Custom 404 page
 [[redirects]]
   from = "/*"
-  to = "/404"
+  to = "/404/"
   status = 404
 
 # Security headers for all pages

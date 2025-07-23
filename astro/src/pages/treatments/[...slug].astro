@@ -12,5 +12,5 @@ export async function getStaticPaths() {
 const { slug } = Astro.props;
 
 // Redirect to the new root-level URL
-return Astro.redirect(`/${slug}`, 301);
+return Astro.redirect(`/${slug}/`, 301);
 --- 

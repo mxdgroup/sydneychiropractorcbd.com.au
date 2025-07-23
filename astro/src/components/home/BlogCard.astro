@@ -8,7 +8,7 @@ interface Props {
 }
 
 const { imageUrl, date, title, excerpt, slug } = Astro.props;
-const blogUrl = slug ? `/${slug}` : '#';
+const blogUrl = slug ? `/${slug}/` : '#';
 ---
 
 <div class="blog-card overflow-hidden shadow-xl mb-8 flex flex-col bg-white cursor-pointer">

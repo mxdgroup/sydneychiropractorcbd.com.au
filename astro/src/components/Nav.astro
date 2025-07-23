@@ -102,7 +102,7 @@ const treatments = await getCollection('treatments');
       <div id="nav-menu" class="hidden md:flex flex-col md:flex-row md:justify-between md:items-center mt-4 md:mt-0">
           <!-- Mobile Search Bar -->
           <div class="md:hidden mb-4">
-            <form action="/search" method="GET">
+            <form action="/search/" method="GET">
                 <input type="search" name="q" placeholder="Search..." class="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-custom-purple" />
             </form>
           </div>
@@ -132,7 +132,7 @@ const treatments = await getCollection('treatments');
                     </a>
                     <div class="dropdown-content">
                         {treatments.map((treatment: CollectionEntry<'treatments'>) => (
-                            <a href={`/${treatment.slug}`}>{treatment.data.title}</a>
+                            <a href={`/${treatment.slug}/`}>{treatment.data.title}</a>
                         ))}
                     </div>
                 </div>
@@ -160,17 +160,17 @@ const treatments = await getCollection('treatments');
                   </button>
                   <div id="treatments-content" class="hidden pl-4 mt-2 flex flex-col gap-y-2">
                       {treatments.map((treatment: CollectionEntry<'treatments'>) => (
-                          <a class="text-custom-pink hover:text-custom-purple" href={`/${treatment.slug}`}>{treatment.data.title}</a>
+                          <a class="text-custom-pink hover:text-custom-purple" href={`/${treatment.slug}/`}>{treatment.data.title}</a>
                       ))}
                   </div>
               </div>
 
-              <a class={`nav-link text-lg font-bold ${currentPath === '/massage-sydney-cbd-best-massage-sydney' ? 'text-custom-purple' : 'text-custom-pink'} hover:text-custom-purple transition-colors duration-300`} href="/massage-sydney-cbd-best-massage-sydney">MASSAGE</a>
-              <a class={`nav-link text-lg font-bold ${currentPath === '/workshops' || currentPath.startsWith('/workshops/') ? 'text-custom-purple' : 'text-custom-pink'} hover:text-custom-purple transition-colors duration-300`} href="/workshops">WORKSHOPS</a>
-              <a class={`nav-link text-lg font-bold ${currentPath === '/videos' ? 'text-custom-purple' : 'text-custom-pink'} hover:text-custom-purple transition-colors duration-300`} href="/videos">VIDEOS</a>
-              <a class={`nav-link text-lg font-bold ${currentPath === '/about-clinic27' ? 'text-custom-purple' : 'text-custom-pink'} hover:text-custom-purple transition-colors duration-300`} href="/about-clinic27">ABOUT</a>
-              <a class={`nav-link text-lg font-bold ${currentPath === '/blog-overview' ? 'text-custom-purple' : 'text-custom-pink'} hover:text-custom-purple transition-colors duration-300`} href="/blog-overview">BLOG</a>
-              <a class={`nav-link text-lg font-bold ${currentPath === '/contact-us' ? 'text-custom-purple' : 'text-custom-pink'} hover:text-custom-purple transition-colors duration-300`} href="/contact-us">CONTACT</a>
+              <a class={`nav-link text-lg font-bold ${currentPath === '/massage-sydney-cbd-best-massage-sydney/' ? 'text-custom-purple' : 'text-custom-pink'} hover:text-custom-purple transition-colors duration-300`} href="/massage-sydney-cbd-best-massage-sydney/">MASSAGE</a>
+              <a class={`nav-link text-lg font-bold ${currentPath === '/workshops/' || currentPath.startsWith('/workshops/') ? 'text-custom-purple' : 'text-custom-pink'} hover:text-custom-purple transition-colors duration-300`} href="/workshops/">WORKSHOPS</a>
+              <a class={`nav-link text-lg font-bold ${currentPath === '/videos/' ? 'text-custom-purple' : 'text-custom-pink'} hover:text-custom-purple transition-colors duration-300`} href="/videos/">VIDEOS</a>
+              <a class={`nav-link text-lg font-bold ${currentPath === '/about-clinic27/' ? 'text-custom-purple' : 'text-custom-pink'} hover:text-custom-purple transition-colors duration-300`} href="/about-clinic27/">ABOUT</a>
+              <a class={`nav-link text-lg font-bold ${currentPath === '/blog-overview/' ? 'text-custom-purple' : 'text-custom-pink'} hover:text-custom-purple transition-colors duration-300`} href="/blog-overview/">BLOG</a>
+              <a class={`nav-link text-lg font-bold ${currentPath === '/contact-us/' ? 'text-custom-purple' : 'text-custom-pink'} hover:text-custom-purple transition-colors duration-300`} href="/contact-us/">CONTACT</a>
           </div>
           <div class="hidden md:flex relative items-center">
             <button id="search-icon" type="button" aria-label="Open Search" class="z-10">
@@ -178,7 +178,7 @@ const treatments = await getCollection('treatments');
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
               </svg>
             </button>
-            <form id="search-bar" action="/search" method="GET" class="hidden absolute top-full right-0 mt-2">
+            <form id="search-bar" action="/search/" method="GET" class="hidden absolute top-full right-0 mt-2">
               <input type="search" name="q" placeholder="Search..." class="px-2 py-1 border rounded shadow-lg" />
             </form>
           </div>

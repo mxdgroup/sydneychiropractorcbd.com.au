@@ -73,10 +73,10 @@ const treatments = await getCollection('treatments');
           <ul class="space-y-3">
             <li><a href="/" class="hover:text-[#e6007e] transition-colors">Home</a></li>
                             <li><a href="/back-pain-treatment/" class="hover:text-[#e6007e] transition-colors">Treatments</a></li>
-            <li><a href="/workshops" class="hover:text-[#e6007e] transition-colors">Workshop</a></li>
-            <li><a href="/about-clinic27" class="hover:text-[#e6007e] transition-colors">About</a></li>
-            <li><a href="/blog-overview" class="hover:text-[#e6007e] transition-colors">Blog</a></li>
-            <li><a href="/contact-us" class="hover:text-[#e6007e] transition-colors">Contact</a></li>
+            <li><a href="/workshops/" class="hover:text-[#e6007e] transition-colors">Workshop</a></li>
+            <li><a href="/about-clinic27/" class="hover:text-[#e6007e] transition-colors">About</a></li>
+            <li><a href="/blog-overview/" class="hover:text-[#e6007e] transition-colors">Blog</a></li>
+            <li><a href="/contact-us/" class="hover:text-[#e6007e] transition-colors">Contact</a></li>
           </ul>
         </div>
 
@@ -85,7 +85,7 @@ const treatments = await getCollection('treatments');
           <h3 class="text-xl font-bold mb-6 uppercase">Treatments</h3>
           <ul class="space-y-3">
             {treatments.map((treatment) => (
-              <li><a href={`/${treatment.slug}`} class="hover:text-[#e6007e] transition-colors">{treatment.data.title}</a></li>
+              <li><a href={`/${treatment.slug}/`} class="hover:text-[#e6007e] transition-colors">{treatment.data.title}</a></li>
             ))}
           </ul>
         </div>
@@ -95,7 +95,7 @@ const treatments = await getCollection('treatments');
           <h3 class="text-xl font-bold mb-6 uppercase">Recent Videos</h3>
           
           <!-- Video 1 -->
-          <a class="flex items-start space-x-4 mb-4" href="/videos">
+          <a class="flex items-start space-x-4 mb-4" href="/videos/">
             <div class="relative flex-shrink-0" style="width: 100px;">
               <Image 
                 src={thumbnail1} 
@@ -118,7 +118,7 @@ const treatments = await getCollection('treatments');
           </a>
           
           <!-- Video 2 -->
-          <a class="flex items-start space-x-4" href="/videos">
+          <a class="flex items-start space-x-4" href="/videos/">
             <div class="relative flex-shrink-0" style="width: 100px;">
               <Image 
                 src={thumbnail2} 
