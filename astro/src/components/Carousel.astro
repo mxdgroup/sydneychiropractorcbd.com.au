@@ -10,7 +10,8 @@ const { items } = Astro.props;
 const itemsPerView = Math.max(1, Math.floor(items.length / 2));
 ---
 
-<div class="carousel-container w-full relative">
+<!-- Desktop Carousel -->
+<div class="hidden md:block carousel-container w-full relative">
   <div class="carousel-wrapper overflow-hidden w-full">
     <div class="carousel-track flex transition-transform duration-300 ease-in-out" style="width: 100%;">
       <!-- Duplicate items for infinite effect -->
@@ -94,9 +95,46 @@ const itemsPerView = Math.max(1, Math.floor(items.length / 2));
   </div>
 </div>
 
+<!-- Mobile Scrollable Banner -->
+<div class="md:hidden w-full overflow-x-auto">
+  <div class="flex gap-4 px-4 py-6" style="min-width: max-content;">
+    {items.map((item) => {
+      if (item.type === 'treatment') {
+        return (
+          <div class="flex-shrink-0" style="width: 200px;">
+            <a href={item.href} class="block">
+              <CarouselItem title={item.title} imageUrl={item.imageUrl} />
+            </a>
+          </div>
+        );
+      }
+      if (item.type === 'video') {
+        return (
+          <div class="flex-shrink-0" style="width: 200px;">
+            <div class="px-2 w-full h-full">
+              <div class="bg-black w-full aspect-video rounded-lg overflow-hidden">
+                <iframe
+                  class="w-full h-full"
+                  src={item.embedUrl}
+                  title="YouTube video player"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowfullscreen
+                  loading="lazy"
+                ></iframe>
+              </div>
+            </div>
+          </div>
+        );
+      }
+      return null;
+    })}
+  </div>
+</div>
+
 <script define:vars={{ items, itemsPerView }}>
   function initCarousel() {
-    const containers = document.querySelectorAll('.carousel-container');
+    const containers = document.querySelectorAll('.carousel-container:not(.mobile-carousel)');
     
     containers.forEach(container => {
       const track = container.querySelector('.carousel-track');
