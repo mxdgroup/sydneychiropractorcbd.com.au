@@ -7,6 +7,7 @@ const isCarpalTunnelTreatment = title === "Carpal Tunnel Syndrome Treatment & Di
 const isVertigoTreatment = title === "Vertigo Treatment In The CBD";
 const isEndoNasalTreatment = title === "EndoNasal Cranial Correction™ Treatment In The CBD";
 const isPostureTreatment = title === "Posture Correction Treatment In The CBD";
+const isHeadacheTreatment = title === "Headache & Migraine Treatment";
 ---
 <div class="grid grid-cols-1 lg:grid-cols-3 mb-20 shadow-lg overflow-hidden shadow-xl">
     <div class={`w-full ${reverse ? 'lg:order-2' : 'lg:order-1'}`}>
@@ -67,6 +68,14 @@ const isPostureTreatment = title === "Posture Correction Treatment In The CBD";
             <div class="mt-6">
                 <a href="/posture-treatment-sydney-cbd/" class="inline-block px-6 py-3 bg-custom-pink text-white font-semibold rounded hover:bg-custom-purple transition-colors duration-300">
                     Fix Posture
+                </a>
+            </div>
+        )}
+        
+        {isHeadacheTreatment && (
+            <div class="mt-6">
+                <a href="/headaches-migraines-treatment-sydney-cbd/" class="inline-block px-6 py-3 bg-custom-pink text-white font-semibold rounded hover:bg-custom-purple transition-colors duration-300">
+                    Migraine Treatment
                 </a>
             </div>
         )}
