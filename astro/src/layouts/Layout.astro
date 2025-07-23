@@ -9,6 +9,7 @@ import Header from "../components/Header.astro";
 import Nav from "../components/Nav.astro";
 import Footer from "../components/Footer.astro";
 import LeftLinks from "../components/LeftLinks.astro";
+import MobileStickyMenu from "../components/MobileStickyMenu.astro";
 
 const { title, preloadImage } = Astro.props;
 ---
@@ -24,6 +25,7 @@ const { title, preloadImage } = Astro.props;
   </head>
   <body class="overflow-x-hidden">
     <Header />
+    <MobileStickyMenu />
     <Nav />
     <!-- Left Links -->
     <div class="hidden lg:block absolute top-1/2 right-0 z-50">

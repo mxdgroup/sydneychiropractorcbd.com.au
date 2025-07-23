@@ -1,0 +1,21 @@
+---
+// MobileStickyMenu.astro
+---
+
+<!-- Mobile Sticky Menu - Only visible on mobile -->
+<div class="md:hidden fixed top-0 left-0 right-0 z-[1001] bg-white shadow-md">
+  <div class="flex w-full">
+    <!-- BOOK APPOINTMENT Button -->
+    <a href="/book-now/" class="flex-1 bg-custom-blue text-white text-center py-3 px-4 font-semibold text-sm hover:bg-blue-700 transition-colors duration-300">
+      BOOK APPOINTMENT
+    </a>
+    
+    <!-- CALL US Button -->
+    <a href="tel:0280597743" class="flex-1 bg-custom-pink text-white text-center py-3 px-4 font-semibold text-sm hover:bg-pink-700 transition-colors duration-300">
+      CALL US
+    </a>
+  </div>
+</div>
+
+<!-- Spacer to prevent content from being hidden behind the sticky menu -->
+<div class="md:hidden h-12"></div> 
