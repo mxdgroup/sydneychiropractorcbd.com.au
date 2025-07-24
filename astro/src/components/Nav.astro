@@ -72,7 +72,7 @@ const treatments = await getCollection('treatments');
 
   .fixed-nav {
     position: fixed;
-    top: 48px; /* Account for mobile sticky menu height */
+    top: 0; /* Always start at top of viewport */
     left: 0;
     right: 0;
     width: 100%;
@@ -82,18 +82,26 @@ const treatments = await getCollection('treatments');
     transition: transform 0.3s ease;
   }
 
-  @media (min-width: 768px) {
-    .fixed-nav {
-      top: 0; /* Reset to top for desktop */
-    }
+  /* Mobile menu specific styles */
+  .mobile-menu-open {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: white;
+    z-index: 1002;
+    overflow-y: auto;
+    padding: 0;
   }
 </style>
 
 <div id="nav-wrapper">
-  <nav id="main-nav" class="py-4 md:py-8 w-full transition-all duration-300">
+  <nav id="main-nav" class="pt-4 pb-0 md:py-8 w-full transition-all duration-300">
     <div class="container mx-auto px-0 sm:px-6 lg:px-8">
       <!-- Mobile Nav -->
-      <div class="md:hidden flex justify-between items-center px-4 gap-2">
+      <div class="md:hidden flex justify-between items-center px-4 gap-2 mb-4">
           <a href="/">
               <Image 
                 src={logo} 
@@ -104,10 +112,8 @@ const treatments = await getCollection('treatments');
                 formats={['webp', 'avif']}
               />
           </a>
-          <button id="hamburger" aria-label="Open Menu">
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
-              </svg>
+          <button id="hamburger" aria-label="Open Menu" class="text-custom-pink hover:text-custom-purple font-bold text-lg transition-colors duration-300">
+              Menu
           </button>
       </div>
 
@@ -115,12 +121,12 @@ const treatments = await getCollection('treatments');
       <div class="md:hidden w-full mt-0 p-0 m-0 leading-none">
         <div class="flex w-full gap-0 leading-none">
           <!-- BOOK APPOINTMENT Button -->
-          <a href="https://clinic27intake.bookings.pracsuite.com/?_gl=1*78zlvn*_gcl_au*MzY2OTQyMzQyLjE3NTA3NzI2MjU.*_ga*MTc5NDAwODQ2NC4xNzUwNzcyNjI1*_ga_DVEN4QQTPM*czE3NTMyNTcxNTYkbzgkZzEkdDE3NTMyNjIyMzgkajEzJGwwJGgw*_ga_S36TR91H9N*czE3NTMyNTcxNTYkbzgkZzEkdDE3NTMyNjIyMzgkajEzJGwwJGgw*_ga_NTMX2EEDN4*czE3NTMyNTcxNTYkbzgkZzEkdDE3NTMyNjIyMzgkajEzJGwwJGgw*_ga_8J9DNH249S*czE3NTMyNTcxNTYkbzgkZzEkdDE3NTMyNjIyMzgkajEzJGwwJGgw" target="_blank" rel="noopener noreferrer" class="flex-1 bg-custom-purple text-white text-center py-3 px-3 font-semibold text-xs hover:bg-purple-700 transition-colors duration-300 whitespace-nowrap min-w-0">
+          <a href="https://clinic27intake.bookings.pracsuite.com/?_gl=1*78zlvn*_gcl_au*MzY2OTQyMzQyLjE3NTA3NzI2MjU.*_ga*MTc5NDAwODQ2NC4xNzUwNzcyNjI1*_ga_DVEN4QQTPM*czE3NTMyNTcxNTYkbzgkZzEkdDE3NTMyNjIyMzgkajEzJGwwJGgw*_ga_S36TR91H9N*czE3NTMyNTcxNTYkbzgkZzEkdDE3NTMyNjIyMzgkajEzJGwwJGgw*_ga_NTMX2EEDN4*czE3NTMyNTcxNTYkbzgkZzEkdDE3NTMyNjIyMzgkajEzJGwwJGgw*_ga_8J9DNH249S*czE3NTMyNTcxNTYkbzgkZzEkdDE3NTMyNjIyMzgkajEzJGwwJGgw" target="_blank" rel="noopener noreferrer" class="flex-1 bg-custom-purple text-white text-center py-3 px-3 font-semibold text-xs hover:bg-purple-700 transition-colors duration-300 whitespace-nowrap min-w-0 mb-0">
             BOOK APPOINTMENT
           </a>
           
           <!-- CALL US Button -->
-          <a href="tel:0280597743" class="flex-1 bg-custom-pink text-white text-center py-3 px-3 font-semibold text-xs hover:bg-pink-700 transition-colors duration-300 whitespace-nowrap min-w-0">
+          <a href="tel:0280597743" class="flex-1 bg-custom-pink text-white text-center py-3 px-3 font-semibold text-xs hover:bg-pink-700 transition-colors duration-300 whitespace-nowrap min-w-0 mb-0">
             CALL US
           </a>
         </div>
@@ -129,13 +135,13 @@ const treatments = await getCollection('treatments');
       <!-- Desktop Nav & Mobile Menu Content -->
       <div id="nav-menu" class="hidden md:flex flex-col md:flex-row md:justify-between md:items-center mt-0 md:mt-0">
           <!-- Mobile Search Bar -->
-          <div class="md:hidden mb-4 px-4">
+          <div class="md:hidden mb-4 px-4 pt-4">
             <form action="/search/" method="GET">
                 <input type="search" name="q" placeholder="Search..." class="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-custom-purple" />
             </form>
           </div>
 
-          <div class="flex flex-col md:flex-row md:items-center gap-y-4 md:gap-x-6 px-4 md:px-0">
+          <div class="flex flex-col md:flex-row md:items-center gap-y-4 md:gap-x-6 px-4 md:px-0 pb-4 md:pb-0">
               <a class={`nav-link text-lg font-bold ${currentPath === '/' ? 'text-custom-purple' : 'text-custom-pink'} hover:text-custom-purple transition-colors duration-300`} href="/">HOME</a>
               
               <!-- Desktop Dropdown -->
@@ -218,8 +224,17 @@ const treatments = await getCollection('treatments');
 <script>
     document.getElementById('hamburger')?.addEventListener('click', () => {
         const navMenu = document.getElementById('nav-menu');
+        const body = document.body;
         if (navMenu) {
             navMenu.classList.toggle('hidden');
+            // Add/remove mobile menu specific styling
+            if (!navMenu.classList.contains('hidden')) {
+                navMenu.classList.add('mobile-menu-open');
+                body.style.overflow = 'hidden'; // Prevent background scrolling
+            } else {
+                navMenu.classList.remove('mobile-menu-open');
+                body.style.overflow = ''; // Restore scrolling
+            }
         }
     }, { passive: true });
 
@@ -240,6 +255,36 @@ const treatments = await getCollection('treatments');
         if (treatmentsContent && treatmentsArrow) {
             treatmentsContent.classList.toggle('hidden');
             treatmentsArrow.classList.toggle('rotate-180');
+        }
+    }, { passive: true });
+
+    // Close mobile menu when clicking on a link
+    const mobileMenuLinks = document.querySelectorAll('#nav-menu a');
+    mobileMenuLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            const navMenu = document.getElementById('nav-menu');
+            const body = document.body;
+            if (navMenu && !navMenu.classList.contains('hidden')) {
+                navMenu.classList.add('hidden');
+                navMenu.classList.remove('mobile-menu-open');
+                body.style.overflow = '';
+            }
+        }, { passive: true });
+    });
+
+    // Close mobile menu when clicking outside
+    document.addEventListener('click', (e) => {
+        const navMenu = document.getElementById('nav-menu');
+        const hamburger = document.getElementById('hamburger');
+        const body = document.body;
+        
+        if (navMenu && hamburger && !navMenu.classList.contains('hidden') && e.target instanceof Node) {
+            // Check if click is outside the menu and not on the hamburger
+            if (!navMenu.contains(e.target) && !hamburger.contains(e.target)) {
+                navMenu.classList.add('hidden');
+                navMenu.classList.remove('mobile-menu-open');
+                body.style.overflow = '';
+            }
         }
     }, { passive: true });
 
