@@ -16,6 +16,78 @@
   to = "/"
   status = 301
 
+#Spam Redirects
+[[redirects]]
+  from = "/plgnoptmzr_work/*"
+  to = "/"
+  status = 301
+
+[[redirects]]
+  from = "/blog-page/*"
+  to = "/"
+  status = 301
+
+[[redirects]]
+  from = "/creative-designers/"
+  to = "/"
+  status = 301
+
+[[redirects]]
+  from = "/degeneration-phase/"
+  to = "/"
+  status = 301
+
+[[redirects]]
+  from = "/ivibet-*"
+  to = "/"
+  status = 301
+
+[[redirects]]
+  from = "/legiano-*"
+  to = "/"
+  status = 301
+
+[[redirects]]
+  from = "/vox-*"
+  to = "/"
+  status = 301
+
+[[redirects]]
+  from = "/author/cl1n1ctwenty7/"
+  to = "/blog-overview/"
+  status = 301
+
+[[redirects]]
+  from = "/author/eth7u/page/2/"
+  to = "/blog-overview/"
+  status = 301
+
+[[redirects]]
+  from = "/author/mxd-dev/"
+  to = "/blog-overview/"
+  status = 301
+
+[[redirects]]
+  from = "/endonasal-cranial-correction-2/"
+  to = "/endonasal-cranial-correction-treatment-sydney-cbd/"
+  status = 301
+
+[[redirects]]
+  from = "/workshop/clinic27-workshop-tuesday-10th-august/"
+  to = "/workshops/"
+  status = 301
+
+[[redirects]]
+  from = "/workshop/clinic27-workshop-tuesday-27th-july/"
+  to = "/workshops/"
+  status = 301
+
+[[redirects]]
+  from = "/workshop/clinic27-workshop-tuesday-5th-october/"
+  to = "/workshops/"
+  status = 301
+
+
 [[redirects]]
   from = "/index"
   to = "/"
