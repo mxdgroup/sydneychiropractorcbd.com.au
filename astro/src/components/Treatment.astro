@@ -55,7 +55,7 @@ const carouselTreatments: CarouselItem[] = allTreatments.map(t => ({
         <ScrollCrop src={bottomImagePath} />
         <img src="/rectangle-overlay.webp" alt="Bottom Treatment Image" class="absolute bottom-0 left-0 w-full h-auto z-10 pointer-events-none" />
       </div>
-      <div class="relative z-20 hidden md:block" style="margin-top: -128px;">
+      <div class="relative z-20" style="margin-top: -128px;">
           <Carousel items={carouselTreatments} />
       </div>
     </>

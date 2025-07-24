@@ -40,3 +40,24 @@ Common risk factors include:
 - Arthritis affecting the jaw joint
 - Connective tissue disorders
 - Chronic stress and anxiety
+
+Our chiropractic care addresses jaw and cranial issues through gentle, non-invasive techniques. This approach recognises the intricate relationships between the jaw, cranium, spine, and nervous system, working to restore balance throughout these interconnected structures.
+
+During a TMJ facial release session, gentle, targeted techniques are applied to relax overactive muscles, release fascial adhesions, and improve circulation. Clients often report not only reduced pain but a softer, more lifted appearance in the face, clearer breathing, and a deep sense of calm.
+
+## Benefits Beyond Pain Relief
+The benefits of TMJ/cranial chiropractic care extend beyond simple pain relief:
+- Decreased jaw pain and elimination of clicking sounds
+- Relief from jaw locking episodes
+- Reduction in TMJ-related headaches and migraines
+- Improved jaw range of motion and function
+- Better sleep quality and reduced teeth grinding
+- Enhanced facial symmetry and structure improvements
+
+Many patients also report improvements in skin vitality due to better circulation and reduced tension in facial muscles. The holistic approach addresses not just symptoms but underlying causes, leading to comprehensive improvements in comfort and function.
+
+## What to Expect During Treatment
+
+Treatment sessions typically involve gentle adjustments to the jaw and cranial structures, along with soft tissue work to address muscle tension. Your practitioner will provide home care recommendations to support your treatment between sessions.
+
+At Clinic 27, Dr. Rin Choi, we approach facial release not just as a treatment for jaw problems, but as a holistic therapy for the entire face and nervous system. Whether you’re recovering from trauma, seeking relief from chronic tension, or simply wishing to age gracefully with less stress on your facial tissues—TMJ facial release may be the support you’ve been looking for.

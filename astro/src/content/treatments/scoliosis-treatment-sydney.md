@@ -28,6 +28,18 @@ Small movements will then be applied to manipulate tension areas to help realign
 
 Scoliosis is tragic. It causes both physical pain and emotional suffering. This sideways bending of the spine shows up as abnormal posture and then finally, deformity. If allowed to advance, it can interfere with the lungs, heart and many other vital organs. 
 
+## Isn't a certain amount of sideways curvature normal?
+
+Any type of sideways curvature is abnormal. From the back, the spine should appear straight. When scoliosis is present, there are usually two curves: a primary curve in one direction and a compensatory curve in the opposite direction.
+
+## Does a lack of calcium or carrying a heavy book bag cause scoliosis
+
+No. However, there are a growing number of authorities who believe uncorrected spinal damage from the birth process may be involved. Others suggest that using walkers to encourage early walking may be a culprit.
+
+## What's the best time for a scoliosis examination?
+
+As with the case of many health problems, early detection can improve the likelihood of correction. Wise parents consult our office soon after the birth of their child. Then they follow up with periodic chiropractic checkups throughout their child’s developing years.
+
 ## There is hope.
 
 Scoliosis affects boys, but more frequently girls, between the ages of 8 and 18. The cause varies. Some are born with this spinal deviation (congenital). Others get it from assuming a distorted head or hip position (habitual). Sadly, in many cases the cause is still unknown. 
