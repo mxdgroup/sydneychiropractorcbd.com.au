@@ -9,9 +9,11 @@ excerpt: "Scoliosis Condition Early detection can improve The likelihood of co
 thumbnail: "chiropratic-help-for-scoliosis.jpeg"
 ---
 
-## Scoliosis ConditionEarly detection can improve The likelihood of correction.  
+## Scoliosis Condition
+Early detection can improve The likelihood of correction.  
 
-### Can it be Prevented?  Scoliosis is tragic. It causes both physical pain and emotional suffering. This sideways bending of the spine shows up as abnormal posture and then finally, deformity. If allowed to advance, it can interfere with the lungs, heart and many other vital organs.  Chiropractic care from Clinic 27 should be your go to place for chiropratic care. 
+## Can it be Prevented?  
+Scoliosis is tragic. It causes both physical pain and emotional suffering. This sideways bending of the spine shows up as abnormal posture and then finally, deformity. If allowed to advance, it can interfere with the lungs, heart and many other vital organs.  Chiropractic care from Clinic 27 should be your go to place for chiropratic care. 
 
 There is hope.  
 
@@ -35,8 +37,11 @@ First, a thorough examination helps detect scoliosis in its early stage. Then, c
 
 Chiropractic care has helped countless young women reclaim their health, posture and their self-esteem.  
 
-### Isn’t a certain amount of sideways curvature normal?  Any type of sideways curvature is abnormal. From the back, the spine should appear straight. When scoliosis is present, there are usually two curves: a primary curve in one direction and a compensatory curve in the opposite direction.  
+## Isn’t a certain amount of sideways curvature normal?  
+Any type of sideways curvature is abnormal. From the back, the spine should appear straight. When scoliosis is present, there are usually two curves: a primary curve in one direction and a compensatory curve in the opposite direction.  
 
-### Does a lack of calcium or carrying a heavy book bag cause scoliosis?  No. However, there are a growing number of authorities who believe uncorrected spinal damage from the birth process may be involved. Others suggest that using walkers to encourage early walking may be a culprit.  
+## Does a lack of calcium or carrying a heavy book bag cause scoliosis?  
+No. However, there are a growing number of authorities who believe uncorrected spinal damage from the birth process may be involved. Others suggest that using walkers to encourage early walking may be a culprit.  
 
-### What’s the best time for a scoliosis examination?  As with the case of many health problems, early detection can improve the likelihood of correction. Wise parents consult our office soon after the birth of their child. Then they follow up with periodic chiropractic checkups throughout their child’s developing years.
+## What’s the best time for a scoliosis examination?  
+As with the case of many health problems, early detection can improve the likelihood of correction. Wise parents consult our office soon after the birth of their child. Then they follow up with periodic chiropractic checkups throughout their child’s developing years.

@@ -9,13 +9,17 @@ excerpt: "What Can a Chiropractor do About Your Knee Pain? Knee pain is a common
 thumbnail: "chiropractic-knee-pain-help-explained.jpg"
 ---
 
-## What Can a Chiropractor do About Your Knee Pain?Knee pain is a common complaint among millions of adults. It usually pops up when you bend over and feel an acute stinging sensation, or pain while walking or jogging. At first, you may think it’s because of an old injury, “wear and tear”, or arthritis. The reality is that it could be anything from arthritis to an overstrained tendon. It’s virtually impossible to tell without a professional eye.
+## What Can a Chiropractor do About Your Knee Pain?
+Knee pain is a common complaint among millions of adults. It usually pops up when you bend over and feel an acute stinging sensation, or pain while walking or jogging. At first, you may think it’s because of an old injury, “wear and tear”, or arthritis. The reality is that it could be anything from arthritis to an overstrained tendon. It’s virtually impossible to tell without a professional eye.
 
-## What is Chronic Knee Pain and What Causes it?Chronic knee pain is long-term pain, swelling, or sensitivity in one or both knees. The cause of your knee pain can determine the symptoms you experience. And if you do suffer from this condition, you will need to seek pain relief treatment.  Many conditions can cause or contribute to chronic knee pain, and many treatments exist. Each person’s experience with chronic knee pain will be different.
+## What is Chronic Knee Pain and What Causes it?
+Chronic knee pain is long-term pain, swelling, or sensitivity in one or both knees. The cause of your knee pain can determine the symptoms you experience. And if you do suffer from this condition, you will need to seek pain relief treatment.  Many conditions can cause or contribute to chronic knee pain, and many treatments exist. Each person’s experience with chronic knee pain will be different.
 
 Temporary knee pain is different from chronic knee pain. Many people experience temporary knee pain as a result of an injury or accident. Chronic knee pain rarely goes away without treatment, and it isn’t always attributable to one incident. It’s most often the result of several causes or conditions.
 
-## Physical Conditions or Diseases Can Cause Knee Pain.  These include:
+## Physical Conditions or Diseases Can Cause Knee Pain.  
+
+These include:
 
 - osteoarthritis: pain, inflammation, and joint destruction caused by degeneration and deterioration of the joint
 - tendinitis: pain in the front of the knee that is made worse when climbing, taking stairs, or walking up an incline
@@ -42,11 +46,13 @@ The joint and ligaments surrounding the knee need to be strong to provide suppor
 
 This is where chiropractic care could come in. Many sufferers of ongoing knee pain are finding that through spinal alignments and complementary treatments, it’s possible to mitigate or eliminate localised pain naturally.
 
-## Removing Painkillers from the EquationMany people mistakenly believe that only temporary solutions – such as Cortisone shots or prescription drugs – are the only way to treat knee pain. The reality is that chiropractic is a conservative, low-risk treatment plan that offers results without the nasty side effects of painkillers or the invasive approach of shots.
+## Removing Painkillers from the Equation
+Many people mistakenly believe that only temporary solutions – such as Cortisone shots or prescription drugs – are the only way to treat knee pain. The reality is that chiropractic is a conservative, low-risk treatment plan that offers results without the nasty side effects of painkillers or the invasive approach of shots.
 
 Chiropractic starts with an accurate, thorough diagnosis of your pain. Knee pain may be caused by osteoarthritis, a nagging injury, referred pain, or excessive weight. Ultimately, an examination and evaluation will determine the specific cause. Determining exactly what’s going on in your case is essential before deciding on a treatment program. Treating knee pain from arthritis may require a different approach than treating knee pain from a recent trauma.
 
-## The Chiropractic Solution to Knee PainDepending on the cause of your knee pain, your chiropractor will create a targeted treatment plan designed for your individual condition. This helps to ensure that the right approach is being taken and that progress and results are measurable. 
+## The Chiropractic Solution to Knee Pain
+Depending on the cause of your knee pain, your chiropractor will create a targeted treatment plan designed for your individual condition. This helps to ensure that the right approach is being taken and that progress and results are measurable. 
 
 The spine may be the root cause of the problem due to its multifaceted role in the central nervous system. Correcting spinal misalignments through adjustment is at the heart of chiropractic treatment.
 

@@ -17,7 +17,8 @@ The proven safety and effectiveness of chiropractic neck adjustments have led to
 
 The clinical presentation may include subaxial subluxation, atlantoaxial instability, and cranial settling. Patients also tend to suffer from atraumatic odontoid fracture, neurologic abnormalities, and inflammatory discitis. If left untreated, cervical arthritis can lead to fatal complications including obstructive hydrocephalus, cardiac arrest, and stroke.
 
-## Clinical Features of Cervical ArthritisNeck pain is the most common clinical manifestation of cervical arthritis. The pain usually occurs in the craniocervical region of the neck. Patients may also experience occipital headaches and ear or mastoid pain. This reflects the involvement of greater auricular and greater and lesser occipital nerves as they pass proximally to the atlas and axis vertebrae.
+## Clinical Features of Cervical Arthritis
+Neck pain is the most common clinical manifestation of cervical arthritis. The pain usually occurs in the craniocervical region of the neck. Patients may also experience occipital headaches and ear or mastoid pain. This reflects the involvement of greater auricular and greater and lesser occipital nerves as they pass proximally to the atlas and axis vertebrae.
 
 Cervical arthritis patients may also present with signs of neurological deficit including:
 
@@ -35,7 +36,8 @@ Cervical arthritis patients may also present with signs of neurological deficit 
 - Vertigo (dizziness without movement)
 - Visual disturbances
 
-## Chiropractic Care for Cervical ArthritisChiropractic care is among the safest and most effective therapeutic modalities for neck pain and cervical arthritis. However, chiropractic adjustment is not recommended during periods of active inflammation. Chiropractors may adjust the vertebrae and surrounding tissues depending on the presenting complaints and the patient’s health status. They may use adjunctive therapies including ultrasound, electrotherapy, cold laser, and infrared sauna to relieve pain, swelling, and stiffness of cervical joints.
+## Chiropractic Care for Cervical Arthritis
+Chiropractic care is among the safest and most effective therapeutic modalities for neck pain and cervical arthritis. However, chiropractic adjustment is not recommended during periods of active inflammation. Chiropractors may adjust the vertebrae and surrounding tissues depending on the presenting complaints and the patient’s health status. They may use adjunctive therapies including ultrasound, electrotherapy, cold laser, and infrared sauna to relieve pain, swelling, and stiffness of cervical joints.
 
 This neck pain treatment process involves several careful steps:
 
@@ -65,6 +67,7 @@ This neck pain treatment process involves several careful steps:
 - Collaterals-dredging technique
 - Ear helix manipulation
 
-## ConclusionProfessional chiropractic adjustment of the cervical spine alleviates neck pain and improves range of movement in patients suffering from cervical arthritis. Don’t let neck pain control your life. With proper chiropractic care, you can work toward lasting relief and better neck function.
+## Conclusion
+Professional chiropractic adjustment of the cervical spine alleviates neck pain and improves range of movement in patients suffering from cervical arthritis. Don’t let neck pain control your life. With proper chiropractic care, you can work toward lasting relief and better neck function.
 
 Contact us today to schedule a comprehensive evaluation and learn how our specialized approach to neck pain and cervical arthritis can help you achieve better results, faster.

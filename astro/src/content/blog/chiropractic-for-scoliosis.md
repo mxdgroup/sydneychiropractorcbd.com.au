@@ -26,7 +26,7 @@ Current studies suggest several potential causes:
 
 This neurological aspect makes chiropractic care uniquely positioned to help manage scoliosis. The brain and nerves control and organise muscle function, and any miscommunication in this system can lead to abnormal postural tone and potentially contribute to spinal deformities, including scoliosis.The scoliosis treatment goes beyond simple spinal manipulation. Research has demonstrated that spinal adjustments increase brain activity in the sensorimotor cortex compared to both pre-adjustment states and control groups.
 
- ## The Role of Advanced Biostructural Correction
+## The Role of Advanced Biostructural Correction
 Our team’s expertise in Advanced Biostructural Correction has proven particularly effective in improving upright posture. This method provides a systematic approach to addressing postural irregularities and has shown promising results in reducing sideways spinal curvature for many clients.
 
 ## Long-Term Management and Bottom Line

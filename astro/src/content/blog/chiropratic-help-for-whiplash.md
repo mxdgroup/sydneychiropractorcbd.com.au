@@ -9,7 +9,8 @@ excerpt: "Can You Help Me?   You’re in your car, relaxed, waiting at a stop
 thumbnail: "chiropratic-help-for-whiplash.jpeg"
 ---
 
-## Can You Help Me?  You’re in your car, relaxed, waiting at a stoplight. Suddenly you hear a screeching of tires behind you and the harsh sound of metal hitting metal. Before you can brace yourself, you feel your car moving forward from some unseen force! You’ve been rear-ended.  
+## Can You Help Me?  
+You’re in your car, relaxed, waiting at a stoplight. Suddenly you hear a screeching of tires behind you and the harsh sound of metal hitting metal. Before you can brace yourself, you feel your car moving forward from some unseen force! You’ve been rear-ended.  
 
  What happens in these few seconds can have tragic consequences. And what you do about it in the next hours, days and weeks can forever affect your health.  
 
@@ -37,12 +38,16 @@ Specific chiropractic spinal adjustments, because they can help restore proper m
 
 A new paint job can improve your car’s appearance, but what about the unseen damage to your spine? 
 
-## Why do I have pain in my arms and hands?   Because the nerves to the arms and hands exit the spine through the injured area of the neck, numbness and tingling are common. Even lower back pain can result directly from the trauma or as a reaction to the loss of proper spinal curves.  
+## Why do I have pain in my arms and hands?   
+Because the nerves to the arms and hands exit the spine through the injured area of the neck, numbness and tingling are common. Even lower back pain can result directly from the trauma or as a reaction to the loss of proper spinal curves.  
 
-## Why did my headaches start more than a week after my accident?  Whether you’ve been in an accident, stressed at work or overexerted yourself in the garden, your body is constantly adapting to the environment. When your capacity to adapt is exhausted, symptoms can appear. This can take days, weeks, months or years to occur.  
+## Why did my headaches start more than a week after my accident?  
+Whether you’ve been in an accident, stressed at work or overexerted yourself in the garden, your body is constantly adapting to the environment. When your capacity to adapt is exhausted, symptoms can appear. This can take days, weeks, months or years to occur.  
 
-## Will I ever be normal again?  Many chiropractic patients report restored spinal curves and an end to their symptoms. Those who delay seeking appropriate care often discover that scar tissue and spinal instability require periodic chiropractic checkups.  
+## Will I ever be normal again?  
+Many chiropractic patients report restored spinal curves and an end to their symptoms. Those who delay seeking appropriate care often discover that scar tissue and spinal instability require periodic chiropractic checkups.  
 
-## How can I prevent whiplash injuries?  Since car accidents are the major cause of acceleration/deceleration injuries, defensive driving skills can help. Be sure your taillights and turn signals are properly working. Allow enough stopping distance in front of you. When you slow down or stop, always check your rearview mirror to see if the driver behind you is paying attention.   
+## How can I prevent whiplash injuries?  
+Since car accidents are the major cause of acceleration/deceleration injuries, defensive driving skills can help. Be sure your taillights and turn signals are properly working. Allow enough stopping distance in front of you. When you slow down or stop, always check your rearview mirror to see if the driver behind you is paying attention.   
 
 Chiropractic is a team approach to better health. As you enjoy results, tell those you love. Explain how millions enjoy relief and better health by restoring the integrity of their spines and nervous systems with safe and natural chiropractic care.

@@ -44,7 +44,7 @@ Radiculopathic manifestations like those said above tend to go along the whole w
 
 Treatment is normally traditionalist in nature. Persistent training on way of life adjustments and nonsteroidal calming medications (NSAIDs) and non-intrusive treatment have been appeared to oversee such conditions [citation needed]. Other option treatments, for example, knead, chiropractic, trigger-point treatment, yoga and needle therapy may be of restricted advantage [citation needed]. Surgery is periodically performed.
 
-#### Cervical Spondylosis with Myelopathy
+## Cervical Spondylosis with Myelopathy
 
 A significant number of the medications for cervical spondylosis have not been subjected to thorough, controlled trials.[citation needed] Surgery is upheld for cervical radiculopathy in patients who have immovable torment, dynamic side effects, or shortcoming that neglects to enhance with preservationist treatment. Surgical signs for cervical spondylosis with myelopathy (CSM) remain fairly dubious, yet “most clinicians prescribe agent treatment over traditionalist treatment for moderate-to-serious myelopathy.
 

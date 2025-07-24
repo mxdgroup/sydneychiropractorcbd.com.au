@@ -38,15 +38,16 @@ Abdominal pain that is sharp and sudden is often due to muscle strain, gastritis
 
 In some cases, the cause of pelvic pain cannot be determined. If you are experiencing pelvic pain, it is important to see a medical practitioner so that the cause can be properly diagnosed and treated.  
 
-### Treatment Options   Treatments for abdominal and pelvic pain can vary widely depending on the underlying cause. For example, patients with injuries or inflammatory conditions may be prescribed pain medications or anti-inflammatory drugs to ease their discomfort. Patients with infections may require antibiotics or other types of antimicrobial therapy to clear up the source of the problem. In more severe cases, surgery may be used to repair tissue damage or remove blockages that are causing pain. Overall, successful management of abdominal and pelvic pain often requires an in-depth understanding of the underlying cause and careful monitoring of the response to different treatment options. 
+## Treatment Options   Treatments for abdominal and pelvic pain can vary widely depending on the underlying cause. For example, patients with injuries or inflammatory conditions may be prescribed pain medications or anti-inflammatory drugs to ease their discomfort. Patients with infections may require antibiotics or other types of antimicrobial therapy to clear up the source of the problem. In more severe cases, surgery may be used to repair tissue damage or remove blockages that are causing pain. Overall, successful management of abdominal and pelvic pain often requires an in-depth understanding of the underlying cause and careful monitoring of the response to different treatment options. 
 
 ## Chiropractic Care for Abdominal and Pelvic Pain Chiropractic treatments are often used to address a wide range of health conditions, including issues related to the abdominal and pelvic region. Spinal misalignments often cause pain and dysfunction in other parts of the body. Chiropractors are experts in the diagnosis and treatment of spinal misalignment and other musculoskeletal disorders. In fact, research has shown that spinal adjustments are more effective than standard medical care for treating abdominal and pelvic pain, irrespective of cause.  
 
-## Abdominal and Pelvic Pain  – ConclusionBy adjusting the body’s alignment, chiropractors help to reduce pressure on sensitive nerves, allowing patients to experience relief from things like abdominal cramps, bloating, and pelvic pain. Furthermore, chiropractic adjustments can also improve blood flow to these areas, promoting better tissue repair and healing. 
+## Abdominal and Pelvic Pain  – Conclusion
+By adjusting the body’s alignment, chiropractors help to reduce pressure on sensitive nerves, allowing patients to experience relief from things like abdominal cramps, bloating, and pelvic pain. Furthermore, chiropractic adjustments can also improve blood flow to these areas, promoting better tissue repair and healing. 
 
  If you are suffering from any kind of abdominal or pelvic pain, we encourage you to contact Clinic 27 for an evaluation by one of our skilled chiropractors, who will help identify the source of your pain and provide you with the relief you need to enjoy the quality of life you know you deserve. 
 
-### References 
+## References 
 - Muir B. (2017). Exercise related transient abdominal pain: a case report and review of the literature. The Journal of the Canadian Chiropractic Association, 53(4). https://pubmed.ncbi.nlm.nih.gov/20037690/ 
 
 - Angus, K., Asgharifar, S., & Gleberzon, B. (2015). What effect does chiropractic treatment have on gastrointestinal (GI) disorders: a narrative review of the literature. The Journal of the Canadian Chiropractic Association, 59(2), 122–133. https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4486990/ 

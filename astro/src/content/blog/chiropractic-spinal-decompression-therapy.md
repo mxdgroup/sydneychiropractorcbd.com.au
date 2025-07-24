@@ -9,9 +9,12 @@ excerpt: "What is Chiropractic Spinal Decompression Therapy? Chiropractic spinal
 thumbnail: "chiropractic-spinal-decompression-therapy.jpeg"
 ---
 
-## What is Chiropractic Spinal Decompression Therapy?Chiropractic spinal decompression therapy, a groundbreaking treatment that involves the meticulous mechanical stretching of your spine, is a gentle, non-surgical way to instantly relieve disc-related pressure, stimulate the flow of blood and nutrients through your spine, thereby promoting natural, long-term healing.
+## What is Chiropractic Spinal Decompression Therapy?
 
-## Non-surgical Spinal Decompression Non-surgical spinal decompression therapy (as opposed to surgical spinal decompression, such as laminectomy and microdiscectomy) is performed using advanced computer technology on a specialised traction table. It works on the same fundamental principles that chiropractors have used for decades to stretch the spine and provide effective pain relief.
+Chiropractic spinal decompression therapy, a groundbreaking treatment that involves the meticulous mechanical stretching of your spine, is a gentle, non-surgical way to instantly relieve disc-related pressure, stimulate the flow of blood and nutrients through your spine, thereby promoting natural, long-term healing.
+
+## Non-surgical Spinal Decompression 
+Non-surgical spinal decompression therapy (as opposed to surgical spinal decompression, such as laminectomy and microdiscectomy) is performed using advanced computer technology on a specialised traction table. It works on the same fundamental principles that chiropractors have used for decades to stretch the spine and provide effective pain relief.
 
 Spinal decompression also increases blood flow to your spinal discs, allowing nutrient-rich fluids and oxygen to flow inside and promote cell renewal, tissue repair, and long-term healing.
 
@@ -23,7 +26,8 @@ If spinal decompression therapy is recommended or required, a schedule of chirop
 
 Before we go on to explain how chiropractic care complements spinal decompression treatments, let’s talk about surgical spinal decompression – the chosen route for some individuals.
 
-## Surgical Spinal DecompressionTo access the compressed nerve, the surgeon would have to make an incision (cut) across the affected section of the spine down to the lamina (bony arch of your vertebra). The nerve will be dragged back towards the centre of the spinal column, and a portion of the bone or ligament pressing on it will be removed.
+## Surgical Spinal Decompression
+To access the compressed nerve, the surgeon would have to make an incision (cut) across the affected section of the spine down to the lamina (bony arch of your vertebra). The nerve will be dragged back towards the centre of the spinal column, and a portion of the bone or ligament pressing on it will be removed.
 
 Your surgeon and anaesthesiologist will go over the procedure with you and give you the opportunity to ask any questions you may have.
 
@@ -43,13 +47,15 @@ The following factors will determine the duration of the surgery:
 
 To discover the back of spine, the muscles in your back will be lifted away from the backbone. The affected tissues or nerves will be removed gradually, relieving pressure on the spinal cord or nerves. After adequate decompression, the muscles will be stitched back together, and the incision will be closed and stitched up.
 
-## What conditions can benefit from spinal decompression?Disc herniation
+## What conditions can benefit from spinal decompression?
+
+## Disc herniation
 
 Herniated discs are inherently difficult to treat because your body may tend to favour the position of the discs even if you do not. Even if it causes you discomfort, your body adapts to its new out-of-whack back, making it difficult to get discs back to where they belong. Many doctors try, only to discover that discs have returned to their original positions during follow-up care.
 
 Spinal decompression gently guides bulging or herniated discs back to their proper locations, providing long-term relief. Regular chiropractic adjustments help your discs stay in place rather than migrate outside of their intended locations over time.
 
-Radiculopathy
+## Radiculopathy
 
 Radiculopathy is more commonly referred to as ‘pinched nerve’, and is defined as a set of conditions in which one or more nerves are affected and do not work properly. It can can result in radicular pain, weakness, altered sensation (paresthesia) or difficulty controlling specific muscles. Pinched nerves arise when surrounding bone or tissue, such as cartilage, muscles or tendons, put pressure on the nerve and disrupt its function.
 
@@ -57,7 +63,7 @@ In a radiculopathy, the problem occurs at or near the root of the nerve, shortly
 
 Non-surgical spinal decompression is an excellent treatment for pinched nerves, sciatica, radiating arm pain, degenerative disc disease, leg pain, and facet syndromes.
 
-Sciatica
+## Sciatica
 
 Sciatica provokes lower back pain and physical discomfort that emanates down to the back of the legs. Sciatica sufferers may also experience muscle weakness, numbness, tingling, or a shock-like sensation. Sciatica is typically felt on only one part of the body. Rotational motion, coughing, sneezing, prolonged periods of inactivity, or bending are all known to aggravate the pain.
 
@@ -69,9 +75,12 @@ Prescription medications or steroid injection shots only provide symptomatic and
 
 Spinal decompression is beneficial for all of these problems, whether they are caused by a herniated disc or a disc injury caused by a degenerative disease. This is due to the fact that it increases blood circulation to the spine and assists dislocated spines in returning to their original position.
 
-## Post-decompression therapyPost-decompression therapy is necessary to ensure that your target regions are relaxed and pre-conditioned for chiropractic manual treatment. Chiropractic adjustments complement your spinal decompression program by correcting your mechanical and structural misalignments.
+## Post-decompression therapy
+Post-decompression therapy is necessary to ensure that your target regions are relaxed and pre-conditioned for chiropractic manual treatment. Chiropractic adjustments complement your spinal decompression program by correcting your mechanical and structural misalignments.
 
-## How are results measured?As with any medical treatment, the outcome of spinal decompression therapy will vary depending on the patient, the doctor, and the procedure used. Patients do not usually feel a great deal of relief after the first treatment. Relief should be apparent after several spinal decompression sessions. In some cases, patients may need to accomplish their entire treatment plan before experiencing complete symptom relief.
+## How are results measured?
+
+As with any medical treatment, the outcome of spinal decompression therapy will vary depending on the patient, the doctor, and the procedure used. Patients do not usually feel a great deal of relief after the first treatment. Relief should be apparent after several spinal decompression sessions. In some cases, patients may need to accomplish their entire treatment plan before experiencing complete symptom relief.
 
 For back pain due to disc herniation, radiculopathy, sciatica or other degenerative conditions, get in touch with Clinic 27 for a thorough health assessment and care program that will set you on the path to self-healing.
 

@@ -45,7 +45,7 @@ Here and there when a vertebra slips strange, you may have no manifestations at 
 
 The athlete should try to gradually build up the stiffened joints in the spine around the forward slipping joint. Manipulation should be avoided at the joint itself. If this treatment fails, then surgery is required. Typically, spondylolisthesis does not worsen, but if it does, then surgery is performed which involves fusing the bones with the specific goal to prevent further forward slipping of the vertebra.
 
-### The Position Of The Head
+## The Position Of The Head
 
 “For many years physiologists have shown that the position of the head on the neck is vital because it governs all postural reflexes. If the head is misaligned, other parts of the body move in and out of line to maintain balance and thus energy is expended to counteract the effects of gravity.”
 
@@ -55,7 +55,7 @@ For every centimetre that the head shifts forward, the pressure on the muscles i
 
 One of the first things that most of my clients have noticed over the years is that when their head starts to come back into alignment on their body, their energy levels increase. This makes sense if you imagine trying to hold something heavy with an outstretched arm for two or three hours at a time: not only would you be very tired, but you’d be very sore in your shoulder, neck, shoulder-blades and also the spine, over time. The position of the head, which is governed by the neck position, is a guide for your entire body. Working with athletes, both amateur and professional, I have found that those with a forward head position have a much greater chance of injury overall than those with a more upright posture.
 
-#### A Departure From Balance
+## A Departure From Balance
 
 When your head is forward, you need to use the muscles of the neck and back to hold it up. If your muscles are tense all the time – as your neck muscles will be if your head is forward – it negatively impacts on both the surrounding tissues and the nearby organs. The result of this is that your homeostasis (which is how your body maintains equilibrium, physical and chemical balance and temperature control) takes more energy to maintain. Any interruption to homeostasis that the body cannot correct by itself, takes up more energy as the body strives to bring itself back into balance.
 

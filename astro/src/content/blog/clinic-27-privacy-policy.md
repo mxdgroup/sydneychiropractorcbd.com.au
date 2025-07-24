@@ -9,29 +9,33 @@ excerpt: "What personal information do we collect from the people that visit our
 thumbnail: "clinic-27-privacy-policy.jpeg"
 ---
 
-## What personal information do we collect from the people that visit our blog, website or app? When ordering or registering on our site, as appropriate, you may be asked to enter your name, email address, phone number or other details to help you with your experience. 
+## What personal information do we collect from the people that visit our blog, website or app? 
+When ordering or registering on our site, as appropriate, you may be asked to enter your name, email address, phone number or other details to help you with your experience. 
 
-When do we collect information? 
+## When do we collect information? 
 
 We collect information from you when you subscribe to a newsletter, fill out a form or enter information on our site. 
 
-How do we use your information? 
+## How do we use your information? 
 
 We may use the information we collect from you when you register, make a purchase, sign up for our newsletter, respond to a survey or marketing communication, surf the website, or use certain other site features in the following ways:  • To allow us to better service you in responding to your customer service requests. • To send periodic emails regarding your products and services. 
 
-## How do we protect visitor information?  Your personal information is contained behind secured networks and is only accessible by a limited number of persons who have special access rights to such systems, and are required to keep the information confidential. In addition, all sensitive/credit information you supply is encrypted via Secure Socket Layer (SSL) technology. We implement a variety of security measures when a user enters, submits, or accesses their information to maintain the safety of your personal information. 
+## How do we protect visitor information?  
+Your personal information is contained behind secured networks and is only accessible by a limited number of persons who have special access rights to such systems, and are required to keep the information confidential. In addition, all sensitive/credit information you supply is encrypted via Secure Socket Layer (SSL) technology. We implement a variety of security measures when a user enters, submits, or accesses their information to maintain the safety of your personal information. 
 
 All transactions are processed through a gateway provider and are not stored or processed on our servers. 
 
-### Do we use ‘cookies’? We may use cookies for tracking purposes 
+## Do we use ‘cookies’? 
+We may use cookies for tracking purposes 
 
 You can choose to have your computer warn you each time a cookie is being sent, or you can choose to turn off all cookies. You do this through your browser (like Internet Explorer) settings. Each browser is a little different, so look at your browser’s Help menu to learn the correct way to modify your cookies. 
 
 If you disable cookies off, some features will be disabled that make your site experience more efficient and some of our services will not function properly. 
 
-### Third Party Disclosure We do not sell, trade, or otherwise transfer to outside parties your personally identifiable information. 
+## Third Party Disclosure We do not sell, trade, or otherwise transfer to outside parties your personally identifiable information. 
 
-### Google Google’s advertising requirements can be summed up by Google’s Advertising Principles. They are put in place to provide a positive experience for users. https://support.google.com/adwordspolicy/answer/1316548?hl=en 
+## Google Google’s advertising requirements can be summed up by Google’s Advertising Principles. 
+They are put in place to provide a positive experience for users. https://support.google.com/adwordspolicy/answer/1316548?hl=en 
 
 We have implemented the following:  • Remarketing with Google AdWords • Google Display Network Impression Reporting • Demographics and Interests Reporting 
 

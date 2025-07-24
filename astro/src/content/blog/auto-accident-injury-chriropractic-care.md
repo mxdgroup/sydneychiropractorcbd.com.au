@@ -24,7 +24,7 @@ Chiropractic care for auto injuries extends beyond adjustments. Depending on you
 
 - Electrotherapy: Electrical stimulation can aid in managing pain and inflammation.
 
- ## Benefits of Chiropractic Care After Auto Accidents
+## Benefits of Chiropractic Care After Auto Accidents
 Remember, chiropractic care is not a magic bullet. While it may provide significant relief and support the healing process, it’s crucial to manage expectations and understand that recovery takes time and dedication. However, the benefits of opting for chiropractic care after an auto accident can be substantial:
 
 - Reduced pain and inflammation: Chiropractic massages can effectively address pain arising from spinal misalignments, promoting faster healing.

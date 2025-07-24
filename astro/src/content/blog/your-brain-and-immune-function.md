@@ -11,19 +11,25 @@ thumbnail: "your-brain-and-immune-function.jpg"
 
 Since the inception of the profession, chiropractors have claimed to be doctors of the Central Nervous System, masters of connecting the brain and body, and removing interferences so an individual can experience and express his/her health at a higher level. In this article we’ll discuss how an individual’s overall health is connected to their immune function, and if and how chiropractic care can help a person’s body immunologically.  Chiropractic care could help you realise these overall health functions. 
 
-## Psychoneuroimmunology  Psychoneuroimmunology is concerned with the link between the cognitive, behavioural and immunological systems of the body. It’s long been known that how we think, act and feel can have a profound impact on our physical health. 
+## Psychoneuroimmunology  
+
+Psychoneuroimmunology is concerned with the link between the cognitive, behavioural and immunological systems of the body. It’s long been known that how we think, act and feel can have a profound impact on our physical health. 
 
 While measuring chiropractic’s effect on psychoneuroimmunology would require many variables, we have many case studies that show improvements in inflammatory conditions concomitant with chiropractic care, and there is basic science that shows how the many pieces of the anatomical and physiological puzzle come together. 
 
 To understand how chiropractic care impacts the manifestation of stress and inflammation, we first need to look at the causes of inflammation. 
 
-## The Science of Inflammation  Inflammation starts with your brain responding to a (physical, chemical or emotional) stressor, then enacting the sympathetic nervous system which governs the ‘fight or flight’ response by dispensing the appropriate hormones. Depending on your genetic and epigenetic tendencies, an itch, ache or autoimmune disorder can result from the combined action of your neurotransmitters, inflammatory cytokines and leukocytes working together to combat the stressor.  
+## The Science of Inflammation  
+
+Inflammation starts with your brain responding to a (physical, chemical or emotional) stressor, then enacting the sympathetic nervous system which governs the ‘fight or flight’ response by dispensing the appropriate hormones. Depending on your genetic and epigenetic tendencies, an itch, ache or autoimmune disorder can result from the combined action of your neurotransmitters, inflammatory cytokines and leukocytes working together to combat the stressor.  
 
 As we age, we see more types of inflammation enter our increasingly complicated picture of health. 
 
 The human stress response starts in the brain and implicates hormones such as testosterone, progesterone and cortisol. The hypothalamic-pituitary-adrenal (HPA) axis mobilises the body’s energy stores under stress, dispensing anti-inflammatory and steroidal hormones from the adrenal cortex. 
 
-## The Role of Spinal Manipulation in the Stress Response Manual therapies including chiropractic may influence inflammatory markers for the better. Available research suggests that: 
+## The Role of Spinal Manipulation in the Stress Response 
+
+Manual therapies including chiropractic may influence inflammatory markers for the better. Available research suggests that: 
 
 - Knee joint manipulation may inhibit transmission of nociceptive signals (which we interpret as pain) 
 
@@ -33,7 +39,9 @@ The human stress response starts in the brain and implicates hormones such as te
 
 Other research has shown manual therapy to influence tumour necrosis, endorphins (our happy hormones), interleukins, adrenaline and immune regulation and response. This should cause us to take a second look at the simple chiropractic adjustment and its far-reaching impact on neurotransmitters and modulators. 
 
-### Depression as an Inflammation Issue We typically think of the sympathetic fight or flight response as something the body switches on in emergencies. It would be more accurate to state that the body switches it on in perceived emergencies, such as a sudden loud noise, a change in the behaviour of a loved one, prolonged financial stress, etc, which are all stressors on the brain, and demand the resources of the HPA axis. 
+## Depression as an Inflammation Issue 
+
+We typically think of the sympathetic fight or flight response as something the body switches on in emergencies. It would be more accurate to state that the body switches it on in perceived emergencies, such as a sudden loud noise, a change in the behaviour of a loved one, prolonged financial stress, etc, which are all stressors on the brain, and demand the resources of the HPA axis. 
 
 It is natural to think of depression and anxiety as mental illnesses alone. However, science does not back up that theory conclusively. When a person experiences mental or emotional stress, serotonin is produced in massive amounts in the gut. The vagus nerve creates a conduit between gut (enteric nervous system) and brain.  
 

@@ -11,7 +11,7 @@ thumbnail: "initial-consultation-special-offer.jpg"
 
 # $90 Off Your Initial Consultation with Clinic 27! (Say Goodbye to Pain!)
 
-#### T&C – Offer Available for This Month Only. Offer Code C271111 Must be Quoted at Time of Booking. New Patients Only.
+## T&C – Offer Available for This Month Only. Offer Code C271111 Must be Quoted at Time of Booking. New Patients Only.
 
 For this month only, Clinic 27 & Complete Chiropractic are offering $90 off your initial consultation. You can receive $149 worth of value in the form of a chiropractic consultation for only $59!
 

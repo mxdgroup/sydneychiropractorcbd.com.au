@@ -187,27 +187,27 @@ We focus on long-term results At Clinic 27, we’re focused on identifying the r
 
 No! Our treatments are designed to specifically correct the areas of your spine that your body cannot self-correct. Treating or adjusting your spine should not hurt. Most patient’s feel an almost immediate improvement in symptoms, and if there is any discomfort it usually is mild and delayed – similar to what you might feel in your body after a tough work out in the gym. 
 
-### What is the “crack” noise when I receive an adjustment?
+## What is the “crack” noise when I receive an adjustment?
 
 When the spine is adjusted to correct the body in a way it cannot self-correct, you may hear a “cracking” noise. The noise when you receive an adjustment is simply gas within your joint being released. A Chiropractic treatment does not aim to release the gas, it is merely a side effect of little to no clinical consequence. Some adjustments don’t make any noise at all. 
 
-### Are adjustments safe?
+## Are adjustments safe?
 
 While there are always risks associated with any procedure, we minimise the risk through our thorough history, examination and testing as well as using specific gentle techniques. We will always discuss any risks with you before proceeding with care. No two cases are the same, therefore we tailor our treatment modality to make sure we deliver the best in Chiropractic care that is both safe and effective. 
 
-### Once you start chiropractic care, do you have to keep going back?
+## Once you start chiropractic care, do you have to keep going back?
 
 You always get to decide whether you want to continue with the benefits of Chiropractic care. Many people chose to continue to get adjusted as they enjoy the ongoing benefits of a living a pain free life, as well as a healthy spine and nervous system. We will always give you our best advice with your care, based on your goals and what your specific objective results show. 
 
-### Are Chiropractors university-trained?
+## Are Chiropractors university-trained?
 
 Yes, all Chiropractors in Australia complete a minimum 5 year University qualification. They are registered through AHPRA, the Australian Health Practitioner Regulation Authority and governed by the National Registration Board. Our Chiropractors at Clinic 27 complete studies in Anatomy, Physiology, Neurology, Orthopaedics, Radiology, Pathology and Chiropractic Diagnosis and skills. Our Chiropractors also complete compulsory continuing education. 
 
-### Do I have to have x-rays?
+## Do I have to have x-rays?
 
 If your chiropractor sees it to be necessary – they will refer you for X-rays if clinically indicated. There are certain conditions that will preclude you from having X-rays such as Pregnancy. If you have any concerns with taking X-ray images your chiropractor at Clinic 27 will be happy to discuss this with you further. 
 
-### How long does it take?
+## How long does it take?
 
 This part is largely down to you, and depends on the severity of your condition and your longer-term health goals. You will see changes in your posture and condition after your very first adjustment by our Sydney CBD chiropractors at Clinic 27, but our philosophy isn’t just focused on alleviating short-term pain. It’s about getting your body into a state of balance and keeping it there so you experience real change to your quality of life. 
 

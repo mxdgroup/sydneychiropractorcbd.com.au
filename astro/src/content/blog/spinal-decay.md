@@ -9,7 +9,7 @@ excerpt: "How Do I Know If I Have Spinal Decay?  Your body adapts to uncorrecte
 thumbnail: "spinal-decay.jpg"
 ---
 
-# How Do I Know If I Have Spinal Decay? 
+## How Do I Know If I Have Spinal Decay? 
 
 Your body adapts to uncorrected spinal stress by depositing calcium into affected joints. As if the body is trying to mend a broken bone, it attempts to “repair” the malfunctioning spinal joint by joining the two segments together! We call this slow, relentless, degenerative process “spinal decay.” As with tooth decay, early detection of spinal decay can help avoid painful symptoms and permanent damage. 
 

@@ -21,22 +21,22 @@ More than bones and nerves are involved. Muscles can become too tight or too wea
 
 Your chiropractic doctor is the only licensed health care professional dedicated to the detection, reduction and prevention of spinal subluxations. You’re in good hands! 
 
-### How Do You Get a Subluxation? 
+## How Do You Get a Subluxation? 
 
 There are three basic causes of subluxations. Physical causes include slips and falls, accidents, repetitive motions and improper lifting. Stress, anger and fear are examples of emotional causes of subluxations. Alcohol, drugs, pollution and poor diet can be chemical causes of subluxations. 
 
-### How Do I Know if I Have a Subluxation? 
+## How Do I Know if I Have a Subluxation? 
 
 You can have subluxations and not even know it. Like tooth decay or cancer, subluxations can be present before any warning signs appear. The results of a thorough examination can show the location and severity of any subluxations you may have. 
 
-### Can Subluxations Clear Up on Their Own? 
+## Can Subluxations Clear Up on Their Own? 
 
 Sometimes. Today’s hectic lifestyles are a constant source of subluxations. Fortunately, our bodies have the ability to self-correct many of these minor problems as we bend and stretch, or when we sleep at night. When subluxations don’t resolve, you need a chiropractic doctor! 
 
-### Can Children Get a Subluxation? 
+## Can Children Get a Subluxation? 
 
 Your first subluxation probably occurred from the birth process. Even “modern” childbirth methods can put tremendous pressure on an infant’s spine. Poor appetite, unexplained crying and sleeplessness can be signs of spinal subluxations. Since the birth process can be a common cause, wise parents have their newborns checked for subluxations.
 
-### Contact Clinic 27 Today
+## Contact Clinic 27 Today
 
 If you seek to learn more about subluxations, contact our Sydney chiropractors today.

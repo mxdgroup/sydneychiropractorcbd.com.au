@@ -9,7 +9,8 @@ excerpt: "How do they work?   Spinal joints that are “locked up”, fixated
 thumbnail: "chiropratic-care-adjustments.jpeg"
 ---
 
-### How do they work?  Spinal joints that are “locked up”, fixated or not moving right can affect your health by “choking” or irritating nearby nerve tissue. Chiropractic adjustments add motion to these stuck areas. This helps restore nervous system integrity and can improve the healing process. 
+## How do they work?  
+Spinal joints that are “locked up”, fixated or not moving right can affect your health by “choking” or irritating nearby nerve tissue. Chiropractic adjustments add motion to these stuck areas. This helps restore nervous system integrity and can improve the healing process. 
 
 Like an experienced piano tuner, your Chiropractic doctor has become a master at finetuning the way your spine works. 
 
@@ -31,12 +32,17 @@ Adjusting approaches are modified to suit the specific needs of each patient. 
 
 Adjustments use the least amount of force possible to get fixated joints moving again. 
 
-### What do adjustments feel like? After the brief thrust, many patients report a sense of well-being or a feeling of calmness. Others feel improved mobility. Inflammation or muscle spasms may delay these positive effects. Chiropractic doctor excel at making adjustments comfortable and effective. 
+## What do adjustments feel like? 
+After the brief thrust, many patients report a sense of well-being or a feeling of calmness. Others feel improved mobility. Inflammation or muscle spasms may delay these positive effects. Chiropractic doctor excel at making adjustments comfortable and effective. 
 
-### Are adjustments safe? Yes, they are. A New Zealand government study concluded that chiropractic adjustments are “remarkably safe”. Taking an over-the-counter pain reliever is about 100 times more risky. 
+## Are adjustments safe? 
+Yes, they are. A New Zealand government study concluded that chiropractic adjustments are “remarkably safe”. Taking an over-the-counter pain reliever is about 100 times more risky. 
 
-### Will adjustments make my spine too loose?  No. Only the spinal joints that are “locked up” receive adjustments. This allows weakened muscles and ligaments to stabilise and heal. 
+## Will adjustments make my spine too loose?  
+No. Only the spinal joints that are “locked up” receive adjustments. This allows weakened muscles and ligaments to stabilise and heal. 
 
-### What makes the sound? Lubricating fluids separate the bones of each spinal joint. Some adjusting methods can produce a sound when the gas and fluids in the joints shift. It is much like opening a can of soda or removing a suction cup. The sound is interesting but isn’t a guide to the quality or value of the adjustment. 
+## What makes the sound? 
+Lubricating fluids separate the bones of each spinal joint. Some adjusting methods can produce a sound when the gas and fluids in the joints shift. It is much like opening a can of soda or removing a suction cup. The sound is interesting but isn’t a guide to the quality or value of the adjustment. 
 
-### Can I adjust myself? No. Some patients can make their joints “pop” but that’s not an adjustment! Even your chiropractic doctor must consult a colleague to benefit from chiropractic care.
+## Can I adjust myself? 
+No. Some patients can make their joints “pop” but that’s not an adjustment! Even your chiropractic doctor must consult a colleague to benefit from chiropractic care.

@@ -9,7 +9,8 @@ excerpt: "Can You Make Them Go Away?   There are many types and causes of hea
 thumbnail: "chiropractic-help-for-headaches-and-migraines.jpeg"
 ---
 
-## Can You Make Them Go Away?  There are many types and causes of headaches. Regardless of the cause, if you have a headache, you want it to end. Fast!   
+## Can You Make Them Go Away?  
+There are many types and causes of headaches. Regardless of the cause, if you have a headache, you want it to end. Fast!   
 
 This has produced a huge market for medications that cover up the symptoms of headaches. Powerful drugs can numb your nervous system so the pain doesn’t register. While these approaches may be convenient, they can cause adverse effects and kidney or liver damage. Worse, they don’t correct the underlying cause of the headache.  
 
@@ -31,10 +32,14 @@ While we can’t guarantee results, our office has a high success rate with pati
 
 Many headaches are the result of a loss of curve in the neck, affecting nerves, muscles and blood supply to the head.  
 
-## What causes headaches?  The most common causes are physical trauma, emotional stress, nutritional deficiencies or chemical toxins. Sometimes there may be a combination of these and other factors. Our examination process helps identify the most likely cause.  
+## What causes headaches?  
+The most common causes are physical trauma, emotional stress, nutritional deficiencies or chemical toxins. Sometimes there may be a combination of these and other factors. Our examination process helps identify the most likely cause.  
 
-## How long will it take?  Some patients enjoy results quickly. Others notice a slow decline in their symptoms after several weeks or longer of chiropractic care. It’s impossible to predict. If you’ve had chronic headaches for many years, improvement can take time.  
+## How long will it take?  
+Some patients enjoy results quickly. Others notice a slow decline in their symptoms after several weeks or longer of chiropractic care. It’s impossible to predict. If you’ve had chronic headaches for many years, improvement can take time.  
 
-## What if I don’t have a headache when I come in?  Chiropractic isn’t an aspirin! Repeated visits, even when you’re feeling better, can help retrain and strengthen the muscles that support your spine. Just as it takes more than one or two workouts at the gym to get in shape, it takes time for your spine to heal.  
+## What if I don’t have a headache when I come in?  
+Chiropractic isn’t an aspirin! Repeated visits, even when you’re feeling better, can help retrain and strengthen the muscles that support your spine. Just as it takes more than one or two workouts at the gym to get in shape, it takes time for your spine to heal.  
 
-## What if chiropractic doesn’t work?  Headaches may be common, but they’re not normal. Every headache has a cause. If we’re unable to find and correct the cause of your headaches, we can refer to other specialists who may be able to help. Your health is our only goal.
+## What if chiropractic doesn’t work?  
+Headaches may be common, but they’re not normal. Every headache has a cause. If we’re unable to find and correct the cause of your headaches, we can refer to other specialists who may be able to help. Your health is our only goal.

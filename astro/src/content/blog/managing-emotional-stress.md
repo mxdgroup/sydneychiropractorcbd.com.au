@@ -9,11 +9,17 @@ excerpt: "MANAGING EMOTIONAL STRESS It is completely healthy to be angry, sad, w
 thumbnail: "managing-emotional-stress.jpeg"
 ---
 
-# MANAGING EMOTIONAL STRESSIt is completely healthy to be angry, sad, worried, or cry over something that made you upset. But when these emotions start to create a hurdle for you that won’t let you go about living your daily life, that’s where the real issue is. Such emotional stress should be managed so that quality of life can be improved. There are hundreds of ways you can employ to manage these emotional states and one such way is chiropractic care. 
+# MANAGING EMOTIONAL STRESS
 
-## WHAT IS EMOTIONAL STRESS ?Stress is a very normal reaction to anything or any event that is worrisome. If the emotion underlying your feelings interferes with your ability to live life and overwhelms you into being unable to do the most basic day to day tasks, this is an unhealthy form of stress called emotional stress. This translates to a psychological strain on your mind and body which can affect your life very negatively.
+It is completely healthy to be angry, sad, worried, or cry over something that made you upset. But when these emotions start to create a hurdle for you that won’t let you go about living your daily life, that’s where the real issue is. Such emotional stress should be managed so that quality of life can be improved. There are hundreds of ways you can employ to manage these emotional states and one such way is chiropractic care. 
 
-### SIGNS AND SYMPTOMSSymptoms of emotional stress can be varied. Some of the many symptoms you might encounter are:
+## WHAT IS EMOTIONAL STRESS?
+
+Stress is a very normal reaction to anything or any event that is worrisome. If the emotion underlying your feelings interferes with your ability to live life and overwhelms you into being unable to do the most basic day to day tasks, this is an unhealthy form of stress called emotional stress. This translates to a psychological strain on your mind and body which can affect your life very negatively.
+
+### SIGNS AND SYMPTOMS
+
+Symptoms of emotional stress can be varied. Some of the many symptoms you might encounter are:
 
 - General body aches; like shoulder pain, back pain.
 - Increased heart rate.
@@ -34,7 +40,9 @@ There are some symptoms that a person going through emotional stress exhibits. T
 - Resorting to substance abuse for support.
 - Trouble concentrating on daily tasks.
 
-## HOW TO MANAGE EMOTIONAL STRESS:There are multiple techniques to relieve the symptoms of emotional stress. Some of the methods you can incorporate into your life to help yourself are below:
+## HOW TO MANAGE EMOTIONAL STRESS:
+
+There are multiple techniques to relieve the symptoms of emotional stress. Some of the methods you can incorporate into your life to help yourself are below:
 
 - Start reading a book and take out some time for yourself. Give yourself a break from reality.
 - Start doing calming exercises even for 15 minutes to harmonise your mind and body, and stabilise your emotional state.
@@ -45,7 +53,9 @@ There are some symptoms that a person going through emotional stress exhibits. T
 - Get proper sleep. Stress can make you feel exhausted. Sleep it off and try to wakeup with a fresh mind and perspective.
 - Start being in control as only you can do it. Stop giving way to emotions that cause havoc in your life. Be more in control, more focused and determined to take charge of your emotional well-being.
 
-## WHEN TO GET PROFESSIONAL HELP? If you have tried some of the self-help remedies, and still feel stuck in a vicious circle that you can’t seem to get out of, you might want to turn to help outside of yourself.
+## WHEN TO GET PROFESSIONAL HELP? 
+
+If you have tried some of the self-help remedies, and still feel stuck in a vicious circle that you can’t seem to get out of, you might want to turn to help outside of yourself.
 
 One of the modalities that is becoming increasingly popular among people to manage stress – whether emotional or physical – is chiropractic.
 
@@ -59,7 +69,9 @@ The body can stay in this emotionally-charged state even after the traumatic eve
 
 Pain is physically and psychologically debilitating in a way that few other conditions are.
 
-## SO HOW CAN CHIROPRACTIC CARE HELP WITH EMOTIONAL STRESS?With chiropractic therapy, adjustments are made to the body to relieve stress points and pain, while helping a person feel more aligned and rejuvenated. Along with dietary/lifestyle changes, and the self-help techniques previously talked about, chiropractic adjustments will help alleviate the physical stresses on your body brought on by emotional and other stresses, and in doing so, help your nervous system better perform its job of bringing about homeostasis, and managing your emotional balance.
+## SO HOW CAN CHIROPRACTIC CARE HELP WITH EMOTIONAL STRESS?
+
+With chiropractic therapy, adjustments are made to the body to relieve stress points and pain, while helping a person feel more aligned and rejuvenated. Along with dietary/lifestyle changes, and the self-help techniques previously talked about, chiropractic adjustments will help alleviate the physical stresses on your body brought on by emotional and other stresses, and in doing so, help your nervous system better perform its job of bringing about homeostasis, and managing your emotional balance.
 
 Don’t ignore the warning signs your mind and body give you to call for help for emotional stress. Trust one of our chiropractors to put you back in a good mood.
 

@@ -11,7 +11,8 @@ thumbnail: "sleep-vs-pain-insomnia-chronic-pain.jpg"
 
 Are you not sleeping because of pain? You’re not alone. Many adults experience increased pain sensitivity during sleep, leading to a frustrating cycle of discomfort and sleeplessness. The solution often lies in understanding how your sleeping surface and position affect your body. We’ve covered all you need to know about the link between sleep and insomnia. Here’s all you need to know.
 
-### The Truth About Mattresses and Pain Management
+## The Truth About Mattresses and Pain Management
+
 A firm mattress is your best ally in fighting chronic pain and insomnia. Here’s why:
 
 - It provides consistent support throughout the night
@@ -39,6 +40,7 @@ Your pillow height significantly impacts your sleep quality and pain levels:
 Too low: Causes opposite shoulder to drop down and forwardToo high: Pulls shoulder backward and twists your bodyMemory foam pillows: Can immobilize parts of your body, potentially worsening positioning
 
 ## Common Sleep Habits That Worsen Pain
+
 Bedtime Activities: For those who enjoy reading or watching TV in bed, be cautious. Sitting with your head pushed forward or at sharp angles can adversely affect your posture. Instead use an armchair for reading or watching TV. If you must read in bed, properly support your back with pillows and avoid working from bed with poor posture.
 
 Poor Mattress Choices: Using the wrong type of mattress can reinforce bad posture:Soft, squashy surfaces that allow sinkingWaterbeds that don’t provide consistent support. Memory foam that immobilizes parts of your body, and worn-out mattresses that have lost their support.
@@ -46,6 +48,7 @@ Poor Mattress Choices: Using the wrong type of mattress can reinforce bad postur
 Incorrect Pillow Usage: Many people unknowingly create problems through improper pillow use  too many pillows, have pillows that are too high or too low, or rely on memory foam pillows that restrict movement.  Not adjusting pillow height based on sleeping position is another mistake people commonly make.
 
 ## Sleep Positions and Their Impact on Disc Treatment
+
 Side Sleepers: The preferred position for most people experiencing chronic pain and insomnia:
 
 - Place a pillow between your knees
@@ -71,6 +74,7 @@ Stomach Sleepers: This position significantly strains your spine:
 - Consider retraining yourself to sleep in a different position
 
 ## Bottom Line: Long-Term Solutions for Better Sleep
+
 While changing sleep habits may seem challenging, it’s a crucial skill that benefits your sleep and long-term health. These recommendations aren’t just theoretical – they’re backed by real patient experiences and clinical success in treating chronic pain and sleep issues.
 
 If you’re waking up feeling stiffer and more sore than when you went to bed, it’s a clear sign that your current sleep setup isn’t supporting your body properly. Consider consulting with a chiropractor to develop a personalized plan for better sleep positioning and pain management.

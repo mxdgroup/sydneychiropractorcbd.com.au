@@ -12,6 +12,7 @@ thumbnail: "rotator-cuff-syndrome-advice-from-sydney-cbd-chiropractor.jpg"
 Rotator cuff syndrome is an exceptionally common shoulder injury that can cause considerable shoulder pain and discomfort that’s pretty hard to ignore. Understanding this condition is crucial for proper diagnosis and treatment. Let’s see what you need to know and how chiropractors can help.
 
 ## What is the Rotator Cuff?
+
 Your shoulder joint is a relatively unstable ball and socket joint that is moved and controlled by a small group of four muscles known as the rotator cuff. The rotator cuff muscles include:
 
 - Subscapularis
@@ -25,6 +26,7 @@ Your shoulder joint is a relatively unstable ball and socket joint that is moved
 These small rotator cuff muscles stabilize and control your shoulder movement on your shoulder blade (scapula). As the name suggests, the rotator cuff muscles are responsible for shoulder rotation and form a sleeve around the head of the humerus (shoulder ball).
 
 ## Rotator Cuff Syndrome Symptoms and Causes
+
 Rotator cuff syndrome can be caused by various factors, including:
 
 - Repetitive overhead movements
@@ -49,10 +51,12 @@ There are many symptoms of a rotator cuff injury, but the most common ones inclu
 
 - A clicking sound when you move your shoulder
 
-### What Does Rotator Cuff Pain Feel Like?
+## What Does Rotator Cuff Pain Feel Like?
+
 Rotator cuff pain can vary depending on the severity of the injury. Generally, it feels like a dull ache deep in the shoulder, which can worsen with certain movements. Many people describe it as a sharp or burning sensation, especially when reaching overhead or behind their back. The pain may also radiate down the arm, particularly when lifting or lowering the arm.Minor rotator cuff injuries can sometimes heal on their own with proper rest and care. However, more severe tears or chronic conditions often require professional treatment. It’s important to note that while the pain may subside, without proper rehabilitation, the underlying issue may persist, leading to recurrent problems or further injury.
 
 ## Rotator Cuff Syndrome Treatment
+
 Depending on the injury’s severity, treatment will vary. If you are experiencing shoulder pain, it’s crucial that you have an exam performed by an experienced physician, as your rotator cuff is vital for control and stability of the shoulder. While some injuries are effectively treated with rest, others may require surgery or physical therapy.
 
 Researchers have concluded that there are essentially 7 stages that need to be covered to effectively rehabilitate these injuries and prevent recurrence:
@@ -74,6 +78,7 @@ Researchers have concluded that there are essentially 7 stages that need to be c
 Additionally, postural correction and exercise to help the alignment of the shoulder is crucial for long-term recovery and prevention of future injuries.
 
 ## The Role of Chiropractic Care in Rotator Cuff Syndrome
+
 Chiropractors can play a significant role in the treatment and management of rotator cuff syndrome. They can provide:
 
 - Manual adjustments to improve shoulder joint mobility
