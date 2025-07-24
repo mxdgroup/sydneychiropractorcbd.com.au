@@ -11,7 +11,9 @@ thumbnail: "understanding-thoracic-outlet-syndrome.jpeg"
 
 Thoracic Outlet Syndrome (TOS) refers to a group of conditions that often cause neck, upper back pain and shoulder pain. TOS causes pain that feels deep within the shoulder and is often coupled with weakness and numbness into the arm and hand. In most cases, only one side of the body is affected. Chiropractic care could help individuals deal with this pain.
 
-## What is Thoracic Outlet Syndrome?TOS is caused by a compression of the blood vessels or nerves, or both, as they pass through the Thoracic Outlet Space which is located in the shoulder region. The space is bordered by our collarbone, 1st rib, and the scalenes muscle in the front of the neck.
+## What is Thoracic Outlet Syndrome?
+
+TOS is caused by a compression of the blood vessels or nerves, or both, as they pass through the Thoracic Outlet Space which is located in the shoulder region. The space is bordered by our collarbone, 1st rib, and the scalenes muscle in the front of the neck.
 
 Thoracic Outlet Syndrome can be caused by various factors:
 

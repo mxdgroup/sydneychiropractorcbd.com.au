@@ -52,7 +52,9 @@ Some symptoms a person might encounter are:
 - Weakness in arms and legs
 - Numbness in extremities
 
-## What causes Ankylosing Spondylitis and Spondylosis?Doctors are still not sure what specifically causes spondylitis. However, environmental factors and genetics have known to play a vital role in its development.
+## What causes Ankylosing Spondylitis and Spondylosis?
+
+Doctors are still not sure what specifically causes spondylitis. However, environmental factors and genetics have known to play a vital role in its development.
 
 Some environmental factors that might affect the development of the condition include:
 

@@ -17,7 +17,9 @@ Sleep abnormalities not only serve as causative factors for fibromyalgia but als
 
 Chiropractic care can help alleviate pain, improve associated symptoms, and promote good quality sleep in fibromyalgia patients.
 
-## Association Between Sleep Quality and Fibromyalgia Sleep has a dual association with the onset and severity of fibromyalgia. Sleep deprivation over prolonged periods in otherwise healthy individuals can cause fibromyalgia to develop and aggravate the symptoms of this pain regulation disorder – symptoms such as fatigue and joint tenderness.
+## Association Between Sleep Quality and Fibromyalgia 
+
+Sleep has a dual association with the onset and severity of fibromyalgia. Sleep deprivation over prolonged periods in otherwise healthy individuals can cause fibromyalgia to develop and aggravate the symptoms of this pain regulation disorder – symptoms such as fatigue and joint tenderness.
 
 Pain dysregulation in fibromyalgia is evident at three key stages of pain transmission: abnormal pain processing, abnormal ascending pain pathways, and abnormal descending pain inhibition pathways. Sleep disturbances are associated with these pain circuits. Sleep impairment can be characterised by nocturnal restlessness, non-refreshing, light sleep, frequent awakenings, and involuntary leg movements during sleep.
 
@@ -29,7 +31,9 @@ Sleep disturbances can affect pain-processing pathways at different levels. Rese
 
 Just as nonrestorative sleep disorders can lead to the onset of widespread pain such as in fibromyalgia, the restoration of sleep and improvement in the quality and duration of sleep can significantly improve the symptoms of fibromyalgia. Chiropractic care for fibromyalgia is targeted at both pain management and improvement of sleep quality.
 
-## How Does Chiropractic Improve Fibromyalgia and Sleep Quality?Chiropractic focuses on spinal adjustments to treat a variety of musculoskeletal and/or neurological disorders. The chiropractic management of fibromyalgia involves manipulation of the vertebral column, passive stretching, and soft tissue therapy. It also includes standardised compression of ischemia or tender points present on the neck and back of the fibromyalgia patients.
+## How Does Chiropractic Improve Fibromyalgia and Sleep Quality?
+
+Chiropractic focuses on spinal adjustments to treat a variety of musculoskeletal and/or neurological disorders. The chiropractic management of fibromyalgia involves manipulation of the vertebral column, passive stretching, and soft tissue therapy. It also includes standardised compression of ischemia or tender points present on the neck and back of the fibromyalgia patients.
 
 Pressure is applied via the thumb and increased to the point where the patient reacts to it. Then this pressure is applied for a duration of 10 seconds at each tender point.
 
@@ -40,11 +44,13 @@ Spinal adjustments restore the normal function of pain processing without the us
 Fibromyalgia patients treated via chiropractic adjustments report improved myalgia scores, range of movement at cervical and lumbar levels, quality of sleep, and psychological status.   
 
 ## Improving  Sleep With Chiropractic Care – Conclusion
+
 Complementary and alternative medicine (CAM) techniques are gaining immense recognition and acceptance for the treatment of a myriad of health conditions without eliciting severe complications and side effects. Chiropractic adjustment improves the neural transmission of pain and pain inhibition signals as well as targets ischemia points to alleviate associated pain.
 
 Call Clinic 27 today to discuss your health concerns with one of our chiropractors. We are committed to helping you achieve better results, faster.
 
 ## References
+
 - https://www.ncbi.nlm.nih.gov/books/NBK540974/
 - https://pubmed.ncbi.nlm.nih.gov/25907704/
 - https://www.ncbi.nlm.nih.gov/labs/pmc/articles/PMC4060169/
