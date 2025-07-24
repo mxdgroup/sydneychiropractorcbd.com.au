@@ -17,6 +17,18 @@ Our chiropractors will look at your spine, to see the issues and the injuries it
 
 Being able to enjoy outdoor activities or go out for a simple walk without pain will directly improve a patient’s quality of life and we may be able to provide you the necessary treatment to help you achieve this.
 
+## How do you get sciatica ?
+It’s easy to trace some spinal problems to an event, such as a car accident. Yet, sciatica is often the result of cumulative damage. Years of bad posture, poor muscle tone, excess weight or countless other causes set the stage. Then, something simple like bending over to tie your shoes can trigger an episode
+
+## Can anything else cause sciatica?
+Spinal decay can be another culprit. Instead of disc thinning that puts pressure on the sciatic nerve roots, arthritic bone spurs can intrude into the space normally reserved for the nerve.
+
+## Can chiropractic cure sciatica?
+Actually, chiropractic doesn’t cure anything! Only your body can do that. The chiropractic approach to sciatica (and other health problems) is to help restore the way your spine works, reducing nerve irritation and revitalizing your own healing ability.
+
+## How long will I need chiropractic care ?
+Most sciatica patients are delighted with the results they get after weeks or months of care. Naturally, this varies from patient to patient. After a relapse or two, many discover that years of neglect have produced spinal instabilities that never fully heal. These patients elect to continue with periodic chiropractic checkups. It’s up to you.
+
 ## How Will I Get Relief?
 Sciatica can be a distracting pain that starts in the lower back and extends down into one or both legs. Chiropractic care has proven to be quite helpful. 
 
