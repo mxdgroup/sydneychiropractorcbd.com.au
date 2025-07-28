@@ -15,6 +15,14 @@ export default defineConfig({
     icon(),
     sitemap({})
   ],
+  redirects: {
+    "/complete-spinal-health-program/": "/",
+    "/our_team/dr-angus-phelps/": "/about-clinic27",
+    "/our_team/dr-hooman-zahedi/": "/about-clinic27",
+    "/team_member/dr-hooman-zahedi/": "/about-clinic27",
+    "/our_team/william/": "/about-clinic27",
+    "/our_team/dr-rebecca-squire/": "/about-clinic27",
+  },
   trailingSlash: "always",
   build: {
     format: "directory",
