@@ -6,7 +6,7 @@ import personalPlan from "/public/Personal-Plan-img.webp";
 import hooman from "/public/team/hooman.webp";
 import angus from "/public/team/angus.png.webp";
 import rebecca from "/public/team/reb.webp";
-import rin from "/public/team/woman.webp";
+import rin from "/public/team/rin(2).png";
 import roberto from "/public/team/rob.png.webp";
 import christine from "/public/team/random1.jpg.webp";
 import emma from "/public/team/random2.jpg.webp";
@@ -66,8 +66,12 @@ const assistant = [
         <div class="hidden md:grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
             {doctors.map((doctor) => (
                 <div class="flex flex-col items-center">
-                    <div class="w-40 h-40 md:w-52 md:h-52 mb-4 overflow-hidden rounded-full">
-                        <img src={doctor.image} alt={doctor.name} class="w-full h-full object-cover" />
+                    <div class="w-40 h-40 md:w-52 md:h-52 mb-4  rounded-full">
+                        <img 
+                            src={doctor.image} 
+                            alt={doctor.name} 
+                            class={` ${doctor.name === 'Dr Rin Choi' ? 'object-cover w-full h-full' : 'w-full h-full object-cover'}`}
+                        />
                     </div>
                     <h3 class="text-xl font-semibold mb-1 text-custom-purple">{doctor.name}</h3>
                     <p class="text-gray-600">{doctor.description}</p>
@@ -80,7 +84,11 @@ const assistant = [
             {doctors.map((doctor) => (
                 <div class="flex flex-col items-center">
                     <div class="w-48 h-48 mb-4 overflow-hidden rounded-full">
-                        <img src={doctor.image} alt={doctor.name} class="w-full h-full object-cover" />
+                        <img 
+                            src={doctor.image} 
+                            alt={doctor.name} 
+                            class={`w-full h-full object-cover ${doctor.name === 'Dr Rin Choi' ? 'object-top' : ''}`}
+                        />
                     </div>
                     <h3 class="text-xl font-semibold mb-1 text-custom-purple">{doctor.name}</h3>
                     <p class="text-gray-600">{doctor.description}</p>
@@ -134,7 +142,11 @@ const assistant = [
                     <div class="carousel-slide" id={`slide-${index}`} style={index === 0 ? "display: block;" : "display: none;"}>
                         <div class="flex flex-col items-center px-8">
                             <div class="w-52 h-52 mb-4 overflow-hidden rounded-full">
-                                <img src={doctor.image} alt={doctor.name} class="w-full h-full object-cover" />
+                                <img 
+                                    src={doctor.image} 
+                                    alt={doctor.name} 
+                                    class={`w-full h-full object-cover ${doctor.name === 'Dr Rin Choi' ? 'object-top' : ''}`}
+                                />
                             </div>
                             <h3 class="text-xl font-semibold mb-1 text-white">{doctor.name}</h3>
                             <p class="text-white mb-6" style="text-transform: uppercase;">{doctor.description}</p>
