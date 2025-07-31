@@ -1,9 +1,16 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import HeaderImage from "../components/HeaderImage.astro";
+import UnderlinedHeader from "../components/UnderlinedHeader.astro";
+import AboutTeamSection from "../components/AboutTeamSection.astro";
+import aboutBg from "../../public/header-images/About.webp";
 ---
 
 <Layout title="FAQ | Sydney Chiropractor CBD">
+    <HeaderImage backgroundImage={aboutBg.src} headerText="SYDNEY CBD CHIROPRACTORS" buttonText="Book an Appointment" />
     <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 md:py-16">
-        <!-- FAQ content will be added here -->
+        <UnderlinedHeader left={true}>FAQ</UnderlinedHeader>
+        <div class="mt-6 sm:mt-8 md:mt-10"></div>
     </div>
+    <AboutTeamSection />
 </Layout> 
