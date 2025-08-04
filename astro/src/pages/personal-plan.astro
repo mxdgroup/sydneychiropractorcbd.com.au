@@ -1,9 +1,284 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import UnderlinedHeader from "../components/UnderlinedHeader.astro";
+import TextInput from "../components/TextInput.astro";
+import PrimaryButton from "../components/PrimaryButton.astro";
+import phase1 from "../../public/phase1.webp"
+import phase2 from "../../public/phase2.webp"
+import phase3 from "../../public/phase3.webp"
+import phase4 from "../../public/phase4.webp"
 ---
 
 <Layout title="Personal Plan | Sydney Chiropractor CBD">
-    <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 md:py-16">
-        <!-- Personal Plan content will be added here -->
-    </div>
+  <!-- Two Column Grid Layout -->
+  <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-16">
+    <UnderlinedHeader left={true}>PERSONAL PLAN</UnderlinedHeader>
+  </div>
+  <div class="mx-auto">
+      
+      <!-- Left Column - Form -->
+      <div class="md:w-full md:col-span-1 md:pr-4 mt-12">
+        <form id="personalPlanForm" method="POST" class="space-y-6">
+          <!-- Patient Name and Practitioner Row -->
+          <div class="flex flex-col md:flex-row md:space-x-4 space-y-6 md:space-y-0 container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex-1">
+              <TextInput 
+                label="Patient Name*" 
+                placeholder="Full Name" 
+                id="patientName" 
+                name="patientName" 
+                required={true}
+              />
+            </div>
+            <div class="flex-1">
+              <TextInput 
+                label="Practitioner" 
+                placeholder="Practitioner" 
+                id="practitioner" 
+                name="practitioner"
+              />
+            </div>
+          </div>
+          
+          <!-- YOUR GOALS Section -->
+          <div class="mt-8 container mx-auto px-4 sm:px-6 lg:px-8">
+            <h3 class="text-2xl font-bold text-gray-800 mb-6">YOUR GOALS</h3>
+            <div class="border-b-2 border-pink-500 w-16 mb-8"></div>
+            
+            <!-- Goals Checkboxes - Two Columns -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <!-- Left Column Goals -->
+              <div class="space-y-4">
+                <label class="flex items-center space-x-3">
+                  <input type="checkbox" name="goals" value="remove-symptoms" class="w-5 h-5 text-pink-500 border-gray-300 rounded focus:ring-pink-500">
+                  <span class="text-gray-700">Remove current symptoms</span>
+                </label>
+                
+                <label class="flex items-center space-x-3">
+                  <input type="checkbox" name="goals" value="avoid-symptoms" class="w-5 h-5 text-pink-500 border-gray-300 rounded focus:ring-pink-500">
+                  <span class="text-gray-700">Avoid symptoms and other body signals</span>
+                </label>
+                
+                <label class="flex items-center space-x-3">
+                  <input type="checkbox" name="goals" value="improve-function" class="w-5 h-5 text-pink-500 border-gray-300 rounded focus:ring-pink-500">
+                  <span class="text-gray-700">Improve function of the body</span>
+                </label>
+                
+                <label class="flex items-center space-x-3">
+                  <input type="checkbox" name="goals" value="stabilise-condition" class="w-5 h-5 text-pink-500 border-gray-300 rounded focus:ring-pink-500">
+                  <span class="text-gray-700">Stabilise the condition and stop from getting worse</span>
+                </label>
+              </div>
+              
+              <!-- Right Column Goals -->
+              <div class="space-y-4">
+                <label class="flex items-center space-x-3">
+                  <input type="checkbox" name="goals" value="optimal-health" class="w-5 h-5 text-pink-500 border-gray-300 rounded focus:ring-pink-500">
+                  <span class="text-gray-700">Reach optimal health</span>
+                </label>
+                
+                <label class="flex items-center space-x-3">
+                  <input type="checkbox" name="goals" value="return-workplace" class="w-5 h-5 text-pink-500 border-gray-300 rounded focus:ring-pink-500">
+                  <span class="text-gray-700">Be fit enough to return to the workplace</span>
+                </label>
+                
+                <label class="flex items-center space-x-3">
+                  <input type="checkbox" name="goals" value="return-activity" class="w-5 h-5 text-pink-500 border-gray-300 rounded focus:ring-pink-500">
+                  <span class="text-gray-700">Be able to return to a favourite activity</span>
+                </label>
+                
+                <label class="flex items-center space-x-3">
+                  <input type="checkbox" name="goals" value="specific-goals" class="w-5 h-5 text-pink-500 border-gray-300 rounded focus:ring-pink-500">
+                  <span class="text-gray-700">Other/more specific goals: For eg. weight loss, lift heavier weights, run a marathon...</span>
+                </label>
+              </div>
+            </div>
+            
+            <!-- Other Goals Text Input -->
+            <div class="mt-6">
+              <label for="otherGoals" class="block text-sm font-medium text-gray-700 mb-2">Other</label>
+              <input 
+                type="text" 
+                id="otherGoals" 
+                name="otherGoals" 
+                placeholder="Other Goal" 
+                class="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-pink-500 focus:border-pink-500"
+              />
+            </div>
+          </div>
+          
+          <!-- YOUR XRAY RESULTS Section -->
+          <div class="mt-12 bg-gray-100 p-8 rounded-lg">
+            <h3 class="text-2xl font-bold text-gray-800 mb-6">YOUR XRAY RESULTS</h3>
+            <div class="border-b-2 border-pink-500 w-16 mb-8"></div>
+            <p class="text-gray-600 mb-8">Please tick which phase of Subluxation Degeneration your spine is at, based on your xray.</p>
+            
+            <!-- Xray Images Grid -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 mb-8">
+              <!-- Phase 1 -->
+              <div class="flex justify-center">
+                <label class="cursor-pointer">
+                  <input type="radio" name="xrayPhase" value="phase1" class="sr-only peer">
+                  <div class="bg-white border-2 border-gray-300 rounded-lg p-6 peer-checked:border-pink-500 peer-checked:bg-pink-50 hover:border-pink-300 transition-colors">
+                    <img src={phase1.src} alt="Spine Phase 1" class="w-full h-48 object-contain">
+                  </div>
+                </label>
+              </div>
+              
+              <!-- Phase 2 -->
+              <div class="flex justify-center">
+                <label class="cursor-pointer">
+                  <input type="radio" name="xrayPhase" value="phase2" class="sr-only peer">
+                  <div class="bg-white border-2 border-gray-300 rounded-lg p-6 peer-checked:border-pink-500 peer-checked:bg-pink-50 hover:border-pink-300 transition-colors">
+                    <img src={phase2.src} alt="Spine Phase 2" class="w-full h-48 object-contain">
+                  </div>
+                </label>
+              </div>
+              
+              <!-- Phase 3 -->
+              <div class="flex justify-center">
+                <label class="cursor-pointer">
+                  <input type="radio" name="xrayPhase" value="phase3" class="sr-only peer">
+                  <div class="bg-white border-2 border-gray-300 rounded-lg p-6 peer-checked:border-pink-500 peer-checked:bg-pink-50 hover:border-pink-300 transition-colors">
+                    <img src={phase3.src} alt="Spine Phase 3" class="w-full h-48 object-contain">
+                  </div>
+                </label>
+              </div>
+              
+              <!-- Phase 4 -->
+              <div class="flex justify-center">
+                <label class="cursor-pointer">
+                  <input type="radio" name="xrayPhase" value="phase4" class="sr-only peer">
+                  <div class="bg-white border-2 border-gray-300 rounded-lg p-6 peer-checked:border-pink-500 peer-checked:bg-pink-50 hover:border-pink-300 transition-colors">
+                    <img src={phase4.src} alt="Spine Phase 4" class="w-full h-48 object-contain">
+                  </div>
+                </label>
+              </div>
+            </div>
+          </div>
+          
+          <!-- YOUR CARE PLAN Section -->
+          <div class="mt-12 container mx-auto px-4 sm:px-6 lg:px-8">
+            <h3 class="text-2xl font-bold text-gray-800 mb-6">YOUR CARE PLAN</h3>
+            <div class="border-b-2 border-pink-500 w-16 mb-8"></div>
+            
+            <div class="space-y-4">
+              <p class="text-gray-700">
+                Based on your goals & our findings, we are recommending the following 
+                <input type="number" name="carePlanMonths" class="inline-block w-16 px-2 py-1 mx-2 border border-gray-300 rounded text-center" placeholder="0" min="0">
+                months of chiropractic care.
+              </p>
+              
+              <p class="text-gray-600 text-sm">
+                Each month we will measure and assess your progress. At the end of the initial recommended care plan, we will re- x-ray your spine (if required) to ensure your body is ready to transition into the next phase of care.
+              </p>
+              
+              <div class="mt-6">
+                <label for="careDetails" class="block text-sm font-medium text-gray-700 mb-2">Details</label>
+                <textarea 
+                  id="careDetails" 
+                  name="careDetails" 
+                  rows="4"
+                  class="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-pink-500 focus:border-pink-500 bg-gray-100"
+                  placeholder="Care plan details..."
+                ></textarea>
+              </div>
+            </div>
+          </div>
+          
+          <!-- WORKSHOP SECTION -->
+          <div class="mt-12 container mx-auto px-4 sm:px-6 lg:px-8">
+            <h3 class="text-2xl font-bold text-gray-800 mb-6">CHIROPRACTIC IS A SUCCESS LIFESTYLE FOR HEALTHY HUMAN BEINGS</h3>
+            <div class="border-b-2 border-pink-500 w-16 mb-8"></div>
+            
+            <div class="space-y-6">
+              <p class="text-gray-700">
+                We at Clinic 27 are committed to helping all our patients reach their health goals. To help us, help you, please attend one of our Better Results Faster workshops. Workshops are held every week and their sole purpose is to get you on the path to feeling better, faster.
+              </p>
+              
+              <div>
+                <label for="workshopDate" class="block text-sm font-medium text-gray-700 mb-2">The date you commit to attending the Workshop</label>
+                <input 
+                  type="date" 
+                  id="workshopDate" 
+                  name="workshopDate" 
+                  class="w-full md:w-80 px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-pink-500 focus:border-pink-500 bg-gray-100"
+                  placeholder="mm / dd / yyyy"
+                />
+              </div>
+              
+              <p class="text-gray-700">
+                We suggest you bring a supporting friend or relative who can help encourage you to follow through on treatments & in-between exercises. Sometimes it really does "take a village"
+              </p>
+              
+              <div>
+                <label for="supportingFriend" class="block text-sm font-medium text-gray-700 mb-2">Your nominated friend/s is</label>
+                <input 
+                  type="text" 
+                  id="supportingFriend" 
+                  name="supportingFriend" 
+                  class="w-full md:w-80 px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-pink-500 focus:border-pink-500"
+                  placeholder="Full Name"
+                />
+              </div>
+              
+              <p class="text-gray-600 text-sm">
+                Feel welcome to bring along up to two friends/relatives to the workshop as support
+              </p>
+            </div>
+          </div>
+          
+          <!-- BETWEEN APPOINTMENTS SECTION -->
+          <div class="mt-12 container mx-auto px-4 sm:px-6 lg:px-8">
+            <h3 class="text-2xl font-bold text-gray-800 mb-6">BETWEEN APPOINTMENTS</h3>
+            <div class="border-b-2 border-pink-500 w-16 mb-8"></div>
+            
+            <div class="space-y-6">
+              <p class="text-gray-700 mb-4">After each adjustment we recommend you</p>
+              
+              <!-- Recommendations Checkboxes -->
+              <div class="space-y-3">
+                <label class="flex items-center space-x-3">
+                  <input type="checkbox" name="recommendations" value="drink-water" class="w-5 h-5 text-pink-500 border-gray-300 rounded focus:ring-pink-500">
+                  <span class="text-gray-700">Drink plenty of water</span>
+                </label>
+                
+                <label class="flex items-center space-x-3">
+                  <input type="checkbox" name="recommendations" value="supportive-footwear" class="w-5 h-5 text-pink-500 border-gray-300 rounded focus:ring-pink-500">
+                  <span class="text-gray-700">Wear supportive footwear</span>
+                </label>
+                
+                <label class="flex items-center space-x-3">
+                  <input type="checkbox" name="recommendations" value="apply-ice" class="w-5 h-5 text-pink-500 border-gray-300 rounded focus:ring-pink-500">
+                  <span class="text-gray-700">Apply ice to any tender areas</span>
+                </label>
+                
+                <label class="flex items-center space-x-3">
+                  <input type="checkbox" name="recommendations" value="gentle-walk" class="w-5 h-5 text-pink-500 border-gray-300 rounded focus:ring-pink-500">
+                  <span class="text-gray-700">Go for a gentle walk</span>
+                </label>
+              </div>
+              
+              <!-- Notes Section -->
+              <div class="mt-8">
+                <label for="notes" class="block text-sm font-medium text-gray-700 mb-2">Notes</label>
+                <textarea 
+                  id="notes" 
+                  name="notes" 
+                  rows="6"
+                  class="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-pink-500 focus:border-pink-500 bg-gray-100"
+                  placeholder="NOTES specifically to your condition"
+                ></textarea>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Submit Button -->
+          <div class="mt-8 container mx-auto px-4 sm:px-6 lg:px-8">
+            <PrimaryButton variant="primary" type="submit">SUBMIT</PrimaryButton>
+          </div>
+        </form>
+      </div>
+
+  </div>  
 </Layout> 
