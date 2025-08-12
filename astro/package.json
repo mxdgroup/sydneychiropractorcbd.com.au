@@ -21,6 +21,7 @@
   },
   "devDependencies": {
     "@types/node": "^22.10.5",
+    "astro-robots-txt": "^1.0.0",
     "typescript": "^5.7.2"
   }
 }

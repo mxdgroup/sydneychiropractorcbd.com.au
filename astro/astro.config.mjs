@@ -2,6 +2,7 @@
 import { defineConfig } from "astro/config";
 import tailwind from "@astrojs/tailwind";
 import sitemap from "@astrojs/sitemap";
+import robotsTxt from "astro-robots-txt";
 
 import icon from "astro-icon";
 // @ts-ignore
@@ -13,7 +14,8 @@ export default defineConfig({
   integrations: [
     tailwind(), 
     icon(),
-    sitemap({})
+    sitemap({}),
+    robotsTxt()
   ],
   redirects: {
     "/complete-spinal-health-program/": "/",
