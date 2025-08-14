@@ -65,6 +65,9 @@ const finalCanonicalUrl = canonicalUrl || autoMetaData.canonicalUrl;
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content={title} />
     <meta name="twitter:description" content={finalMetaDescription} />
+
+    <!-- Ahrefs -->
+    <meta name="ahrefs-site-verification" content="cb47325d88640e7b4f2fcc8fd09cc8f5079b3b9e2b04779011cac8dcf817718d">
     
     <!-- Critical Resource Preloading -->
     {preloadImage && <link rel="preload" href={preloadImage} as="image" />}
@@ -79,6 +82,8 @@ const finalCanonicalUrl = canonicalUrl || autoMetaData.canonicalUrl;
     <link rel="dns-prefetch" href="//maps.gstatic.com" />
     <link rel="preconnect" href="https://maps.googleapis.com" crossorigin />
     <link rel="preconnect" href="https://maps.gstatic.com" crossorigin />
+
+    
     
     <!-- Critical CSS - Inline for immediate rendering -->
     <style is:inline>
