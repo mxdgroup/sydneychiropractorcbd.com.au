@@ -167,7 +167,9 @@ const finalCanonicalUrl = canonicalUrl || autoMetaData.canonicalUrl;
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-      gtag('config', 'G-DVEN4QQTPM');
+      gtag('config', 'G-DVEN4QQTPM',{
+        cookie_domain: 'auto',
+      });
     </script>
   </head>
   <body class="overflow-x-hidden">
