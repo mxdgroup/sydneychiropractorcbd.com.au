@@ -1,5 +1,5 @@
 ---
-const { variant = "primary", type = "button", href = "" } = Astro.props;
+const { variant = "primary", type = "button", href = "", trackingEvent = "" } = Astro.props;
 const baseClasses = `px-6 py-3 hover:cursor-pointer ${variant === "primary" ? "bg-custom-pink text-white hover:bg-white hover:text-custom-pink hover:border-custom-pink border border-custom-pink" : "bg-custom-purple text-white hover:bg-white hover:text-custom-purple"} text-md font-semibold inline-block text-center text-decoration-none`;
 ---
 
@@ -9,6 +9,7 @@ const baseClasses = `px-6 py-3 hover:cursor-pointer ${variant === "primary" ? "b
     target="_blank" 
     rel="noopener noreferrer"
     class={baseClasses}
+    onclick={trackingEvent ? `gtag('event', '${trackingEvent}')` : undefined}
   >
     <slot />
   </a>
@@ -16,6 +17,7 @@ const baseClasses = `px-6 py-3 hover:cursor-pointer ${variant === "primary" ? "b
   <button 
     type={type} 
     class={baseClasses}
+    onclick={trackingEvent ? `gtag('event', '${trackingEvent}')` : undefined}
   >
     <slot />
   </button>
