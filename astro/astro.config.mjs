@@ -14,7 +14,23 @@ export default defineConfig({
   integrations: [
     tailwind(), 
     icon(),
-    sitemap({}),
+    sitemap({
+      customPages: [],
+      i18n: {
+        defaultLocale: 'en',
+        locales: {
+          en: 'en'
+        }
+      },
+      serialize(item) {
+        return {
+          url: item.url,
+          changefreq: 'weekly',
+          lastmod: new Date(),
+          priority: item.url === 'https://sydneychiropractorcbd.com.au/' ? 1.0 : 0.8
+        };
+      }
+    }),
     robotsTxt()
   ],
   redirects: {

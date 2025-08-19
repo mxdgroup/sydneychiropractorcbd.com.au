@@ -167,4 +167,11 @@
 [[headers]]
   for = "/api/*"
   [headers.values]
-    Cache-Control = "no-cache, no-store, must-revalidate" 
+    Cache-Control = "no-cache, no-store, must-revalidate"
+
+# XML files (sitemap, etc.)
+[[headers]]
+  for = "/*.xml"
+  [headers.values]
+    Content-Type = "application/xml; charset=utf-8"
+    Cache-Control = "public, max-age=3600" 
