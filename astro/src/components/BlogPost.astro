@@ -17,9 +17,96 @@ const formattedDate = new Intl.DateTimeFormat('en-AU', {
   month: 'long',
   day: 'numeric',
 }).format(post.data.date);
+
+// Custom meta data mapping from CSV
+const customMetaData: Record<string, { title: string; description?: string; keywords?: string }> = {
+  'chiropractic-adjustment-treatments-beyond-back-pain': {
+    title: 'The wonders of Chiropractic Adjustment Beyond Back Pain',
+    description: 'Discover how chiropractors helps more than just back pain. See how our Sydney chiropractors treat headaches, neck pain, posture issues & boost wellness!',
+    keywords: 'chiropractic adjustment'
+  },
+  'initial-consultation-special-offer': {
+    title: 'Special Offer For Initial Consultations | Complete Chiropractic',
+    description: 'New patient special offer in Sydney CBD! Get comprehensive chiropractic assessment and personalised treatment plan. Book your consultation today!',
+    keywords: '/'
+  },
+  'posture-correction-improve-posture-with-these-tips': {
+    title: 'Posture Correction Tips That Could Improve Your Life',
+    description: 'Learn effective posture correction tips from Sydney\'s expert chiropractors. See how w]simple changes can dramatically improve your comfort!',
+    keywords: 'posture correction tips'
+  },
+  'chiropractic-treatment-for-pregnancy': {
+    title: 'Top Pregnancy Chiropractor | Complete Chiro Dee Why',
+    description: 'Safe, gentle chiropractic care for expectant mothers in Sydney. Call us and see how we can help relieve pregnancy discomfort and support your changing body!',
+    keywords: 'pregnancy chiropractor'
+  },
+  'sciatica-successful-treatment-at-sydney-cbd-chiropractor': {
+    title: 'Chiropractor For Sciatica | Complete Chiropractic Dee Why',
+    description: 'Find lasting relief from sciatica pain with our expert and gentle chiropractic treatments in Sydney CBD. Call us and get back to living without limitations!',
+    keywords: 'chiropractor for sciatica'
+  },
+  'why-chiropractic-care-is-effective-for-back-pain': {
+    title: 'Why Chiropractic Treatments Are Good For Back Pain',
+    description: 'Discover why chiropractic care works so well for back pain relief. Learn how spinal adjustments provide lasting results without meds or surgery!',
+    keywords: 'chiropractic treatments for back pain'
+  },
+  'chiropractic-help-for-headaches-and-migraines': {
+    title: 'How a Chiropractor Helps With Headaches',
+    description: 'Learn how chiropractors treat headaches by addressing neck tension, spinal alignment, and muscle stress that trigger pain naturally!',
+    keywords: 'chiropractor for headaches'
+  },
+  'chiropractic-spinal-decompression-therapy': {
+    title: 'Spinal Decompression Therapy | Complete Chiro Dee Why',
+    description: 'Gentle spinal decompression therapy in Sydney. Non-invasive treatment for disc problems that promotes natural healing and pain relief. Call us today!',
+    keywords: 'spinal decompression therapy'
+  },
+  'chiropratic-care-for-head-asymmetry': {
+    title: 'Asymmetrical Head - Why it Happens & How to Treat It?',
+    description: 'Understand what causes head asymmetry and discover gentle chiropractic techniques that help restore balance and reduce associated symptoms.',
+    keywords: 'asymmetrical head'
+  },
+  'abc-advanced-bio-structural-correction': {
+    title: 'ABC Chiropractic Care - How It Relieves Pain For Good',
+    description: 'Discover how Advanced BioStructural Correction technique addresses spinal misalignments at their source for permanent pain relief and better posture.',
+    keywords: 'abc chiropractic'
+  },
+  'spondylosis-and-ankylosing-spondylitis': {
+    title: 'Ankylosing Spondylitis Vs Spondylosis: What\'s Better?',
+    description: 'Learn the key differences between ankylosing spondylitis and spondylosis, plus discover which chiropractic treatments work best for each condition.',
+    keywords: 'ankylosing spondylitis vs spondylosis'
+  },
+  'auto-accident-injury-chriropractic-care': {
+    title: 'Auto Accident Chiropractor - Does it Really Help?',
+    keywords: 'auto accident chiropractor'
+  },
+  'chiropratic-care-for-posture': {
+    title: 'Chiropractor For Posture | Complete Chiro Sydney',
+    description: 'Improve your posture with expert chiropractic care in Sydney. Stand taller, feel more confident, and reduce pain naturally. Call us and   see how we can help!',
+    keywords: 'chiropractor for posture'
+  },
+  'tension-headaches-and-migraines': {
+    title: 'Tension Headache Treatment - How Can it Help?',
+    keywords: 'tension headache treatment sydney'
+  },
+  'treaatment-for-sciatica': {
+    title: 'Sciatica Treatment Sydney | Expert Chiro Care',
+    description: 'Expert sciatica treatment in Sydney CBD. Our personalised approach helps eliminate pain and restore normal function to your daily life. Call us today!',
+    keywords: 'sciatica treatment sydney'
+  }
+};
+
+// Get custom meta data or use defaults
+const customMeta = customMetaData[post.slug];
+const pageTitle = customMeta?.title || `${post.data.title} | Sydney Chiropractor CBD`;
+const metaDescription = customMeta?.description;
+const metaKeywords = customMeta?.keywords;
 ---
 
-<Layout title={`${post.data.title} | Sydney Chiropractor CBD`}>
+<Layout 
+  title={pageTitle}
+  metaDescription={metaDescription}
+  metaKeywords={metaKeywords}
+>
   <!-- Header Image Section -->
   <HeaderImage 
     backgroundImage={`/thumbnails/${post.data.thumbnail}`} 

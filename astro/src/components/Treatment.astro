@@ -33,9 +33,56 @@ const carouselTreatments: CarouselItem[] = allTreatments.map(t => ({
     imageUrl: `/treatments/normal/${generateImageName(t.data.title)}.${topExtension}`,
     href: `/${t.slug}/`
 }));
+
+// Custom meta data mapping from CSV
+const customMetaData: Record<string, { title: string; description?: string; keywords?: string }> = {
+  'posture-treatment-sydney-cbd': {
+    title: 'Posture Treatment Sydney | Chiropractic Care Dee Why',
+    description: 'Improve your posture and confidence with expert chiropractic care in Sydney CBD. Call us and see how we can help you thrive and feel your best every day!',
+    keywords: 'posture treatment sydney'
+  },
+  'endonasal-cranial-correction-treatment-sydney-cbd': {
+    title: 'Pregnancy Chiropractor | Expert Chiropractic Care in Sy'
+  },
+  'headaches-migraines-treatment-sydney-cbd': {
+    title: 'Migraine Treatment Sydney | Expert Chiropractic Care',
+    description: 'Professional migraine treatment in Sydney CBD. Our caring team helps reduce the frequency and intensity of migraines even after one visit. Call us today!',
+    keywords: 'migraine treatment sydney'
+  },
+  'scoliosis-treatment-sydney-cbd': {
+    title: 'Scoliosis Treatment Sydney | Complete Chiro Dee Why',
+    description: 'Gentle and personalised scoliosis chiro care in Sydney. Call us and see how our expert chiropractors help manage symptoms and improve quality of life!',
+    keywords: 'scoliosis treatment sydney'
+  },
+  'back-pain-treatment-sydney-cbd': {
+    title: 'Back Pain Treatment Sydney | Complete Chiropractic',
+    description: 'Professional back pain treatment in Sydney CBD. Our caring chiropractors provide effective relief and can help you live a painless life. Call us today!',
+    keywords: 'back pain sydney'
+  },
+  'vertigo-treatment-sydney-cbd': {
+    title: 'Chiropractor For Vertigo | Complete Chiro Dee Why',
+    description: 'Find relief from vertigo and dizziness with expert chiropractic care in Sydney. Our gentle & fun treatments can help restore your balance. Book a session today!',
+    keywords: 'chiropractor for vertigo'
+  },
+  'sciatica-treatment-sydney-cbd': {
+    title: 'Sciatica Treatment Sydney | Complete Chiro Dee Why',
+    description: 'Effective sciatica treatment in Sydney CBD. Our experienced chiropractors provide gentle care that targets the root cause of your pain. Book a session today!',
+    keywords: 'sciatica treatment sydney'
+  }
+};
+
+// Get custom meta data or use defaults
+const customMeta = customMetaData[treatment.slug];
+const pageTitle = customMeta?.title || `${treatment.data.title} | Sydney Chiropractor CBD`;
+const metaDescription = customMeta?.description;
+const metaKeywords = customMeta?.keywords;
 ---
 
-<Layout title={`${treatment.data.title} | Sydney Chiropractor CBD`}>
+<Layout 
+  title={pageTitle}
+  metaDescription={metaDescription}
+  metaKeywords={metaKeywords}
+>
   <!-- Header Image Section -->
   <HeaderImage 
     backgroundImage={normalImagePath} 
