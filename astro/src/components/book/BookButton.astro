@@ -9,47 +9,12 @@ const { text, href, centerText } = Astro.props;
 ---
 {
     href ? (
-        <a href="tel:0280597743" target="_blank" class="primary-button" style={centerText ? "text-align: center;" : ""}>
+        <a href="tel:0280597743" target="_blank" class={`inline-block bg-primary-pink text-white px-6 py-3 no-underline font-semibold text-base transition-colors duration-300 ease-in-out border-none cursor-pointer capitalize z-10 relative hover:bg-[rgb(181,48,94)] max-[480px]:text-sm max-[480px]:w-full max-[400px]:text-xs max-[400px]:h-fit ${centerText ? 'text-center' : ''}`}>
             {text}
         </a>
     ) : (
-        <button class="primary-button" style={centerText ? "text-align: center;" : ""}>
+        <button class={`inline-block bg-primary-pink text-white px-6 py-3 no-underline font-semibold text-base transition-colors duration-300 ease-in-out border-none cursor-pointer capitalize z-10 relative hover:bg-[rgb(181,48,94)] max-[480px]:text-sm max-[480px]:w-full max-[400px]:text-xs max-[400px]:h-fit ${centerText ? 'text-center' : ''}`}>
             {text}
         </button>
     )
 }
-<style>
-    .primary-button {
-        display: inline-block;
-        background: var(--primary-pink);
-        color: white;
-        padding: 0.8rem 1.5rem;
-        text-decoration: none;
-        font-weight: 600;
-        font-size: 1rem;
-        transition: background-color 0.3s ease;
-        border: none;
-        cursor: pointer;
-        text-transform: capitalize;
-        z-index: 1;
-        position: relative;
-    }
-    .primary-button:hover {
-        background: rgb(181, 48, 94);
-    }
-
-    @media (max-width: 480px) {
-        .primary-button {
-            font-size: 0.8rem;
-            width: 100%;
-        }
-    }
-
-
-    @media (max-height: 400px) {
-        .primary-button {
-            font-size: 0.5rem;
-            height: fit-content;
-        }
-    }
-</style>

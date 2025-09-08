@@ -6,111 +6,30 @@ import Team from "./Team.astro";
 import Reviews from "./Reviews.astro";
 import Ratings from "./Ratings.astro";
 ---
-<section class="main-section">
+<section class="my-12 bg-white flex flex-col items-center justify-center gap-8 overflow-x-hidden">
     <UnderlineHeader text="A quick walkthrough" />
-    <div class="video-container">
+    <div class="w-2/5 max-[480px]:w-4/5">
         <YoutubeVideo videoId="https://www.youtube.com/embed/KehQPtPov_0?si=EBVNfxIueP3SdwoL" fullWidth/>
     </div>
-    <div class="book-an-appointment-container">
+    <div class="max-w-[60%]">
         <!-- <BookAnAppotiment /> -->
     </div>
     <UnderlineHeader text="What out clients say"/>
-    <span id="client-testimonials-text">
+    <span class="font-semibold text-xs text-gray-600 bg-transparent w-1/5 text-center max-[480px]:w-4/5">
         Join So Many of Our Satisfied Clients Find out why our clients keep coming back.
     </span>
     <Reviews />
     <Ratings blackText lazyLoad />
-    <div class="book-an-appointment-container">
+    <div class="max-w-[60%]">
         <BookButton text="Call us to book an appointment" href="tel:0280597743" centerText={true}/>
     </div>
     <Team />
     <UnderlineHeader text="How can you find us?" />
-    <div class="map-container">
-        <h1 style="color: white;font-size: 2rem; font-weight: 600; z-index: 1;">Need Help?</h1>
-        <div class="button-container">
+    <div class="w-[70%] h-[400px] bg-[url('/bookmap.png')] bg-cover bg-center bg-no-repeat relative flex flex-col items-start justify-center px-20 py-20 gap-8 max-[480px]:w-[90%] max-[480px]:text-center max-[480px]:flex max-[480px]:flex-col max-[480px]:items-center max-[480px]:justify-center">
+        <h1 class="text-white text-3xl font-semibold z-10 max-[480px]:text-2xl">Need Help?</h1>
+        <div class="max-[480px]:flex max-[480px]:justify-center max-[480px]:mx-auto max-[480px]:mt-8 max-[480px]:w-full">
             <BookButton text="contact us for more information" href="tel:0280597743"/>
         </div>
-        <div class="overlay"></div>
+        <div class="absolute top-0 left-0 bg-black/50 h-full w-full"></div>
     </div>
 </section>
-<style>
-    .main-section {
-        margin: 3rem auto;
-        background-color: white;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        gap: 2rem;
-        overflow-x: hidden;
-    }
-    .book-an-appointment-container {
-        max-width: 60%;
-    }
-    .map-container {
-        width: 70%;
-        height: 400px;
-        background-image: url("/bookmap.png");
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-        position: relative;
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        justify-content: center;
-        padding: 5rem;
-        gap: 2rem;
-    }
-    .overlay {
-        position: absolute;
-        top: 0;
-        left: 0;
-        background-color: rgba(0, 0, 0, 0.5);
-        height: 100%;
-        width: 100%;
-    }
-
-    .video-container {
-        width: 40%;
-    }
-
-    #client-testimonials-text {
-        font-weight: 600; 
-        font-size: 13px; 
-        color: rgb(74, 74, 74); 
-        background-color: rgba(0, 0, 0, 0); 
-        width:20%; 
-        text-align: center;   
-    }
-    @media (max-width: 480px) {
-        #client-testimonials-text {
-            width: 80%;
-        }
-        .map-container {
-            width: 90%;
-            text-align: center;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-
-        }
-        .map-container h1{
-            font-size: 1.5rem;
-        }
-        .map-container p{
-            font-size: 0.6rem;
-        }
-        .video-container {
-            width: 80%;
-        }
-        .button-container{
-            display: flex;
-            justify-content: center;
-            margin:0 auto;
-            margin-top: 2rem;   
-            width: 100%;
-        }
-    }
-</style>

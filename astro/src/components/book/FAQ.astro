@@ -42,21 +42,21 @@ const faqItems: FAQItem[] = [
 ];
 
 ---
-<section class="faq">
-    <h1>Frequently Asked Questions (FAQ)</h1>
-    <div class="faq-container">
-        <div class="faq-container-left">
+<section class="py-12 max-w-[60%] mx-auto flex flex-col items-center">
+    <h1 class="text-2xl text-center leading-5 text-primary-blue mb-8">Frequently Asked Questions (FAQ)</h1>
+    <div class="w-full flex flex-row gap-12 max-[768px]:flex-col max-[768px]:gap-0">
+        <div class="w-1/2 max-[768px]:w-full">
             {faqItems.slice(0, 5).map((item) => (
                 <FAQItem question={item.question} answer={item.answer} />
             ))}
         </div>
-        <div class="faq-container-right">
+        <div class="w-1/2 max-[768px]:w-full">
             {faqItems.slice(5).map((item) => (
                 <FAQItem question={item.question} answer={item.answer} />
             ))}
         </div>
     </div>
-    <div id="book-an-appointment-container">
+    <div class="w-[30%] flex justify-center items-center max-[768px]:w-full">
         <BookAnAppotiment />
     </div>
 </section>
@@ -98,57 +98,3 @@ const faqItems: FAQItem[] = [
         });
     });
 </script>
-
-<style>
-    h1 {
-        font-size: 1.4rem;
-        text-align: center;
-        line-height: 1.25;
-        color: var(--primary-blue);
-        margin-bottom: 2rem;
-    }
-    .faq {
-        padding: 3rem 0;
-        max-width: 60%;
-        margin: 0 auto;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-    .faq-container {
-        width: 100%;
-        display: flex;
-        flex-direction: row;
-        gap: 3rem;
-    }
-    .faq-container-left {
-        width: 50%;
-    }
-    .faq-container-right {
-        width: 50%;
-    }
-
-    #book-an-appointment-container{
-        width: 30%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-
-
-    @media (max-width: 768px) {
-        .faq-container {
-            flex-direction: column;
-            gap:0rem;
-        }
-        .faq-container-left {
-            width: 100%;
-        }
-        .faq-container-right {
-            width: 100%;
-        }
-        #book-an-appointment-container{
-            width: 100%;
-        }
-    }
-</style>
