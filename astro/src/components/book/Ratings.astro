@@ -1,0 +1,74 @@
+---
+import { Image } from 'astro:assets';
+import googleLogo from '../../assets/logo/google.webp';
+
+interface Props {
+    blackText?: boolean;
+    lazyLoad?: boolean;
+}
+
+const { blackText = false, lazyLoad = false }: Props = Astro.props;
+const reviewLink = "https://www.google.com/search?sca_esv=98a71f72e401179b&sxsrf=AHTn8zpM1Qih6cq4PFmdG5xd9ZpFu-uh7A:1742290584343&si=APYL9bs7Hg2KMLB-4tSoTdxuOx8BdRvHbByC_AuVpNyh0x2KzZ-B0pwvte_rIE4_4gS94q42hUy3UyrKuF0wh7o_btiAYDCWwr63ZjoWlMiEjwZCf-74UTjg2O8QyMGwCZ8HlwViuNBA&q=Clinic+27+Reviews&sa=X&ved=2ahUKEwjQ8P-aqpOMAxWp9wIHHdy4Db4Q0bkNegQINBAE&biw=2560&bih=963";
+---
+<div class="rating" style={blackText ? "color: black;" : "color: white;"}>
+    <Image src={googleLogo} alt="Google Reviews logo showing 4.9 star rating for Clinic 27 Chiropractic Sydney CBD" class="google-logo" loading={lazyLoad ? "lazy" : "eager"} />
+    <div class="rating-content">
+        <div class="rating-stars">
+          <span class="rating-number" style={"font-weight: 900;"}>4.9</span>
+          <div class="stars">★★★★★</div>
+        </div>
+        <a href={reviewLink} class="review-link" target="_blank" style={blackText ? "color: black;" : "color: white;"}>Read our 173 reviews</a>
+    </div>
+</div>
+<style>
+    img{
+        width: 48px;
+        height: 48px;
+        object-fit: contain;
+    }
+
+    .rating {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 2rem;
+    gap: 0.5rem;
+  }
+
+  .rating-content {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+  }
+
+  .rating-stars {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .rating-number {
+    font-size: 1rem;
+    font-weight: 900;
+  }
+
+  .stars {
+    color: #FFD700;
+    font-size: 1rem;
+  }
+
+  .review-link {
+    text-decoration: underline;
+    font-size: 0.8rem;
+    font-weight: 600;
+  }
+  @media (max-width: 480px) {
+    img{
+        width: 32px;
+        height: 32px;
+    }
+    .rating-number{
+        font-size: 0.8rem;
+    }
+  }
+</style>

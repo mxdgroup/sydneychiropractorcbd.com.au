@@ -1,0 +1,92 @@
+---
+import UnderlineHeader from "./BookUnderlineHeader.astro";
+import TeamPerson from "./TeamPerson.astro";
+import TeamPersonMore from "./TeamPersonMore.astro";
+import { Image } from 'astro:assets';
+import dr1 from '/public/avatars/doctors/dr1.png';
+import dr2 from '/public/avatars/doctors/dr2.png';
+import dr3 from '/public/avatars/doctors/dr3.png';
+interface TeamPerson {
+    name: string;
+    role: string;
+    about: string[];
+    image: any;
+}
+
+const team: TeamPerson[] = [
+    {
+        name: "Dr. Hooman Zahedi",
+        role: "Chiropractor",
+        about: ["After qualifying as a chiropractor at Macquarie University, Hooman travelled to the UK. Along with a few other chiropractors, he pioneered chiropractic treatment in Scotland and went on to become the Director of Chiropractic Care and a partner in Europe’s largest chiropractic group, comprising 21 practices.","When he returned to Australia he became a Founding Board member of Advanced Biostructural Correction Australasia, a unique chiropractic technique."],
+        image: dr1
+    },
+    {
+        name: "Dr. Rebecca Squire",
+        role: "Chiropractor",
+        about: ["Rebecca cherishes the opportunity to help you enhance your health. By relieving your pain and stiffness, she enables you to sleep better and live a more active, fulfilling life. She enjoys giving health and wellness talks and appreciates the opportunity to share with you how to sleep, stand and sit without straining your body.","Completing the Master of Chiropractic at Macquarie University gave her the skills and experience to help dancers prevent injuries and recover from them once they have occurred."],
+        image: dr2
+    },
+    {
+        name: "Dr. Angus Phelps",
+        role: "Chiropractor",
+        about:["Angus enjoys managing musculoskeletal conditions and improving athletic performance, but also recognises the power of Chiropractic in providing a foundation for good health, both physically and mentally. He offers a pro-active style of healthcare and believes in preventative chiropractic care. He tailors your treatment plan, helping you make informed decisions about your health so you can realise your physical and mental potential.","As a graduate of Macquarie University’s Master of Chiropractic, he is deeply committed to lifelong learning and continual professional development, enabling him to offer you expert chiropractic care."],
+        image: dr3
+    }
+]
+---
+<section class="team">
+    <div class="team-container-header">
+        <UnderlineHeader text="Your Dedicated Team" />
+    </div>
+    <div class="team-container">
+        {team.map((person) => (
+            <TeamPerson person={person} />
+        ))}
+    </div>
+    <div class="team-more-container">
+        {team.map((person, index) => (
+            <TeamPersonMore person={person} index={index} />
+        ))}
+    </div>
+</section>
+<style>
+    .team {
+        margin: 0 auto;
+        background-color: white;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 2rem;
+    }
+    .team-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-top:1.5rem;
+        gap: 10rem;
+        width: 60%;
+    }
+    .team-more-container {
+        margin: 1.5rem auto;
+        width: 60%;
+    }
+
+    @media (max-width: 900px) {
+        .team{
+            width: 100%;
+        }
+        .team-container {
+            width: 100%;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+        }
+        .team-container-header {
+            width: 100%;
+            text-align: center;
+        }
+        
+        
+    }
+</style>

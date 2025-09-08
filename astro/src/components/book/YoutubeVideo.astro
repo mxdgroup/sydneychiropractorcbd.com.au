@@ -1,0 +1,32 @@
+---
+interface Props {
+    videoId?: string;
+    fullWidth?: boolean;
+}
+
+const { videoId, fullWidth = false }: Props = Astro.props;
+---
+<div class="youtube-video-container" style={`width: ${fullWidth ? '100%' : '50%'}; border:0;`}>
+    <iframe loading="lazy" src={videoId} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> 
+</div>
+<style>
+    .youtube-video-container{
+        width: 50%;
+        height: 20rem;
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    iframe{
+        width: 100%;
+        border:0;
+        height: 100%;
+    }
+    @media (max-width: 480px) {
+        .youtube-video-container{
+            width: 100%;
+            height: 15rem;
+        }
+    }
+</style>

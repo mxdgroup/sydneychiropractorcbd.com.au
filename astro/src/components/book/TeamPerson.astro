@@ -1,0 +1,51 @@
+--- 
+import { Image } from 'astro:assets';
+interface TeamPerson {
+    name: string;
+    role: string;
+    image: any;
+}
+const { person } = Astro.props;
+---
+<div class="team-person">
+    <Image src={person.image} alt={`Portrait of ${person.name}, ${person.role} at Clinic 27 Chiropractic Sydney CBD`} class="team-person-image" />
+    <p class="team-person-name">{person.name}</p>
+    <p class="team-person-title">{person.role}</p>
+</div>
+<style>
+    .team-person {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 0.5rem;
+        text-align: center;
+        width: 100%;
+    }
+    .team-person-name {
+        color: var(--purple);
+        font-weight: 600;
+        margin: 0.5rem 0 0 0;
+    }
+    .team-person-title {
+        font-size: 1rem;
+        margin: 0;
+        color: #333;
+    }
+    img {
+        width: 250px;
+        height: 250px;
+        object-fit: contain;
+    }
+    @media (max-width: 480px) {
+        .team-person-name {
+            font-size: 1.2rem;
+        }
+        img {
+            width: 200px;
+            height: 200px;
+        }
+        
+    }
+
+</style>

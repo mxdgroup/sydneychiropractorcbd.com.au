@@ -1,0 +1,27 @@
+---
+interface Props {
+    blackText?: boolean;
+    text?: string;
+    header?: string;
+}
+const {blackText = false, text, header} = Astro.props;
+---
+<div class="paragraph-with-header-container" style={`color: ${blackText ? 'black' : 'white'};`}> 
+    <h3>{header || 'Test'}</h3>
+    <p>{text || 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.'}</p>
+</div>
+<style>
+    .paragraph-with-header-container{
+    }
+    h3{
+        font-size: 1rem;
+        font-weight: 600;
+        margin-bottom: 0.5rem;
+    }
+    p{
+        font-size: 0.9rem;
+        text-wrap: balance;
+        line-height: 1.5;
+        font-weight: 400;
+    }
+</style>

@@ -1,0 +1,50 @@
+---
+import { Image } from 'astro:assets';
+import BookButton from './BookButton.astro';
+import  clinicLogo from '../../assets/logo/clinic27.webp';
+
+---
+<header class="header">
+  <div class="container">
+      <div class="header-content">
+      <Image src={clinicLogo} alt="Clinic 27 Chiropractic Sydney CBD Logo" loading="eager"/>
+      <div class="header-button-container">
+        <BookButton text="Give Us a Call (02) 8059 7743" href="tel:0280597743" />
+      </div>
+    </div>
+  </div>
+</header>
+
+<style is:inline>
+  .header {
+    background: white;
+    width: 100%;
+  }
+
+
+  img{
+    width: 100px;
+    height: 100px;
+  }
+
+  .header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+
+  @media (max-width: 900px) {
+    .header-content {
+      flex-direction: column;
+      gap: 1rem;
+      width: 100%;
+      padding: 1rem 1rem;
+    }
+    img{
+      width: 80px;
+      height: 80px;
+    }
+  }
+</style>  
+

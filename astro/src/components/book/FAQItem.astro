@@ -1,0 +1,61 @@
+---
+interface FAQItemProps {
+    question: string;
+    answer: string;
+}
+const { question, answer } = Astro.props;
+---
+<div class="faq-item">
+    <div class="faq-item-header">
+        <h3>{question}</h3>
+        <span>+</span>
+    </div>
+    <p style="display: none;">{answer}</p>
+</div>
+<style>
+    .faq-item{
+        padding: 1rem 0;
+        width: 100%;
+        margin-bottom: 0.8rem;
+    }
+    .faq-item h3{
+        font-size: 1rem;
+        font-weight: bold;
+        color: var(--primary-blue);
+    }
+
+    .faq-item h3:hover{
+        cursor: pointer;
+        color:black;
+    }
+    .faq-item-header{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        cursor: pointer;
+    }
+
+    .faq-item-header span{
+        font-size: 1.2rem;
+        font-weight: bold;
+        color: var(--primary-pink);
+    }
+    
+    p {
+        margin-top: 0.8rem;
+        padding: 0.5rem 0;
+        line-height: 1.5;
+        color: var(--primary-pink);
+        font-size: 0.8rem;
+    }
+
+    @media (max-width: 768px) {
+        .faq-item{
+            margin-bottom: 0.5rem;
+            width: 100%;
+        }
+        .faq-item h3{
+            font-size: 0.9rem;
+        }
+    }
+</style>

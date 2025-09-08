@@ -1,0 +1,116 @@
+---
+import UnderlineHeader from "./BookUnderlineHeader.astro";
+import YoutubeVideo from "./YoutubeVideo.astro";
+import BookButton from "./BookButton.astro";
+import Team from "./Team.astro";
+import Reviews from "./Reviews.astro";
+import Ratings from "./Ratings.astro";
+---
+<section class="main-section">
+    <UnderlineHeader text="A quick walkthrough" />
+    <div class="video-container">
+        <YoutubeVideo videoId="https://www.youtube.com/embed/KehQPtPov_0?si=EBVNfxIueP3SdwoL" fullWidth/>
+    </div>
+    <div class="book-an-appointment-container">
+        <!-- <BookAnAppotiment /> -->
+    </div>
+    <UnderlineHeader text="What out clients say"/>
+    <span id="client-testimonials-text">
+        Join So Many of Our Satisfied Clients Find out why our clients keep coming back.
+    </span>
+    <Reviews />
+    <Ratings blackText lazyLoad />
+    <div class="book-an-appointment-container">
+        <BookButton text="Call us to book an appointment" href="tel:0280597743" centerText={true}/>
+    </div>
+    <Team />
+    <UnderlineHeader text="How can you find us?" />
+    <div class="map-container">
+        <h1 style="color: white;font-size: 2rem; font-weight: 600; z-index: 1;">Need Help?</h1>
+        <div class="button-container">
+            <BookButton text="contact us for more information" href="tel:0280597743"/>
+        </div>
+        <div class="overlay"></div>
+    </div>
+</section>
+<style>
+    .main-section {
+        margin: 3rem auto;
+        background-color: white;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 2rem;
+        overflow-x: hidden;
+    }
+    .book-an-appointment-container {
+        max-width: 60%;
+    }
+    .map-container {
+        width: 70%;
+        height: 400px;
+        background-image: url("/bookmap.png");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        padding: 5rem;
+        gap: 2rem;
+    }
+    .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: rgba(0, 0, 0, 0.5);
+        height: 100%;
+        width: 100%;
+    }
+
+    .video-container {
+        width: 40%;
+    }
+
+    #client-testimonials-text {
+        font-weight: 600; 
+        font-size: 13px; 
+        color: rgb(74, 74, 74); 
+        background-color: rgba(0, 0, 0, 0); 
+        width:20%; 
+        text-align: center;   
+    }
+    @media (max-width: 480px) {
+        #client-testimonials-text {
+            width: 80%;
+        }
+        .map-container {
+            width: 90%;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+        }
+        .map-container h1{
+            font-size: 1.5rem;
+        }
+        .map-container p{
+            font-size: 0.6rem;
+        }
+        .video-container {
+            width: 80%;
+        }
+        .button-container{
+            display: flex;
+            justify-content: center;
+            margin:0 auto;
+            margin-top: 2rem;   
+            width: 100%;
+        }
+    }
+</style>

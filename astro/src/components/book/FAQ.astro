@@ -1,0 +1,154 @@
+---
+import BookAnAppotiment from './BookAnAppotiment.astro';
+import FAQItem from './FAQItem.astro';
+
+interface FAQItem {
+    question: string;
+    answer: string;
+}
+const faqItems: FAQItem[] = [
+    {
+        question: 'What conditions can chiropractic help with?',
+        answer: 'Chiropractic care can help with a wide range of conditions including back pain, neck pain, headaches, sciatica, joint pain, sports injuries, and more. It\'s also effective for improving posture and overall wellness.'
+    },
+    {
+        question: 'Are chiropractic treatments safe?',
+        answer: 'Yes, chiropractic treatments are generally very safe when performed by a licensed professional. The techniques used are non-invasive and drug-free, making them a safe alternative to more invasive treatments.'
+    },
+    {
+        question: 'How often will I need to come in for treatment?',
+        answer: 'Treatment frequency varies based on your specific condition and goals. Initially, you might need 2-3 visits per week, gradually decreasing as you improve. Your chiropractor will create a personalized treatment plan for you.'
+    },
+    {
+        question: 'What should I expect during my first visit?',
+        answer: 'Your first visit typically includes a thorough health history review, physical examination, and possibly diagnostic tests. Your chiropractor will explain their findings and recommend a treatment plan tailored to your needs.'
+    },
+    {
+        question: 'Does my insurance cover chiropractic care?',
+        answer: 'Many insurance plans cover chiropractic care, but coverage varies. We recommend contacting your insurance provider to verify your benefits. Our office staff can also help you understand your coverage.'
+    },
+    {
+        question: 'Are spinal adjustments painful?',
+        answer: 'Spinal adjustments are generally not painful. You might feel pressure or mild discomfort, but most patients find the experience relieving. Some patients report immediate relief after adjustments.'
+    },
+    {
+        question: 'Will I need to continue chiropractic care once I feel better?',
+        answer: 'While some patients choose to end care once symptoms resolve, many opt for maintenance care to prevent future issues. Your chiropractor will discuss the benefits of ongoing care based on your specific situation.'
+    },
+    {
+        question: 'Is ABC™ safe for kids?',
+        answer: 'Yes, Advanced Biostructural Correction™ (ABC™) is safe for children when performed by a properly trained practitioner. The techniques are gentle and can be modified for children of all ages.'
+    },
+];
+
+---
+<section class="faq">
+    <h1>Frequently Asked Questions (FAQ)</h1>
+    <div class="faq-container">
+        <div class="faq-container-left">
+            {faqItems.slice(0, 5).map((item) => (
+                <FAQItem question={item.question} answer={item.answer} />
+            ))}
+        </div>
+        <div class="faq-container-right">
+            {faqItems.slice(5).map((item) => (
+                <FAQItem question={item.question} answer={item.answer} />
+            ))}
+        </div>
+    </div>
+    <div id="book-an-appointment-container">
+        <BookAnAppotiment />
+    </div>
+</section>
+
+<script is:inline>
+    document.addEventListener('DOMContentLoaded', function() {
+        const faqItems = document.querySelectorAll('.faq-item');
+        
+        faqItems.forEach(function(item) {
+            const header = item.querySelector('.faq-item-header');
+            const paragraph = item.querySelector('p');
+            const toggleIcon = item.querySelector('.faq-item-header span');
+            
+            if (header && paragraph && toggleIcon) {
+                header.addEventListener('click', function() {
+                    // Close all other FAQ items
+                    faqItems.forEach(function(otherItem) {
+                        if (otherItem !== item) {
+                            const otherParagraph = otherItem.querySelector('p');
+                            const otherToggleIcon = otherItem.querySelector('.faq-item-header span');
+                            
+                            if (otherParagraph && otherToggleIcon) {
+                                otherParagraph.style.display = 'none';
+                                otherToggleIcon.textContent = '+';
+                            }
+                        }
+                    });
+                    
+                    // Toggle current paragraph
+                    if (paragraph.style.display === 'none' || paragraph.style.display === '') {
+                        paragraph.style.display = 'block';
+                        toggleIcon.textContent = '-';
+                    } else {
+                        paragraph.style.display = 'none';
+                        toggleIcon.textContent = '+';
+                    }
+                });
+            }
+        });
+    });
+</script>
+
+<style>
+    h1 {
+        font-size: 1.4rem;
+        text-align: center;
+        line-height: 1.25;
+        color: var(--primary-blue);
+        margin-bottom: 2rem;
+    }
+    .faq {
+        padding: 3rem 0;
+        max-width: 60%;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .faq-container {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        gap: 3rem;
+    }
+    .faq-container-left {
+        width: 50%;
+    }
+    .faq-container-right {
+        width: 50%;
+    }
+
+    #book-an-appointment-container{
+        width: 30%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+
+    @media (max-width: 768px) {
+        .faq-container {
+            flex-direction: column;
+            gap:0rem;
+        }
+        .faq-container-left {
+            width: 100%;
+        }
+        .faq-container-right {
+            width: 100%;
+        }
+        #book-an-appointment-container{
+            width: 100%;
+        }
+    }
+</style>

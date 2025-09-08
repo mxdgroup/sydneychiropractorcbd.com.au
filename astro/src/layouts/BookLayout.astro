@@ -1,0 +1,112 @@
+---
+interface Props {
+	title: string;
+}
+
+const { title } = Astro.props;
+
+// Import the Analytics component
+---
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content="Clinic 27 - Your Path to Optimal Health and Wellness" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+		<!-- preload image -->
+		<link rel="preload" href="/src/assets/hero_bg.webp" as="image" />
+		<link rel="preload" href="/src/assets/logo/clinic27.webp" as="image" />
+		<link rel="preload" href="/src/assets/logo/google.webp" as="image" />
+		<!-- Preload critical fonts -->
+		<link rel="preload" href="/fonts/inter-regular.woff" as="font" type="font/woff" crossorigin />
+		<link rel="preload" href="/fonts/inter-medium.woff" as="font" type="font/woff" crossorigin />
+		<!-- Inline critical font CSS -->
+		<style>
+			/* Self-hosted font files with font-display: swap */
+			@font-face {
+				font-family: 'Inter';
+				font-style: normal;
+				font-weight: 400;
+				font-display: swap;
+				src: local('Inter Regular'), local('Inter-Regular'), url('/fonts/inter-regular.woff') format('woff');
+			}
+			@font-face {
+				font-family: 'Inter';
+				font-style: normal;
+				font-weight: 500;
+				font-display: swap;
+				src: local('Inter Medium'), local('Inter-Medium'), url('/fonts/inter-medium.woff') format('woff');
+			}
+			@font-face {
+				font-family: 'Inter';
+				font-style: normal;
+				font-weight: 600;
+				font-display: swap;
+				src: local('Inter SemiBold'), local('Inter-SemiBold'), url('/fonts/inter-semibold.woff') format('woff');
+			}
+			@font-face {
+				font-family: 'Inter';
+				font-style: normal;
+				font-weight: 700;
+				font-display: swap;
+				src: local('Inter Bold'), local('Inter-Bold'), url('/fonts/inter-bold.woff') format('woff');
+			}
+		</style>
+	</head>
+	<body>
+		<slot />
+		<style is:global>
+			:root {
+				--primary-blue: rgb(0, 86, 179);
+				--primary-pink: rgba(223,47,109);
+				--purple : rgb(32, 32, 137);
+				--text-dark: #333333;
+				--text-light: #ffffff;
+				--link-hover: #0e1346;
+			}
+			
+			* {
+				margin: 0;
+				padding: 0;
+				box-sizing: border-box;
+			}
+			
+			html {
+				font-family: 'Inter', system-ui, sans-serif;
+				background: #ffffff;
+			}
+
+			body {
+				min-height: 100vh;
+			}
+
+			img {
+				max-width: 100%;
+				height: auto;
+			}
+
+			.container {
+				max-width: 60%;
+				margin: 0 auto;
+				padding: 1rem 1rem;
+			}
+
+			button{
+				border: none;
+				cursor: pointer;
+			}
+
+			@media (max-width: 480px) {
+				.container{
+					max-width: 100%;
+					margin: 0 auto;
+					padding: 1rem 1rem;
+				}
+			}
+		</style>
+	</body>
+</html>

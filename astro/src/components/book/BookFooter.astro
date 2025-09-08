@@ -1,0 +1,170 @@
+---
+import { Image } from 'astro:assets';
+import clinicLogo from '../../assets/logo/clinic27.webp';
+import BookButton from './BookButton.astro';
+---
+<footer>
+    <div class="footer-container">
+        <div class="footer-content">
+            <Image src={clinicLogo} alt="Clinic 27 Chiropractic Sydney CBD Logo" loading="lazy"/>
+            <p class="footer-text">
+                Get in touch with us and find out why
+                so many patients stay with us for years
+                (and even decades!)
+            </p>
+            <div class="footer-button-container">
+                <BookButton text="Call us today" href="tel:0280597743" centerText={true} />
+            </div>
+        </div>
+    </div>
+</footer>
+<style>
+    .footer-container{
+        background-image: url('../../assets/hero_bg.webp');
+        background-size: cover;
+        background-position: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 40vh;
+        height: auto;
+        padding: 3rem 1rem;
+        width: 100%;
+        position: relative;
+    }
+    
+    .footer-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: clamp(2rem, 4vw, 5rem);
+        width: 100%;
+        max-width: 1200px;
+        text-align: center;
+        position: relative;
+        z-index: 2;
+    }
+       
+    .footer-text{
+        width: 100%;
+        max-width: 600px;
+        color: var(--text-light, #ffffff);
+        font-size: clamp(1rem, 1.5vw, 1.2rem);
+        font-weight: 600;
+        text-align: center;    
+        margin: 0 auto;
+        text-shadow: 0 0 5px rgba(0, 0, 0, 0.7); /* Add text shadow for better readability on background image */
+    }
+    
+    .footer-button-container {
+        width: 100%;
+        max-width: 250px;
+        margin: 0 auto;
+    }
+
+    img{
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 3px solid white;
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Large screens */
+    @media (min-width: 1200px) {
+        .footer-container {
+            height: 60vh;
+        }
+        .footer-content {
+            gap: 5rem;
+        }
+        .footer-text {
+            width: 30%;
+            font-size: 1.2rem;
+        }
+        img {
+            width: 150px;
+            height: 150px;
+        }
+    }
+
+    /* Medium screens (tablets) */
+    @media (min-width: 768px) and (max-width: 1199px) {
+        .footer-container {
+            height: 50vh;
+        }
+        .footer-content {
+            gap: 3rem;
+        }
+        .footer-text {
+            width: 50%;
+            font-size: 1.1rem;
+        }
+        img {
+            width: 120px;
+            height: 120px;
+        }
+    }
+
+    /* Small screens (larger mobile) */
+    @media (min-width: 481px) and (max-width: 767px) {
+        .footer-container {
+            height: 45vh;
+        }
+        .footer-content {
+            gap: 2.5rem;
+        }
+        .footer-text {
+            width: 70%;
+            font-size: 1rem;
+        }
+    }
+
+    /* Extra small screens (small mobile) */
+    @media (max-width: 480px) {
+        .logo-circle{
+            width: 100px;
+            height: 100px;
+        }
+        .footer-container{
+            height: 35vh;
+        }
+        .footer-content {
+            gap: 2rem;
+        }
+        .footer-text{
+            width: 85%;
+            font-size: 0.9rem;
+        }
+    }
+
+    @media (max-height: 768px) {
+        .footer-container{
+            height: 60vh;
+        }
+        .footer-text{
+            width: 85%;
+            font-size: 0.6rem;
+        }
+        img {
+            width: 80px;
+            height: 80px;
+        }
+    }
+
+    @media (max-height: 400px) {
+        img {
+            width: 60px;
+            height: 60px;
+        }
+    }
+
+    @media (max-height: 300px) {
+        img {
+            width: 40px;
+            height: 40px;
+        }
+    }
+</style>

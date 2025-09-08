@@ -1,0 +1,83 @@
+---
+import ReviewCard from "./ReviewCard.astro";
+import lieneAvatar from '../../../public/avatars/review/liene.png';
+import seanAvatar from '../../../public/avatars/review/sean.png';
+import shantelAvatar from '../../../public/avatars/review/shantel.png';
+import jessicaAvatar from '../../../public/avatars/review/jes.png';
+---
+<div class="reviews-container">
+  <div class="reviews-grid">
+    <ReviewCard 
+      name="Liene Indriksone"
+      avatarSrc={lieneAvatar}
+      reviewText="I've had only great experiences going to the chiropractor here. The team are friendly, welcoming and with a sense of humour! Angus is a great chiropractor who always makes me feel at ease and listens to any concerns I have. Thank you for being so wonderful!"
+    />
+    
+    <ReviewCard 
+      name="Doris Doris"
+      avatarInitial="D"
+      avatarColor="#6a3db3"
+      reviewText="Dr Hooman is the best Chiropractor I ever met, I was following him more than 5 years. With his help, my feet keens leg lower back arms neck pains have been released. Thank you! All the other doctors are also very good and nice."
+    />
+    
+    <ReviewCard 
+      name="Jessica Block"
+      avatarSrc={jessicaAvatar}
+      reviewText="Hooman's treatment has made a world of difference to me - hips and lower back pain have been dramatically reduced through a slow, careful, sustained series of treatments over the course of four weeks. I can highly recommend him and Clinic 27."
+    />
+    
+    <ReviewCard 
+      name="Stephen Dewick"
+      avatarInitial="S"
+      avatarColor="#4caf50"
+      reviewText="I have been attending Clinic27 and specifically seeing Dr Angus Phelps for a number of years now to address the wear and tear that comes from long distance running. Angus is a true professional; always on time, answering my many queries on the what and why of adjustment and overall a friendly and personable approach. My health has greatly benefited from Angus and the team. Highly recommend."
+    />
+    
+    <ReviewCard 
+      name="Sean Melbourne"
+      avatarSrc={seanAvatar}
+      reviewText="This is by far the most impactful chiropractic treatment I have had. It's very thorough and has a long lasting effect. Hooman and his team are very skilled at it. I highly recommend them!"
+    />
+    
+    <ReviewCard 
+      name="Shantel Gabriele"
+      avatarSrc={shantelAvatar}
+      reviewText="I have been seeing Dr Angus Phelps since 2021. Initially it was to help with my posture. After a few adjustments I noticed a significant improvement and I've continued with maintenance adjustments. When providing treatment I found Dr Angus to be very professional, knowledgeable and caring. He listens carefully to understand what the issue is and provides treatment accordingly. I feel confident in his care and I would highly recommend him and the whole team."
+    />
+  </div>
+</div>
+
+<style>
+  .reviews-container {
+    max-width: 60%;
+    margin: 0 auto;
+  }
+  
+  .reviews-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+  }
+  
+  @media (max-width: 1024px) {
+    .reviews-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .reviews-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .reviews-grid {
+      grid-template-columns: 1fr;
+    }
+    .reviews-container {
+      max-width: 80%;
+      margin-bottom: 2rem;
+    }
+  }
+</style> 

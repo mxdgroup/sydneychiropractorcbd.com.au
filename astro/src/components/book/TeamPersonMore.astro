@@ -1,0 +1,157 @@
+---
+import TeamPerson from "./TeamPerson.astro";
+import BookButton from "./BookButton.astro";
+import { Image } from 'astro:assets';
+
+interface TeamPersonDetails {
+    name: string;
+    role: string;
+    about: string[];
+    index: number;
+}
+
+const { person, index } = Astro.props;
+---
+<div class="team-person-more">
+    {index % 2 === 0 ? (
+        <div class="person-image left-image">
+            <div class="custom-team-person">
+                <Image src={person.image} alt={`Portrait of ${person.name}, ${person.role} at Clinic 27 Chiropractic Sydney CBD`} class="team-person-image" />
+                <p class="team-person-name">{person.name}</p>
+                <p class="team-person-title">{person.role}</p>
+            </div>
+        </div>
+    ) : <></>}
+    <div class="person-details">
+        <h2 style={`text-align: ${index % 2 === 0 ? "left" : "right"}`}>Meet {person.name.replace("Dr. ", "")}</h2>
+        {person.about.map((paragraph: string) => (
+            <p style={`text-align: ${index % 2 === 0 ? "left" : "right"}`}>{paragraph}</p>
+        ))}
+        <div class="button-container" style={`align-self: ${index % 2 === 0 ? "flex-start" : "flex-end"}`}>
+                <BookButton text="Get in Touch With Us" href="tel:0280597743" centerText={true}/>
+        </div>
+    </div>
+    {index % 2 !== 0 ? (
+        <div class="person-image right-image">
+            <div class="custom-team-person">
+                <Image src={person.image} alt={`Portrait of ${person.name}, ${person.role} at Clinic 27 Chiropractic Sydney CBD`} class="team-person-image" />
+                <p class="team-person-name">{person.name}</p>
+                <p class="team-person-title">{person.role}</p>
+            </div>
+        </div>
+    ) : <></>}
+</div>
+
+<style>
+    .team-person-more {
+        display: flex;
+        gap: 4rem;
+        align-items: flex-start;
+        padding: 2rem 0;
+        margin-bottom: 2rem;
+    }
+
+    .person-details {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    .person-image {
+        flex: 0 0 auto;
+    }
+    
+    .custom-team-person {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 0.5rem;
+        text-align: center;
+        width: 100%;
+    }
+    
+    .team-person-name {
+        color: var(--purple);
+        font-weight: 600;
+        margin: 0.5rem 0 0 0;
+    }
+    
+    .team-person-title {
+        font-size: 1rem;
+        margin: 0;
+        color: #333;
+    }
+    
+    .team-person-image {
+        width: 250px;
+        height: 250px;
+        object-fit: contain;
+    }
+
+    h2 {
+        font-size: 1.2rem;
+        margin: 0;
+        font-weight: 800;
+    }
+
+    p {
+        font-size: 1rem;
+        line-height: 20px;
+        margin: 0;
+        color: #333;
+    }
+
+    .button-container {
+        width: 40%;
+    }
+
+    @media (max-width: 1200px) {
+        .button-container {
+            width: 100%;
+        }
+    }
+    
+    @media (max-width: 900px) {
+        .team-person-more {
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 2rem;
+        }
+
+        .left-image, .right-image {
+            order: 1;
+        }
+
+        .person-details {
+            order: 2;
+        }
+
+        h2, p:not(.team-person-name):not(.team-person-title) {
+            text-align: center !important;
+        }
+
+        p {
+            font-size: 0.8rem;
+        }
+        
+        .team-person-name, .team-person-title {
+            display: none;
+        }
+        
+        .team-person-image {
+            width: 200px;
+            height: 200px;
+        }
+        
+        .button-container {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            align-self: center !important;
+        }
+    }
+</style>

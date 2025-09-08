@@ -1,0 +1,172 @@
+---
+import ParagraphWithHeader from './ParagraphWithHeader.astro';
+import YoutubeVideo from './YoutubeVideo.astro';
+import BookButton from './BookButton.astro';
+import UnderlineHeader from './BookUnderlineHeader.astro';
+---
+<section class="sales-pitch">
+    <h3 class="section-title">How We Can Help You</h3>
+    <div class="top-section"> 
+        <div class="top-text-section">
+            <ParagraphWithHeader text="Experience relief from back and spine pain, including issues like lower back degeneration in the lumbar region. Our treatment improves mobility, reduces discomfort, and supports greater physical activity. We treat even challenging cases and difficult adjustments." header="Back and spine pain"/>
+            <ParagraphWithHeader text="Improved posture can lead to your better overall health, increased energy, and reduced strain on the body. Our treatments focus on correcting posture-related imbalances, helping you achieve proper alignment and prevent long-term complications." header="All posture related problems"/>
+        </div>
+        <YoutubeVideo videoId="https://www.youtube.com/embed/n2hiC9-gGTI?si=VNkyQAZ1lG5Sz-Q6" fullWidth />
+    </div>
+    <div class="primary-button-wrapper">
+        <BookButton text="Get in touch with the experts" href="tel:0280597743" centerText={true}/>
+    </div>
+    <div class="mid-section">
+        <ParagraphWithHeader header="Chronic Pain Relief" text="Chronic pain, whether it affects the feet, knees, legs, lower back, arms, or neck, can be effectively managed through targeted treatments. You can experience relief not only from old injuries and traumas but also from stress, aches, and tension caused by daily life." />
+        <ParagraphWithHeader header="Achieving Overall Health Goals" text="Incorporating chiropractic care as part of a holistic approach can help you maintain balance, mobility, and overall health. Regular treatments support your body's natural ability to function optimally, ensuring ongoing wellness and helping achieve long-term health goals." />
+        <ParagraphWithHeader header="Sports Injuries" text="Recover faster and return to your activities with improved strength and mobility. Our care focuses on addressing overuse injuries, improving joint function, and relieving pain to enhance performance and prevent future setbacks, keeping you on track toward your fitness and life goals." />
+        <ParagraphWithHeader header="EndoNasal Cranial Correction" text="While ECC™ is a well-known effective method for helping bring the body back into proper alignment, it should only be applied by experienced chiropractors. Even your posture and the symmetry of your face and head can benefit from this treatment." />
+        <ParagraphWithHeader header="Headaches and Vertigo" text="If you experience headaches and vertigo, you can reduce dizziness, pain, and discomfort with our chiropractic care. Our patients quickly notice an overall increase in their sense of well-being and body confidence, enjoying improved balance and comfort." />
+        <div class="button-container">
+                <BookButton text="Call Us to Start Your Wellness Journey" href="tel:0280597743" centerText={true}/>
+        </div>
+    </div>
+    <UnderlineHeader text="How we are different?" />
+    <div class="bottom-section">
+        <div class="bottom-text-section">
+            <ParagraphWithHeader blackText header="We Use a Unique, Groundbreaking Method" text="We're one of the pioneers of Advanced Biostructural Correction (ABC) ™in Australia. This technique helps by removing mechanical stress from your body's skeletal, muscular and tissue structures. We're also using advanced Core Score technology to measure the areas of concern." />
+            <ParagraphWithHeader blackText header="All Our Plans Are Tailored to Your Needs" text="Each of our clients has a unique body, a unique set of symptoms and a unique set of needs. Once we've established an overall picture of the life you lead, we'll develop a personalised care plan that is responsive to your lifestyle and health care goals."/>
+            <ParagraphWithHeader blackText header="The Clinic Owner is a Published Author" text="Dr. Hooman Zahedi is a published author whose book has earned a 5-star rating on Amazon. Known for his straightforward approach, he shares valuable insights into chiropractic care and health, reflecting his dedication to empowering patients with knowledge and effective solutions."/>
+        </div>
+        <div class="bottom-video-section">
+            <YoutubeVideo videoId="https://www.youtube.com/embed/XvYeHDnvfPw?si=vCmk0R19H5aEULgS" fullWidth />
+            <div class="bottom-button-wrapper">
+                <BookButton text="Call us to book an appointment" href="tel:0280597743" centerText={true} />
+            </div>
+        </div>
+    </div>
+</section>
+<style>
+    .sales-pitch{
+        background: linear-gradient(180deg, var(--purple) 50%, white );
+        color: white;
+        padding: 3rem 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .section-title {
+        color: white;
+        margin-bottom: 1rem;
+        font-weight: 800;
+    }
+    
+    .top-section {
+        display: flex;
+        flex-direction: row;
+        gap: 1rem;
+        margin: 3rem 0;
+        max-width: 60%;
+    }
+    
+    .top-text-section {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        width: 100%;
+    }
+    
+    .primary-button-wrapper {
+        margin-bottom: 2rem;
+    }
+    
+    .mid-section {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto auto auto;
+        gap: 2rem;
+        max-width: 60%;
+        margin: 3rem 0;
+    }
+    
+    .button-container {
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-end;
+    }
+    
+    .bottom-section {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+        max-width: 60%;
+    }
+    
+    .bottom-text-section {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+    
+    .bottom-video-section {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+    
+    .bottom-button-wrapper {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    
+    @media (max-width: 900px) {
+        .sales-pitch {
+            padding: 4rem;
+            padding-top: 8rem;
+            background-image: url('/sales_pitch_bg.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+        
+        .section-title {
+            font-size: 1.5rem;
+            text-align: center;
+            margin-bottom: 0.5rem;
+        }
+        
+        .top-section {
+            flex-direction: column;
+            margin: 1.5rem 0;
+            max-width: 100%;
+        }
+        
+        .mid-section {
+            grid-template-columns: 1fr;
+            max-width: 100%;
+            margin: 1.5rem 0;
+        }
+        
+        .button-container {
+            justify-content: center;
+            grid-column: 1;
+            margin-top: 1rem;
+        }
+        
+        .bottom-section {
+            grid-template-columns: 1fr;
+            max-width: 100%;
+        }
+        
+        .bottom-text-section {
+            order: 2;
+        }
+        
+        .bottom-video-section {
+            order: 1;
+        }
+    }
+</style>
