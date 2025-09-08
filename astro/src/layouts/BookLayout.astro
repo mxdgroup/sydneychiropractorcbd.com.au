@@ -15,10 +15,6 @@ const { title } = Astro.props;
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
-		<!-- Google Fonts -->
-		<link rel="preconnect" href="https://fonts.googleapis.com">
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-		<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
 		<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
 
 		<!-- Open Graph / Facebook -->
@@ -71,7 +67,7 @@ const { title } = Astro.props;
 		}
 		</script>
 	</head>
-	<body class="min-h-screen bg-white font-[Inter,system-ui,sans-serif]">
+	<body class="min-h-screen bg-white font-sans">
 		<slot />
 		<style is:global>
 			/* Only CSS custom properties for booking page components */
