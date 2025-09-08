@@ -74,6 +74,7 @@ const { title } = Astro.props;
 	<body class="min-h-screen bg-white font-[Inter,system-ui,sans-serif]">
 		<slot />
 		<style is:global>
+			/* Only CSS custom properties for booking page components */
 			:root {
 				--primary-blue: rgb(0, 86, 179);
 				--primary-pink: rgba(223,47,109);
@@ -81,41 +82,6 @@ const { title } = Astro.props;
 				--text-dark: #333333;
 				--text-light: #ffffff;
 				--link-hover: #0e1346;
-			}
-			
-			* {
-				margin: 0;
-				padding: 0;
-				box-sizing: border-box;
-			}
-			
-			html {
-				font-family: 'Inter', system-ui, sans-serif;
-				background: #ffffff;
-			}
-
-			img {
-				max-width: 100%;
-				height: auto;
-			}
-
-			.container {
-				max-width: 60%;
-				margin: 0 auto;
-				padding: 1rem 1rem;
-			}
-
-			button{
-				border: none;
-				cursor: pointer;
-			}
-
-			@media (max-width: 480px) {
-				.container{
-					max-width: 100%;
-					margin: 0 auto;
-					padding: 1rem 1rem;
-				}
 			}
 		</style>
 	</body>
