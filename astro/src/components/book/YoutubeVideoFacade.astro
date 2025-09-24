@@ -99,10 +99,11 @@ const thumbnailUrl = `https://img.youtube.com/vi/${extractedVideoId}/maxresdefau
         width: 100%;
         height: 100%;
         background: rgba(0, 0, 0, 0.8);
-        display: flex;
+        display: none;
         justify-content: center;
         align-items: center;
-        z-index: 3;
+        z-index: 10;
+        border-radius: 8px;
     }
 
     .loading-spinner {
@@ -123,6 +124,11 @@ const thumbnailUrl = `https://img.youtube.com/vi/${extractedVideoId}/maxresdefau
         width: 100%;
         height: 100%;
         border: 0;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 5;
+        border-radius: 8px;
     }
 
     @media (max-width: 480px) {
@@ -151,10 +157,16 @@ const thumbnailUrl = `https://img.youtube.com/vi/${extractedVideoId}/maxresdefau
                 
                 if (!videoUrl || !loadingDiv || !thumbnailDiv) return;
                 
-                // Show loading spinner
+                // Prevent multiple clicks
+                facade.removeEventListener('click', clickHandler);
+                
+                // Show loading spinner briefly
                 loadingDiv.style.display = 'flex';
                 
-                // Create iframe
+                // Hide thumbnail immediately and show loading
+                thumbnailDiv.style.opacity = '0';
+                
+                // Create and configure iframe
                 const iframe = document.createElement('iframe');
                 iframe.className = 'youtube-facade-iframe';
                 iframe.src = videoUrl + '&autoplay=1';
@@ -164,16 +176,12 @@ const thumbnailUrl = `https://img.youtube.com/vi/${extractedVideoId}/maxresdefau
                 iframe.referrerPolicy = 'strict-origin-when-cross-origin';
                 iframe.allowFullscreen = true;
                 
-                // Replace facade with iframe when loaded
-                iframe.onload = function() {
-                    loadingDiv.style.display = 'none';
-                    thumbnailDiv.style.display = 'none';
+                // Replace the facade content with iframe after a brief moment
+                setTimeout(() => {
+                    facade.innerHTML = '';
                     facade.appendChild(iframe);
-                };
-                
-                // Remove click handler to prevent multiple loads
-                facade.style.cursor = 'default';
-                facade.removeEventListener('click', clickHandler);
+                    facade.style.cursor = 'default';
+                }, 500);
             };
             
             facade.addEventListener('click', clickHandler);
