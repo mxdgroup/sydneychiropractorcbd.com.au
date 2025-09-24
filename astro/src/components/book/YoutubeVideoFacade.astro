@@ -13,7 +13,14 @@ const extractVideoId = (url: string): string => {
 };
 
 const extractedVideoId = videoId ? extractVideoId(videoId) : '';
-const thumbnailUrl = `https://img.youtube.com/vi/${extractedVideoId}/maxresdefault.jpg`;
+
+// Use medium quality thumbnail (480x360) instead of maxresdefault (1280x720)
+// This is much closer to our actual display size and saves significant bandwidth
+const thumbnailUrl = `https://img.youtube.com/vi/${extractedVideoId}/hqdefault.jpg`;
+const thumbnailUrlWebP = `https://img.youtube.com/vi/${extractedVideoId}/hqdefault.webp`;
+
+// Fallback to standard quality (320x180) for even smaller size on mobile
+const thumbnailUrlMobile = `https://img.youtube.com/vi/${extractedVideoId}/mqdefault.jpg`;
 ---
 
 <div 
@@ -24,10 +31,14 @@ const thumbnailUrl = `https://img.youtube.com/vi/${extractedVideoId}/maxresdefau
 >
     <div class="youtube-facade-thumbnail">
         <img 
-            src={thumbnailUrl} 
+            src={thumbnailUrl}
+            srcset={`${thumbnailUrlMobile} 320w, ${thumbnailUrl} 480w`}
+            sizes="(max-width: 480px) 320px, 480px"
             alt="YouTube video thumbnail"
             loading="lazy"
             decoding="async"
+            width="480"
+            height="360"
         />
         <button class="youtube-facade-play-button" aria-label="Play YouTube video">
             <svg width="68" height="48" viewBox="0 0 68 48" fill="none" xmlns="http://www.w3.org/2000/svg">
