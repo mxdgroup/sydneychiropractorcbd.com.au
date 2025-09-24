@@ -1,6 +1,5 @@
 ---
-import BookLayout from '../layouts/BookLayout.astro';
-import BookHeader from '../components/book/BookHeader.astro';
+import Layout from '../layouts/Layout.astro';
 import BookHero from '../components/book/BookHero.astro';
 import Credentials from '../components/book/Credentials.astro';
 import SalesPitch from '../components/book/SalesPitch.astro';
@@ -10,9 +9,7 @@ import FAQ from '../components/book/FAQ.astro';
 import BookFooter from '../components/book/BookFooter.astro';
 ---
 
-<BookLayout  title="Book Appointment | Sydney Chiropractor CBD">
-
-  <BookHeader />
+<Layout title="Book Appointment | Sydney Chiropractor CBD">
 
   <BookHero />
 
@@ -27,4 +24,4 @@ import BookFooter from '../components/book/BookFooter.astro';
   <FAQ/>
 
   <BookFooter/>
-</BookLayout>
+</Layout>
