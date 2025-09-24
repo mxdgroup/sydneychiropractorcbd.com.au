@@ -1,0 +1,182 @@
+---
+interface Props {
+    videoId?: string;
+    fullWidth?: boolean;
+}
+
+const { videoId, fullWidth = false }: Props = Astro.props;
+
+// Extract YouTube video ID from the full URL
+const extractVideoId = (url: string): string => {
+    const match = url.match(/(?:youtube\.com\/embed\/|youtu\.be\/)([^?&"'>]+)/);
+    return match ? match[1] : '';
+};
+
+const extractedVideoId = videoId ? extractVideoId(videoId) : '';
+const thumbnailUrl = `https://img.youtube.com/vi/${extractedVideoId}/maxresdefault.jpg`;
+---
+
+<div 
+    class="youtube-facade-container" 
+    style={`width: ${fullWidth ? '100%' : '50%'}`}
+    data-video-id={extractedVideoId}
+    data-video-url={videoId}
+>
+    <div class="youtube-facade-thumbnail">
+        <img 
+            src={thumbnailUrl} 
+            alt="YouTube video thumbnail"
+            loading="lazy"
+            decoding="async"
+        />
+        <button class="youtube-facade-play-button" aria-label="Play YouTube video">
+            <svg width="68" height="48" viewBox="0 0 68 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M66.52 7.74C65.11 2.88 61.54 0 56.89 0H11.11C6.46 0 2.89 2.88 1.48 7.74C0 12.6 0 24 0 24S0 35.4 1.48 40.26C2.89 45.12 6.46 48 11.11 48H56.89C61.54 48 65.11 45.12 66.52 40.26C68 35.4 68 24 68 24S68 12.6 66.52 7.74Z" fill="#FF0000"/>
+                <path d="M45 24L27 14V34L45 24Z" fill="white"/>
+            </svg>
+        </button>
+    </div>
+    <div class="youtube-facade-loading" style="display: none;">
+        <div class="loading-spinner"></div>
+    </div>
+</div>
+
+<style>
+    .youtube-facade-container {
+        height: 20rem;
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        cursor: pointer;
+        border-radius: 8px;
+        overflow: hidden;
+        background: #000;
+    }
+
+    .youtube-facade-thumbnail {
+        width: 100%;
+        height: 100%;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .youtube-facade-thumbnail img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: opacity 0.3s ease;
+    }
+
+    .youtube-facade-play-button {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background: none;
+        border: none;
+        cursor: pointer;
+        transition: transform 0.2s ease, opacity 0.2s ease;
+        z-index: 2;
+    }
+
+    .youtube-facade-play-button:hover {
+        transform: translate(-50%, -50%) scale(1.1);
+        opacity: 0.9;
+    }
+
+    .youtube-facade-container:hover .youtube-facade-thumbnail img {
+        opacity: 0.8;
+    }
+
+    .youtube-facade-loading {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.8);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 3;
+    }
+
+    .loading-spinner {
+        width: 40px;
+        height: 40px;
+        border: 3px solid #f3f3f3;
+        border-top: 3px solid #ff0000;
+        border-radius: 50%;
+        animation: spin 1s linear infinite;
+    }
+
+    @keyframes spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+    }
+
+    .youtube-facade-iframe {
+        width: 100%;
+        height: 100%;
+        border: 0;
+    }
+
+    @media (max-width: 480px) {
+        .youtube-facade-container {
+            width: 100% !important;
+            height: 15rem;
+        }
+        
+        .youtube-facade-play-button svg {
+            width: 50px;
+            height: 36px;
+        }
+    }
+</style>
+
+<script>
+    // Client-side script to handle YouTube facade loading
+    document.addEventListener('DOMContentLoaded', function() {
+        const facades = document.querySelectorAll('.youtube-facade-container') as NodeListOf<HTMLElement>;
+        
+        facades.forEach((facade: HTMLElement) => {
+            const clickHandler = function(this: HTMLElement) {
+                const videoUrl = this.dataset.videoUrl;
+                const loadingDiv = this.querySelector('.youtube-facade-loading') as HTMLElement;
+                const thumbnailDiv = this.querySelector('.youtube-facade-thumbnail') as HTMLElement;
+                
+                if (!videoUrl || !loadingDiv || !thumbnailDiv) return;
+                
+                // Show loading spinner
+                loadingDiv.style.display = 'flex';
+                
+                // Create iframe
+                const iframe = document.createElement('iframe');
+                iframe.className = 'youtube-facade-iframe';
+                iframe.src = videoUrl + '&autoplay=1';
+                iframe.title = 'YouTube video player';
+                iframe.frameBorder = '0';
+                iframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share';
+                iframe.referrerPolicy = 'strict-origin-when-cross-origin';
+                iframe.allowFullscreen = true;
+                
+                // Replace facade with iframe when loaded
+                iframe.onload = function() {
+                    loadingDiv.style.display = 'none';
+                    thumbnailDiv.style.display = 'none';
+                    facade.appendChild(iframe);
+                };
+                
+                // Remove click handler to prevent multiple loads
+                facade.style.cursor = 'default';
+                facade.removeEventListener('click', clickHandler);
+            };
+            
+            facade.addEventListener('click', clickHandler);
+        });
+    });
+</script>
