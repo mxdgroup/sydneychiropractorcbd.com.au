@@ -21,6 +21,7 @@ const treatmentCollection = defineCollection({
     pubDate: z.date(),
     heroImage: z.string(),
     secondImage: z.string().optional(),
+    imageName: z.string().optional(),
     tags: z.array(z.string()).default([]),
     author: z.string().default('Sydney Chiropractor CBD'),
   }),

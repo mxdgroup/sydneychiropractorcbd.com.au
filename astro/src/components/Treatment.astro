@@ -15,13 +15,14 @@ const { treatment } = Astro.props;
 const { Content } = await treatment.render();
 
 // Generate image filename from treatment title
-const generateImageName = (title: string) => {
-  return title.toLowerCase().split(' ').join('-');
+const generateImageName = (name: string) => {
+  return name.toLowerCase().split(' ').join('-');
 };
 
 const topExtension = 'jpg';
 const bottomExtension = 'png';
-const imageName = generateImageName(treatment.data.title);
+const imageNameSource = treatment.data.imageName ?? treatment.data.title;
+const imageName = generateImageName(imageNameSource);
 const normalImagePath = `/treatments/normal/${imageName}.${topExtension}`;
 const bottomImagePath = `/treatments/bottom/${imageName}.${bottomExtension}`;
 
@@ -30,7 +31,7 @@ const allTreatments = await getCollection('treatments');
 const carouselTreatments: CarouselItem[] = allTreatments.map(t => ({
     type: 'treatment',
     title: t.data.title,
-    imageUrl: `/treatments/normal/${generateImageName(t.data.title)}.${topExtension}`,
+    imageUrl: `/treatments/normal/${generateImageName(t.data.imageName ?? t.data.title)}.${topExtension}`,
     href: `/${t.slug}/`
 }));
 
@@ -42,7 +43,9 @@ const customMetaData: Record<string, { title: string; description?: string; keyw
     keywords: 'posture treatment sydney'
   },
   'endonasal-cranial-correction-treatment-sydney-cbd': {
-    title: 'Pregnancy Chiropractor | Expert Chiropractic Care in Sy'
+    title: 'EndoNasal Cranial Correction Treatment Sydney CBD',
+    description: 'Clinic 27 use the Endonasal Cranial Correction technique which specifically targets cranial bones that are out of place to remove discomfort.',
+    keywords: 'endonasal cranial correction sydney'
   },
   'headaches-migraines-treatment-sydney-cbd': {
     title: 'Migraine Treatment Sydney | Expert Chiropractic Care',
