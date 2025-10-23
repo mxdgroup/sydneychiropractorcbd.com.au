@@ -38,7 +38,8 @@ const phoneImage = await getImage({src: heroBgPhone, format: 'png'});
     target="_blank"
     rel="noopener noreferrer"
     class="absolute -bottom-20 left-2/4 hidden lg:flex rounded-full w-[250px] h-[250px] items-center justify-center cursor-pointer"
-    onclick="gtag('event', 'book_appointment_clicked')">
+    onclick="if(typeof posthog !== 'undefined'){posthog.capture('book_appointment_clicked');}if(typeof gtag !== 'undefined'){gtag('event', 'book_appointment_clicked');}if(typeof dataLayer !== 'undefined'){dataLayer.push({'event': 'book_appointment_clicked'});}"
+    >
         <Image src="/pink-circle.webp" alt="Book now" loading="eager" width={250} height={250} class="rounded-full" />
         <div class="absolute inset-0 flex flex-col items-center justify-center text-white text-center">
             <div class="text-3xl font-bold">BOOK</div>

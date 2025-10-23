@@ -17,8 +17,15 @@ export const analyticsConfig = {
   
   // Google Tag Manager
   googleTagManager: {
-    enabled: false, // Set to true to enable Google Tag Manager
-    containerId: 'GTM-XXXXXXX', // Replace with your GTM Container ID
+    enabled: true, // Set to true to enable Google Tag Manager
+    containerId: 'GTM-WZLQ9N7', // Replace with your GTM Container ID
+  },
+  
+  // PostHog
+  posthog: {
+    enabled: true, // Set to true to enable PostHog
+    apiKey: 'phc_ouzZokwmcnIr4PXJXJLDBILtIBzdUJIGTP519V6n511', // Replace with your PostHog API Key
+    apiHost: 'https://app.posthog.com', // Or your self-hosted instance URL
   },
   
   // Hotjar

@@ -6,14 +6,17 @@ interface Props {
 }
 
 const { text, href, centerText } = Astro.props;
+
+// Tracking function that sends to both PostHog and GTM
+const trackingScript = `if(typeof posthog !== 'undefined'){posthog.capture('book_appointment_clicked');}if(typeof gtag !== 'undefined'){gtag('event', 'book_appointment_clicked');}if(typeof dataLayer !== 'undefined'){dataLayer.push({'event': 'book_appointment_clicked'});}`;
 ---
 {
     href ? (
-        <a href="tel:0280597743" target="_blank" class={`inline-block bg-primary-pink text-white px-6 py-3 no-underline font-semibold text-base transition-colors duration-300 ease-in-out border-none cursor-pointer capitalize z-10 relative hover:bg-[rgb(181,48,94)] max-[480px]:text-sm max-[480px]:w-full max-[400px]:text-xs max-[400px]:h-fit ${centerText ? 'text-center' : ''}`}>
+        <a href="tel:0280597743" target="_blank" class={`inline-block bg-primary-pink text-white px-6 py-3 no-underline font-semibold text-base transition-colors duration-300 ease-in-out border-none cursor-pointer capitalize z-10 relative hover:bg-[rgb(181,48,94)] max-[480px]:text-sm max-[480px]:w-full max-[400px]:text-xs max-[400px]:h-fit ${centerText ? 'text-center' : ''}`} onclick={trackingScript}>
             {text}
         </a>
     ) : (
-        <button class={`inline-block bg-primary-pink text-white px-6 py-3 no-underline font-semibold text-base transition-colors duration-300 ease-in-out border-none cursor-pointer capitalize z-10 relative hover:bg-[rgb(181,48,94)] max-[480px]:text-sm max-[480px]:w-full max-[400px]:text-xs max-[400px]:h-fit ${centerText ? 'text-center' : ''}`}>
+        <button class={`inline-block bg-primary-pink text-white px-6 py-3 no-underline font-semibold text-base transition-colors duration-300 ease-in-out border-none cursor-pointer capitalize z-10 relative hover:bg-[rgb(181,48,94)] max-[480px]:text-sm max-[480px]:w-full max-[400px]:text-xs max-[400px]:h-fit ${centerText ? 'text-center' : ''}`} onclick={trackingScript}>
             {text}
         </button>
     )

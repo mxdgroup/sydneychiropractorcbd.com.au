@@ -44,7 +44,21 @@ Analytics code can be added in two places in `src/layouts/Layout.astro`:
 
 **Code Location:** Head section (add if needed)
 
-### 4. Hotjar
+### 4. PostHog
+
+**Setup:**
+1. Go to [PostHog](https://posthog.com/) or use your self-hosted instance
+2. Create a new project or use existing one
+3. Get your API Key
+4. The PostHog script is already added to `Layout.astro`
+5. Replace `YOUR_POSTHOG_API_KEY` in `Layout.astro` (line 144)
+6. Update the `apiHost` if using self-hosted PostHog
+
+**Code Location:** Head section, lines 141-146
+
+**Note:** PostHog tracking is already integrated into all book buttons via the event `book_appointment_clicked`.
+
+### 5. Hotjar
 
 **Setup:**
 1. Go to [Hotjar](https://www.hotjar.com/)
@@ -86,9 +100,30 @@ export const analyticsConfig = {
   facebookPixel: {
     enabled: true,
     pixelId: '123456789',
+  },
+  googleTagManager: {
+    enabled: true,
+    containerId: 'GTM-WZLQ9N7',
+  },
+  posthog: {
+    enabled: true,
+    apiKey: 'YOUR_POSTHOG_API_KEY',
+    apiHost: 'https://app.posthog.com',
   }
 };
 ```
+
+## 📍 Book Appointment Tracking
+
+All "Book Appointment" buttons across the site automatically track clicks with the event `book_appointment_clicked` to:
+- **PostHog**: `posthog.capture('book_appointment_clicked')`
+- **Google Tag Manager**: `dataLayer.push({'event': 'book_appointment_clicked'})`
+- **Google Analytics**: `gtag('event', 'book_appointment_clicked')`
+
+This tracking is implemented in:
+- `PrimaryButton.astro` component (supports custom tracking events)
+- `BookButton.astro` component (all instances)
+- Individual book buttons in `Nav.astro`, `HomeHero.astro`, and `HeaderImage.astro`
 
 ## 🔒 Privacy Compliance
 
