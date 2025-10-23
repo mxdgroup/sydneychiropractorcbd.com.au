@@ -113,7 +113,9 @@ export const analyticsConfig = {
 };
 ```
 
-## 📍 Book Appointment Tracking
+## 📍 Event Tracking
+
+### Book Appointment Tracking
 
 All "Book Appointment" buttons across the site automatically track clicks with the event `book_appointment_clicked` to:
 - **PostHog**: `posthog.capture('book_appointment_clicked')`
@@ -122,8 +124,23 @@ All "Book Appointment" buttons across the site automatically track clicks with t
 
 This tracking is implemented in:
 - `PrimaryButton.astro` component (supports custom tracking events)
-- `BookButton.astro` component (all instances)
 - Individual book buttons in `Nav.astro`, `HomeHero.astro`, and `HeaderImage.astro`
+- Calendar/booking link in `LeftLinks.astro`
+- `HomeTeam.astro` book button
+
+### Call/Phone Tracking
+
+All "Call Us" buttons and phone number links track clicks with the event `call_clicked` to:
+- **PostHog**: `posthog.capture('call_clicked')`
+- **Google Tag Manager**: `dataLayer.push({'event': 'call_clicked'})`
+- **Google Analytics**: `gtag('event', 'call_clicked')`
+
+This tracking is implemented in:
+- `BookButton.astro` component (all phone call instances)
+- Call button in `Nav.astro` mobile menu
+- Phone link icon in `LeftLinks.astro`
+- Phone numbers in `Header.astro` (both Clinic 27 and Complete Chiropractic)
+- "Call Us" buttons in `BookHero.astro` and `BookAnAppotiment.astro`
 
 ## 🔒 Privacy Compliance
 
