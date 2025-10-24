@@ -1,0 +1,65 @@
+---
+import "../global.css";
+import { Image } from 'astro:assets';
+import logo from '../../public/logo-header.webp';
+---
+
+<style>
+  .nav-link {
+    position: relative;
+    text-decoration: none;
+  }
+  
+  .nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 0;
+    height: 3px;
+    background-color: #1F2BA3;
+    transition: width 0.3s ease;
+  }
+  
+  .nav-link:hover::after {
+    width: 100%;
+  }
+</style>
+
+<nav class="pt-4 pb-0 md:py-8 w-full transition-all duration-300">
+  <div class="container mx-auto px-0 sm:px-6 lg:px-8">
+    <!-- Mobile Nav - Book Page Version -->
+    <div class="md:hidden flex justify-between items-center px-4 gap-2 mb-4">
+        <a href="/">
+            <Image 
+              src={logo} 
+              alt="Clinic 27 Logo" 
+              class="w-auto h-12"
+              widths={[48, 96, 192]}
+              sizes="48px"
+              formats={['webp', 'avif']}
+            />
+        </a>
+        <button id="hamburger" aria-label="Open Menu" class="text-custom-pink hover:text-custom-purple font-bold text-lg transition-colors duration-300">
+            Menu
+        </button>
+    </div>
+
+    <!-- Desktop Nav - Book Page Version -->
+    <div class="hidden md:flex justify-between items-center px-4">
+        <a href="/">
+            <Image 
+              src={logo} 
+              alt="Clinic 27 Logo" 
+              class="w-auto h-20"
+              widths={[80, 160, 320]}
+              sizes="160px"
+              formats={['webp', 'avif']}
+            />
+        </a>
+        <button id="menu-button" class="nav-link text-lg font-bold text-custom-pink hover:text-custom-purple transition-colors duration-300">
+            MENU
+        </button>
+    </div>
+  </div>
+</nav>

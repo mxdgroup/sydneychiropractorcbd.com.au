@@ -1,5 +1,10 @@
 ---
-import Layout from '../layouts/Layout.astro';
+import "../global.css";
+import Header from "../components/Header.astro";
+import Nav from "../components/Nav.astro";
+import BookNav from "../components/BookNav.astro";
+import Footer from "../components/Footer.astro";
+import LeftLinks from "../components/LeftLinks.astro";
 import BookHero from '../components/book/BookHero.astro';
 import Credentials from '../components/book/Credentials.astro';
 import SalesPitch from '../components/book/SalesPitch.astro';
@@ -7,21 +12,159 @@ import MainSection from '../components/book/MainSection.astro';
 import WhatElseWeOffer from '../components/book/WhatElseWeOffer.astro';
 import FAQ from '../components/book/FAQ.astro';
 import BookFooter from '../components/book/BookFooter.astro';
+
+const title = "Book Appointment | Sydney Chiropractor CBD";
+const metaDescription = "Book your appointment at Clinic 27 Chiropractic in Sydney CBD. Expert chiropractic care with over 30 years of experience using Advanced Biostructural Correction.";
 ---
 
-<Layout title="Book Appointment | Sydney Chiropractor CBD">
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    
+    <!-- Favicon Configuration -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    
+    <!-- Apple Touch Icon -->
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    
+    <!-- Android Chrome Icons -->
+    <link rel="icon" type="image/png" sizes="192x192" href="/android-chrome-192x192.png" />
+    <link rel="icon" type="image/png" sizes="512x512" href="/android-chrome-512x512.png" />
+    
+    <!-- Web App Manifest -->
+    <link rel="manifest" href="/site.webmanifest" />
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content={metaDescription} />
+    <meta name="keywords" content="chiropractic, Sydney CBD, back pain, neck pain, posture correction, Advanced Biostructural Correction, ABC, chiropractor, spine health, book appointment" />
+    <link rel="canonical" href={Astro.url} />
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={metaDescription} />
+    <meta property="og:url" content={Astro.url} />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Clinic 27 - Sydney CBD Chiropractors" />
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={metaDescription} />
 
-  <BookHero />
+    <!-- Critical CSS - Inline for immediate rendering -->
+    <style is:inline>
+      /* Critical CSS for above-the-fold content */
+      body { margin: 0; font-family: system-ui, -apple-system, sans-serif; }
+      .overflow-x-hidden { overflow-x: hidden; }
+      .container { width: 100%; margin: 0 auto; padding: 0 1rem; }
+    </style>
+    
+    <!-- Non-critical CSS - Load asynchronously -->
+    <link rel="preload" href="/_astro/global.css" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+    <noscript><link rel="stylesheet" href="/_astro/global.css" /></noscript>
+    
+    <!-- PostHog Analytics -->
+    <script>
+      !function(t,e){var o,n,p,r;e.__SV||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement("script")).type="text/javascript",p.async=!0,p.src=s.api_host+"/static/array.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],u.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},u.people.toString=function(){return u.toString(1)+".people (stub)"},o="capture identify alias people.set people.set_once set_config register register_once unregister opt_out_capturing has_opted_out_capturing opt_in_capturing reset isFeatureEnabled onFeatureFlags getFeatureFlag getFeatureFlagPayload reloadFeatureFlags group updateEarlyAccessFeatureEnrollment getEarlyAccessFeatures getActiveMatchingSurveys getSurveys".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a])},e.__SV=1)}(document,window.posthog||[]);
+      posthog.init('phc_ouzZokwmcnIr4PXJXJLDBILtIBzdUJIGTP519V6n511',{api_host:'https://app.posthog.com'})
+    </script>
 
-  <Credentials />
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-WZLQ9N7');</script>
 
-  <SalesPitch />
-
-  <MainSection/>
-
-  <WhatElseWeOffer/>
-
-  <FAQ/>
-
-  <BookFooter/>
-</Layout>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-DVEN4QQTPM"></script>
+    <script is:inline>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-DVEN4QQTPM',{
+        cookie_domain: 'auto',
+      });
+    </script>
+  </head>
+  <body class="overflow-x-hidden">
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WZLQ9N7"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    
+    <div id="normal-nav" class="hidden">
+      <Header />
+      <Nav />
+    </div>
+    <div id="book-nav">
+      <BookNav />
+    </div>
+    
+    <script>
+      // Switch between book nav and normal nav
+      document.addEventListener('DOMContentLoaded', () => {
+        const bookNav = document.getElementById('book-nav');
+        const normalNav = document.getElementById('normal-nav');
+        const menuButton = document.getElementById('menu-button');
+        const hamburger = document.getElementById('hamburger');
+        
+        const showNormalNav = () => {
+          if (bookNav && normalNav) {
+            bookNav.classList.add('hidden');
+            normalNav.classList.remove('hidden');
+          }
+        };
+        
+        menuButton?.addEventListener('click', showNormalNav);
+        hamburger?.addEventListener('click', showNormalNav);
+      });
+    </script>
+    
+    <!-- Left Links -->
+    <div class="hidden lg:block absolute top-1/2 right-0 z-50">
+      <LeftLinks />
+    </div>
+    
+    <main class="overflow-x-hidden">
+      <BookHero />
+      <Credentials />
+      <SalesPitch />
+      <MainSection/>
+      <WhatElseWeOffer/>
+      <FAQ/>
+      <BookFooter/>
+    </main>
+    
+    <div class="h-40 relative hidden md:flex justify-center pt-10">
+      <div class="mx-auto z-10 grid grid-cols-2 text-white w-2/3 2xl:w-2/5">
+        <div class="bg-custom-pink p-10 flex flex-col justify-center items-start ">
+          <h1 class="text-xl font-bold mb-4">Clinic 27</h1>
+          <p class="text-md mb-2">
+            (02) 8059 7743
+          </p>
+          <p class="text-md">
+            Suite 1, Level 1, 44 Bridge Street, Sydney NSW 2000
+          </p>
+        </div>
+        <div class="bg-custom-purple p-10 flex flex-col justify-center items-start ">
+          <h1 class="text-xl font-bold mb-4">Complete Chiropractic</h1>
+          <p class="text-md mb-2">
+            (02) 9972 0040
+          </p>
+          <p class="text-md">
+            Suite 1/32 Fisher Rd, Dee Why NSW 2099
+          </p>
+        </div>
+      </div>
+    </div>
+    <Footer />
+  </body>
+</html>
