@@ -1,4 +1,6 @@
 ---
+import { Image } from 'astro:assets';
+
 interface Props {
     videoId?: string;
     fullWidth?: boolean;
@@ -30,7 +32,7 @@ const thumbnailUrlMobile = `https://img.youtube.com/vi/${extractedVideoId}/mqdef
     data-video-url={videoId}
 >
     <div class="youtube-facade-thumbnail">
-        <img 
+        <Image 
             src={thumbnailUrl}
             srcset={`${thumbnailUrlMobile} 320w, ${thumbnailUrl} 480w`}
             sizes="(max-width: 480px) 320px, 480px"
