@@ -16,6 +16,297 @@
   to = "/"
   status = 301
 
+# Legacy WordPress paths
+[[redirects]]
+  from = "/book"
+  to = "/book/"
+  status = 301
+
+[[redirects]]
+  from = "/booking"
+  to = "/book/"
+  status = 301
+
+[[redirects]]
+  from = "/booking/"
+  to = "/book/"
+  status = 301
+
+[[redirects]]
+  from = "/wp-admin"
+  to = "/"
+  status = 301
+
+[[redirects]]
+  from = "/wp-login.php"
+  to = "/"
+  status = 301
+
+[[redirects]]
+  from = "/asdfdsa"
+  to = "/"
+  status = 301
+
+[[redirects]]
+  from = "/category/pain/"
+  to = "/blog-overview/"
+  status = 301
+
+[[redirects]]
+  from = "/category/accident-and-injuries/"
+  to = "/blog-overview/"
+  status = 301
+
+[[redirects]]
+  from = "/category/headaches/"
+  to = "/blog-overview/"
+  status = 301
+
+[[redirects]]
+  from = "/category/posture/"
+  to = "/blog-overview/"
+  status = 301
+
+[[redirects]]
+  from = "/category/pregnancy/"
+  to = "/blog-overview/"
+  status = 301
+
+[[redirects]]
+  from = "/category/spinal-health/"
+  to = "/blog-overview/"
+  status = 301
+
+[[redirects]]
+  from = "/category/uncategorized/"
+  to = "/blog-overview/"
+  status = 301
+
+[[redirects]]
+  from = "/workshop/clinic27-workshop-tuesday-7th-september/"
+  to = "/workshops/"
+  status = 301
+
+[[redirects]]
+  from = "/workshop/clinic27-workshop-tuesday-14th-september/"
+  to = "/workshops/"
+  status = 301
+
+[[redirects]]
+  from = "/workshop/clinic27-workshop-tuesday-21st-september/"
+  to = "/workshops/"
+  status = 301
+
+[[redirects]]
+  from = "/workshop/clinic27-workshop-tuesday-31st-august/"
+  to = "/workshops/"
+  status = 301
+
+[[redirects]]
+  from = "/author/eth7u/page/3/"
+  to = "/blog-overview/"
+  status = 301
+
+[[redirects]]
+  from = "/author/eth7u/page/4/"
+  to = "/blog-overview/"
+  status = 301
+
+[[redirects]]
+  from = "/author/seonorthsydney1/"
+  to = "/blog-overview/"
+  status = 301
+
+[[redirects]]
+  from = "/back-pain-treatment-sydney-cbd/tel:0280597743"
+  to = "/back-pain-treatment-sydney-cbd/"
+  status = 301
+
+[[redirects]]
+  from = "/chiropractic-care-for-developmental-concerns-in-children/"
+  to = "/learn-about-your-childs-posture-at-clinic27/"
+  status = 301
+
+[[redirects]]
+  from = "/chiropractic-care-for-pregnancy/"
+  to = "/chiropractic-treatment-for-pregnancy/"
+  status = 301
+
+[[redirects]]
+  from = "/middle-ear-infections/"
+  to = "/blog-overview/"
+  status = 301
+
+[[redirects]]
+  from = "/neck-pain-chiropractor/"
+  to = "/neck-pain/"
+  status = 301
+
+[[redirects]]
+  from = "/one-page-scroll/"
+  to = "/"
+  status = 301
+
+[[redirects]]
+  from = "/our_team/dr-hooman-zahedi/tel:0280597743"
+  to = "/about-clinic27/"
+  status = 301
+
+[[redirects]]
+  from = "/about-clinic27/tel:0280597743"
+  to = "/about-clinic27/"
+  status = 301
+
+[[redirects]]
+  from = "/scoliosis-treatment-sydney-cbd/tel:0280597743"
+  to = "/scoliosis-treatment-sydney-cbd/"
+  status = 301
+
+[[redirects]]
+  from = "/privacy_policy/"
+  to = "/clinic-27-privacy-policy/"
+  status = 301
+
+[[redirects]]
+  from = "/sos_work/3-legged-stool/"
+  to = "/3-legged-stool/"
+  status = 301
+
+[[redirects]]
+  from = "/sos_work/90-off-your-initial-chiropractic-consultation/"
+  to = "/book/"
+  status = 301
+
+[[redirects]]
+  from = "/sos_work/abc-advanced-bio-structural-correction/"
+  to = "/abc-advanced-bio-structural-correction/"
+  status = 301
+
+[[redirects]]
+  from = "/sos_work/about/"
+  to = "/about-clinic27/"
+  status = 301
+
+[[redirects]]
+  from = "/sos_work/add-filter-to-chiropractic-knee-pain-help-explained*"
+  to = "/chiropractic-knee-pain-help-explained/"
+  status = 301
+
+[[redirects]]
+  from = "/sos_work/add-filter-to-contact-us*"
+  to = "/contact-us/"
+  status = 301
+
+[[redirects]]
+  from = "/sos_work/add-filter-to-home*"
+  to = "/"
+  status = 301
+
+[[redirects]]
+  from = "/sos_work/add-filter-to-how-to-treat-aches-pains-chiropractic-care/"
+  to = "/how-to-treat-aches-and-pains/"
+  status = 301
+
+[[redirects]]
+  from = "/sos_work/add-filter-to-workshops*"
+  to = "/workshops/"
+  status = 301
+
+[[redirects]]
+  from = "/sos_work/carpal-tunnel-syndrome-treatment-diagnosis/"
+  to = "/carpal-tunnel-syndrome-treatment-sydney-cbd/"
+  status = 301
+
+[[redirects]]
+  from = "/sos_work/contact-us/"
+  to = "/contact-us/"
+  status = 301
+
+[[redirects]]
+  from = "/sos_work/creative-designers/"
+  to = "/"
+  status = 301
+
+[[redirects]]
+  from = "/sos_work/endonasal-cranial-correction-2/"
+  to = "/endonasal-cranial-correction-treatment-sydney-cbd/"
+  status = 301
+
+[[redirects]]
+  from = "/sos_work/faq/"
+  to = "/faq/"
+  status = 301
+
+[[redirects]]
+  from = "/sos_work/headache-migraine-treatment/"
+  to = "/headaches-migraines-treatment-sydney-cbd/"
+  status = 301
+
+[[redirects]]
+  from = "/sos_work/neck-pain-treatment/"
+  to = "/neck-pain-treatment-sydney-cbd/"
+  status = 301
+
+[[redirects]]
+  from = "/sos_work/pinched-nerve-treatment/"
+  to = "/pinched-nerve-treatment/"
+  status = 301
+
+[[redirects]]
+  from = "/sos_work/posture-support-product/"
+  to = "/posture-treatment-sydney-cbd/"
+  status = 301
+
+[[redirects]]
+  from = "/sos_work/posture-treatment/"
+  to = "/posture-treatment-sydney-cbd/"
+  status = 301
+
+[[redirects]]
+  from = "/sos_work/pregnancy-chiropractic-treatment/"
+  to = "/chiropractic-treatment-for-pregnancy/"
+  status = 301
+
+[[redirects]]
+  from = "/sos_work/privacy-policy/"
+  to = "/clinic-27-privacy-policy/"
+  status = 301
+
+[[redirects]]
+  from = "/sos_work/refer-a-friend/"
+  to = "/contact-us/"
+  status = 301
+
+[[redirects]]
+  from = "/sos_work/sciatica-treatment/"
+  to = "/sciatica-treatment-sydney-cbd/"
+  status = 301
+
+[[redirects]]
+  from = "/sos_work/spinal-decay-symptoms-treatment/"
+  to = "/spinal-decay/"
+  status = 301
+
+[[redirects]]
+  from = "/sos_work/vertigo-treatment/"
+  to = "/vertigo-treatment-sydney-cbd/"
+  status = 301
+
+[[redirects]]
+  from = "/sos_work/videos/"
+  to = "/videos/"
+  status = 301
+
+[[redirects]]
+  from = "/sos_work/workshops/"
+  to = "/workshops/"
+  status = 301
+
+[[redirects]]
+  from = "/sos_work/*"
+  to = "/"
+  status = 301
+
 #Spam Redirects
 [[redirects]]
   from = "/plgnoptmzr_work/*"
