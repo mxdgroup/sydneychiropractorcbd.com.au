@@ -16,12 +16,6 @@ export default defineConfig({
     icon(),
     sitemap({
       customPages: [],
-      i18n: {
-        defaultLocale: 'en',
-        locales: {
-          en: 'en'
-        }
-      },
       serialize(item) {
         return {
           url: item.url,
