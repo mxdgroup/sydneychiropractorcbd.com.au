@@ -16,11 +16,13 @@ export default defineConfig({
     icon(),
     sitemap({
       customPages: [],
+      entryLimit: 50000, // Force single sitemap.xml instead of sitemap-index.xml
+      // @ts-ignore
       serialize(item) {
         return {
-          url: item.url,
+          ...item,
           changefreq: 'weekly',
-          lastmod: new Date(),
+          lastmod: new Date().toISOString(),
           priority: item.url === 'https://sydneychiropractorcbd.com.au/' ? 1.0 : 0.8
         };
       }
