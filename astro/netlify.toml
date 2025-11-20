@@ -16,11 +16,6 @@
   to = "/"
   status = 301
 
-# Sitemap redirect (backward compatibility)
-[[redirects]]
-  from = "/sitemap-index.xml"
-  to = "/sitemap.xml"
-  status = 301
 
 # Legacy WordPress paths
 [[redirects]]

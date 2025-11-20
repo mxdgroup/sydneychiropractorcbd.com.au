@@ -1,7 +1,6 @@
 // @ts-check
 import { defineConfig } from "astro/config";
 import tailwind from "@astrojs/tailwind";
-import sitemap from "@astrojs/sitemap";
 import robotsTxt from "astro-robots-txt";
 
 import icon from "astro-icon";
@@ -10,24 +9,14 @@ import netlify from "@astrojs/netlify/functions";
 
 // https://astro.build/config
 export default defineConfig({
+  // @ts-ignore
   adapter: netlify(),
   integrations: [
     tailwind(), 
     icon(),
-    sitemap({
-      customPages: [],
-      entryLimit: 50000, // Force single sitemap.xml instead of sitemap-index.xml
-      // @ts-ignore
-      serialize(item) {
-        return {
-          ...item,
-          changefreq: 'weekly',
-          lastmod: new Date().toISOString(),
-          priority: item.url === 'https://sydneychiropractorcbd.com.au/' ? 1.0 : 0.8
-        };
-      }
-    }),
-    robotsTxt()
+    robotsTxt({
+      sitemap: 'https://sydneychiropractorcbd.com.au/sitemap.xml'
+    })
   ],
   redirects: {
     "/complete-spinal-health-program/": "/",
