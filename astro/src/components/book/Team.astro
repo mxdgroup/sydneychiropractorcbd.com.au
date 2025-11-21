@@ -6,6 +6,7 @@ import { Image } from 'astro:assets';
 import dr1 from '/public/avatars/doctors/dr1.png';
 import dr2 from '/public/avatars/doctors/dr2.png';
 import dr3 from '/public/avatars/doctors/dr3.png';
+import dr4 from '/public/team/kel.png';
 interface TeamPerson {
     name: string;
     role: string;
@@ -29,9 +30,9 @@ const team: TeamPerson[] = [
     {
         name: "Dr. Angus Phelps",
         role: "Chiropractor",
-        about:["Angus enjoys managing musculoskeletal conditions and improving athletic performance, but also recognises the power of Chiropractic in providing a foundation for good health, both physically and mentally. He offers a pro-active style of healthcare and believes in preventative chiropractic care. He tailors your treatment plan, helping you make informed decisions about your health so you can realise your physical and mental potential.","As a graduate of Macquarie University’s Master of Chiropractic, he is deeply committed to lifelong learning and continual professional development, enabling him to offer you expert chiropractic care."],
+        about:["Angus enjoys managing musculoskeletal conditions and improving athletic performance, but also recognises the power of Chiropractic in providing a foundation for good health, both physically and mentally. He offers a pro-active style of healthcare and believes in preventative chiropractic care. He tailors your treatment plan, helping you make informed decisions about your health so you can realise your physical and mental potential.","As a graduate of Macquarie University's Master of Chiropractic, he is deeply committed to lifelong learning and continual professional development, enabling him to offer you expert chiropractic care."],
         image: dr3
-    }
+    },
 ]
 ---
 <section class="team">
