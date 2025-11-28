@@ -102,7 +102,7 @@ const metaKeywords = customMeta?.keywords;
   {treatment.data.title !== "Cranial Chiropractic" && (
     <>
       <div class="relative w-full">
-        <ScrollCrop src={bottomImagePath} />
+        <ScrollCrop src={bottomImagePath} alt={`${treatment.data.title} treatment at Sydney Chiropractor CBD`} />
         <img src="/rectangle-overlay.webp" alt="Bottom Treatment Image" class="absolute bottom-0 left-0 w-full h-auto z-10 pointer-events-none" />
       </div>
       <div class="relative z-20" style="margin-top: -128px;">
