@@ -32,6 +32,8 @@ export const GET: APIRoute = async () => {
     'videos',
     'workshops',
     '3-legged-stool',
+    'search',
+    // Note: orbit-test and scrollcrop-demo excluded as they are test pages
   ];
 
   // Build sitemap entries
