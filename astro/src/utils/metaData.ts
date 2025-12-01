@@ -107,7 +107,8 @@ const metaDescriptions: Record<string, string> = {
   "//": "Clinic 27 is a chiropractic clinic with experienced chiropractors in Sydney CBD dedicated to the provision of chiropractic care.",
   "/book-now/": "Have a question or would like to book an appointment? Contact the chiropractors at Clinic 27 at 02 8059 7743 or use our online contact form.",
   "/shoulder-pain/": "Overcome Back Pain with Chiropractic Care. While many turn to quick fixes like pain medication, chiropractic care offers better apporach.",
-  "/spine-pain/": "Overcome Back Pain with Chiropractic Care. While many turn to quick fixes like pain medication, chiropractic care offers better apporach."
+  "/spine-pain/": "Overcome Back Pain with Chiropractic Care. While many turn to quick fixes like pain medication, chiropractic care offers better apporach.",
+  "/scrollcrop-demo/": "ScrollCrop Component Demo. Scroll down to see the scroll crop effect in action."
 };
 
 // Base keywords for different page types
