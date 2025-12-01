@@ -1,5 +1,5 @@
 ---
-title: "How to Know If Your Back Pain is Serious – A Quick Guide"
+title: "When is Back Pain Serious?"
 date: 2024-11-05T15:36:08
 slug: "how-to-tell-if-back-pain-is-serious"
 status: "publish"

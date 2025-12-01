@@ -1,5 +1,5 @@
 ---
-title: "What Happens When You Experience Wrist Injury"
+title: "Understanding Wrist Injuries"
 date: 2015-12-02T12:21:00
 slug: "what-happens-to-your-hand-when-you-experience-wrist-injury"
 status: "publish"

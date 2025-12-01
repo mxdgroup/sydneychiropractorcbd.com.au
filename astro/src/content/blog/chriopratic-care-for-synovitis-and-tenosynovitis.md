@@ -1,5 +1,5 @@
 ---
-title: "SYNOVITIS AND TENOSYNOVITIS (JOINT AND TENDON INFLAMMATION)"
+title: "Synovitis and Tenosynovitis Treatment"
 date: 2022-06-27T02:37:00
 slug: "chriopratic-care-for-synovitis-and-tenosynovitis"
 status: "publish"

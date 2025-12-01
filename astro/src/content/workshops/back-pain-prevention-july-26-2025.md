@@ -1,5 +1,5 @@
 ---
-title: "Back Pain Prevention Workshop - July 26, 2025"
+title: "Back Pain Prevention - July 26, 2025"
 description: "Learn effective strategies to prevent back pain and maintain a healthy spine through proper movement and daily habits."
 pubDate: 2025-07-26
 startTime: "10:00 a.m."

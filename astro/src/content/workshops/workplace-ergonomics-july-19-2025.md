@@ -1,5 +1,5 @@
 ---
-title: "Workplace Ergonomics Workshop - July 19, 2025"
+title: "Workplace Ergonomics - July 19, 2025"
 description: "Learn how to set up your workspace for optimal spinal health and prevent workplace injuries. Essential tips for Sydney CBD professionals."
 pubDate: 2025-07-19
 startTime: "2:00 p.m."

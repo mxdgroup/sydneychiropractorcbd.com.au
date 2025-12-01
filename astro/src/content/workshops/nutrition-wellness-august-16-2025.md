@@ -1,5 +1,5 @@
 ---
-title: "Nutrition & Wellness Workshop - August 16, 2025"
+title: "Nutrition & Wellness - August 16, 2025"
 description: "Discover how nutrition affects your musculoskeletal health and learn dietary strategies to support your chiropractic treatment."
 pubDate: 2025-08-16
 startTime: "11:30 a.m."

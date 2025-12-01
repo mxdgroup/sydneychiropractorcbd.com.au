@@ -1,5 +1,5 @@
 ---
-title: "Posture and Pregnancy: Why It Matters for You and Your Baby"
+title: "Posture During Pregnancy"
 date: 2015-08-04T11:34:00
 slug: "learn-about-posture-and-pregnancy-in-sydney-cbd"
 status: "publish"

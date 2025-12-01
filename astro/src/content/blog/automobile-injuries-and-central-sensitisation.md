@@ -1,5 +1,5 @@
 ---
-title: "Automobile Injuries and Central Sensitisation | All You Should Know"
+title: "Car Accidents and Central Sensitisation"
 date: 2022-06-06T01:49:00
 slug: "automobile-injuries-and-central-sensitisation"
 status: "publish"

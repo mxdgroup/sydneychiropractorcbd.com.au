@@ -1,5 +1,5 @@
 ---
-title: "VITAMIN D – WHY THIS SUPER VITAMIN IS VITAL TO OUR HEALTH"
+title: "Why Vitamin D is Essential for Health"
 date: 2022-04-07T01:46:05
 slug: "vitamin-d-super-vitamin-vital-to-health"
 status: "publish"

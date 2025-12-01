@@ -1,5 +1,5 @@
 ---
-title: "Car Accident Injuries: Chiropractic Treatments"
+title: "Car Accident Injury Treatment"
 date: 2018-05-28T12:52:00
 slug: "car-accident-injuries-chiropractic-treatments-2"
 status: "publish"

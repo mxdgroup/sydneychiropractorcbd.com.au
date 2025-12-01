@@ -1,5 +1,5 @@
 ---
-title: "Stress Management & Wellness Workshop - August 2, 2025"
+title: "Stress Management - August 2, 2025"
 description: "Discover how stress affects your body and learn practical techniques for managing stress to improve your overall health and wellbeing."
 pubDate: 2025-08-02
 startTime: "3:30 p.m."

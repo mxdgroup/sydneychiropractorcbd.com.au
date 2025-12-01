@@ -1,5 +1,5 @@
 ---
-title: "Learning the Importance of Good Posture at Clinic 27"
+title: "The Importance of Good Posture"
 date: 2015-08-04T11:31:00
 slug: "learning-the-importance-of-good-posture-at-clinic27"
 status: "publish"

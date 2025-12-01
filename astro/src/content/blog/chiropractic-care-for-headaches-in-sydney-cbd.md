@@ -1,5 +1,5 @@
 ---
-title: "Chiropractic Care for Headaches in Sydney CBD"
+title: "Chiropractic Care for Headaches"
 date: 2019-11-14T13:01:00
 slug: "chiropractic-care-for-headaches-in-sydney-cbd"
 status: "publish"

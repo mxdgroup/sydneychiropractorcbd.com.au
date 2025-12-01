@@ -1,5 +1,5 @@
 ---
-title: "All About The Link Between Emotion and Posture"
+title: "Emotion and Posture: The Connection"
 date: 2019-11-14T12:58:00
 slug: "learn-about-emotion-and-posture-with-chiropractors-in-sydney-city"
 status: "publish"

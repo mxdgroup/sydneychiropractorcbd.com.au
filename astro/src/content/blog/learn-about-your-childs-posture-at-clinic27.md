@@ -1,5 +1,5 @@
 ---
-title: "Learn About Your Child’s Posture at Clinic 27"
+title: "Your Child’s Posture Guide"
 date: 2015-08-04T11:38:00
 slug: "learn-about-your-childs-posture-at-clinic27"
 status: "publish"

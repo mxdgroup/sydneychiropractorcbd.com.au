@@ -1,5 +1,5 @@
 ---
-title: "How to Treat Aches & Pains | Chiropractic Care"
+title: "Treating Aches and Pains"
 date: 2021-09-27T03:51:28
 slug: "how-to-treat-aches-and-pains"
 status: "publish"

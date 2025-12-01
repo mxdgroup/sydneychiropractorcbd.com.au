@@ -1,5 +1,5 @@
 ---
-title: "Movement & Mobility Workshop - August 9, 2025"
+title: "Movement & Mobility - August 9, 2025"
 description: "Learn essential exercises and stretches to improve your mobility, flexibility, and overall movement quality for better health."
 pubDate: 2025-08-09
 startTime: "1:00 p.m."
