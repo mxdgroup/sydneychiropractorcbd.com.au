@@ -1,6 +1,4 @@
 ---
-import { Image } from 'astro:assets';
-
 interface Props {
     videoId?: string;
     fullWidth?: boolean;
@@ -19,7 +17,6 @@ const extractedVideoId = videoId ? extractVideoId(videoId) : '';
 // Use medium quality thumbnail (480x360) instead of maxresdefault (1280x720)
 // This is much closer to our actual display size and saves significant bandwidth
 const thumbnailUrl = `https://img.youtube.com/vi/${extractedVideoId}/hqdefault.jpg`;
-const thumbnailUrlWebP = `https://img.youtube.com/vi/${extractedVideoId}/hqdefault.webp`;
 
 // Fallback to standard quality (320x180) for even smaller size on mobile
 const thumbnailUrlMobile = `https://img.youtube.com/vi/${extractedVideoId}/mqdefault.jpg`;
@@ -32,7 +29,7 @@ const thumbnailUrlMobile = `https://img.youtube.com/vi/${extractedVideoId}/mqdef
     data-video-url={videoId}
 >
     <div class="youtube-facade-thumbnail">
-        <Image 
+        <img 
             src={thumbnailUrl}
             srcset={`${thumbnailUrlMobile} 320w, ${thumbnailUrl} 480w`}
             sizes="(max-width: 480px) 320px, 480px"
