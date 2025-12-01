@@ -12,6 +12,16 @@
 
 # Redirects for better SEO and user experience
 [[redirects]]
+  from = "/blog/*"
+  to = "/:splat"
+  status = 301
+
+[[redirects]]
+  from = "/treatments/*"
+  to = "/:splat"
+  status = 301
+
+[[redirects]]
   from = "/home"
   to = "/"
   status = 301
