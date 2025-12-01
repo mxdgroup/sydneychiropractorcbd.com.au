@@ -108,7 +108,13 @@ const metaDescriptions: Record<string, string> = {
   "/book-now/": "Have a question or would like to book an appointment? Contact the chiropractors at Clinic 27 at 02 8059 7743 or use our online contact form.",
   "/shoulder-pain/": "Overcome Back Pain with Chiropractic Care. While many turn to quick fixes like pain medication, chiropractic care offers better apporach.",
   "/spine-pain/": "Overcome Back Pain with Chiropractic Care. While many turn to quick fixes like pain medication, chiropractic care offers better apporach.",
-  "/scrollcrop-demo/": "ScrollCrop Component Demo. Scroll down to see the scroll crop effect in action."
+  "/scrollcrop-demo/": "ScrollCrop Component Demo. Scroll down to see the scroll crop effect in action.",
+  "/book/": "Book your appointment at Clinic 27 in Sydney CBD. Expert chiropractic care with over 30 years of experience. Advanced Biostructural Correction.",
+  "/orbit-test/": "Orbit diagram component test page for Sydney Chiropractor CBD website development.",
+  "/faq/": "Frequently asked questions about chiropractic care at Clinic 27 in Sydney CBD. Get answers to your questions about our services and treatments.",
+  "/search/": "Search through our chiropractic blog articles and resources. Find information about treatments, conditions, and wellness tips from Sydney Chiropractor CBD.",
+  "/personal-plan/": "Create your personalized chiropractic care plan at Clinic 27. Set your health goals and track your progress with our Sydney CBD chiropractors.",
+  "/3-legged-stool/": "Learn about the 3-legged stool approach to chiropractic care at Clinic 27. Discover how we help you achieve optimal health in Sydney CBD."
 };
 
 // Base keywords for different page types
