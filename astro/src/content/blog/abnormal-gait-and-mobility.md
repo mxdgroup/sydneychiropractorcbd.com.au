@@ -13,6 +13,6 @@ A gait abnormality is characterized as abnormal and uncontrollable difficulty in
 
 Symptoms of gait abnormality are:• Loss of symmetry- unilateral neurological or musculoskeletal disorders• Difficulty initiating gait- Parkinson’s• Dragging foot- footdrop Wide-based gait- cerebellar & B/L knee/hip disease• Circumduction- foot moves in an arc- pelvic muscle weakness & fixed knee joint• Decreased arm swing- Parkinson’s, dementia, paresis• Deviation from path- motor control defect, alcohol
 
-Gait abnormality may be treated in a number of different ways, depending on the cause. However, muscle weakness due to joint weakness appears to be the most common, and Chiropractic care is a great treatment to consider. Clinic 27 will ensure that people who suffer from abnormal gait / mobility to benefit from a program of specific exercise designed for them.
+Gait abnormality may be treated in a number of different ways, depending on the cause. However, muscle weakness due to joint weakness appears to be the most common, and Chiropractic care is a great treatment to consider. Clinic 27 will ensure that people who suffer from abnormal gait / mobility to benefit from a programme of specific exercise designed for them.
 
 Want to learn more on the treatments for Gait abnormality in Chiro Sydney CBD? Ask us how chiropractic care can help you.

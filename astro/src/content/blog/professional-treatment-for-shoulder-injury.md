@@ -17,7 +17,7 @@ The shoulder girdle primarily consists of the scapula (shoulder blade) and the c
 
 ## Common Symptoms of Shoulder Injury
 
-When seeking to alleviate shoulder pain, it’s important to recognize the common symptoms of shoulder injuries:
+When seeking to alleviate shoulder pain, it's important to recognise the common symptoms of shoulder injuries:
 
 - Swelling and tenderness in the neck or shoulder area
 
@@ -47,6 +47,6 @@ Shoulder pain itself doesn’t typically refer to the upper chest wall. However,
 
 ## Seeking Professional Help
 
-For effective pain relief for shoulder pain, it’s crucial to consult with a healthcare professional. At Sydney CBD Chiropractor, we specialize in diagnosing and treating shoulder injuries. Our experts can provide a comprehensive evaluation of your condition and develop a tailored treatment plan to alleviate your shoulder pain.
+For effective pain relief for shoulder pain, it’s crucial to consult with a healthcare professional. At Sydney CBD Chiropractor, we specialise in diagnosing and treating shoulder injuries. Our experts can provide a comprehensive evaluation of your condition and develop a tailored treatment plan to alleviate your shoulder pain.
 
 Don’t let shoulder pain impact your quality of life. Visit Sydney CBD Chiropractor to discuss your case and start your journey towards shoulder pain relief today.

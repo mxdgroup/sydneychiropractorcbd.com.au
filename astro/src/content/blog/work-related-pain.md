@@ -49,7 +49,7 @@ Compared to most other physical therapies, chiropractic care for work-related lo
 
 Recent observations indicate a significant increase in work-related pain issues, especially since the COVID-19 pandemic and the shift to remote work. Young professionals in their early to late 20s are increasingly experiencing neck pain and shoulder pain due to long hours at desks and poor home office setups. This trend underscores the importance of proper ergonomics and regular breaks, even for those early in their careers.
 
-To minimize the risk of developing work-related pain, it’s crucial to maintain good posture, take regular breaks for stretching and movement, set up an ergonomic workspace, engage in regular exercise to strengthen core and back muscles, practice stress-reduction techniques, and seek early intervention at the onset of pain.
+To minimise the risk of developing work-related pain, it’s crucial to maintain good posture, take regular breaks for stretching and movement, set up an ergonomic workspace, engage in regular exercise to strengthen core and back muscles, practice stress-reduction techniques, and seek early intervention at the onset of pain.
 
 ## Conclusion
 

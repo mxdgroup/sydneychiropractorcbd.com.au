@@ -15,6 +15,6 @@ Signs and symptoms of tendinitis tend to occur at the point where a tendon attac
 
 • Pain often described as a dull ache, especially when moving the affected limb or joint• Tenderness• Mild swelling
 
-Most cases are successfully treated non-surgically, a formal physical therapy program may be of benefit. A person might benefit from a program of specific exercise designed to stretch and strengthen the affected muscle-tendon unit. A cast or brace to completely rest this area may be necessary. Most cases of tendinitis can be successfully treated with rest and physical therapy.
+Most cases are successfully treated non-surgically, a formal physical therapy programme may be of benefit. A person might benefit from a programme of specific exercise designed to stretch and strengthen the affected muscle-tendon unit. A cast or brace to completely rest this area may be necessary. Most cases of tendinitis can be successfully treated with rest and physical therapy.
 
 Learn more about Tendinitis treatment at Straight Forward Clinics?Join our practice session in Chiro Sydney CBD.

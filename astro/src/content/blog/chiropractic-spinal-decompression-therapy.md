@@ -20,7 +20,7 @@ Spinal decompression also increases blood flow to your spinal discs, allowing nu
 
 The main goal of spinal decompression therapy is to provide immediate pain relief and promote an optimal healing environment for several spinal disc conditions such as disc herniation, radiculopathy and sciatica.
 
-During your initial consultation, one of our experienced Chiropractors will go through a thorough examination to determine your suitability for any type of chiropractic care, and customise a program for you to achieve optimum results.  This examination would usually include patient history, a neurological examination, posture and gait examination, range of motion tests, weight distribution test, X-ray, CT or MRI scan analysis.
+During your initial consultation, one of our experienced Chiropractors will go through a thorough examination to determine your suitability for any type of chiropractic care, and customise a programme for you to achieve optimum results.  This examination would usually include patient history, a neurological examination, posture and gait examination, range of motion tests, weight distribution test, X-ray, CT or MRI scan analysis.
 
 If spinal decompression therapy is recommended or required, a schedule of chiropractic care would be laid out for you to follow. 
 
@@ -76,13 +76,13 @@ Prescription medications or steroid injection shots only provide symptomatic and
 Spinal decompression is beneficial for all of these problems, whether they are caused by a herniated disc or a disc injury caused by a degenerative disease. This is due to the fact that it increases blood circulation to the spine and assists dislocated spines in returning to their original position.
 
 ## Post-decompression therapy
-Post-decompression therapy is necessary to ensure that your target regions are relaxed and pre-conditioned for chiropractic manual treatment. Chiropractic adjustments complement your spinal decompression program by correcting your mechanical and structural misalignments.
+Post-decompression therapy is necessary to ensure that your target regions are relaxed and pre-conditioned for chiropractic manual treatment. Chiropractic adjustments complement your spinal decompression programme by correcting your mechanical and structural misalignments.
 
 ## How are results measured?
 
 As with any medical treatment, the outcome of spinal decompression therapy will vary depending on the patient, the doctor, and the procedure used. Patients do not usually feel a great deal of relief after the first treatment. Relief should be apparent after several spinal decompression sessions. In some cases, patients may need to accomplish their entire treatment plan before experiencing complete symptom relief.
 
-For back pain due to disc herniation, radiculopathy, sciatica or other degenerative conditions, get in touch with Clinic 27 for a thorough health assessment and care program that will set you on the path to self-healing.
+For back pain due to disc herniation, radiculopathy, sciatica or other degenerative conditions, get in touch with Clinic 27 for a thorough health assessment and care programme that will set you on the path to self-healing.
 
 REFERENCES:
 

@@ -16,7 +16,7 @@ The aftermath of an auto accident can leave you shaken, not just emotionally, bu
 ## How Chiropractic Care Helps After Auto Accidents
 Thankfully, chiropractic care can offer a natural, non-invasive approach to help alleviate pain and promote healing after an auto accident. Our team of skilled chiropractors focus on the musculoskeletal system, specifically the spine and joints. Following a thorough examination, which may include X-rays and other diagnostic tests, we assess any misalignments in your spine, known as subluxations. These misalignments, even if seemingly minor, can put pressure on nerves and surrounding tissues, contributing to pain, stiffness, and headaches often associated with auto injuries. Through spinal adjustments, our skilled chiros gently manipulate the joints to improve their alignment and function. This can help reduce inflammation, improve circulation, and ultimately, alleviate pain and discomfort.
 
-Chiropractic care for auto injuries extends beyond adjustments. Depending on your specific needs, a chiropractor may utilize various techniques like:
+Chiropractic care for auto injuries extends beyond adjustments. Depending on your specific needs, a chiropractor may utilise various techniques like:
 
 - Soft tissue therapy: Massaging muscles and releasing trigger points can help reduce pain and muscle tension.
 

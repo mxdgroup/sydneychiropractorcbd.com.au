@@ -58,7 +58,7 @@ Chiropractic care has helped many young women avoid the unhappy effects of scoli
 
 Surgical intervention often involved bolting a steel rod to the child’s spinal column.
 
-First, a thorough examination helps detect scoliosis in its early stage. Then, corrective action can begin at once. The primary course of care is a program of specific chiropractic adjustments. These help improve the function and structure of the spine. Muscles strengthen. Posture can improve. 
+First, a thorough examination helps detect scoliosis in its early stage. Then, corrective action can begin at once. The primary course of care is a programme of specific chiropractic adjustments. These help improve the function and structure of the spine. Muscles strengthen. Posture can improve. 
 
 Chiropractic care has helped countless young women reclaim their health, posture and their self-esteem. 
 

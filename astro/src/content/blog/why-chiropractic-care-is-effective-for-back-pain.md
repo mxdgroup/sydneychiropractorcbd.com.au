@@ -39,7 +39,7 @@ While fast back pain relief is the main goal of any person who experiences pain,
 
 By improving spinal alignment and function, chiropractic adjustments can help distribute the stresses on the body more evenly. This can reduce wear and tear on joints and discs, potentially slowing the progression of degenerative conditions that often lead to chronic back pain.
 
-Chiropractors also emphasize patient education. They often teach patients about proper posture, ergonomics, and exercises they can do at home. This encourages patients to take an active role in their back health, possibly preventing future pain and injuries.Moreover, regular chiropractic check-ups can help identify potential issues before they become painful problems. Just as regular dental check-ups can prevent major tooth problems, regular spinal check-ups can help maintain optimal back health.
+Chiropractors also emphasise patient education. They often teach patients about proper posture, ergonomics, and exercises they can do at home. This encourages patients to take an active role in their back health, possibly preventing future pain and injuries.Moreover, regular chiropractic check-ups can help identify potential issues before they become painful problems. Just as regular dental check-ups can prevent major tooth problems, regular spinal check-ups can help maintain optimal back health.
 
 Many patients report improvements in sleep, digestion, and even mood following chiropractic treatments. These secondary benefits can contribute to a higher quality of life and better overall health, which in turn can help prevent or manage back pain.
 

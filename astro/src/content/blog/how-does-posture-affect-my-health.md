@@ -17,7 +17,7 @@ The findings presented challenged many common assumptions about posture and reve
 
 ## Understanding the Full Impact on Your Health
 
-While most people associate poor posture with obvious physical symptoms like neck pain and headaches, the impact of poor alignment runs much deeper. The long-term effects of bad posture can significantly influence various aspects of your health in ways many don’t realize. Beyond the familiar aches and pains, poor posture creates a cascade of effects throughout your body that can seriously impact your overall well-being.
+While most people associate poor posture with obvious physical symptoms like neck pain and headaches, the impact of poor alignment runs much deeper. The long-term effects of bad posture can significantly influence various aspects of your health in ways many don't realise. Beyond the familiar aches and pains, poor posture creates a cascade of effects throughout your body that can seriously impact your overall well-being.
 
 One of the most surprising discoveries in recent years has been the relationship between posture and hormonal balance. Research has shown that poor posture can actually alter your cortisol levels – your body’s primary stress hormone. This hormonal disruption doesn’t just affect your stress levels; it can also impact testosterone production, potentially influencing everything from your energy levels to your mood.
 

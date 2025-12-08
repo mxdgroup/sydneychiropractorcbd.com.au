@@ -26,7 +26,7 @@ You’re in your car, relaxed, waiting at a stoplight. Suddenly you hear a scree
 
 First surprise. Then anger. Then pain.  
 
-Don’t minimize your own injuries because your car has sustained little or no damage.  
+Don't minimise your own injuries because your car has sustained little or no damage.  
 
 An immediate chiropractic examination is essential. Pain pills won’t heal inflamed tendons and ligaments. Muscle relaxers won’t heal torn muscles. A cervical collar won’t restore a graceful forward spinal curve.  
 

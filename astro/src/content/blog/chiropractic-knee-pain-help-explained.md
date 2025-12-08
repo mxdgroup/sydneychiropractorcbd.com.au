@@ -49,7 +49,7 @@ This is where chiropractic care could come in. Many sufferers of ongoing knee pa
 ## Removing Painkillers from the Equation
 Many people mistakenly believe that only temporary solutions – such as Cortisone shots or prescription drugs – are the only way to treat knee pain. The reality is that chiropractic is a conservative, low-risk treatment plan that offers results without the nasty side effects of painkillers or the invasive approach of shots.
 
-Chiropractic starts with an accurate, thorough diagnosis of your pain. Knee pain may be caused by osteoarthritis, a nagging injury, referred pain, or excessive weight. Ultimately, an examination and evaluation will determine the specific cause. Determining exactly what’s going on in your case is essential before deciding on a treatment program. Treating knee pain from arthritis may require a different approach than treating knee pain from a recent trauma.
+Chiropractic starts with an accurate, thorough diagnosis of your pain. Knee pain may be caused by osteoarthritis, a nagging injury, referred pain, or excessive weight. Ultimately, an examination and evaluation will determine the specific cause. Determining exactly what's going on in your case is essential before deciding on a treatment programme. Treating knee pain from arthritis may require a different approach than treating knee pain from a recent trauma.
 
 ## The Chiropractic Solution to Knee Pain
 Depending on the cause of your knee pain, your chiropractor will create a targeted treatment plan designed for your individual condition. This helps to ensure that the right approach is being taken and that progress and results are measurable. 

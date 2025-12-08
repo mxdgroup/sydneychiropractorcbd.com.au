@@ -5,13 +5,13 @@ slug: "habit-stacking-for-holisitic-health"
 status: "publish"
 id: 5478
 link: "https://sydneychiropractorcbd.com.au/habit-stacking-for-holisitic-health/"
-excerpt: "One of the most effective approaches to creating lasting healthy practices is habit stacking. While I’ll focus primarily on exercise here, these principles apply to all healthy habits daily. In my practice, we often discuss three fundamental pillars for achieving better results: Regular chiropractic care to optimize your nervous system’s performance and address pain Breaking […]"
+excerpt: "One of the most effective approaches to creating lasting healthy practices is habit stacking. While I'll focus primarily on exercise here, these principles apply to all healthy habits daily. In my practice, we often discuss three fundamental pillars for achieving better results: Regular chiropractic care to optimise your nervous system's performance and address pain Breaking […]"
 thumbnail: "habit-stacking-for-holisitic-health.jpeg"
 ---
 
 One of the most effective approaches to creating lasting healthy practices is habit stacking. While I’ll focus primarily on exercise here, these principles apply to all healthy habits daily. In my practice, we often discuss three fundamental pillars for achieving better results:
 
-- Regular chiropractic care to optimize your nervous system’s performance and address pain
+- Regular chiropractic care to optimise your nervous system's performance and address pain
 - Breaking poor postural habits in sitting, sleeping, and standing
 - Incorporating regular movement and exercise
 
