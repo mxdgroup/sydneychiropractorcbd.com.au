@@ -41,12 +41,12 @@ Neurological TOS: Refers to compression of the nerves and accounts for more than
 - Weakness in the arm or hand
 - ‘Tiredness’ or ‘fatigue’ in the arms and hand muscles of the affected side
 - Cold hand or arm
-- Swelling or discoloration in the arm
+- Swelling or discolouration in the arm
 - Weak or no pulse in the affected arm
 
 ## Diagnosis of Thoracic Outlet Syndrome
 
-Diagnosis involves a thorough medical history and appropriate neurological and orthopedic examination. Further investigations including X-rays can be helpful in identifying underlying structural factors that may be contributing to the condition. In some cases, additional tests such as MRI, CT scans, or vascular studies may be necessary to confirm the diagnosis.
+Diagnosis involves a thorough medical history and appropriate neurological and orthopaedic examination. Further investigations including X-rays can be helpful in identifying underlying structural factors that may be contributing to the condition. In some cases, additional tests such as MRI, CT scans, or vascular studies may be necessary to confirm the diagnosis.
 
 ## Thoracic Outlet Syndrome Treatment
 

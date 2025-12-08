@@ -31,9 +31,11 @@ As your body adapts to carrying your growing baby, chiropractic care could be es
 
 Many patients report experiencing more comfortable pregnancies when receiving regular chiro care during pregnancy.
 
-3. Labor and Delivery EnhancementChoosing chiropractic during pregnancy can lead to:
+3. Labour and Delivery Enhancement
 
-- Shorter labor duration
+Choosing chiropractic during pregnancy can lead to:
+
+- Shorter labour duration
 - Reduced need for medical interventions
 - More effective contractions
 - Optimal baby positioning
@@ -57,7 +59,7 @@ Regular visits to a chiropractor could lead to:
 - Optimal fetal positioning
 - Reduced pregnancy discomfort
 - Better sleep quality
-- Easier labor and delivery
+- Easier labour and delivery
 - Enhanced postpartum recovery
 
 At clinic 27, we understand the unique journey of pregnancy and offer specialized care that honors both mother and baby. Our team provides gentle, effective chiropractic during pregnancy services that support your body’s natural abilities.

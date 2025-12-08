@@ -7,7 +7,7 @@ tags: ["spinal decompression", "back pain", "non-surgical"]
 slug: back-pain-treatment-sydney-cbd
 ---
 
-Back pain treatment is one of the most common requests that patients present to our clinic. Many people worldwide are afflicted with debilitating back pain, in many cases this can prevent them engaging in day to day bathtime.
+Back pain treatment is one of the most common requests that patients present to our clinic. Many people worldwide are afflicted with debilitating back pain, in many cases this can prevent them engaging in day to day activities.
 
 Back pain can arise from many causes, it could be from accidents or injuries, toxins or diet or even in some cases thoughts or stress.
 

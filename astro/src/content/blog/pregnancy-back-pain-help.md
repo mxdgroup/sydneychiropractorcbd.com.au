@@ -45,8 +45,8 @@ Chiropractic care offers numerous benefits for pregnant women:
 - Improved Mobility: Maintaining proper alignment can help women stay active throughout their pregnancy, which is beneficial for both mother and baby.
 - Better Sleep: Reduced back pain related to pregnancy can lead to improved sleep quality, which is crucial during pregnancy.
 - Optimal Fetal Positioning: A balanced pelvis provides the best environment for the baby to move into the optimal position for birth.
-- Shorter Labor Times: Some studies suggest that women who receive chiropractic care during pregnancy may experience shorter labor times.
-- Reduced Need for Interventions: By promoting optimal fetal positioning, chiropractic care may reduce the need for interventions during labor.
+- Shorter Labour Times: Some studies suggest that women who receive chiropractic care during pregnancy may experience shorter labour times.
+- Reduced Need for Interventions: By promoting optimal fetal positioning, chiropractic care may reduce the need for interventions during labour.
 
 ## Safety of Chiropractic Care During Pregnancy
 
@@ -67,7 +67,7 @@ While chiropractic care can be beneficial throughout pregnancy, many women find 
 
 - In the first trimester, to address early postural changes and morning sickness
 - In the second trimester, as the baby’s weight increases and the body’s center of gravity shifts
-- In the third trimester, to manage increased back pain and prepare for labor
+- In the third trimester, to manage increased back pain and prepare for labour
 
 It’s never too late to start chiropractic care during pregnancy. Many women find pregnancy back pain relief even when starting care in the later stages of pregnancy.
 

@@ -43,7 +43,7 @@ It’s important to note that discomfort in the anterior chest area can be refer
 
 - Cervical spine (neck) issues
 
-Shoulder pain itself doesn’t typically refer to the upper chest wall. However, there are a significant number of nerves around the pectoralis major tendon that originate from the neck area and travel behind the clavicle on their way down to the forearm along the chest wall. These may be spine-related issues. Given this rich network of nerves traveling behind the coracoid and pectoralis minor, it’s understandable how pain in this region can result from referred pain.
+Shoulder pain itself doesn’t typically refer to the upper chest wall. However, there are a significant number of nerves around the pectoralis major tendon that originate from the neck area and travel behind the clavicle on their way down to the forearm along the chest wall. These may be spine-related issues. Given this rich network of nerves travelling behind the coracoid and pectoralis minor, it’s understandable how pain in this region can result from referred pain.
 
 ## Seeking Professional Help
 

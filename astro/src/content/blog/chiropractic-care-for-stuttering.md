@@ -38,4 +38,4 @@ With everything properly aligned, the stutter is no longer the focus, allowing t
 - Offer praise rather than criticism. It’s better to praise your child for speaking clearly than to draw attention to stuttering. If you do correct your child’s speech, do so in a gentle, positive way. 
 - Accept your child just as he or she is. Don’t react negatively or criticise or punish your child for stuttering. This can add to feelings of insecurity and self-consciousness. Support and encouragement can make a big difference. 
 
-For more Chiropratic Care checkout our workshops.
+For more Chiropractic Care checkout our workshops.

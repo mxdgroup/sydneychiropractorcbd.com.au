@@ -13,7 +13,7 @@ thumbnail: "chiropratic-help-for-scoliosis.jpeg"
 Early detection can improve The likelihood of correction.  
 
 ## Can it be Prevented?  
-Scoliosis is tragic. It causes both physical pain and emotional suffering. This sideways bending of the spine shows up as abnormal posture and then finally, deformity. If allowed to advance, it can interfere with the lungs, heart and many other vital organs.  Chiropractic care from Clinic 27 should be your go to place for chiropratic care. 
+Scoliosis is tragic. It causes both physical pain and emotional suffering. This sideways bending of the spine shows up as abnormal posture and then finally, deformity. If allowed to advance, it can interfere with the lungs, heart and many other vital organs.  Chiropractic care from Clinic 27 should be your go to place for chiropractic care. 
 
 There is hope.  
 

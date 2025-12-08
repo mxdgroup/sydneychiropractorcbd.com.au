@@ -17,7 +17,7 @@ You neck is the most vulnerable part of your spine. Not only does it support you
 
 Improper telephone use is but one of the many causes of neck pain. A thorough examination can reveal its likely causes and suggest the best approach for optimum results.
 
-Many everyday things can cause neck pain, such as watching TV, using your computer, reading a book or falling asleep in a chair or on an airplane. The temporary pain that results can’t resolve on its own, especially when the offending activity is discontinued. When it doesn’t a more serious underlying problem may be indicated.
+Many everyday things can cause neck pain, such as watching TV, using your computer, reading a book or falling asleep in a chair or on an aeroplane. The temporary pain that results can’t resolve on its own, especially when the offending activity is discontinued. When it doesn’t a more serious underlying problem may be indicated.
 
 A thorough examination can determine if you’re a good candidate for chiropractic care. These tests may involve your ability to turn and bend. Muscle tone of the supporting muscles in the neck may be tested. Diagnostic imaging to reveal the underlying structure of the spine may be requested. These and other tests are designed to identify the cause and location of your neck pain.
 

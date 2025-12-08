@@ -31,7 +31,7 @@ Chiropractic care for back pain consists of a combination of techniques, with sp
 
 - Nutritional guidance to support overall health and reduce inflammation
 
-Chiropractors take a patient-centered approach, adapting treatments to each client’s needs. That’s how chiropractors can address the causes of back pain, not just symptoms.Many patients report immediate backache pain relief following chiropractic adjustments, while others experience gradual improvement over a series of treatments. This variability underscores the importance of personalized care plans in chiropractic practice.
+Chiropractors take a patient-centred approach, adapting treatments to each client's needs. That’s how chiropractors can address the causes of back pain, not just symptoms.Many patients report immediate backache pain relief following chiropractic adjustments, while others experience gradual improvement over a series of treatments. This variability underscores the importance of personalized care plans in chiropractic practice.
 
 ## The Role of Chiropractic Care in Long-Term Back Health
 

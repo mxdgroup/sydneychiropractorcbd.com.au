@@ -25,7 +25,7 @@ Not all pain felt in the lower back actually originates there. Unfortunately, th
 
 Sciatica is often mistaken for general lower back pain. While it can cause lower back discomfort, sciatica is actually due to irritation of the sciatic nerve. The pain often radiates down the leg. Sacroiliac joint dysfunction is another condition that mimics lower back pain. It involves the joints connecting the spine to the pelvis. The pain is usually more localized to one side.
 
-Sometimes, pain that feels like it’s in the lower back comes from other parts of the body. Kidney stones, for example, can cause pain that feels like it’s in the lower back. Some digestive or reproductive issues can also manifest as lower back ache causesPsychological factors can influence back pain too. Stress and anxiety can increase muscle tension and make existing pain feel worse.
+Sometimes, pain that feels like it's in the lower back comes from other parts of the body. Kidney stones, for example, can cause pain that feels like it's in the lower back. Some digestive or reproductive issues can also manifest as lower back ache causes. Psychological factors can influence back pain too. Stress and anxiety can increase muscle tension and make existing pain feel worse.
 
 ## Backache During Pregnancy
 

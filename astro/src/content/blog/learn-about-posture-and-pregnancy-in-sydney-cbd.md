@@ -13,7 +13,7 @@ Maintaining proper posture during pregnancy is crucial for both maternal comfort
 
 ## How Posture Affects Your Pregnancy
 
-Maintaining good posture during pregnancy is essential for both you and your baby. It provides optimal space for fetal development, reduces muscle strain, eases labor preparation, and improves blood circulation. On the other hand, poor posture can lead to restricted fetal movement, increased muscle tension, challenges with optimal fetal positioning, and even prolonged labor.
+Maintaining good posture during pregnancy is essential for both you and your baby. It provides optimal space for fetal development, reduces muscle strain, eases labour preparation, and improves blood circulation. On the other hand, poor posture can lead to restricted fetal movement, increased muscle tension, challenges with optimal fetal positioning, and even prolonged labour.
 
 ## Essential Pregnancy Sitting Posture Guidelines
 
@@ -35,13 +35,15 @@ Your pregnancy sitting posture should prioritize:
 - Supported lower back
 - Room for baby movement
 
-By following these guidelines, you can enhance your comfort, support your baby’s development, and prepare your body for labor.
+By following these guidelines, you can enhance your comfort, support your baby's development, and prepare your body for labour.
 
-## The Impact on Labor and DeliveryProper posture and pregnancy preparation influences:
+## The Impact on Labour and Delivery
 
-- Baby’s positioning for birth
+Proper posture and pregnancy preparation influences:
+
+- Baby's positioning for birth
 - Uterine muscle efficiency
-- Labor duration
+- Labour duration
 - Delivery comfort
 
 When the mother maintains good posture throughout pregnancy, her body can better work with the baby to achieve optimal positioning for birth. Working with chiropractors during pregnancy helps ensure proper positioning. They can:

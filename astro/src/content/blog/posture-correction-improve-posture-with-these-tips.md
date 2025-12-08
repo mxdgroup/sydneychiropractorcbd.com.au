@@ -69,7 +69,7 @@ As well as not being able to create permanent, lasting change, trying to remembe
 
 Myth #3: Breathing exercises will fix my posture
 
-Many breathing techniques and exercises claim to improve your posture, ranging from deep relaxation techniques to yoga and pilates. While these exercises are useful, they only address the posture at the top half of your body, while for most people good posture starts in the lower back. Hence, these exercises will be neither an effective nor a reliable solution to the problem.
+Many breathing techniques and exercises claim to improve your posture, ranging from deep relaxation techniques to yoga and Pilates. While these exercises are useful, they only address the posture at the top half of your body, while for most people good posture starts in the lower back. Hence, these exercises will be neither an effective nor a reliable solution to the problem.
 
 ## Myth #4: Pain and posture is purely physical
 

@@ -39,7 +39,7 @@ Phase 3 The body can turn affected spinal joints into a solid block of calcium! 
 
 ## Isn’t this Just part of the Normal Aging Process?
 
-Because spinal decay is often (but not always) seen in the elderly, some people are misled into believing that it is merely part of the aging process. Not true. It seems clear that it is the result of long-standing, uncorrected spinal stress. 
+Because spinal decay is often (but not always) seen in the elderly, some people are misled into believing that it is merely part of the ageing process. Not true. It seems clear that it is the result of long-standing, uncorrected spinal stress. 
 
 ## Can Chiropractic Care Help with Advanced Cases of Spinal Decay?
 

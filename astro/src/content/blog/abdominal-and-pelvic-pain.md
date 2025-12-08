@@ -13,7 +13,7 @@ Abdominal and pelvic pain can take many different forms, depending on the underl
 
 Often, the severity of pain is related to the severity of the underlying condition. For example, infection-related abdominal pain can be quite severe and may be accompanied by high fever or nausea and vomiting. Trauma-related pain is often very localised in nature, while digestive disorders that cause stomach cramping are typically mild to moderate in intensity. 
 
-Some forms of abdominal or pelvic pain may present as a noticeable bulge in the abdomen or groin area. Ultimately, assessing the causes of abdominal or pelvic pain is an important first step towards finding the appropriate treatment options. Chiropratic care could help deal with this pain. 
+Some forms of abdominal or pelvic pain may present as a noticeable bulge in the abdomen or groin area. Ultimately, assessing the causes of abdominal or pelvic pain is an important first step towards finding the appropriate treatment options. Chiropractic care could help deal with this pain. 
 
 ## Types and Causes of Abdominal Pain 
 

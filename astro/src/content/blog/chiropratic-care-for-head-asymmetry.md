@@ -5,11 +5,11 @@ slug: "chiropratic-care-for-head-asymmetry"
 status: "publish"
 id: 5068
 link: "https://sydneychiropractorcbd.com.au/chiropratic-care-for-head-asymmetry/"
-excerpt: "Head asymmetry can be evident from birth in about 13% of babies due to in utero molding of the shape of the baby’s head; however, if this occurs, there is in most cases rapid correction of the baby’s head shape soon after birth. Most cases of head asymmetry occur in babies born with a normal […]"
+excerpt: "Head asymmetry can be evident from birth in about 13% of babies due to in utero moulding of the shape of the baby’s head; however, if this occurs, there is in most cases rapid correction of the baby’s head shape soon after birth. Most cases of head asymmetry occur in babies born with a normal […]"
 thumbnail: "chiropratic-care-for-head-asymmetry.webp"
 ---
 
-Head asymmetry can be evident from birth in about 13% of babies due to in utero molding of the shape of the baby’s head; however, if this occurs, there is in most cases rapid correction of the baby’s head shape soon after birth. Most cases of head asymmetry occur in babies born with a normal shaped head, and the head asymmetry develops after birth, usually becoming apparent to the parents or to a health care professional between four and eight weeks of age. The head asymmetry usually affects one side of the occipital bone or the back of the head.  
+Head asymmetry can be evident from birth in about 13% of babies due to in utero moulding of the shape of the baby’s head; however, if this occurs, there is in most cases rapid correction of the baby’s head shape soon after birth. Most cases of head asymmetry occur in babies born with a normal shaped head, and the head asymmetry develops after birth, usually becoming apparent to the parents or to a health care professional between four and eight weeks of age. The head asymmetry usually affects one side of the occipital bone or the back of the head.  
 
 The issue of head asymmetry has become more common as a result of the baby on the back program to reduce the incidence of SIDS. The head asymmetry is caused by constant pressure on one part of the back of the head, and this tells us that the baby is not able to turn their head properly to both sides, resulting in positional preference. Babies that develop head asymmetry have been found to have a positional preference and to also have restricted neck function. Many babies that go on to develop head asymmetry have associated torticollis, and may have a sternocleidomastoid muscle tumour along with contraction of this muscle. To avoid this you can seek help from a chiropractor for baby flat head syndrome at Clinic 27. 
 

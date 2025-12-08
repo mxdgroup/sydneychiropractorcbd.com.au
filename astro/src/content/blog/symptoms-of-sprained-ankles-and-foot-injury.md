@@ -17,7 +17,7 @@ Around 25,000 individuals experience it every day. A sprained ankle leg can happ
 - bruising
 - ankle pain
 - inability to bear weight on affected ankle
-- skin discoloration
+- skin discolouration
 - stiffness
 
 How Is An Ankle Sprain Diagnosed? 

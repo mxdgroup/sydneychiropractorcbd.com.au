@@ -1,5 +1,5 @@
 ---
-title: "Advanced Bio Structrual Correction – ABC™"
+title: "Advanced Bio Structural Correction – ABC™"
 date: 2019-11-14T12:55:00
 slug: "advanced-bio-structrual-correction-abc"
 status: "publish"

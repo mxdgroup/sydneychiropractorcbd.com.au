@@ -1,5 +1,5 @@
 ---
-title: "Chiropractic Adjustements"
+title: "Chiropractic Adjustments"
 date: 2021-12-27T00:30:00
 slug: "chiropratic-care-adjustments"
 status: "publish"

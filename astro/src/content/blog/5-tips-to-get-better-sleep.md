@@ -15,7 +15,7 @@ thumbnail: "5-tips-to-get-better-sleep.jpeg"
 
 At least 30 minutes before bed, try and switch off all technology: tablets, phones and laptops. This reduces the amount of mental and emotional stimulation which often keeps us awake. The blue-light that comes out of these devices can actually reduce levels of a hormone called melatonin, which is something that we need to help us drop into deep, relaxing sleep.  
 
-Hack – Put your devices into a different room so you are less tempted to use them or turn off your wifi an hour before you are ready to go to sleep.  
+Hack – Put your devices into a different room so you are less tempted to use them or turn off your Wi-Fi an hour before you are ready to go to sleep.  
 
  These tips are brought to you by Clinic 27. Visit them today for all your chiropractic needs. 
 
