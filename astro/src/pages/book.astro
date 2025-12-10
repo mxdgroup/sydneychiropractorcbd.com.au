@@ -146,7 +146,13 @@ const metaDescription = "Book your appointment at Clinic 27 in Sydney CBD. Exper
         <div class="bg-custom-pink p-10 flex flex-col justify-center items-start ">
           <h1 class="text-xl font-bold mb-4">Clinic 27</h1>
           <p class="text-md mb-2">
-            (02) 8059 7743
+            <a
+              href="tel:0280597743"
+              class="hover:text-white transition-colors"
+              onclick="if(typeof posthog !== 'undefined'){posthog.capture('call_clicked');}if(typeof gtag !== 'undefined'){gtag('event', 'call_clicked');}if(typeof dataLayer !== 'undefined'){dataLayer.push({'event': 'call_clicked'});}"
+            >
+              (02) 8059 7743
+            </a>
           </p>
           <p class="text-md">
             Suite 1, Level 1, 44 Bridge Street, Sydney NSW 2000
@@ -155,7 +161,13 @@ const metaDescription = "Book your appointment at Clinic 27 in Sydney CBD. Exper
         <div class="bg-custom-purple p-10 flex flex-col justify-center items-start ">
           <h1 class="text-xl font-bold mb-4">Complete Chiropractic</h1>
           <p class="text-md mb-2">
-            (02) 9972 0040
+            <a
+              href="tel:0299720040"
+              class="hover:text-white transition-colors"
+              onclick="if(typeof posthog !== 'undefined'){posthog.capture('call_clicked');}if(typeof gtag !== 'undefined'){gtag('event', 'call_clicked');}if(typeof dataLayer !== 'undefined'){dataLayer.push({'event': 'call_clicked'});}"
+            >
+              (02) 9972 0040
+            </a>
           </p>
           <p class="text-md">
             Suite 1/32 Fisher Rd, Dee Why NSW 2099

@@ -19,12 +19,28 @@ const treatments = await getCollection('treatments');
       <div class="md:hidden mb-8">
         <div class="bg-custom-pink p-6 text-white mb-4">
           <h2 class="text-lg font-bold mb-2">Clinic 27</h2>
-          <p class="text-sm mb-1">(02) 8059 7743</p>
+          <p class="text-sm mb-1">
+            <a
+              href="tel:0280597743"
+              class="hover:text-white transition-colors"
+              onclick="if(typeof posthog !== 'undefined'){posthog.capture('call_clicked');}if(typeof gtag !== 'undefined'){gtag('event', 'call_clicked');}if(typeof dataLayer !== 'undefined'){dataLayer.push({'event': 'call_clicked'});}"
+            >
+              (02) 8059 7743
+            </a>
+          </p>
           <p class="text-sm">Suite 1, Level 1, 44 Bridge Street, Sydney NSW 2000</p>
         </div>
         <div class="bg-custom-purple p-6 text-white">
           <h2 class="text-lg font-bold mb-2">Complete Chiropractic</h2>
-          <p class="text-sm mb-1">(02) 9972 0040</p>
+          <p class="text-sm mb-1">
+            <a
+              href="tel:0299720040"
+              class="hover:text-white transition-colors"
+              onclick="if(typeof posthog !== 'undefined'){posthog.capture('call_clicked');}if(typeof gtag !== 'undefined'){gtag('event', 'call_clicked');}if(typeof dataLayer !== 'undefined'){dataLayer.push({'event': 'call_clicked'});}"
+            >
+              (02) 9972 0040
+            </a>
+          </p>
           <p class="text-sm">Suite 1/32 Fisher Rd, Dee Why NSW 2099</p>
         </div>
       </div>

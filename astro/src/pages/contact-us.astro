@@ -64,7 +64,15 @@ import PrimaryButton from "../components/PrimaryButton.astro";
           <p class="text-white text-2xl font-bold">Email</p>
           <p class="text-white text-md my-4">info@clinic27.com.au</p>
           <p class="text-white text-2xl font-bold">Call</p>
-          <p class="text-white text-4xl font-bold">02 8059 7743</p>
+          <p class="text-white text-4xl font-bold">
+            <a
+              href="tel:0280597743"
+              class="inline-block"
+              onclick="if(typeof posthog !== 'undefined'){posthog.capture('call_clicked');}if(typeof gtag !== 'undefined'){gtag('event', 'call_clicked');}if(typeof dataLayer !== 'undefined'){dataLayer.push({'event': 'call_clicked'});}"
+            >
+              02 8059 7743
+            </a>
+          </p>
       </div>
       
     </div>

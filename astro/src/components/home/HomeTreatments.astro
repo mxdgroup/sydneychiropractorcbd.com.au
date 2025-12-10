@@ -139,7 +139,22 @@ const treatments = [
         <p class="text-md text-left md:text-center">
             Whatever type of pain you may be experiencing right now, know that it’s not something you need to live with every day. <br/>
             You may schedule an appointment with Clinic 27 by using our online booking form. <br/>
-            Alternatively, you can call us on 02 9972 0040 or 02 8059 7743.
+            Alternatively, you can call us on
+            <a
+              href="tel:0299720040"
+              class="underline underline-offset-2"
+              onclick="if(typeof posthog !== 'undefined'){posthog.capture('call_clicked');}if(typeof gtag !== 'undefined'){gtag('event', 'call_clicked');}if(typeof dataLayer !== 'undefined'){dataLayer.push({'event': 'call_clicked'});}"
+            >
+              02 9972 0040
+            </a>
+            or
+            <a
+              href="tel:0280597743"
+              class="underline underline-offset-2"
+              onclick="if(typeof posthog !== 'undefined'){posthog.capture('call_clicked');}if(typeof gtag !== 'undefined'){gtag('event', 'call_clicked');}if(typeof dataLayer !== 'undefined'){dataLayer.push({'event': 'call_clicked'});}"
+            >
+              02 8059 7743
+            </a>.
         </p>
 
     </div>
