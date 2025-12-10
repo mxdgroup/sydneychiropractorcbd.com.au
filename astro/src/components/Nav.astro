@@ -126,7 +126,7 @@ const treatments = await getCollection('treatments');
           </a>
           
           <!-- CALL US Button -->
-          <a href="tel:0280597743" class="flex-1 bg-custom-pink text-white text-center py-3 px-3 font-semibold text-xs hover:bg-pink-700 transition-colors duration-300 whitespace-nowrap min-w-0 mb-0" onclick="if(typeof posthog !== 'undefined'){posthog.capture('call_clicked');}if(typeof gtag !== 'undefined'){gtag('event', 'call_clicked');}if(typeof dataLayer !== 'undefined'){dataLayer.push({'event': 'call_clicked'});}">
+          <a href="tel:0280597743" class="flex-1 bg-custom-pink text-white text-center py-3 px-3 font-semibold text-xs hover:bg-pink-700 transition-colors duration-300 whitespace-nowrap min-w-0 mb-0" onclick="if(typeof posthog !== 'undefined'){posthog.capture('call_us_clicked');}if(typeof gtag !== 'undefined'){gtag('event', 'call_us_clicked');}if(typeof dataLayer !== 'undefined'){dataLayer.push({'event': 'call_us_clicked'});}">
             CALL US
           </a>
         </div>

@@ -8,8 +8,8 @@ interface Props {
 const { text, href, centerText } = Astro.props;
 
 // Tracking function that sends to both PostHog and GTM
-// BookButton is used for call/phone buttons, so we track as 'call_clicked'
-const trackingScript = `if(typeof posthog !== 'undefined'){posthog.capture('call_clicked');}if(typeof gtag !== 'undefined'){gtag('event', 'call_clicked');}if(typeof dataLayer !== 'undefined'){dataLayer.push({'event': 'call_clicked'});}`;
+// BookButton is used for call/phone buttons, so we track as 'call_us_clicked'
+const trackingScript = `if(typeof posthog !== 'undefined'){posthog.capture('call_us_clicked');}if(typeof gtag !== 'undefined'){gtag('event', 'call_us_clicked');}if(typeof dataLayer !== 'undefined'){dataLayer.push({'event': 'call_us_clicked'});}`;
 ---
 {
     href ? (

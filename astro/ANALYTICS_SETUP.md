@@ -130,10 +130,10 @@ This tracking is implemented in:
 
 ### Call/Phone Tracking
 
-All "Call Us" buttons and phone number links track clicks with the event `call_clicked` to:
-- **PostHog**: `posthog.capture('call_clicked')`
-- **Google Tag Manager**: `dataLayer.push({'event': 'call_clicked'})`
-- **Google Analytics**: `gtag('event', 'call_clicked')`
+All "Call Us" buttons and phone number links track clicks with the event `call_us_clicked` to:
+- **PostHog**: `posthog.capture('call_us_clicked')`
+- **Google Tag Manager**: `dataLayer.push({'event': 'call_us_clicked'})`
+- **Google Analytics**: `gtag('event', 'call_us_clicked')`
 
 This tracking is implemented in:
 - `BookButton.astro` component (all phone call instances)
