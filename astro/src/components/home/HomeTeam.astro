@@ -11,6 +11,7 @@ import kelly from "/public/team/kel.jpg";
 import roberto from "/public/team/rob.png.webp";
 import christine from "/public/team/random1.jpg.webp";
 import emma from "/public/team/random2.jpg.webp";
+import placeholderWoman from "/public/team/woman.webp";
 
 
 const doctors = [
@@ -41,6 +42,14 @@ const assistant = [
         name: "Roberto Vita",
         image: roberto.src,
         description: "Massage Therapist"
+    },
+    {
+        name: "Hailey Cerneaz",
+        description: "Chiropractic Assistant"
+    },
+    {
+        name: "Salome Raut",
+        description: "Chiropractic Assistant"
     },
     {
         name: "Dr. Kelly Rafferty",
@@ -98,10 +107,10 @@ const assistant = [
         </div>
 
         <!-- Assistants Grid - Desktop -->
-        <div class="hidden md:grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="hidden md:grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
             {assistant.map((person) => (
                 <div class="flex flex-col items-center">
-                    <div class="w-48 h-48 md:w-72 md:h-72 mb-4 overflow-hidden rounded-full">
+                    <div class="w-48 h-48  mb-4 overflow-hidden rounded-full">
                         <img src={person.image} alt={person.name} class="w-full h-full object-cover" />
                     </div>
                     <h3 class="text-xl font-semibold mb-1 text-custom-purple">{person.name}</h3>
