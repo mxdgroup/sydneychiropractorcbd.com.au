@@ -1,0 +1,44 @@
+---
+import Layout from "../layouts/Layout.astro";
+import UnderlinedHeader from "../components/UnderlinedHeader.astro";
+import { c27TeamMembers } from "../data/team";
+---
+
+<Layout 
+  title="Clinic 27 Team | Sydney CBD Chiropractors"
+  metaDescription="Meet the Clinic 27 team in Sydney CBD. Discover the chiropractors and support crew dedicated to helping you move with confidence."
+>
+  <section class="py-16 md:py-24">
+    <div class="container mx-auto px-4">
+      <div class="max-w-3xl mx-auto text-center mb-12">
+        <UnderlinedHeader left={false}>Meet the Clinic 27 Team</UnderlinedHeader>
+        <p class="text-lg text-gray-600 mt-6">
+          Only the practitioners and support crew who serve Clinic 27 are featured here. Every person in this list spends their days helping busy professionals move with less pain, more confidence and a clear plan for long-term wellbeing.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+        {c27TeamMembers.map((member) => (
+          <article class="p-8 flex flex-col">
+            <div class="flex flex-col items-center text-center mb-6">
+              <div class="w-40 h-40 rounded-full overflow-hidden mb-4">
+                <img src={member.image} alt={member.name} class="w-full h-full object-cover" loading="lazy" />
+              </div>
+              <h3 class="text-2xl font-semibold text-custom-purple">{member.name}</h3>
+              <p class="text-sm tracking-[0.2em] uppercase text-gray-500 mt-2">{member.role}</p>
+            </div>
+            <p class="text-gray-600 flex-1 text-center">{member.shortBlurb}</p>
+            <div class="mt-8 flex justify-center">
+              <a 
+                href={`/our-team/${member.slug}/`}
+                class="px-6 py-3 bg-custom-pink text-white font-semibold rounded hover:bg-white hover:text-custom-pink border border-custom-pink transition-colors"
+              >
+                Read More
+              </a>
+            </div>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+</Layout>

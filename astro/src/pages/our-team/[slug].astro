@@ -1,0 +1,56 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import PrimaryButton from "../../components/PrimaryButton.astro";
+import { c27TeamMembers, type TeamMember } from "../../data/team";
+
+export function getStaticPaths() {
+  return c27TeamMembers.map((member) => ({
+    params: { slug: member.slug },
+    props: { member }
+  }));
+}
+
+interface Props {
+  member: TeamMember;
+}
+
+const { member } = Astro.props as Props;
+const metaDescription = `${member.name} – ${member.shortBlurb}`;
+---
+
+<Layout 
+  title={`${member.name} | Clinic 27 Team`}
+  metaDescription={metaDescription}
+>
+  <section class="py-16 md:py-24">
+    <div class="container mx-auto px-4">
+      <div class="grid gap-10 lg:grid-cols-2 items-start">
+        <div class="p-8 flex flex-col items-center text-center">
+          <div class="w-48 h-48 md:w-64 md:h-64 rounded-full overflow-hidden mb-6">
+            <img src={member.image} alt={member.name} class="w-full h-full object-cover" loading="lazy" />
+          </div>
+          <p class="text-sm uppercase tracking-[0.3em] text-gray-500 mb-2">{member.role}</p>
+          <h1 class="text-3xl font-semibold text-custom-purple">{member.name}</h1>
+          <p class="text-gray-600 mt-6">{member.shortBlurb}</p>
+        </div>
+
+        <div class="p-8">
+          <div class="space-y-6 text-gray-700 leading-relaxed">
+            {member.longBio.map((paragraph) => (
+              <p>{paragraph}</p>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-12 flex flex-col sm:flex-row gap-4">
+        <PrimaryButton href="https://clinic27intake.bookings.pracsuite.com/guest?_gl=1*ish5tk*_gcl_au*MTE4MzYwMjQ1Ny4xNzUyNDc4Mzk3*_ga*MTgyODUzMzI5Ni4xNzUyNDc4Mzk3*_ga_DVEN4QQTPM*czE3NTI0NzgzOTckbzEkZzAkdDE3NTI0NzgzOTckajYwJGwwJGgw*_ga_S36TR91H9N*czE3NTI0NzgzOTckbzEkZzAkdDE3NTI0NzgzOTckajYwJGwwJGgw*_ga_NTMX2EEDN4*czE3NTI0NzgzOTckbzEkZzAkdDE3NTI0NzgzOTckajYwJGwwJGgw*_ga_8J9DNH249S*czE3NTI0NzgzOTckbzEkZzAkdDE3NTI0NzgzOTckajYwJGwwJGgw" trackingEvent="book_appointment_clicked">
+          Book an Appointment
+        </PrimaryButton>
+        <a href="/our-team" class="inline-flex items-center justify-center px-6 py-3 border border-custom-purple text-custom-purple font-semibold rounded hover:bg-custom-purple hover:text-white transition-colors">
+          Back to Our Team
+        </a>
+      </div>
+    </div>
+  </section>
+</Layout>
