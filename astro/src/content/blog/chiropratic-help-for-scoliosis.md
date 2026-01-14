@@ -1,6 +1,6 @@
 ---
 title: "Chiropractic Help for Scoliosis"
-date: 2021-11-29T00:30:00
+date: 2022-11-29T00:30:00
 slug: "chiropratic-help-for-scoliosis"
 status: "publish"
 id: 5000

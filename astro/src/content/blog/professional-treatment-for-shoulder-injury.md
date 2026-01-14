@@ -1,6 +1,6 @@
 ---
 title: "Professional Treatment for Shoulder Injury"
-date: 2015-12-02T11:59:00
+date: 2025-12-02T11:59:00
 slug: "professional-treatment-for-shoulder-injury"
 status: "publish"
 id: 1039

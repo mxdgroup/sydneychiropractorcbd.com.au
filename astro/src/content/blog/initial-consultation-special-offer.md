@@ -1,6 +1,6 @@
 ---
 title: "$90 Off Your Initial Chiropractic Consultation!"
-date: 2021-06-22T04:30:19
+date: 2022-06-22T04:30:19
 slug: "initial-consultation-special-offer"
 status: "publish"
 id: 4635

@@ -1,6 +1,6 @@
 ---
 title: "When is Back Pain Serious?"
-date: 2024-11-05T15:36:08
+date: 2025-11-05T15:36:08
 slug: "how-to-tell-if-back-pain-is-serious"
 status: "publish"
 id: 8704

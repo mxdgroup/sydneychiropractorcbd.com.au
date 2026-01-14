@@ -1,6 +1,6 @@
 ---
 title: "Your Child’s Posture Guide"
-date: 2015-08-04T11:38:00
+date: 2025-08-04T11:38:00
 slug: "learn-about-your-childs-posture-at-clinic27"
 status: "publish"
 id: 1021

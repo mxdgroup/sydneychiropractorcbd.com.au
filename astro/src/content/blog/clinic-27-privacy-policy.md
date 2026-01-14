@@ -1,6 +1,6 @@
 ---
 title: "Privacy Policy"
-date: 2022-05-19T01:45:52
+date: 2023-05-19T01:45:52
 slug: "clinic-27-privacy-policy"
 status: "publish"
 id: 6036

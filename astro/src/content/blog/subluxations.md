@@ -1,6 +1,6 @@
 ---
 title: "What Is a Subluxation?"
-date: 2021-05-31T13:58:25
+date: 2022-05-31T13:58:25
 slug: "subluxations"
 status: "publish"
 id: 4450

@@ -1,6 +1,6 @@
 ---
 title: "Spinal Decay: Symptoms & Treatment"
-date: 2021-05-31T13:54:18
+date: 2022-05-31T13:54:18
 slug: "spinal-decay"
 status: "publish"
 id: 4445

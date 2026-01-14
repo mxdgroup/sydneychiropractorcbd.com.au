@@ -1,6 +1,6 @@
 ---
 title: "Chiropractor While Pregnant – A Complete Guide"
-date: 2022-01-10T00:30:00
+date: 2023-01-10T00:30:00
 slug: "chiropractic-treatment-for-pregnancy"
 status: "publish"
 id: 5078

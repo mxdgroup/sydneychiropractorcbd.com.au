@@ -1,6 +1,6 @@
 ---
 title: "Terms and Conditions"
-date: 2022-05-20T01:48:00
+date: 2023-05-20T01:48:00
 slug: "terms-and-conditions"
 status: "publish"
 id: 6054

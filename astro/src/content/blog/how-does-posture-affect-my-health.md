@@ -1,6 +1,6 @@
 ---
 title: "How Posture Affects Your Health"
-date: 2016-10-06T12:29:00
+date: 2025-10-06T12:29:00
 slug: "how-does-posture-affect-my-health"
 status: "publish"
 id: 1092

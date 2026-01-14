@@ -1,6 +1,6 @@
 ---
 title: "Rotator Cuff Syndrome: Treatment Options"
-date: 2015-12-02T12:07:00
+date: 2025-12-02T12:07:00
 slug: "rotator-cuff-syndrome-advice-from-sydney-cbd-chiropractor"
 status: "publish"
 id: 1051

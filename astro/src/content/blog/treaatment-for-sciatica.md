@@ -1,6 +1,6 @@
 ---
 title: "Managing Sciatica: Best Treatments for Long-Term Relief"
-date: 2022-01-24T04:25:00
+date: 2025-01-24T04:25:00
 slug: "treaatment-for-sciatica"
 status: "publish"
 id: 5441

@@ -1,6 +1,6 @@
 ---
 title: "How to Treat Elbow Injury"
-date: 2015-12-02T11:56:00
+date: 2025-12-02T11:56:00
 slug: "how-to-treat-elbow-injury"
 status: "publish"
 id: 1036

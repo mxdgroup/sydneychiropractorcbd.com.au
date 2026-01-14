@@ -1,7 +1,7 @@
 ---
 title: "EndoNasal Cranial Correction Treatment Sydney CBD"
 description: Clinic 27 use the Endonasal Cranial Correction technique which specifically targets cranial bones that are out of place to remove discomfort.
-pubDate: 2024-06-14
+pubDate: 2025-06-14
 heroImage: "https://sydneychiropractorcbd.com.au/wp-content/uploads/2024/12/The-Main-Reasons-for-Lower-Back-Pain-1024x1024.jpg"
 imageName: "endonasal-cranial-correction-sydney"
 tags: ["spinal decompression", "back pain", "non-surgical"]

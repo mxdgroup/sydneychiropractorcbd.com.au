@@ -1,6 +1,6 @@
 ---
 title: "The Importance of Good Posture"
-date: 2015-08-04T11:31:00
+date: 2025-08-04T11:31:00
 slug: "learning-the-importance-of-good-posture-at-clinic27"
 status: "publish"
 id: 1015

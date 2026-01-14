@@ -1,6 +1,6 @@
 ---
 title: "Tethered Cord Syndrome: Overview"
-date: 2022-05-02T01:49:07
+date: 2023-05-02T01:49:07
 slug: "tethered-cord-syndrome"
 status: "publish"
 id: 5868

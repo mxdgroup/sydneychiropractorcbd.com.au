@@ -1,6 +1,6 @@
 ---
 title: "Chiropractic Adjustment Treatments: Beyond Back Pain"
-date: 2024-11-14T17:38:28
+date: 2025-11-14T17:38:28
 slug: "chiropractic-adjustment-treatments-beyond-back-pain"
 status: "publish"
 id: 8815

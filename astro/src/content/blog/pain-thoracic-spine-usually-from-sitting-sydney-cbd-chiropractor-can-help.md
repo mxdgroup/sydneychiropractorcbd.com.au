@@ -1,6 +1,6 @@
 ---
 title: "Thoracic Spine Pain Treatment"
-date: 2015-12-02T12:02:00
+date: 2025-12-02T12:02:00
 slug: "pain-thoracic-spine-usually-from-sitting-sydney-cbd-chiropractor-can-help"
 status: "publish"
 id: 1045

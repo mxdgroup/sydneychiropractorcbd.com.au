@@ -1,6 +1,6 @@
 ---
 title: "Emotion and Posture: The Connection"
-date: 2019-11-14T12:58:00
+date: 2020-11-14T12:58:00
 slug: "learn-about-emotion-and-posture-with-chiropractors-in-sydney-city"
 status: "publish"
 id: 1123

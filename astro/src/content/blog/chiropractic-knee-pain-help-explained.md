@@ -1,6 +1,6 @@
 ---
 title: "Chiropractic Knee Pain Help Explained"
-date: 2021-09-27T02:28:27
+date: 2022-09-27T02:28:27
 slug: "chiropractic-knee-pain-help-explained"
 status: "publish"
 id: 4829

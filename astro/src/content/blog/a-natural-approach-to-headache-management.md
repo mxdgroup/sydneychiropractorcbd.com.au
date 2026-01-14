@@ -1,6 +1,6 @@
 ---
 title: "A Natural Approach to Headache Management"
-date: 2015-07-29T11:15:00
+date: 2016-07-29T11:15:00
 slug: "a-natural-approach-to-headache-management"
 status: "publish"
 id: 1009

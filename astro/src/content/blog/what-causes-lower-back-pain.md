@@ -1,6 +1,6 @@
 ---
 title: "What Causes Lower Back Pain"
-date: 2015-12-02T12:17:00
+date: 2025-12-02T12:17:00
 slug: "what-causes-lower-back-pain"
 status: "publish"
 id: 1062

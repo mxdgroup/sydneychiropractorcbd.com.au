@@ -1,6 +1,6 @@
 ---
 title: "CHIROPRACTIC CARE FOR NECK ARTHRITIS"
-date: 2022-03-16T00:46:13
+date: 2023-03-16T00:46:13
 slug: "chiropractic-care-for-neck-arthritis"
 status: "publish"
 id: 5621

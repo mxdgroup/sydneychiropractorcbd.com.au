@@ -1,6 +1,6 @@
 ---
 title: "Treating Aches and Pains"
-date: 2021-09-27T03:51:28
+date: 2022-09-27T03:51:28
 slug: "how-to-treat-aches-and-pains"
 status: "publish"
 id: 4890

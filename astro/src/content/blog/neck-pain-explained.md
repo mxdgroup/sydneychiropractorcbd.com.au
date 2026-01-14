@@ -1,6 +1,6 @@
 ---
 title: "Neck Pain Explained"
-date: 2021-11-22T12:30:00
+date: 2022-11-22T12:30:00
 slug: "neck-pain-explained"
 status: "publish"
 id: 5017

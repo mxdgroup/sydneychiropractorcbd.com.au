@@ -1,6 +1,6 @@
 ---
 title: "Tendinitis Treatment in Sydney CBD"
-date: 2015-08-19T11:45:00
+date: 2025-08-19T11:45:00
 slug: "tendinitis-treatment-in-sydney-cbd"
 status: "publish"
 id: 1027

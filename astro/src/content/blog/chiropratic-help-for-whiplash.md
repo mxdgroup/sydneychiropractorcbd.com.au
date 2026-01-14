@@ -1,6 +1,6 @@
 ---
 title: "Chiropractic Help for Whiplash"
-date: 2021-12-13T00:30:00
+date: 2022-12-13T00:30:00
 slug: "chiropratic-help-for-whiplash"
 status: "publish"
 id: 5038

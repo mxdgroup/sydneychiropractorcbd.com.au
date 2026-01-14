@@ -1,6 +1,6 @@
 ---
 title: "The Main Reasons for Lower Back Pain"
-date: 2024-12-04T15:45:46
+date: 2025-12-04T15:45:46
 slug: "main-reasons-for-lower-back-pain"
 status: "publish"
 id: 8966

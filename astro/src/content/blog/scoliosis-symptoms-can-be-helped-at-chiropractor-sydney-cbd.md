@@ -1,6 +1,6 @@
 ---
 title: "Chiropractic Treatment for Scoliosis"
-date: 2015-12-02T12:10:00
+date: 2025-12-02T12:10:00
 slug: "scoliosis-symptoms-can-be-helped-at-chiropractor-sydney-cbd"
 status: "publish"
 id: 1053

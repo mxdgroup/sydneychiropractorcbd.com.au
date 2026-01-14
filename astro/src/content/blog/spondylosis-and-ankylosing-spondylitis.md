@@ -1,6 +1,6 @@
 ---
 title: "SPONDYLOSIS AND ANKYLOSING SPONDYLITIS"
-date: 2022-05-30T01:41:00
+date: 2023-05-30T01:41:00
 slug: "spondylosis-and-ankylosing-spondylitis"
 status: "publish"
 id: 5977

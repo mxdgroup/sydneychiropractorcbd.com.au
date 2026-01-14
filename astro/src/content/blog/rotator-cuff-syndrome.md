@@ -1,6 +1,6 @@
 ---
 title: "Rotator Cuff Injury | Symptoms & Treatments"
-date: 2020-02-18T10:56:00
+date: 2021-02-18T10:56:00
 slug: "rotator-cuff-syndrome"
 status: "publish"
 id: 991

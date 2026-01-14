@@ -1,6 +1,6 @@
 ---
 title: "How ABC Treatment Relieves Pain | Expert Chiropractic Care"
-date: 2021-06-18T02:50:17
+date: 2022-06-18T02:50:17
 slug: "abc-advanced-bio-structural-correction"
 status: "publish"
 id: 4477

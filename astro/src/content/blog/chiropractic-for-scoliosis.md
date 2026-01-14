@@ -1,6 +1,6 @@
 ---
 title: "Chiropractic for Scoliosis"
-date: 2024-02-19T23:04:00
+date: 2025-02-19T23:04:00
 slug: "chiropractic-for-scoliosis"
 status: "publish"
 id: 6381

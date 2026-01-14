@@ -1,6 +1,6 @@
 ---
 title: "Proven Methods for Managing Emotional Stress"
-date: 2022-03-09T00:55:46
+date: 2023-03-09T00:55:46
 slug: "managing-emotional-stress"
 status: "publish"
 id: 5566

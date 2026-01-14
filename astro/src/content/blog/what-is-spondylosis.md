@@ -1,6 +1,6 @@
 ---
 title: "What is Spondylosis"
-date: 2015-12-02T12:14:00
+date: 2025-12-02T12:14:00
 slug: "what-is-spondylosis"
 status: "publish"
 id: 1056

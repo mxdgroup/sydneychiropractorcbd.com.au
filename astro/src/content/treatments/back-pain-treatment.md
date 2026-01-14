@@ -1,7 +1,7 @@
 ---
 title: "Back Pain Treatment Sydney"
 description: "Non-surgical spinal decompression therapy is a safe and effective treatment for herniated discs, sciatica, and other back conditions."
-pubDate: 2024-06-14
+pubDate: 2025-06-14
 heroImage: "https://sydneychiropractorcbd.com.au/wp-content/uploads/2024/12/The-Main-Reasons-for-Lower-Back-Pain-1024x1024.jpg"
 tags: ["spinal decompression", "back pain", "non-surgical"]
 slug: back-pain-treatment-sydney-cbd

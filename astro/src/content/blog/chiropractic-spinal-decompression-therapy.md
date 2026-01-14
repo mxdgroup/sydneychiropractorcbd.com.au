@@ -1,6 +1,6 @@
 ---
 title: "CHIROPRACTIC SPINAL DECOMPRESSION"
-date: 2022-08-24T01:54:28
+date: 2023-08-24T01:54:28
 slug: "chiropractic-spinal-decompression-therapy"
 status: "publish"
 id: 6138

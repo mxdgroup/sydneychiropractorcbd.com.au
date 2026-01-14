@@ -1,6 +1,6 @@
 ---
 title: "Habit Stacking for Holistic Health"
-date: 2022-01-31T00:47:12
+date: 2023-01-31T00:47:12
 slug: "habit-stacking-for-holisitic-health"
 status: "publish"
 id: 5478

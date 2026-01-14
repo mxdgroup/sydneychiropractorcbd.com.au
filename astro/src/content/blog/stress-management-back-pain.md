@@ -1,6 +1,6 @@
 ---
 title: "Stress Management & Back Pain"
-date: 2017-01-13T12:33:00
+date: 2025-01-13T12:33:00
 slug: "stress-management-back-pain"
 status: "publish"
 id: 1095

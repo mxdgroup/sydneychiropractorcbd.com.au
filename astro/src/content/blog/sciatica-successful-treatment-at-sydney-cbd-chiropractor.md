@@ -1,6 +1,6 @@
 ---
 title: "How Chiropractic Care Can Help with Sciatica"
-date: 2015-12-01T11:49:00
+date: 2025-12-01T11:49:00
 slug: "sciatica-successful-treatment-at-sydney-cbd-chiropractor"
 status: "publish"
 id: 1030

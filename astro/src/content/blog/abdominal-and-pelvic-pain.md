@@ -1,6 +1,6 @@
 ---
 title: "ABDOMINAL AND PELVIC PAIN"
-date: 2022-06-20T02:22:00
+date: 2023-06-20T02:22:00
 slug: "abdominal-and-pelvic-pain"
 status: "publish"
 id: 6013

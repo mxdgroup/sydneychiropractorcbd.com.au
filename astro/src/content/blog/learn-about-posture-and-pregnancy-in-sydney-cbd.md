@@ -1,6 +1,6 @@
 ---
 title: "Posture During Pregnancy"
-date: 2015-08-04T11:34:00
+date: 2025-08-04T11:34:00
 slug: "learn-about-posture-and-pregnancy-in-sydney-cbd"
 status: "publish"
 id: 1018

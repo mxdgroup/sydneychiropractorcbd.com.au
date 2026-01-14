@@ -1,6 +1,6 @@
 ---
 title: "Fibromyalgia and Sleep: Chiropractic Care"
-date: 2022-06-13T02:03:00
+date: 2023-06-13T02:03:00
 slug: "chiropractic-care-for-fibromyalgia-and-improved-sleep"
 status: "publish"
 id: 6001

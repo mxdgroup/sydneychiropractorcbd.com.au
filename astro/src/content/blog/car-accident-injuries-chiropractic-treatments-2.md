@@ -1,6 +1,6 @@
 ---
 title: "Car Accident Injury Treatment"
-date: 2018-05-28T12:52:00
+date: 2025-05-28T12:52:00
 slug: "car-accident-injuries-chiropractic-treatments-2"
 status: "publish"
 id: 1117

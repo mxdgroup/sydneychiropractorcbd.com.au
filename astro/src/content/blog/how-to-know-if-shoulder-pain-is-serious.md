@@ -1,6 +1,6 @@
 ---
 title: "How to Know If Shoulder Pain Is Serious?"
-date: 2024-12-30T11:06:25
+date: 2025-12-30T11:06:25
 slug: "how-to-know-if-shoulder-pain-is-serious"
 status: "publish"
 id: 9147

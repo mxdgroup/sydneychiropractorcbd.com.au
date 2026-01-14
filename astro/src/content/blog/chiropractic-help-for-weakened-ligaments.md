@@ -1,6 +1,6 @@
 ---
 title: "WEAKENED LIGAMENTS"
-date: 2022-03-28T00:34:00
+date: 2023-03-28T00:34:00
 slug: "chiropractic-help-for-weakened-ligaments"
 status: "publish"
 id: 5636

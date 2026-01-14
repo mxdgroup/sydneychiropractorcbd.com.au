@@ -1,6 +1,6 @@
 ---
 title: "How Chiropractors Can Help Improve Posture"
-date: 2015-07-01T11:10:00
+date: 2025-07-01T11:10:00
 slug: "learn-how-to-improve-posture-with-our-chiropractors-in-sydney"
 status: "publish"
 id: 1006

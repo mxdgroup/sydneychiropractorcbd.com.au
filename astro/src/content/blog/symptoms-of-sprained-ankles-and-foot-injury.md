@@ -1,6 +1,6 @@
 ---
 title: "Symptoms of Sprained Ankles and Foot Injury"
-date: 2015-12-02T11:53:00
+date: 2025-12-02T11:53:00
 slug: "symptoms-of-sprained-ankles-and-foot-injury"
 status: "publish"
 id: 1033

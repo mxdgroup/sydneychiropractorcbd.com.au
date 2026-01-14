@@ -1,6 +1,6 @@
 ---
 title: "Chiropractic Care for Posture | All You Should Know"
-date: 2021-12-20T00:30:00
+date: 2022-12-20T00:30:00
 slug: "chiropratic-care-for-posture"
 status: "publish"
 id: 5046

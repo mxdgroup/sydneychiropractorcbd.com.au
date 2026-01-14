@@ -1,6 +1,6 @@
 ---
 title: "Is Head Asymmetry a Cause for Concern?"
-date: 2022-01-03T00:30:00
+date: 2023-01-03T00:30:00
 slug: "chiropratic-care-for-head-asymmetry"
 status: "publish"
 id: 5068

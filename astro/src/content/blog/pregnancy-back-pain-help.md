@@ -1,6 +1,6 @@
 ---
 title: "Pregnancy Back Pain: Chiropractic Relief"
-date: 2024-12-09T14:04:39
+date: 2025-12-09T14:04:39
 slug: "pregnancy-back-pain-help"
 status: "publish"
 id: 8999

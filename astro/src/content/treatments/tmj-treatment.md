@@ -1,7 +1,7 @@
 ---
 title: "TMJ treatment"
 description: Test
-pubDate: 2024-06-14
+pubDate: 2025-06-14
 heroImage: "https://sydneychiropractorcbd.com.au/wp-content/uploads/2024/12/The-Main-Reasons-for-Lower-Back-Pain-1024x1024.jpg"
 tags: ["spinal decompression", "back pain", "non-surgical"]
 slug: tmj-treatment

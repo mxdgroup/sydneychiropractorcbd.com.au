@@ -1,6 +1,6 @@
 ---
 title: "Posture Correction: Improve Posture With These Tips"
-date: 2017-01-13T12:45:00
+date: 2025-01-13T12:45:00
 slug: "posture-correction-improve-posture-with-these-tips"
 status: "publish"
 id: 1102

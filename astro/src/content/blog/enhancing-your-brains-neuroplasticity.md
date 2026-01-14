@@ -1,6 +1,6 @@
 ---
 title: "How to Enhance your Brain’s Neuroplasticity"
-date: 2021-10-29T01:18:29
+date: 2022-10-29T01:18:29
 slug: "enhancing-your-brains-neuroplasticity"
 status: "publish"
 id: 4948

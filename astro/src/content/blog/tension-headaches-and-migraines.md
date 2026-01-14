@@ -1,6 +1,6 @@
 ---
 title: "Tension Headaches and Migraines | All You Should Know"
-date: 2015-08-04T11:19:00
+date: 2025-08-04T11:19:00
 slug: "tension-headaches-and-migraines"
 status: "publish"
 id: 1012

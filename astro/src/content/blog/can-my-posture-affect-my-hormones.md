@@ -1,6 +1,6 @@
 ---
 title: "Can Posture Affect Hormones?"
-date: 2016-10-06T12:24:00
+date: 2025-10-06T12:24:00
 slug: "can-my-posture-affect-my-hormones"
 status: "publish"
 id: 1083

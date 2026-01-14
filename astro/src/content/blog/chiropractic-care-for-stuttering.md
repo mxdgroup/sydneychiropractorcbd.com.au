@@ -1,6 +1,6 @@
 ---
 title: "How Chiropractors Can Help Treat Stuttering"
-date: 2021-11-15T00:30:00
+date: 2022-11-15T00:30:00
 slug: "chiropractic-care-for-stuttering"
 status: "publish"
 id: 5009

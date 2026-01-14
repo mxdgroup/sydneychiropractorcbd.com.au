@@ -1,6 +1,6 @@
 ---
 title: "Chiropractic Help for Headaches and Migraines"
-date: 2021-12-06T00:30:00
+date: 2022-12-06T00:30:00
 slug: "chiropractic-help-for-headaches-and-migraines"
 status: "publish"
 id: 5028

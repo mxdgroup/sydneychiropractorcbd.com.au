@@ -1,6 +1,6 @@
 ---
 title: "Chiropractic Care for Auto Accident Injuries"
-date: 2024-02-08T02:17:22
+date: 2025-02-08T02:17:22
 slug: "auto-accident-injury-chriropractic-care"
 status: "publish"
 id: 6361

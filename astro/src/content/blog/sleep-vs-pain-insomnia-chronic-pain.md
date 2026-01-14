@@ -1,6 +1,6 @@
 ---
 title: "Sleep Vs Pain: Insomnia & Chronic Pain"
-date: 2017-01-13T12:41:00
+date: 2025-01-13T12:41:00
 slug: "sleep-vs-pain-insomnia-chronic-pain"
 status: "publish"
 id: 1099

@@ -1,6 +1,6 @@
 ---
 title: "Abnormal Gait and Mobility"
-date: 2015-08-19T11:42:00
+date: 2025-08-19T11:42:00
 slug: "abnormal-gait-and-mobility"
 status: "publish"
 id: 1024

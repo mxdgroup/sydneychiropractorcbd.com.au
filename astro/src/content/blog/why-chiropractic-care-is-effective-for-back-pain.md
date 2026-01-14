@@ -1,6 +1,6 @@
 ---
 title: "Here’s Why Chiropractic Care Is Effective for Back Pain"
-date: 2024-11-27T14:34:56
+date: 2025-11-27T14:34:56
 slug: "why-chiropractic-care-is-effective-for-back-pain"
 status: "publish"
 id: 8937

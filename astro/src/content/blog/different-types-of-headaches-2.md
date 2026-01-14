@@ -1,6 +1,6 @@
 ---
 title: "Different Types of Headaches"
-date: 2019-11-14T13:04:00
+date: 2020-11-14T13:04:00
 slug: "different-types-of-headaches-2"
 status: "publish"
 id: 1138
