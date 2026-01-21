@@ -6,7 +6,7 @@ import personalPlan from "/public/Personal-Plan-img.webp";
 import hooman from "/public/team/hooman.webp";
 import angus from "/public/team/angus.png.webp";
 import rin from "/public/team/rin(2).png";
-import roberto from "/public/team/rob.png.webp";
+import roberto from "/public/team/rob-3.png";
 import emma from "/public/team/random2.jpg.webp";
 import hailey from "/public/team/hailey.png";
 import salome from "/public/team/salome.png";
@@ -73,7 +73,8 @@ const therapist = {
                         <img 
                             src={doctor.image} 
                             alt={doctor.name} 
-                            class="w-full h-full object-cover"
+                            class={`w-full h-full  ${doctor.name === 'Dr Rin Choi' ? 'object-contain' : 'object-cover'}`}
+
                         />
                     </div>
                     <h3 class="text-xl font-semibold mb-1 text-custom-purple">{doctor.name}</h3>
