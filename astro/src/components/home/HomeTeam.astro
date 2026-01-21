@@ -5,31 +5,17 @@ import ScrollCrop from "../ScrollCrop.astro";
 import personalPlan from "/public/Personal-Plan-img.webp";
 import hooman from "/public/team/hooman.webp";
 import angus from "/public/team/angus.png.webp";
-import rebecca from "/public/team/reb.webp";
 import rin from "/public/team/rin(2).png";
-import kelly from "/public/team/kel.jpg";
 import roberto from "/public/team/rob.png.webp";
-import christine from "/public/team/random1.jpg.webp";
 import emma from "/public/team/random2.jpg.webp";
-import placeholderWoman from "/public/team/woman.webp";
 import hailey from "/public/team/hailey.png";
 import salome from "/public/team/salome.png";
 
-
+// Row 1: Dr Hooman, Dr Rin, Dr Angus
 const doctors = [
     {
-        name: "Dr. Hooman Zahedi",
+        name: "Dr Hooman Zahedi",
         image: hooman.src,
-        description: "Chiropractor"
-    },
-    {
-        name: "Dr. Angus Phelps",
-        image: angus.src,
-        description: "Chiropractor"
-    },
-    {
-        name: "Dr. Rebecca Squire",
-        image: rebecca.src,
         description: "Chiropractor"
     },
     {
@@ -37,36 +23,38 @@ const doctors = [
         image: rin.src,
         description: "Chiropractor"
     },
-]
-
-const assistant = [
     {
-        name: "Roberto Vita",
-        image: roberto.src,
-        description: "Massage Therapist"
-    },
-
-    {
-        name: "Dr. Kelly Rafferty",
-        image: kelly.src,
+        name: "Dr Angus Phelps",
+        image: angus.src,
         description: "Chiropractor"
     },
+]
+
+// Row 2: Emma, Salome, Hailey
+const staff = [
     {
         name: "Emma Muir",
         image: emma.src,
         description: "Chiropractic Assistant"
     },
     {
-        name: "Hailey Cerneaz",
-        description: "Chiropractic Assistant",
-        image: hailey.src
+        name: "Salome Raut",
+        image: salome.src,
+        description: "Chiropractic Assistant"
     },
     {
-        name: "Salome Raut",
-        description: "Chiropractic Assistant",
-        image:salome.src
+        name: "Hailey Cerneaz",
+        image: hailey.src,
+        description: "Chiropractic Assistant"
     },
 ]
+
+// Row 3: Roberto
+const therapist = {
+    name: "Roberto Vita",
+    image: roberto.src,
+    description: "Massage Therapist"
+}
 
 ---
 <div class="w-full py-20">
@@ -77,15 +65,15 @@ const assistant = [
             </UnderlinedHeader>
         </div>
 
-        <!-- Doctors Grid - Desktop -->
-        <div class="hidden md:grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+        <!-- Row 1: Doctors (Dr Hooman, Dr Rin, Dr Angus) - Desktop -->
+        <div class="hidden md:grid grid-cols-3 gap-8 mb-12 max-w-4xl mx-auto">
             {doctors.map((doctor) => (
                 <div class="flex flex-col items-center">
-                    <div class="w-40 h-40 md:w-52 md:h-52 mb-4  rounded-full">
+                    <div class="w-40 h-40 md:w-52 md:h-52 mb-4 overflow-hidden rounded-full">
                         <img 
                             src={doctor.image} 
                             alt={doctor.name} 
-                            class={` ${doctor.name === 'Dr Rin Choi' ? 'object-cover w-full h-full' : 'w-full h-full object-cover'}`}
+                            class="w-full h-full object-cover"
                         />
                     </div>
                     <h3 class="text-xl font-semibold mb-1 text-custom-purple">{doctor.name}</h3>
@@ -94,15 +82,15 @@ const assistant = [
             ))}
         </div>
 
-        <!-- Doctors Grid - Mobile -->
-        <div class="grid md:hidden grid-cols-1 gap-8 mb-16">
+        <!-- Row 1: Doctors - Mobile -->
+        <div class="grid md:hidden grid-cols-1 gap-8 mb-12">
             {doctors.map((doctor) => (
                 <div class="flex flex-col items-center">
                     <div class="w-48 h-48 mb-4 overflow-hidden rounded-full">
                         <img 
                             src={doctor.image} 
                             alt={doctor.name} 
-                            class={`w-full h-full object-cover ${doctor.name === 'Dr Rin Choi' ? 'object-top' : ''}`}
+                            class="w-full h-full object-cover"
                         />
                     </div>
                     <h3 class="text-xl font-semibold mb-1 text-custom-purple">{doctor.name}</h3>
@@ -111,11 +99,11 @@ const assistant = [
             ))}
         </div>
 
-        <!-- Assistants Grid - Desktop -->
-        <div class="hidden md:grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
-            {assistant.map((person) => (
+        <!-- Row 2: Staff (Emma, Salome, Hailey) - Desktop -->
+        <div class="hidden md:grid grid-cols-3 gap-8 mb-12 max-w-4xl mx-auto">
+            {staff.map((person) => (
                 <div class="flex flex-col items-center">
-                    <div class="w-48 h-48  mb-4 overflow-hidden rounded-full">
+                    <div class="w-40 h-40 md:w-52 md:h-52 mb-4 overflow-hidden rounded-full">
                         <img src={person.image} alt={person.name} class="w-full h-full object-cover" />
                     </div>
                     <h3 class="text-xl font-semibold mb-1 text-custom-purple">{person.name}</h3>
@@ -124,9 +112,9 @@ const assistant = [
             ))}
         </div>
 
-        <!-- Assistants Grid - Mobile -->
-        <div class="grid md:hidden grid-cols-1 gap-8">
-            {assistant.map((person) => (
+        <!-- Row 2: Staff - Mobile -->
+        <div class="grid md:hidden grid-cols-1 gap-8 mb-12">
+            {staff.map((person) => (
                 <div class="flex flex-col items-center">
                     <div class="w-48 h-48 mb-4 overflow-hidden rounded-full">
                         <img src={person.image} alt={person.name} class="w-full h-full object-cover" />
@@ -135,6 +123,17 @@ const assistant = [
                     <p class="text-gray-600">{person.description}</p>
                 </div>
             ))}
+        </div>
+
+        <!-- Row 3: Roberto (centered) -->
+        <div class="flex justify-center">
+            <div class="flex flex-col items-center">
+                <div class="w-40 h-40 md:w-52 md:h-52 mb-4 overflow-hidden rounded-full">
+                    <img src={therapist.image} alt={therapist.name} class="w-full h-full object-cover" />
+                </div>
+                <h3 class="text-xl font-semibold mb-1 text-custom-purple">{therapist.name}</h3>
+                <p class="text-gray-600">{therapist.description}</p>
+            </div>
         </div>
 
         <div class="flex justify-center mt-10">
