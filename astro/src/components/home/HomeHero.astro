@@ -1,11 +1,10 @@
 ---
-import { Image, getImage } from "astro:assets";
+import { Image } from "astro:assets";
 import heroOverlay from "../../assets/hero-overlay.webp";
 import heroBg from "../../assets/New Project.png";
-import heroBgPhone from "../../assets/hero-bg-phone.webp";
 import PrimaryButton from "../PrimaryButton.astro";
 
-const phoneImage = await getImage({src: heroBgPhone, format: 'png'});
+const heroBgWidths = [640, 1024, 1440, heroBg.width];
 ---
 
 <div class="relative flex flex-col justify-center items-center min-h-[30vh] max-h-[40h] md:min-h-[90vh]">
@@ -15,8 +14,10 @@ const phoneImage = await getImage({src: heroBgPhone, format: 'png'});
       class="absolute inset-0 w-full h-full object-cover -z-10" 
       loading="eager" 
       fetchpriority="high"
-      widths={[400, 800, 1200, 1600]}
-      quality={100}
+      quality="max"
+      width={heroBg.width}
+      height={heroBg.height}
+      widths={heroBgWidths}
       sizes="100vw"
     />
     <Image src={heroOverlay} alt="Hero Overlay" class="w-full h-full object-cover absolute bottom-0 right-0 hidden md:block" loading="eager" />
