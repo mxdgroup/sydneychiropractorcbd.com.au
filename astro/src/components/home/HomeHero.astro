@@ -16,8 +16,8 @@ const phoneImage = await getImage({src: heroBgPhone, format: 'png'});
       loading="eager" 
       fetchpriority="high"
       widths={[400, 800, 1200, 1600]}
+      quality={100}
       sizes="100vw"
-      formats={['webp', 'avif']}
     />
     <Image src={heroOverlay} alt="Hero Overlay" class="w-full h-full object-cover absolute bottom-0 right-0 hidden md:block" loading="eager" />
     
