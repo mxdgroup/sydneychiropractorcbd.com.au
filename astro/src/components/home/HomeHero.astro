@@ -11,11 +11,13 @@ const heroBgWidths = [640, 1024, 1440, heroBg.width];
     <Image 
       src={heroBg} 
       alt="Hero Background" 
-      class="absolute inset-0 w-full h-full object-cover " 
+      class="absolute inset-0 w-full h-full object-cover -z-10" 
       loading="eager" 
       fetchpriority="high"
       quality="max"
-
+      width={heroBg.width}
+      height={heroBg.height}
+      widths={heroBgWidths}
       sizes="100vw"
     />
     <Image src={heroOverlay} alt="Hero Overlay" class="w-full h-full object-cover absolute bottom-0 right-0 hidden md:block" loading="eager" />
